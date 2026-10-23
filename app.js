@@ -104,6 +104,7 @@
       ${d.decisions.map(id => decisionBlock(id, n)).join("")}
       ${d.legs.map(legBlock).join("")}
       ${poolBlock("Do in", "do", d.base, picksAll, n)}
+      ${poolBlock("Scuba and snorkel in", "dive", d.base, picksAll, n)}
       ${poolBlock("Eat in", "eat", d.base, picksAll, n)}
       ${poolBlock("Drink in", "drink", d.base, picksAll, n)}
       ${d.base !== "airport" ? poolBlock("Sleep in", "stay", d.base, [], n) : ""}
@@ -128,7 +129,7 @@
     const picked = dayN && isPicked(dayN, it.id);
     let decOpt = null; for (const d of T.decisions) for (const o of d.options) if (o.item === it.id) decOpt = { d, o };
     const lockedHere = decOpt && C.state.locks[decOpt.d.id] === decOpt.o.id;
-    const typeName = { stay: "Stay", do: "Do", eat: "Eat", drink: "Drink" }[it.type] || it.type;
+    const typeName = { stay: "Stay", do: "Do", eat: "Eat", drink: "Drink", dive: "Scuba and snorkel" }[it.type] || it.type;
     return `<div class="inner"><button class="back" data-close="item">← Back</button>
       <p class="eyebrow">${typeName} · ${h(PLACE(it.place).name)}${it.area ? " · " + h(it.area) : ""}</p>
       <h1 class="disp">${h(it.name)}</h1>

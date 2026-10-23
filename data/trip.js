@@ -60,6 +60,15 @@ window.TRIP = {
    ],
    "zoom": 12.5
   },
+  "khaolak": {
+   "name": "Khao Lak",
+   "thai": "เขาหลัก",
+   "lngLat": [
+    98.25,
+    8.64
+   ],
+   "zoom": 10
+  },
   "rassada": {
    "name": "Rassada pier",
    "thai": "ท่าเรือรัษฎา",
@@ -570,6 +579,8 @@ window.TRIP = {
    ],
    "picks": {
     "do": [
+     "princess-divers-phi-phi",
+     "the-dive-ao-nang",
      "private-longtail-from-tonsai",
      "maya-bay",
      "phi-phi-viewpoint-2",
@@ -638,13 +649,15 @@ window.TRIP = {
     "Phuket."
    ],
    "highlights": [
-    "Boat day: Racha and Coral snorkel, 8 to 10 h",
+    "Boat day: Racha Yai try-dive with SSS Phuket, or the Racha and Coral snorkel",
     "Naka Weekend Market from 16:00"
    ],
    "decisions": [],
    "legs": [],
    "picks": {
     "do": [
+     "sss-phuket-dsd-racha-yai",
+     "acdc-diving-phuket",
      "racha-and-coral-islands-speedboat-snorkel",
      "naka-weekend-market"
     ],
@@ -5214,6 +5227,635 @@ window.TRIP = {
     "airport": "~33 km"
    },
    "fitsBudget": false
+  },
+  "sss-phuket-dsd-racha-yai": {
+   "id": "sss-phuket-dsd-racha-yai",
+   "name": "SSS Phuket Dive Freedive & Surf Center - DSD Racha Yai",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Kata (pickup Kata/Karon/Patong/Chalong/Rawai)",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving, 2 dives, Racha Yai",
+   "priceTHB": 4200,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "08:00-16:00",
+   "book": null,
+   "rating": 4.9,
+   "scale": "5",
+   "reviews": 1131,
+   "reviewSource": "TripAdvisor+Google (operator page)",
+   "highlights": [
+    "all-inclusive incl. meals and transfer",
+    "max ~12 m",
+    "one dedicated instructor",
+    "age 10+"
+   ],
+   "praise": [
+    "patient instructors",
+    "clear briefings"
+   ],
+   "complaints": [
+    "one related-trip review noted poor visibility in bad weather"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=SSS+Phuket+Dive+Freedive+&+Surf+Center+-+DSD+Racha+Yai+Phuket",
+    "official": "https://www.sssphuket.com/discover-scuba-diving-phuket/",
+    "booking": "https://wa.me/66895869920",
+    "reviews": "https://www.tripadvisor.com/Attraction_Review-g1210687-d3186766-Reviews-or30-SSS_Phuket_Dive_Freedive_Surf_Center-Kata_Beach_Karon_Phuket.html"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "acdc-diving-phuket": {
+   "id": "acdc-diving-phuket",
+   "name": "ACDC Diving Phuket - DSD Racha Noi + Yai",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Chalong pier (pickup Kata/Karon/Patong/Rawai/Nai Harn)",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving, 2 dives",
+   "priceTHB": 3900,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "approx 07:00-17:00",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "not found",
+   "highlights": [
+    "max 2 beginners per instructor",
+    "meals and transfers included",
+    "free cancel to 18:00 day before",
+    "photos 1,000 THB extra"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=ACDC+Diving+Phuket+-+DSD+Racha+Noi+++Yai+Phuket",
+    "official": "https://www.acdcdivingphuket.com/en/dsd-intro-diving-phuket",
+    "booking": "https://www.acdcdivingphuket.com/en/booking"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "sunrise-divers-phuket": {
+   "id": "sunrise-divers-phuket",
+   "name": "Sunrise Divers Phuket - DSD Racha Yai",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Chalong pier (pickup Patong/Karon/Kata)",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving, 2 dives (3 dives 5,200)",
+   "priceTHB": 4500,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "07:45-16:30",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "not found",
+   "highlights": [
+    "equipment, insurance, meals, transfers included",
+    "max 12 m"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sunrise+Divers+Phuket+-+DSD+Racha+Yai+Phuket",
+    "official": "https://www.sunrise-divers.com/courses/discover-scuba/"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "houbou-ya-phuket": {
+   "id": "houbou-ya-phuket",
+   "name": "Houbou-ya Phuket - DSD Racha Yai",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Phuket (transfer extra)",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving (4,000 promo for 2+)",
+   "priceTHB": 4400,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "not found",
+   "highlights": [
+    "group promo 4,000 THB for 2+"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Houbou-ya+Phuket+-+DSD+Racha+Yai+Phuket",
+    "official": "https://houbou-ya-phuket.com/en/diving/dsd/schedule.html"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "the-dive-ao-nang": {
+   "id": "the-dive-ao-nang",
+   "name": "The Dive Ao Nang - DSD Phi Phi / local islands",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang (hotel pickup 07:30)",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving, Phi Phi Islands, 2 dives (local islands 4,200); park fees about 600 extra",
+   "priceTHB": 5200,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "07:30-15:00",
+   "book": null,
+   "rating": 4.9,
+   "scale": "5",
+   "reviews": 680,
+   "reviewSource": "TripAdvisor (search summary)",
+   "highlights": [
+    "max 2 divers per instructor",
+    "Nov-Apr goes to Phi Phi by speedboat",
+    "max 12 m",
+    "age 10+ and able to swim"
+   ],
+   "praise": [
+    "professional staff",
+    "careful equipment fitting"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Dive+Ao+Nang+-+DSD+Phi+Phi+/+local+islands+Ao+Nang+Krabi",
+    "official": "https://thediveaonang.com/courses/discover-scuba-diving-dsd/",
+    "booking": "https://thediveaonang.com/contact-us/",
+    "reviews": "https://www.tripadvisor.com/Attraction_Review-g1507054-d3616575-Reviews-The_Dive_Ao_Nang-Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "mr-dolphin-diving-krabi": {
+   "id": "mr-dolphin-diving-krabi",
+   "name": "Mr Dolphin Diving - DSD",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving local islands (Phi Phi 5,200 + park fees)",
+   "priceTHB": 4100,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "not found",
+   "highlights": [
+    "max 2 divers per instructor",
+    "hotel pickup and lunch included",
+    "Open Water 14,500 local"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Mr+Dolphin+Diving+-+DSD+Ao+Nang+Krabi",
+    "official": "https://mrdolphindiving.com/krabi-scuba-diving-cost/"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "sawasdee-divers-krabi": {
+   "id": "sawasdee-divers-krabi",
+   "name": "Sawasdee Divers Krabi",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving (price not found)",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price found; ask the shop.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": 669,
+   "reviewSource": "TripAdvisor (review count only, search summary)",
+   "highlights": [
+    "one reviewer: best diving centre in Krabi"
+   ],
+   "praise": [
+    "first time scuba"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sawasdee+Divers+Krabi+Ao+Nang+Krabi",
+    "reviews": "https://www.tripadvisor.com/ShowUserReviews-g1507054-d8181386-r450104487-Sawasdee_Divers_Krabi-Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "local-diving-aonang": {
+   "id": "local-diving-aonang",
+   "name": "Local Diving",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Dive shop. Discover Scuba Diving (price not found)",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price found; ask the shop.",
+   "when": null,
+   "book": null,
+   "rating": 4.7,
+   "scale": "5",
+   "reviews": 248,
+   "reviewSource": "TripAdvisor (search summary)",
+   "highlights": [
+    "friendly crew"
+   ],
+   "praise": [
+    "good first Discover Scuba experience"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Local+Diving+Ao+Nang+Krabi",
+    "reviews": "https://www.tripadvisor.com/Attraction_Review-g1507054-d2516705-Reviews-or20-Local_Diving-Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "princess-divers-phi-phi": {
+   "id": "princess-divers-phi-phi",
+   "name": "Princess Divers (ex Phi Phi Island Divers)",
+   "type": "dive",
+   "place": "phiphi",
+   "area": "Koh Phi Phi Don",
+   "thai": null,
+   "tagline": "Dive shop. Try Dive (from)",
+   "priceTHB": 3600,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": null,
+   "book": null,
+   "rating": 4.9,
+   "scale": "5",
+   "reviews": 2987,
+   "reviewSource": "TripAdvisor (Google 4.9 / about 1,700)",
+   "highlights": [
+    "max 4 divers per group",
+    "#1 of 88 outdoor activities Ko Phi Phi Don",
+    "Bida Nok and Viking Cave"
+   ],
+   "praise": [
+    "Bida Nok",
+    "Viking Cave"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Princess+Divers+(ex+Phi+Phi+Island+Divers)+Ko+Phi+Phi",
+    "official": "https://www.princessdivers.com/",
+    "booking": "https://www.princessdivers.com/"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "adventure-club-phi-phi": {
+   "id": "adventure-club-phi-phi",
+   "name": "The Adventure Club - Discover Scuba Diver",
+   "type": "dive",
+   "place": "phiphi",
+   "area": "Koh Phi Phi Don",
+   "thai": null,
+   "tagline": "Dive shop. DSD 2 dives Bida Islands / Phi Phi Ley (park fee 600 extra)",
+   "priceTHB": 3800,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "half day",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "TripAdvisor ranked #1 badge, no score on page",
+   "highlights": [
+    "max 2 students per instructor",
+    "lunch and gear included",
+    "must be staying on Phi Phi"
+   ],
+   "praise": [
+    "very professional, great gear, great boat"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Adventure+Club+-+Discover+Scuba+Diver+Ko+Phi+Phi",
+    "official": "https://www.adventureclubthailand.com/product/discover-scuba-diver/",
+    "booking": "https://www.adventureclubthailand.com/product/discover-scuba-diver/"
+   },
+   "tags": [
+    "scuba",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "phuket-dive-tours-racha-snorkel": {
+   "id": "phuket-dive-tours-racha-snorkel",
+   "name": "Phuket Dive Tours - Racha Yai snorkelling day trip",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Panwa pier (pickup Kata/Karon/Patong/Chalong)",
+   "thai": null,
+   "tagline": "Snorkel tour. Racha Noi + Racha Yai speedboat snorkel day",
+   "priceTHB": 2800,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "08:00-16:30",
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 2144,
+   "reviewSource": "Google (business-wide, not trip-specific)",
+   "highlights": [
+    "lunch and mask included, fins 100 THB",
+    "Banana Beach and Racha Yai stops",
+    "dolphins not guaranteed"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phuket+Dive+Tours+-+Racha+Yai+snorkelling+day+trip+Phuket",
+    "official": "https://www.phuketdivetours.com/product/racha-yai-snorkeling-day-trip-tour/"
+   },
+   "tags": [
+    "snorkel",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "krabi-4-islands-snorkel": {
+   "id": "krabi-4-islands-snorkel",
+   "name": "4 Islands tour (Poda, Chicken, Tup, Phra Nang)",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Snorkel tour. Group longtail 650-1,000 / speedboat 950-1,500 THB pp; plus about 400 park fee",
+   "priceTHB": 1000,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "6-7 h",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "seller blogs; no independent rating found",
+   "highlights": [
+    "lunch, mask and life jacket usually included",
+    "Tup sandbar only at low tide"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=4+Islands+tour+(Poda,+Chicken,+Tup,+Phra+Nang)+Ao+Nang+Krabi",
+    "official": "https://kohtourkrabi.com/tours/4-island-tour-longtail-boat/"
+   },
+   "tags": [
+    "snorkel",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "hong-islands-trip-thai-tour": {
+   "id": "hong-islands-trip-thai-tour",
+   "name": "Hong Islands tour - Trip Thai Tour",
+   "type": "dive",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Snorkel tour. Group speedboat Hong Islands, about 6 h; park fee 300 extra",
+   "priceTHB": 1800,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "about 6 h",
+   "book": null,
+   "rating": 4.0,
+   "scale": "5",
+   "reviews": 186,
+   "reviewSource": "operator self-reported",
+   "highlights": [
+    "Hong lagoon",
+    "109 m viewpoint"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hong+Islands+tour+-+Trip+Thai+Tour+Ao+Nang+Krabi",
+    "official": "https://www.tripthaitour.com/blog/krabi-hong-islands-tour"
+   },
+   "tags": [
+    "snorkel",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "phi-phi-speedboat-lovely-phuket": {
+   "id": "phi-phi-speedboat-lovely-phuket",
+   "name": "Phi Phi Island speedboat tour from Phuket - Lovely Phuket Tours",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Phuket (hotel pickup)",
+   "thai": null,
+   "tagline": "Snorkel tour. Maya Bay, Pileh Lagoon, Phi Phi Don, snorkel, Khai; park fee 400 extra",
+   "priceTHB": 2990,
+   "priceINR": null,
+   "priceNote": "Per head, headline product.",
+   "when": "full day",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "not found",
+   "highlights": [
+    "10-45 guests",
+    "Maya Bay is wade-only, no swimming"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Island+speedboat+tour+from+Phuket+-+Lovely+Phuket+Tours+Phuket",
+    "official": "https://lovephukettours.com/phi-phi-island-tour"
+   },
+   "tags": [
+    "snorkel",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "racha-yai": {
+   "id": "racha-yai",
+   "name": "Racha Yai (Siam Bay, Bungalow Bay)",
+   "type": "dive",
+   "place": "phuket",
+   "area": "Racha Islands, 30-45 min speedboat from Phuket",
+   "thai": null,
+   "tagline": "Dive site. Beginner dive and snorkel site, max 12 m on DSD",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price found; ask the shop.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "n/a",
+   "highlights": [
+    "west-coast bays are the Nov-Apr snorkel spots",
+    "used by all Phuket DSD products found"
+   ],
+   "praise": [],
+   "complaints": [
+    "haze on some days (TripAdvisor reviewers)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Racha+Yai+(Siam+Bay,+Bungalow+Bay)+Phuket",
+    "reviews": "https://www.tripadvisor.com/AttractionProductReview-g293920-d11462659-Racha_Yai_Dive_Trip_from_Phuket-Phuket.html"
+   },
+   "tags": [
+    "site",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "bida-nok-phi-phi": {
+   "id": "bida-nok-phi-phi",
+   "name": "Bida Nok / Bida Nai and Viking Cave (Phi Phi)",
+   "type": "dive",
+   "place": "phiphi",
+   "area": "Phi Phi Leh area",
+   "thai": null,
+   "tagline": "Dive site. Beginner-OK dive site used by Phi Phi DSDs",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price found; ask the shop.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "n/a",
+   "highlights": [
+    "named in recent Princess Divers praise",
+    "Nov-Apr DSD site for Ao Nang shops"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bida+Nok+/+Bida+Nai+and+Viking+Cave+(Phi+Phi)+Ko+Phi+Phi",
+    "reviews": "https://www.princessdivers.com/"
+   },
+   "tags": [
+    "site",
+    "beginner-ok"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
+  },
+  "similan-islands": {
+   "id": "similan-islands",
+   "name": "Similan Islands (from Khao Lak)",
+   "type": "dive",
+   "place": "khaolak",
+   "area": "Khao Lak, about 1.5 h by speedboat",
+   "thai": null,
+   "tagline": "Dive site. Day trips list certified divers only (18 m OW, 30 m Advanced); season 15 Oct-15 May",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price found; ask the shop.",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "n/a",
+   "highlights": [
+    "daily cap 525 dive places",
+    "book early"
+   ],
+   "praise": [],
+   "complaints": [
+    "Reddit: action mostly deeper than 18 m with currents"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Similan+Islands+(from+Khao+Lak)",
+    "reviews": "https://www.tisland.travel/en/blog/similany-otkryvayutsya-15-oktyabrya-2026"
+   },
+   "tags": [
+    "site"
+   ],
+   "sources": [
+    "research/scuba-snorkel.md"
+   ]
   }
  },
  "activities": [
@@ -5221,21 +5863,39 @@ window.TRIP = {
    "id": "scuba",
    "title": "Scuba and snorkel",
    "question": "Where is the best scuba or snorkel on this whole trip, and where can beginners try it?",
-   "status": "pending",
-   "intro": "Research is running: dive shops with real reviews per base, late-November conditions, try-dives for non-certified people, and a ranked pick. What is already known is below.",
-   "verdict": "Pending. Known so far: Racha Yai has the clearest water near Phuket; Phi Phi's Pileh and Bamboo Island are the snorkel stops people actually enjoy; Hong Islands are gentler. No diving within 24 hours of the 24 Nov flight, so Sunday 22 is the last dive day.",
+   "status": "ready",
+   "intro": "Nobody needs a certificate for a Discover Scuba Diving day: a briefing, shallow practice, then one or two dives to about 12 m with an instructor. Late November is the start of the dry season on this coast: visibility 10 to 25 m at Racha Yai, seas settling, speedboats still bouncy. Thai marine parks ban oxybenzone sunscreen. No diving within 24 hours of the flight, so Sunday 22 is the last possible dive day.",
+   "verdict": "Best scuba moment: a Racha Yai try-dive from Phuket on Saturday 21 Nov (Sunday 22 as weather fallback) with SSS Phuket in Kata (4.9 from 1,131 reviews, 4,200 THB all-in, pickup included) or ACDC (3,900 THB, two beginners per instructor). Prettier but pricier: a Phi Phi try-dive on Thursday 19 with The Dive Ao Nang (5,200 plus about 600 park fees) or, if you sleep on the island, Princess Divers from 3,600 (4.9 from 2,987 reviews). Cheaper snorkel-only: the 4 Islands longtail from Ao Nang (about 1,000 to 1,600 all-in) or Racha Yai plus Coral from Phuket (about 2,800). Certified divers' stretch: Similans from Khao Lak, open since 15 Oct, but it does not fit this itinerary.",
    "perPlace": {
     "phuket": [
+     "sss-phuket-dsd-racha-yai",
+     "acdc-diving-phuket",
+     "sunrise-divers-phuket",
+     "houbou-ya-phuket",
+     "phuket-dive-tours-racha-snorkel",
+     "phi-phi-speedboat-lovely-phuket",
+     "racha-yai",
      "racha-and-coral-islands-speedboat-snorkel"
     ],
     "aonang": [
+     "the-dive-ao-nang",
+     "mr-dolphin-diving-krabi",
+     "sawasdee-divers-krabi",
+     "local-diving-aonang",
+     "krabi-4-islands-snorkel",
+     "hong-islands-trip-thai-tour",
      "hong-islands-day-tour",
      "4-island-longtail-tour"
     ],
     "phiphi": [
+     "princess-divers-phi-phi",
+     "adventure-club-phi-phi",
+     "bida-nok-phi-phi",
      "private-longtail-from-tonsai",
-     "phi-phi-speedboat-day-tour-from-ao-nang",
      "maya-bay"
+    ],
+    "khaolak": [
+     "similan-islands"
     ]
    }
   },
