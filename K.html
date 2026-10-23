@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-skin="k">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -10,172 +10,19 @@
 @font-face{font-family:"Avara";src:url(fonts/Avara-Bold.woff2) format("woff2");font-weight:700}
 @font-face{font-family:"Playfair";src:url(fonts/PlayfairRomanVF.woff2) format("woff2");font-weight:360 900;font-stretch:88% 113%}
 @font-face{font-family:"Playfair";src:url(fonts/PlayfairItalicVF.woff2) format("woff2");font-weight:360 900;font-stretch:88% 113%;font-style:italic}
-:root{--ground:#061822;--ink:#ece2cb;--note:#8ea4ae;--dim:#4f6672}
-html{background:var(--ground)}
-body{margin:0;font-family:"Playfair",Georgia,serif;font-style:italic;font-weight:400;color:var(--note);font-size:clamp(15px,1.15vw,18px);line-height:1.45;font-variation-settings:"opsz" 14;-webkit-font-smoothing:antialiased}
-#map{position:fixed;inset:0;z-index:0}
-#map canvas{outline:none}
-.maplibregl-ctrl-attrib{font:11px/1.3 system-ui;background:rgba(6,24,34,.6)!important;color:var(--dim)}
-.maplibregl-ctrl-top-right{top:1vh}
-.maplibregl-ctrl-attrib.maplibregl-compact:not(:hover):not(:focus-within) .maplibregl-ctrl-attrib-inner{display:none}
-.maplibregl-ctrl-attrib a{color:var(--dim)}
-main{position:relative;z-index:1;padding:10vh 0 26vh 6vw;pointer-events:none}
-.shade{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(6,24,34,.9) 0%,rgba(6,24,34,.72) 34%,rgba(6,24,34,.18) 58%,rgba(6,24,34,0) 72%)}
-main > *{pointer-events:auto}
-.top{max-width:40ch;padding-bottom:14vh}
-.top .n{font-size:clamp(26px,3vw,46px);text-align:left;margin-bottom:.35em}
-.top p{margin:0 0 .6em}
-.who{margin-top:1.2em}
-.who input{font:inherit;font-style:italic;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--dim);padding:.1em 0;width:14ch;outline:none}
-.who input:focus{border-bottom-color:var(--ink)}
-.isle{max-width:min(760px,88vw);padding-bottom:28vh}
-h2{font-family:"Avara",Georgia,serif;font-weight:900;font-style:normal;color:var(--ink);font-size:clamp(52px,8.5vw,140px);line-height:.88;letter-spacing:-.03em;margin:0 0 .3em}
-h2 small{display:block;font-size:.26em;letter-spacing:0;margin-top:.45em;font-weight:700}
-.l{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4vw;align-items:baseline}
-.w{max-width:36ch;padding:.45em 0 1.1em}
-.n{font-style:normal;color:var(--ink);font-weight:500;font-stretch:88%;font-variation-settings:"opsz" 1200;font-variant-numeric:tabular-nums lining-nums;text-align:right;font-size:clamp(30px,4.4vw,74px);line-height:.95;letter-spacing:-.03em;white-space:nowrap}
-.n.sm{font-size:clamp(22px,2.6vw,42px)}
-.k{display:block;font-size:.8em;color:var(--dim);margin-bottom:.15em}
-.sec{margin-top:3.5em}
-.sec h3{font-style:normal;font-weight:500;color:var(--ink);font-size:1em;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .6em;font-variation-settings:"opsz" 14}
-.opt{cursor:pointer}
-.opt .w b{font-style:normal;font-weight:600;color:var(--ink)}
-.opt .act{display:inline-block;margin-left:.6em;font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--dim);transition:color .5s cubic-bezier(.32,.72,0,1)}
-.opt:hover .act{color:var(--note)}
-.opt.locked .act{color:var(--ink)}
-.opt.locked .n{color:var(--ink)}
-.opt.other .w,.opt.other .n{color:var(--dim)}
-.opt.other .w b{color:var(--dim)}
-.opt{transition:opacity .6s cubic-bezier(.32,.72,0,1)}
-.leg .w{max-width:30ch}
-.reddit ul{margin:0;padding-left:1.1em}
-.reddit li{margin:0 0 .5em}
-.reddit .src a{color:var(--note)}
-.pending{color:var(--dim)}
-.notes form{display:grid;grid-template-columns:1fr auto;gap:1em;align-items:end;margin-top:.6em}
-.notes textarea{font:inherit;font-style:italic;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--dim);resize:vertical;min-height:2.6em;width:100%;outline:none;padding:.2em 0}
-.notes textarea:focus{border-bottom-color:var(--ink)}
-.notes button{font:inherit;font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--ink);background:transparent;border:0;cursor:pointer;padding:.4em 0}
-.notes .item{margin:.6em 0 0}
-.notes .item b{font-style:normal;font-weight:500;color:var(--ink)}
-.rail{position:fixed;left:0;right:0;bottom:0;z-index:2;display:flex;gap:3.5vw;padding:2.2vh 6vw calc(2.2vh + env(safe-area-inset-bottom));overflow-x:auto;scrollbar-width:none;background:linear-gradient(to top,rgba(6,24,34,.92),rgba(6,24,34,0))}
-.rail::-webkit-scrollbar{display:none}
-.rail button{font-family:"Playfair",Georgia,serif;font-style:normal;font-weight:500;font-stretch:88%;font-variation-settings:"opsz" 400;font-variant-numeric:tabular-nums;color:var(--dim);background:transparent;border:0;font-size:clamp(22px,2.4vw,36px);line-height:1;padding:0;cursor:pointer;flex:0 0 auto;transition:color .6s cubic-bezier(.32,.72,0,1),transform .6s cubic-bezier(.32,.72,0,1)}
-.rail button small{display:block;font-style:italic;font-weight:400;font-size:.42em;letter-spacing:.02em;margin-top:.35em;font-variation-settings:"opsz" 14}
-.rail button.on{color:var(--ink);transform:translateY(-4px)}
-.budget{position:fixed;top:0;right:0;z-index:2;padding:7vh 5vw 0 0;text-align:right;pointer-events:none}
-.budget .n{font-size:clamp(28px,3.4vw,54px)}
-.budget span{display:block;font-size:.85em;color:var(--dim)}
-@media (max-width:720px){.shade{background:linear-gradient(180deg,rgba(6,24,34,.9),rgba(6,24,34,.72))}main{padding-left:6vw;padding-right:4vw}.leg,.opt{grid-template-columns:1fr;row-gap:.1em}.leg .n,.opt .n{text-align:left;font-size:clamp(22px,6vw,34px);white-space:normal}.leg .w,.opt .w{padding-bottom:.2em}.leg .k,.opt .k{display:inline;margin-right:.6em}.budget{position:relative;z-index:2;text-align:left;padding:0 0 4vh}.budget .n{text-align:left}.isle{padding-bottom:18vh}.n{font-size:clamp(26px,7.6vw,44px)}}
-@media (prefers-reduced-motion:reduce){.opt,.rail button,.opt .act{transition:none}}
 </style>
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
 <div id="map" aria-hidden="true"></div>
 <div class="shade" aria-hidden="true"></div>
-<div class="budget" id="budget"></div>
-<main id="main"></main>
-<nav class="rail" id="rail" aria-label="Days"></nav>
+<header class="top"><div class="brand">Thailand Research 26<small>17 to 24 November 2026 · five of us · ไปไหน</small></div><nav class="menu" id="menu" aria-label="Across the trip"></nav><div class="budget" id="budget"></div></header>
+<div class="overview"><section class="hl" id="hl" aria-live="polite"></section><nav class="rail" id="rail" aria-label="Days"></nav></div>
+<section class="sheet" id="sheet" hidden></section>
+<section class="card" id="card" hidden></section>
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="data/trip.js"></script>
 <script src="data/core.js"></script>
-<script>
-(function(){
-  const C = window.CORE, T = C.T, h = (s)=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const groups = C.groupsByBase();
-  const main = document.getElementById("main"), rail = document.getElementById("rail"), budgetEl = document.getElementById("budget");
-
-  function row(w, n, cls, nk) { return `<div class="l ${cls||""}"><div class="w">${w}</div><div class="n ${nk||""}">${n}</div></div>`; }
-
-  function renderDecision(id) {
-    const d = C.decision(id); if (!d) return "";
-    const lockedId = C.state.locks[d.id];
-    const rows = d.options.map(o => {
-      const st = lockedId ? (lockedId === o.id ? "locked" : "other") : "";
-      const price = o.costINR ? C.fmtK(o.costINR) : "—";
-      const unit = o.unit ? `<span class="k">${h(o.unit)}</span>` : "";
-      const link = o.url ? ` <a href="${o.url}" target="_blank" rel="noopener" style="color:inherit">link</a>` : "";
-      return `<div class="l opt ${st}" data-d="${d.id}" data-o="${o.id}" role="button" tabindex="0" aria-pressed="${st==="locked"}"><div class="w"><b>${h(o.label)}</b> ${h(o.note||"")}${link}<span class="act">${st==="locked"?"Locked":"Lock"}</span></div><div class="n sm">${unit}${price}</div></div>`;
-    }).join("");
-    return `<div class="sec"><h3>${h(d.title)}</h3>${rows}</div>`;
-  }
-  function renderLegs(ids) {
-    const legs = ids.map(id => T.legs.find(l => l.id === id)).filter(Boolean);
-    if (!legs.length) return "";
-    return legs.map(l => `<div class="sec"><h3>${h(l.title)}</h3>${l.options.map(o => row(`<b style="font-style:normal;color:var(--ink);font-weight:600">${h(o.mode)}</b> ${h(o.note)}`, `<span class="k">${h(o.duration)}</span>฿${C.fmtINR(o.costGroupTHB)}`, "leg", "sm")).join("")}</div>`).join("");
-  }
-  function renderReddit(key) {
-    const r = T.reddit[key]; if (!r) return "";
-    if (r.status === "pending") return `<div class="sec reddit"><h3>What Reddit says</h3><p class="pending">Research running. The summary of what people ask and the top answers lands here, with the threads as sources. Snapshot ${T.snapshot}.</p></div>`;
-    const blocked = r.status === "blocked" ? `<p class="pending">Reddit itself is blocked for Claude's tools, so this is the same questions answered by dated 2026 guides and forums. To get the real threads, search these and paste the links back: ${r.queries.map(h).join(" · ")}</p>` : "";
-    return `<div class="sec reddit"><h3>What ${r.status === "blocked" ? "the guides" : "Reddit"} say${r.status === "blocked" ? "" : "s"}</h3><ul>${r.summary.map(s=>`<li>${h(s)}</li>`).join("")}</ul><p class="src">${r.sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${h(s.title)}</a>`).join(" · ")}</p>${blocked}</div>`;
-  }
-  function renderGuide(key) {
-    const g = T.guide[key]; if (!g) return "";
-    const sec = (title, items) => !items || !items.length ? "" : `<div class="sec"><h3>${title}</h3>${items.map(it => row(`<b style="font-style:normal;color:var(--ink);font-weight:600">${h(it.name)}</b> ${h(it.note)}`, it.costTHB ? `<span class="k">฿ a head</span>${C.fmtINR(it.costTHB)}` : "free", "leg", "sm")).join("")}</div>`;
-    return sec("Do", g.do) + sec("Eat", g.eat) + sec("Drink", g.drink) + sec("Sleep, per room-night", g.stay);
-  }
-  function renderTips(days) {
-    const t = days.flatMap(d => d.tips || []); if (!t.length) return "";
-    return `<div class="sec"><h3>From the research</h3>${t.map(x => `<p style="margin:0 0 .6em;max-width:46ch">${h(x)}</p>`).join("")}</div>`;
-  }
-  function renderEssentials() {
-    return `<section class="isle" id="essentials" data-place="phuket" data-first="9"><h2>Before<small>we go</small></h2>${T.essentials.map(e => row(`<b style="font-style:normal;color:var(--ink);font-weight:600">${h(e.k)}.</b> ${h(e.v)}`, "", "", "sm")).join("")}</section>`;
-  }
-  function renderNotes(days) {
-    return days.map(d => {
-      const items = (C.state.notes[d.n] || []).map(n => `<p class="item"><b>${h(n.who)}</b> ${h(n.text)} <span class="k" style="display:inline">${n.at}</span></p>`).join("");
-      return `<div class="sec notes"><h3>Day ${d.n} notes</h3>${items || `<p class="pending">Nothing yet. Write the first one.</p>`}<form data-day="${d.n}"><textarea placeholder="Write here"></textarea><button type="submit">Add</button></form></div>`;
-    }).join("");
-  }
-  function renderIsle(g, i) {
-    const p = T.places[g.base];
-    const dayRows = g.days.map(d => row(`<span class="k">Day ${d.n}, ${d.weekday}${d.spend?". "+h(d.spend):""}</span>${d.plan.map(h).join(" ")}`, d.date)).join("");
-    const decisions = [...new Set(g.days.flatMap(d => d.decisions))].map(renderDecision).join("");
-    const legs = renderLegs([...new Set(g.days.flatMap(d => d.legs))]);
-    const reddit = renderReddit(g.days[0].reddit);
-    const guideKey = g.base === "aonang" ? "krabi" : g.base;
-    return `<section class="isle" id="isle-${i}" data-place="${g.base}" data-first="${g.days[0].n}"><h2>${h(p.name)}<small>${h(p.thai)}</small></h2>${dayRows}${renderTips(g.days)}${decisions}${legs}${renderGuide(guideKey)}${reddit}${renderNotes(g.days)}</section>`;
-  }
-  function render() {
-    const b = C.budget();
-    budgetEl.innerHTML = `<div class="n">${b.total?C.fmtINR(b.total):"—"}</div><span>locked so far, INR</span><span>${b.total?C.fmtINR(b.perHead)+" each":"lock something to start the budget"}</span>`;
-    main.innerHTML = `<div class="top"><div class="n">${h(T.dates)}</div><p>${h(T.title)}. Five of us. Three rooms. ${h(T.vibe)} ${h(T.food)} ${h(T.budgetRule)} ${h(T.thaiGreeting)}</p><p class="who">Writing as <input id="who" value="${h(C.state.who)}" placeholder="your name"></p></div>` + groups.map(renderIsle).join("") + renderEssentials();
-    rail.innerHTML = T.days.map(d => `<button data-day="${d.n}" data-place="${d.base}">${d.date.split(" ")[0]}<small>${d.weekday.slice(0,3)}</small></button>`).join("");
-    observe();
-  }
-
-  main.addEventListener("click", e => {
-    const opt = e.target.closest(".opt"); if (opt && !e.target.closest("a")) C.lock(opt.dataset.d, opt.dataset.o);
-  });
-  main.addEventListener("keydown", e => { const opt = e.target.closest(".opt"); if (opt && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); C.lock(opt.dataset.d, opt.dataset.o); } });
-  main.addEventListener("submit", e => { e.preventDefault(); const f = e.target, t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
-  main.addEventListener("change", e => { if (e.target.id === "who") C.setWho(e.target.value); });
-  rail.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; const first = [...document.querySelectorAll(".isle")].find(s => s.dataset.place === b.dataset.place && Number(s.dataset.first) <= Number(b.dataset.day)); const target = first || document.querySelector(`.isle[data-place="${b.dataset.place}"]`); if (target) target.scrollIntoView({ behavior: "smooth", block: "start" }); });
-
-  let map, current = null, io;
-  function focus(place) {
-    if (place === current) return; current = place;
-    document.querySelectorAll(".rail button").forEach(b => b.classList.toggle("on", b.dataset.place === place));
-    if (map) { const w = window.innerWidth; const pad = w > 720 ? { left: Math.round(w * 0.5), right: 40, top: 60, bottom: 120 } : { left: 20, right: 20, top: 60, bottom: Math.round(window.innerHeight * 0.55) }; C.flyTo(map, place, { padding: pad, pitch: 48, bearing: -12 }); }
-  }
-  function observe() {
-    if (io) io.disconnect();
-    io = new IntersectionObserver(es => { es.forEach(en => { if (en.isIntersecting) focus(en.target.dataset.place); }); }, { rootMargin: "-40% 0px -45% 0px", threshold: 0 });
-    document.querySelectorAll(".isle").forEach(s => io.observe(s));
-  }
-  C.onChange(() => {
-    const y = window.scrollY, act = document.activeElement, actId = act && act.id, actDay = act && act.closest && act.closest("form")?.dataset.day;
-    const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; });
-    render();
-    document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d] && !t.value) t.value = drafts[d]; });
-    window.scrollTo(0, y);
-    if (actId === "who") { const w = document.getElementById("who"); w.focus(); w.setSelectionRange(w.value.length, w.value.length); }
-    else if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); }
-  });
-  render();
-  map = C.initMap({ container: "map", pitch: 48, attribution: "top-right", palette: { land: "#0f3140", water: "#061822", cover: "#113644", road: "#1d4a5e", label: "#8ea4ae", route: "#ece2cb" }, onLoad: m => { const p = current; current = null; focus(p || "phuket"); } });
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>

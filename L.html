@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-skin="l">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,159 +7,19 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <style>
 @font-face{font-family:"Jost";src:url(fonts/JostVF.ttf) format("truetype");font-weight:100 900}
-:root{--ground:#f4f1ea;--ink:#1c1c1a;--blue:#2f5f8c;--mute:#8a8a84;--line:#d9d4c8}
-html{background:var(--ground)}
-body{margin:0;font-family:"Jost",system-ui,sans-serif;color:var(--ink);font-weight:300;font-size:clamp(15px,1.1vw,18px);line-height:1.5;-webkit-font-smoothing:antialiased}
-#map{position:fixed;inset:0;z-index:0}
-.maplibregl-ctrl-attrib{font:11px/1.3 system-ui;background:rgba(244,241,234,.7)!important;color:var(--mute)}
-.maplibregl-ctrl-attrib.maplibregl-compact:not(:hover):not(:focus-within) .maplibregl-ctrl-attrib-inner{display:none}
-.maplibregl-ctrl-attrib a{color:var(--mute)}
-.maplibregl-ctrl-top-right{top:8vh}
-main{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:16vh 6vw 22vh;text-align:center}
-.shade{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(244,241,234,0) 0%,rgba(244,241,234,.86) 22%,rgba(244,241,234,.86) 78%,rgba(244,241,234,0) 100%)}
-.top{max-width:50ch;margin:0 auto 10vh}
-.top h1{font-weight:300;font-size:1.05em;letter-spacing:.14em;text-transform:uppercase;margin:0 0 .9em}
-.top p{margin:0 0 .6em}
-.who input{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);text-align:center;width:14ch;outline:none;padding:.1em 0}
-.who input:focus{border-bottom-color:var(--ink)}
-.place{font-weight:600;font-size:clamp(40px,6.2vw,92px);line-height:1;letter-spacing:-.02em;margin:0}
-.place small{display:block;font-weight:300;font-size:.3em;letter-spacing:.02em;margin-top:.35em}
-.block{max-width:52ch;margin:1.6em auto 0;text-align:center}
-.day{margin:0 0 1.1em}
-.day .k{display:block;font-size:.82em;color:var(--mute);letter-spacing:.04em}
-.sec{margin:2.6em auto 0;max-width:52ch}
-.sec h3{font-weight:500;font-size:.78em;letter-spacing:.16em;text-transform:uppercase;margin:0 0 .8em;color:var(--mute)}
-.opt{cursor:pointer;padding:.55em 0;transition:opacity .6s cubic-bezier(.32,.72,0,1)}
-.opt b{font-weight:500}
-.opt .price{display:block;color:var(--blue);font-variant-numeric:tabular-nums;font-weight:400}
-.opt .act{display:inline-block;margin-left:.6em;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.7em;color:var(--mute);transition:color .5s cubic-bezier(.32,.72,0,1)}
-.opt:hover .act{color:var(--ink)}
-.opt.locked .act{color:var(--blue)}
-.opt.locked b{font-weight:600}
-.opt.other{opacity:.45}
-.gap{display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--blue);font-weight:300;padding:4vh 0}
-.gap .t{font-size:clamp(17px,1.5vw,24px);letter-spacing:.02em;margin:0 0 .6em}
-.gap .o{display:grid;grid-template-columns:1fr auto;gap:.2em 2em;max-width:44ch;width:100%;text-align:left;font-size:.9em}
-.gap .o span{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
-.gap .o i{font-style:normal;color:var(--mute);font-size:.85em;display:block}
-.reddit ul{margin:0;padding:0;list-style:none}
-.reddit li{margin:0 0 .5em}
-.pending{color:var(--mute)}
-.notes form{display:grid;grid-template-columns:1fr auto;gap:1em;align-items:end;margin-top:.6em;text-align:left}
-.notes textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);resize:vertical;min-height:2.6em;width:100%;outline:none;padding:.2em 0}
-.notes textarea:focus{border-bottom-color:var(--ink)}
-.notes button{font:inherit;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.7em;color:var(--blue);background:transparent;border:0;cursor:pointer;padding:.4em 0}
-.notes .item{margin:.5em 0 0;text-align:left}
-.notes .item b{font-weight:500}
-.notes .item .k{color:var(--mute);font-size:.82em;margin-left:.5em}
-.rail{position:fixed;top:0;left:0;right:0;z-index:2;display:flex;justify-content:center;gap:2.6vw;padding:2.4vh 4vw;background:linear-gradient(to bottom,rgba(244,241,234,.95),rgba(244,241,234,0));overflow-x:auto;scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.rail button{font:inherit;font-weight:300;color:var(--mute);background:transparent;border:0;font-size:clamp(14px,1.1vw,17px);letter-spacing:.06em;cursor:pointer;padding:0;flex:0 0 auto;transition:color .6s cubic-bezier(.32,.72,0,1),font-weight .3s}
-.rail button.on{color:var(--ink);font-weight:600}
-.budget{position:fixed;bottom:0;left:0;right:0;z-index:2;text-align:center;padding:1.6vh 4vw calc(1.6vh + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(244,241,234,.96),rgba(244,241,234,0));font-weight:300}
-.budget b{font-weight:500;color:var(--blue);font-variant-numeric:tabular-nums}
-@media (max-width:720px){.shade{background:rgba(244,241,234,.78)}main{padding-top:12vh}.gap .o{font-size:.85em}}
-@media (prefers-reduced-motion:reduce){.opt,.rail button,.opt .act{transition:none}}
 </style>
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
 <div id="map" aria-hidden="true"></div>
 <div class="shade" aria-hidden="true"></div>
-<nav class="rail" id="rail" aria-label="Days"></nav>
-<main id="main"></main>
-<div class="budget" id="budget"></div>
+<header class="top"><div class="brand">Thailand Research 26<small>17 to 24 November 2026 · five of us · ไปไหน</small></div><nav class="menu" id="menu" aria-label="Across the trip"></nav><div class="budget" id="budget"></div></header>
+<div class="overview"><section class="hl" id="hl" aria-live="polite"></section><nav class="rail" id="rail" aria-label="Days"></nav></div>
+<section class="sheet" id="sheet" hidden></section>
+<section class="card" id="card" hidden></section>
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 <script src="data/trip.js"></script>
 <script src="data/core.js"></script>
-<script>
-(function(){
-  const C = window.CORE, T = C.T, h = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const groups = C.groupsByBase();
-  const main = document.getElementById("main"), rail = document.getElementById("rail"), budgetEl = document.getElementById("budget");
-
-  function renderDecision(id) {
-    const d = C.decision(id); if (!d) return "";
-    const lockedId = C.state.locks[d.id];
-    return `<div class="sec"><h3>${h(d.title)}</h3>${d.options.map(o => {
-      const st = lockedId ? (lockedId === o.id ? "locked" : "other") : "";
-      const link = o.url ? ` <a href="${o.url}" target="_blank" rel="noopener" style="color:inherit">link</a>` : "";
-      return `<div class="opt ${st}" data-d="${d.id}" data-o="${o.id}" role="button" tabindex="0" aria-pressed="${st==="locked"}"><b>${h(o.label)}</b> ${h(o.note||"")}${link}<span class="act">${st==="locked"?"Locked":"Lock"}</span>${o.costINR?`<span class="price">${C.fmtINR(o.costINR)} INR${o.unit?" · "+h(o.unit):""}</span>`:""}</div>`;
-    }).join("")}</div>`;
-  }
-  function renderGap(legIds, hours, fallbackText) {
-    const legs = legIds.map(id => T.legs.find(l => l.id === id)).filter(Boolean);
-    const vh = Math.max(10, hours * 11);
-    const inner = legs.length ? legs.map(l => `<p class="t">${h(l.title)}, about ${l.hours} hour${l.hours>1?"s":""}</p><div class="o">${l.options.map(o=>`<div>${h(o.mode)}<i>${h(o.note)}</i></div><span>${h(o.duration)}<i>฿${C.fmtINR(o.costGroupTHB)} for five</i></span>`).join("")}</div>`).join("") : `<p class="t">${h(fallbackText||"")}</p>`;
-    return `<div class="gap" style="min-height:${vh}vh">${inner}</div>`;
-  }
-  function renderReddit(key) {
-    const r = T.reddit[key]; if (!r) return "";
-    if (r.status === "pending") return `<div class="sec reddit"><h3>What Reddit says</h3><p class="pending">Research running. The summary of what people ask and the top answers lands here, with the threads as sources. Snapshot ${T.snapshot}.</p></div>`;
-    const blocked = r.status === "blocked" ? `<p class="pending">Reddit itself is blocked for Claude's tools, so this is the same questions answered by dated 2026 guides and forums. To get the real threads, search these and paste the links back: ${r.queries.map(h).join(" · ")}</p>` : "";
-    return `<div class="sec reddit"><h3>What ${r.status === "blocked" ? "the guides say" : "Reddit says"}</h3><ul>${r.summary.map(s=>`<li>${h(s)}</li>`).join("")}</ul><p class="pending">${r.sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener" style="color:inherit">${h(s.title)}</a>`).join(" · ")}</p>${blocked}</div>`;
-  }
-  function renderGuide(key) {
-    const g = T.guide[key]; if (!g) return "";
-    const sec = (title, items) => !items || !items.length ? "" : `<div class="sec"><h3>${title}</h3>${items.map(it => `<p class="day"><b style="font-weight:500">${h(it.name)}</b> ${h(it.note)}<span class="k" style="color:var(--blue)">${it.costTHB ? "฿" + C.fmtINR(it.costTHB) + " a head" : "free"}</span></p>`).join("")}</div>`;
-    return sec("Do", g.do) + sec("Eat", g.eat) + sec("Drink", g.drink) + sec("Sleep, per room-night", g.stay);
-  }
-  function renderTips(days) {
-    const t = days.flatMap(d => d.tips || []); if (!t.length) return "";
-    return `<div class="sec"><h3>From the research</h3>${t.map(x => `<p class="day">${h(x)}</p>`).join("")}</div>`;
-  }
-  function renderNotes(days) {
-    return days.map(d => {
-      const items = (C.state.notes[d.n] || []).map(n => `<p class="item"><b>${h(n.who)}</b> ${h(n.text)}<span class="k">${n.at}</span></p>`).join("");
-      return `<div class="sec notes"><h3>Day ${d.n} notes</h3>${items || `<p class="pending">Nothing yet. Write the first one.</p>`}<form data-day="${d.n}"><textarea placeholder="Write here"></textarea><button type="submit">Add</button></form></div>`;
-    }).join("");
-  }
-  function render() {
-    const b = C.budget();
-    budgetEl.innerHTML = b.total ? `Locked so far <b>${C.fmtINR(b.total)} INR</b>, <b>${C.fmtINR(b.perHead)}</b> each` : `Lock something to start the budget`;
-    let html = `<div class="top"><h1>${h(T.title)}</h1><p>${h(T.dates)}. Five of us. Three rooms. ${h(T.budgetRule)}</p><p>${h(T.vibe)} ${h(T.food)}</p><p class="who">Writing as <input id="who" value="${h(C.state.who)}" placeholder="your name"></p></div>`;
-    groups.forEach((g, i) => {
-      const p = T.places[g.base];
-      const days = g.days.map(d => `<p class="day"><span class="k">Day ${d.n}, ${d.weekday} ${d.date}${d.spend?" · "+h(d.spend):""}</span>${d.plan.map(h).join(" ")}</p>`).join("");
-      const decisions = [...new Set(g.days.flatMap(d => d.decisions))].map(renderDecision).join("");
-      const guideKey = g.base === "aonang" ? "krabi" : g.base;
-      html += `<section class="stop" data-place="${g.base}" id="stop-${i}"><p class="place">${h(p.name)}<small>${h(p.thai)}</small></p><div class="block">${days}</div>${renderTips(g.days)}${decisions}${renderGuide(guideKey)}${renderReddit(g.days[0].reddit)}${renderNotes(g.days)}</section>`;
-      const next = groups[i+1];
-      if (next) { const legIds = [...new Set(g.days.flatMap(d => d.legs).concat(next.days[0].legs))].filter(id => { const l = T.legs.find(x=>x.id===id); return l && l.from === g.base && (l.to === next.base || (next.base==="phuket" && l.to==="phuket")); }); const hrs = legIds.length ? Math.max(...legIds.map(id => T.legs.find(l=>l.id===id).hours)) : 1; html += renderGap(legIds, hrs, "Short hop."); }
-    });
-    html += `<section class="stop" data-place="phuket" id="stop-end"><p class="place">Before we go</p>${T.essentials.map(e => `<p class="day" style="max-width:52ch;margin-left:auto;margin-right:auto"><b style="font-weight:500">${h(e.k)}.</b> ${h(e.v)}</p>`).join("")}</section><div class="top" style="margin-top:8vh"><p>${h(T.thaiGreeting)}</p></div>`;
-    main.innerHTML = html;
-    rail.innerHTML = T.days.map(d => `<button data-day="${d.n}" data-place="${d.base}">${d.weekday.slice(0,3)} ${d.date.split(" ")[0]}</button>`).join("");
-    observe();
-  }
-  main.addEventListener("click", e => { const opt = e.target.closest(".opt"); if (opt && !e.target.closest("a")) C.lock(opt.dataset.d, opt.dataset.o); });
-  main.addEventListener("keydown", e => { const opt = e.target.closest(".opt"); if (opt && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); C.lock(opt.dataset.d, opt.dataset.o); } });
-  main.addEventListener("submit", e => { e.preventDefault(); const f = e.target, t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
-  main.addEventListener("change", e => { if (e.target.id === "who") C.setWho(e.target.value); });
-  rail.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; const t = document.querySelector(`.stop[data-place="${b.dataset.place}"]`); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); });
-
-  let map, current = null, io;
-  function focus(place) {
-    if (place === current) return; current = place;
-    document.querySelectorAll(".rail button").forEach(b => b.classList.toggle("on", b.dataset.place === place));
-    if (map) C.flyTo(map, place, { pitch: 0, bearing: 0, duration: 2800, zoom: T.places[place].zoom - 0.6 });
-  }
-  function observe() {
-    if (io) io.disconnect();
-    io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) focus(en.target.dataset.place); }), { rootMargin: "-35% 0px -50% 0px", threshold: 0 });
-    document.querySelectorAll(".stop").forEach(s => io.observe(s));
-  }
-  C.onChange(() => {
-    const y = window.scrollY, act = document.activeElement, actId = act && act.id, actDay = act && act.closest && act.closest("form")?.dataset.day;
-    const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; });
-    render();
-    document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d] && !t.value) t.value = drafts[d]; });
-    window.scrollTo(0, y);
-    if (actId === "who") { const w = document.getElementById("who"); w.focus(); w.setSelectionRange(w.value.length, w.value.length); }
-    else if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); }
-  });
-  render();
-  map = C.initMap({ container: "map", pitch: 0, attribution: "top-right", palette: { land: "#f4f1ea", water: "#e2e7e4", cover: "#ebe9df", road: "#ddd7ca", label: "#8a8a84", route: "#2f5f8c" }, onLoad: () => { const p = current; current = null; focus(p || "phuket"); } });
-})();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
