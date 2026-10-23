@@ -562,7 +562,8 @@ window.TRIP = {
     "Fire show at Slinky or Carlito's"
    ],
    "decisions": [
-    "day3"
+    "day3",
+    "phiphi-stay"
    ],
    "legs": [
     "L3"
@@ -789,16 +790,30 @@ window.TRIP = {
      "unit": "night, 3 rooms, from-price"
     },
     {
+     "id": "casablanca",
+     "item": "casa-blanca-boutique",
+     "costINR": 11760,
+     "unit": "night, 3 rooms, from-price"
+    },
+    {
+     "id": "memory",
+     "item": "the-memory-at-on-on",
+     "costINR": 12348,
+     "unit": "night, 3 rooms, from-price"
+    },
+    {
      "id": "pearl",
      "item": "pearl-hotel-phuket",
      "costINR": 13000,
-     "unit": "night, 3 rooms"
+     "unit": "night, 3 rooms",
+     "note": "Not recommended by the stay research: TripAdvisor 3.1 of 5 from 80 reviews."
     },
     {
      "id": "merlin",
      "item": "phuket-merlin-hotel",
      "costINR": 14700,
-     "unit": "night, 3 rooms"
+     "unit": "night, 3 rooms",
+     "note": "Not recommended: TripAdvisor 3.0 of 5, Booking 7.4."
     }
    ]
   },
@@ -828,8 +843,51 @@ window.TRIP = {
     {
      "id": "anawin",
      "item": "anawin-bungalows",
+     "costINR": 12600,
+     "unit": "2 nights, 3 rooms, from-price; 300 m from the beach"
+    },
+    {
+     "id": "doodee",
+     "item": "doo-dee-boutique-resort",
+     "costINR": 22200,
+     "unit": "2 nights, from-price; by the night market"
+    }
+   ]
+  },
+  {
+   "id": "phiphi-stay",
+   "title": "Phi Phi room, if we sleep on the island",
+   "place": "phiphi",
+   "options": [
+    {
+     "id": "tonsai",
+     "item": "ton-sai-tropical",
+     "costINR": 12852,
+     "unit": "night, 3 rooms, from-price; 2 min from the pier"
+    },
+    {
+     "id": "ivory",
+     "item": "ivory-phi-phi",
+     "costINR": 8430,
+     "unit": "night, 3 rooms, from-price"
+    },
+    {
+     "id": "p2",
+     "item": "p2-wood-loft",
+     "costINR": 7560,
+     "unit": "night, 3 rooms, from-price"
+    },
+    {
+     "id": "whitehouse",
+     "item": "white-house-phi-phi-island",
      "costINR": 0,
-     "unit": "price pending"
+     "unit": "price not readable"
+    },
+    {
+     "id": "pearlpp",
+     "item": "paradise-pearl-bungalows",
+     "costINR": 0,
+     "unit": "Long Beach; price not readable"
     }
    ]
   },
@@ -907,6 +965,10 @@ window.TRIP = {
      "unit": "resorts inside the cap",
      "note": "Beach plus mild nightlife; Reddit's all-rounder this month; Bolt to Bangla 305 THB; an hour to the airport on the 24th.",
      "items": [
+      "pineapple-guesthouse-karon",
+      "kata-tranquil-villa",
+      "kk-karon-kata-boutique",
+      "prima-karon-villa",
       "chanalai-flora-resort",
       "chanalai-garden-resort",
       "centara-kata-resort",
@@ -922,10 +984,13 @@ window.TRIP = {
      "unit": "cheapest rooms",
      "note": "Food and bars, Lard Yai on Sunday, cheapest; no beach (30 to 60 min to one); songthaews stop at 18:00; easy airport run.",
      "items": [
+      "casa-blanca-boutique",
+      "xinlor-house",
+      "the-memory-at-on-on",
       "homa-phuket-town",
       "travelodge-phuket-town",
       "dara-hotel-phuket",
-      "the-memory-at-on-on"
+      "solin-house-phuket"
      ]
     },
     {
@@ -935,6 +1000,9 @@ window.TRIP = {
      "unit": "",
      "note": "Skip unless nightlife is the point, says every thread this month.",
      "items": [
+      "elite-suites-patong",
+      "atease-phuket-patong",
+      "kalim-seaview-villa-penda",
       "patong-mansion-hotel"
      ]
     },
@@ -955,140 +1023,216 @@ window.TRIP = {
    "name": "Horange Phuket",
    "type": "stay",
    "place": "phuket",
-   "area": "Phuket Town",
+   "area": "Phuket Town / Old Town edge",
    "thai": null,
    "tagline": "Cheap, well-rated Town hotel 6.5 km from Rassada pier.",
    "priceTHB": null,
-   "priceINR": 10300,
-   "priceNote": "10,300 INR a night for 3 rooms (the doc's figure). Trip.com showed from about 17 USD a room in late Oct.",
+   "priceINR": 8400,
+   "priceNote": "10,300 INR a night for 3 rooms (the doc's figure). Trip.com showed from about 17 USD a room in late Oct. Per night, all rooms: MakeMyTrip 'from USD 33'/room (undated snippet) x3; Trip.com avg from USD 73; dated price not readable",
    "when": null,
    "book": null,
    "rating": 8.7,
    "scale": "10",
-   "reviews": 503,
-   "reviewSource": "Trip.com, read 2026-10-24",
+   "reviews": 504,
+   "reviewSource": "Trip.com 2026-10-24 (Booking.com 7.7/196 snippet)",
    "highlights": [
-    "In Phuket Town, so the ferry (Rassada, 15 min) and the Krabi minivans (Terminal 1) are both close",
-    "Chillva Market and Old Town bars a short Grab away"
+    "Cheapest clean option near the pier",
+    "Old Town on foot (4-15 min)",
+    "Quiet rooms with windows in Superior King"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "Clean and quiet rooms, not noisy at all",
+    "The room was spotless, and the location is super convenient",
+    "famous attractions are just a 4-15 minute walk away"
+   ],
+   "complaints": [
+    "No elevator; abandoned building next door",
+    "Absolutely no soundproofing",
+    "Musty smell in hallway; small/no-window rooms"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Horange+Phuket+Phuket",
-    "agoda": "https://www.agoda.com/en-in/accom/property?propertyId=55611369",
-    "reviews": "https://www.trip.com/hotels/phuket-hotels-list-725/zone830/"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Horange+Phuket+Town",
+    "agoda": "https://www.agoda.com/partners/partnersearch.aspx?hid=55611369",
+    "reviews": "https://www.trip.com/hotels/phuket-hotels-list-725/zone830/",
+    "booking": "https://www.booking.com/hotel/th/horange-phuket-town.html",
+    "official": "https://horangetown.phukethotel.info/en/"
    },
    "tags": [
     "night1"
    ],
    "sources": [
-    "research/phuket.md §1d, §2"
-   ]
+    "research/phuket.md §1d, §2",
+    "research/stays.md"
+   ],
+   "verdict": "Cheapest clean one-night turnaround near the pier; accept stairs and thin walls.",
+   "rooms": "3 x King rooms (no triples seen); 2+2+1",
+   "distances": {
+    "beach": "none (town)",
+    "pier": "Rassada 2.8 km",
+    "airport": "34 km"
+   },
+   "fitsBudget": true
   },
   "pearl-hotel-phuket": {
    "id": "pearl-hotel-phuket",
    "name": "Pearl Hotel Phuket",
    "type": "stay",
    "place": "phuket",
-   "area": "Phuket Town",
+   "area": "Phuket Town (Montri Rd)",
    "thai": null,
    "tagline": "Old Town classic on Montri Road, same street as Chuan Chim.",
    "priceTHB": null,
-   "priceINR": 13000,
-   "priceNote": "13,000 INR a night for 3 rooms (doc). Rating not readable by the tools; verify on Agoda.",
+   "priceINR": 9600,
+   "priceNote": "13,000 INR a night for 3 rooms (doc). Rating not readable by the tools; verify on Agoda. Per night, all rooms: MakeMyTrip 'from USD 38'/room (undated snippet) x3; TripAdvisor range $33-89",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 7.8,
+   "scale": "10",
+   "reviews": 564,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Trip.com 9.0/371; TripAdvisor 3.1/80)",
    "highlights": [
-    "6 km from Rassada pier",
-    "Chuan Chim (Michelin-listed) on the same road"
+    "Lift, pool, big-hotel lobby",
+    "0.3 mi to Soi Romanee",
+    "Walkability 95/100"
    ],
-   "praise": [],
+   "praise": [
+    "Great location for a quick walk into the Old Town",
+    "The room was clean and tidy with beautiful city and mountain view",
+    "Great location, within 20 minutes of all points of interest"
+   ],
    "complaints": [
-    "Looks pricey next to HOMA (9.2) or Travelodge (9.1) on the same list"
+    "Filthy landing carpets",
+    "Mattresses very hard",
+    "Refused to call a cab; dated rooms vs photos"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Pearl+Hotel+Phuket+Phuket",
-    "agoda": "https://www.agoda.com/en-in/accom/property?propertyId=10919"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pearl+Hotel+Phuket+Montri+Road",
+    "agoda": "https://www.agoda.com/partners/partnersearch.aspx?hid=10919",
+    "booking": "https://www.booking.com/hotel/th/pearl-phuket.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d308785-Reviews-Pearl_Hotel-Phuket_Town_Phuket.html"
    },
    "tags": [
     "night1"
    ],
    "sources": [
-    "research/phuket.md §2"
-   ]
+    "research/phuket.md §2",
+    "research/stays.md"
+   ],
+   "verdict": "Only if you want a lift and pool for one night; Western-platform reviews are poor.",
+   "rooms": "Deluxe Twin/Double + family rooms; 2+2+1",
+   "distances": {
+    "beach": "none",
+    "pier": "Rassada ~3 km",
+    "airport": "32 km"
+   },
+   "fitsBudget": true
   },
   "phuket-merlin-hotel": {
    "id": "phuket-merlin-hotel",
    "name": "Phuket Merlin Hotel",
    "type": "stay",
    "place": "phuket",
-   "area": "Phuket Town",
+   "area": "Phuket Town (Yaowarat Rd)",
    "thai": null,
    "tagline": "Big older hotel on Yaowarat Road, pier side.",
    "priceTHB": null,
-   "priceINR": 14700,
-   "priceNote": "14,700 INR a night for 3 rooms (doc). Rating not readable; verify.",
+   "priceINR": 9100,
+   "priceNote": "14,700 INR a night for 3 rooms (doc). Rating not readable; verify. Per night, all rooms: TripAdvisor range $36-84/room x3 at low end; dated price not readable",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
-   "highlights": [],
-   "praise": [],
+   "rating": 7.4,
+   "scale": "10",
+   "reviews": 810,
+   "reviewSource": "Booking.com snippet 2026-10-24 (TripAdvisor 3.0/115)",
+   "highlights": [
+    "Pool and lift",
+    "0.4 mi to Old Town",
+    "Large rooms"
+   ],
+   "praise": [
+    "Large rooms, daily cleaning, excellent air conditioning",
+    "The hotel staff is welcoming, smiling, and available",
+    "half-way between the Old Town and the Central Phuket"
+   ],
    "complaints": [
-    "The priciest of the three doc options for an unverified rating"
+    "Rooms very dated",
+    "Breakfast so bad guests ate out",
+    "Weak Wi-Fi (6.2)"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Phuket+Merlin+Hotel+Phuket",
-    "agoda": "https://www.agoda.com/en-in/accom/property?propertyId=48531"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phuket+Merlin+Hotel",
+    "agoda": "https://www.agoda.com/partners/partnersearch.aspx?hid=48531",
+    "booking": "https://www.booking.com/hotel/th/phuket-merlin.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d478783-Reviews-Phuket_Merlin_Hotel-Phuket_Town_Phuket.html"
    },
    "tags": [
     "night1"
    ],
    "sources": [
-    "research/phuket.md §2"
-   ]
+    "research/phuket.md §2",
+    "research/stays.md"
+   ],
+   "verdict": "Skip: lowest scores of the block and not cheaper.",
+   "rooms": "180 doubles/twins; 2+2+1",
+   "distances": {
+    "beach": "none (~20 km)",
+    "pier": "Rassada ~2.5-3 km",
+    "airport": "26 km"
+   },
+   "fitsBudget": true
   },
   "homa-phuket-town": {
    "id": "homa-phuket-town",
    "name": "HOMA Phuket Town",
    "type": "stay",
    "place": "phuket",
-   "area": "Phuket Town",
+   "area": "Ratsada, 2.9 km from Old Town",
    "thai": null,
    "tagline": "The best-rated Town hotel on Trip.com's list, about 38 USD a room.",
    "priceTHB": null,
-   "priceINR": 9576,
-   "priceNote": "About 38 USD a room in late Oct on Trip.com; three rooms about 9,600 INR.",
+   "priceINR": 11262,
+   "priceNote": "About 38 USD a room in late Oct on Trip.com; three rooms about 9,600 INR. Per night, all rooms: Kayak Classic INR 3,754 incl. VAT for 28-29 Oct 2026 (read 2026-10-24) x3; Nov dates not readable Per night, all rooms: Kayak Classic INR 3,754 for 28-29 Oct 2026 x3; Nov not readable",
    "when": null,
    "book": null,
-   "rating": 9.2,
+   "rating": 8.9,
    "scale": "10",
-   "reviews": 1043,
-   "reviewSource": "Trip.com, read 2026-10-24",
+   "reviews": 2121,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Kayak 9.0/2,919)",
    "highlights": [
-    "Co-living style hotel with pool and gym",
-    "Walk to Old Town food"
+    "Pool, gym, kitchens, laundry",
+    "Best facilities per rupee"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "best condo in Phuket town",
+    "Facilities 9.3"
+   ],
+   "complaints": [
+    "Grab to Old Town each evening",
+    "Dark no-window units"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=HOMA+Phuket+Town+Phuket",
+    "maps": "https://www.google.com/maps/search/?api=1&query=HOMA+Phuket+Town",
     "reviews": "https://www.trip.com/hotels/phuket-hotels-list-725/zone830/",
-    "booking": "https://www.booking.com/searchresults.html?ss=HOMA+Phuket+Town"
+    "booking": "https://www.booking.com/hotel/th/homa.html",
+    "official": "https://www.homa.co.th/",
+    "tripadvisor": "https://www.tripadvisor.in/Hotel_Review-g2315815-d23619637-Reviews-Homa_Phuket_Town-Ratsada_Phuket_Town_Phuket.html"
    },
    "tags": [
     "night1",
     "phuket4"
    ],
    "sources": [
-    "research/phuket.md §1d"
-   ]
+    "research/phuket.md §1d",
+    "research/stays.md"
+   ],
+   "verdict": "Strongest 4-night base on facilities if a nightly Grab is acceptable.",
+   "rooms": "3 studios or 1 x 2BR + 1 studio; 2+2+1",
+   "distances": {
+    "beach": "none",
+    "pier": "Rassada ~2-3 km",
+    "airport": "24-34 km"
+   },
+   "fitsBudget": true
   },
   "travelodge-phuket-town": {
    "id": "travelodge-phuket-town",
@@ -1161,34 +1305,52 @@ window.TRIP = {
    "name": "The Memory at On On",
    "type": "stay",
    "place": "phuket",
-   "area": "Phuket Old Town",
+   "area": "Phuket Old Town core",
    "thai": null,
    "tagline": "Heritage Sino-Portuguese hotel in Old Town (the one from The Beach).",
    "priceTHB": null,
-   "priceINR": 9576,
-   "priceNote": "About 38 USD a room (Travelocity snapshot).",
+   "priceINR": 12348,
+   "priceNote": "About 38 USD a room (Travelocity snapshot). Per night, all rooms: TripAdvisor range $49-143/room; x3 at low end; Superior likely top of our band Per night, all rooms: TripAdvisor range $49-143/room; x3 at low end",
    "when": null,
    "book": null,
    "rating": 9.2,
    "scale": "10",
-   "reviews": 634,
-   "reviewSource": "Travelocity, read 2026-10-24",
+   "reviews": 2031,
+   "reviewSource": "Booking.com snippet 2026-10-24",
    "highlights": [
-    "Oldest hotel in Phuket, restored",
-    "On Phang Nga Road in the middle of the food streets"
+    "Heritage hotel, #7 of 158",
+    "Old Town on foot"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "Our room was spotless. Super comfy bed",
+    "Amazing place for the price"
+   ],
+   "complaints": [
+    "No lift, no common-area AC",
+    "Small Superior rooms for 4 nights"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=The+Memory+at+On+On+Phuket",
-    "booking": "https://www.booking.com/searchresults.html?ss=The+Memory+at+On+On+Hotel"
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Memory+at+On+On+Hotel+Phuket",
+    "booking": "https://www.booking.com/hotel/th/the-memory-at-on-on.html",
+    "official": "https://www.thememoryhotel.com/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d3929799-Reviews-The_Memory_at_On_On_Hotel-Phuket_Town_Phuket.html"
    },
    "tags": [
-    "phuket4"
+    "phuket4",
+    "night1"
    ],
    "sources": [
-    "research/phuket.md §1d"
-   ]
+    "research/phuket.md §1d",
+    "research/stays.md"
+   ],
+   "verdict": "Top-rated Old Town base if Deluxe rooms fit the band.",
+   "rooms": "Deluxe 25 m2 recommended over Superior 16 m2; 2+2+1",
+   "distances": {
+    "beach": "none (Kata/Patong 30-40 min taxi)",
+    "pier": "Rassada ~3 km",
+    "airport": "34 km"
+   },
+   "fitsBudget": true
   },
   "chanalai-flora-resort": {
    "id": "chanalai-flora-resort",
@@ -1439,280 +1601,430 @@ window.TRIP = {
    "name": "Ban Preeya Private Pool Villa",
    "type": "stay",
    "place": "aonang",
-   "area": "Na Thai, Ao Nang",
+   "area": "Na Thai, Ao Nang (5-min drive to beach)",
    "thai": null,
    "tagline": "The doc's Airbnb: 3 king en-suites and a private pool, inland in Na Thai.",
    "priceTHB": null,
    "priceINR": 38000,
-   "priceNote": "38,000 INR for 2 nights, 3 rooms: about 6,330 INR per room-night, above the 5K cap (about 3,800 per person).",
+   "priceNote": "38,000 INR for 2 nights, 3 rooms: about 6,330 INR per room-night, above the 5K cap (about 3,800 per person). Airbnb shows no price without dates",
    "when": "Wed 18 to Fri 20 Nov",
    "book": "Airbnb",
    "rating": 4.92,
    "scale": "5",
    "reviews": 64,
-   "reviewSource": "Airbnb listing, read 2026-10-24",
+   "reviewSource": "Airbnb 2026-10-24",
    "highlights": [
-    "3 bedrooms, 3 king beds, 3.5 bathrooms, up to 7 guests",
-    "Private pool, kitchen, BBQ, laundry, free parking",
-    "Superhost Wayne, 12 years hosting, responds within an hour",
-    "Guest favourite; cleanliness 4.9, location 4.8, value 4.9"
+    "Guest Favourite, 92% five-star",
+    "Private pool, mountain view, BBQ",
+    "3.5 bathrooms"
    ],
-   "praise": [],
+   "praise": [
+    "Hospitality: 56 mentions",
+    "Pool: 23 mentions",
+    "Communication 5.0, Cleanliness 4.9"
+   ],
    "complaints": [
-    "Inland: a 5-minute drive to the beach and bars, so every outing is a Grab or scooter",
-    "Check-in and check-out times not shown without dates; ask the host"
+    "Location 4.8 is the lowest category: taxis every evening",
+    "No written negatives readable"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Ban+Preeya+Private+Pool+Villa+Ao+Nang+Krabi",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Na+Thai+Ao+Nang+Krabi",
     "airbnb": "https://www.airbnb.co.in/rooms/4114674"
    },
    "tags": [
     "aonang"
    ],
    "sources": [
-    "research/krabi-ao-nang.md §1"
-   ]
+    "research/krabi-ao-nang.md §1",
+    "research/stays.md"
+   ],
+   "verdict": "Best-reviewed villa with 3 full baths; take it if you accept taxis and the 2-night total is under 30,000 INR.",
+   "rooms": "3 bedrooms x 1 king, 3.5 baths, max 7; 5th adult has a king alone",
+   "distances": {
+    "beach": "~3-4 km / 5-min drive, not walkable",
+    "pier": "Nopparat Thara ~5 km",
+    "airport": "Krabi ~30 km"
+   },
+   "fitsBudget": false
   },
   "smooth-as-silk-pool-villa": {
    "id": "smooth-as-silk-pool-villa",
    "name": "Smooth as Silk Pool Villa",
    "type": "stay",
    "place": "aonang",
-   "area": "Ao Nang",
+   "area": "Soi Ao Nang 6 (1.9-2.6 km from beach)",
    "thai": null,
    "tagline": "3-bedroom private pool villa in Ao Nang, from about 170 USD a night.",
    "priceTHB": null,
-   "priceINR": 28560,
-   "priceNote": "From-price on Booking.com for 2 adults; about 4,800 INR per room-night. Not a quote for the dates.",
+   "priceINR": 21600,
+   "priceNote": "From-price on Booking.com for 2 adults; about 4,800 INR per room-night. Not a quote for the dates. Per night, all rooms: Mirror FAQ 'from $257/night' (read 2026-10-24) = ~7,200 INR/room, over cap; Booking page empty",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 9.7,
+   "scale": "10",
+   "reviews": 85,
+   "reviewSource": "Booking.com snippet 2026-10-24 (mirror 9.5/73)",
    "highlights": [
-    "3 king-bed rooms, sleeps 6"
+    "Top score of the block",
+    "Pool + hot tub",
+    "Closest-to-walkable villa"
    ],
-   "praise": [],
+   "praise": [
+    "Cleanliness and value rated highest",
+    "Listing accuracy praised",
+    "Hot tub and pool"
+   ],
    "complaints": [
-    "Booking page returned empty to the tools; verify availability for 18 to 20 Nov"
+    "Location lowest category (8.7), hard to find",
+    "Only 2 bathrooms",
+    "Different 'Platinum' villa shares the name"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Smooth+as+Silk+Pool+Villa+Ao+Nang+Krabi",
-    "booking": "https://www.booking.com/hotel/th/exclusive-private-pool-villa-smoth-as-silk.html"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Soi+Ao+Nang+6+Krabi",
+    "booking": "https://www.booking.com/hotel/th/exclusive-private-pool-villa-smoth-as-silk.html",
+    "official": "https://exclusive-private-pool-villa-smoth-as-silk.hotels-krabi.com/en/"
    },
    "tags": [
     "aonang"
    ],
    "sources": [
-    "research/krabi-ao-nang.md §1"
-   ]
+    "research/krabi-ao-nang.md §1",
+    "research/stays.md"
+   ],
+   "verdict": "Only pursue if Booking shows 15,000 INR/night or less for our dates; the readable price is 40% over.",
+   "rooms": "3 bedrooms, 2 bathrooms, sleeps 6-7; 2+2+1",
+   "distances": {
+    "beach": "Ao Nang 1.9 km / 25-min walk; Nopparat Thara 1.3-1.8 km",
+    "pier": "Nopparat Thara ~2 km",
+    "airport": "Krabi 28 km"
+   },
+   "fitsBudget": false
   },
   "aonang-nine-poolvilla": {
    "id": "aonang-nine-poolvilla",
    "name": "Aonang Nine Poolvilla",
    "type": "stay",
    "place": "aonang",
-   "area": "Ao Nang Beach",
+   "area": "Ao Nang, 3.5 km from centre",
    "thai": null,
    "tagline": "3-bedroom pool villas near Ao Nang Beach, from about 189 USD a night.",
    "priceTHB": null,
    "priceINR": 31752,
-   "priceNote": "From-price on Booking.com; about 5,300 INR per room-night, right at the cap.",
+   "priceNote": "From-price on Booking.com; about 5,300 INR per room-night, right at the cap. TripAdvisor range $104-363 'standard room'; low end would fit (~2,900 INR/room) but unverified",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 9.5,
+   "scale": "10",
+   "reviews": 157,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Google 4.9/57; TripAdvisor 0 reviews)",
    "highlights": [
-    "Every villa 3 bedrooms, 6 guests"
+    "Cleanliness/comfort 9.7",
+    "Private pool per villa",
+    "Google 4.9"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "Cleanliness 9.7",
+    "Comfort 9.7",
+    "Planet of Hotels 9.7/301"
+   ],
+   "complaints": [
+    "Location 8.5",
+    "Bedroom counts differ by listing",
+    "Zero TripAdvisor reviews"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Aonang+Nine+Poolvilla+Ao+Nang+Krabi",
-    "booking": "https://www.booking.com/hotel/th/the-nine-villa.html"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Aonang+Nine+Poolvilla+Krabi",
+    "booking": "https://www.booking.com/hotel/th/the-nine-villa.html",
+    "official": "https://aonang-nine-poolvilla.aonanghotels.net/en/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1507054-d17803812-Reviews-Aonang_Nine_Pool_Villa-Ao_Nang_Krabi_Province.html"
    },
    "tags": [
     "aonang"
    ],
    "sources": [
-    "research/krabi-ao-nang.md §1"
-   ]
+    "research/krabi-ao-nang.md §1",
+    "research/stays.md"
+   ],
+   "verdict": "Same taxi-to-town proposition as Ban Preeya with thinner independent coverage; pick on price.",
+   "rooms": "3-bedroom villas for 6 (some 4BR); 2+2+1",
+   "distances": {
+    "beach": "~3.5 km, not walkable",
+    "pier": "Nopparat Thara ~4 km",
+    "airport": "Krabi ~17 km"
+   },
+   "fitsBudget": false
   },
   "anawin-bungalows": {
    "id": "anawin-bungalows",
    "name": "Anawin Bungalows",
    "type": "stay",
    "place": "aonang",
-   "area": "Ao Nang",
+   "area": "Central Ao Nang back street, 300 m from beach",
    "thai": null,
    "tagline": "Quiet garden bungalows, walkable to the Ao Nang strip.",
    "priceTHB": null,
-   "priceINR": null,
-   "priceNote": "No price on the page; check for the dates.",
+   "priceINR": 6300,
+   "priceNote": "No price on the page; check for the dates. Per night, all rooms: TripAdvisor range $25-146/room; x3 at low end; Trip.com avg USD 96 likely the 3BR house",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 8.6,
+   "scale": "10",
+   "reviews": 471,
+   "reviewSource": "Booking.com snippet 2026-10-24 (TripAdvisor 4.1/202; Trip.com 8.0/529)",
    "highlights": [
-    "Named by Indie Traveller's 2026-10-14 guide as the walkable budget pick"
+    "Genuinely walkable to beach and bars",
+    "Booking location 9.5",
+    "3-bedroom house available"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "The bungalow is clean, cozy, and just a short walk from the beach",
+    "5 nights spent in this very quiet place, relaxing",
+    "Central yet quiet"
+   ],
+   "complaints": [
+    "Stained/torn bedding, sand and hair in beds (Feb 2026)",
+    "No housekeeping during stay (Feb 2026)",
+    "Repeated owner rudeness/dishonesty claims"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Anawin+Bungalows+Ao+Nang+Krabi",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Anawin+Bungalows+Ao+Nang",
     "official": "https://www.indietraveller.co/where-to-stay-in-krabi/",
-    "booking": "https://www.booking.com/searchresults.html?ss=Anawin+Bungalows+Ao+Nang"
+    "booking": "https://www.booking.com/hotel/th/anawin-bungalows.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1507054-d1573289-Reviews-Anawin_Bungalows-Ao_Nang_Krabi_Province.html"
    },
    "tags": [
     "aonang"
    ],
    "sources": [
-    "research/krabi-ao-nang.md §1"
-   ]
+    "research/krabi-ao-nang.md §1",
+    "research/stays.md"
+   ],
+   "verdict": "The walkable budget pick; recent owner and cleanliness complaints mean book refundable.",
+   "rooms": "9 bungalows: doubles, family cottage, 3-bedroom house (3 doubles + 2 sofa beds); 2+2+1 or the 3BR house",
+   "distances": {
+    "beach": "300-380 m, 3-5 min walk",
+    "pier": "Nopparat Thara ~2.5 km",
+    "airport": "Krabi ~26 km"
+   },
+   "fitsBudget": true
   },
   "doo-dee-boutique-resort": {
    "id": "doo-dee-boutique-resort",
    "name": "Doo Dee Boutique Resort",
    "type": "stay",
    "place": "aonang",
-   "area": "Nopparat Thara",
+   "area": "Between Ao Nang and Nopparat Thara, near night market",
    "thai": null,
    "tagline": "Budget jungle-style resort in Nopparat Thara, by the Landmark night market.",
    "priceTHB": null,
-   "priceINR": null,
-   "priceNote": null,
+   "priceINR": 11100,
+   "priceNote": "Per night, all rooms: ZenHotels 'from $44'/room x3 (snippet); TripAdvisor range $27-104",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
+   "rating": 8.6,
+   "scale": "10",
    "reviews": null,
-   "reviewSource": null,
+   "reviewSource": "Expedia snippet 2026-10-24 (Booking-based 8.2/781; TripAdvisor 3.9/12)",
    "highlights": [
-    "Next to the night market and the pier for Phi Phi and Railay boats"
+    "Pool",
+    "Group room for six",
+    "Renovated Oct 2023"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "What a find with great value",
+    "Great location for the nightmarket. Very quiet and chilled",
+    "Pool most-praised feature"
+   ],
+   "complaints": [
+    "Misleading photos, rude staff, sewage smells, bugs (Jan 2026)",
+    "Rooms and bathrooms need updating",
+    "Street-boxing noise"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Doo+Dee+Boutique+Resort+Ao+Nang+Krabi",
-    "official": "https://www.indietraveller.co/where-to-stay-in-krabi/",
-    "booking": "https://www.booking.com/searchresults.html?ss=Doo+Dee+Boutique+Resort+Krabi"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Doo+Dee+Boutique+Resort+Ao+Nang",
+    "official": "https://doo-dee-boutique-resort-by-swiss-chalet.aonanghotels.net/en/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Doo+Dee+Boutique+Resort+Krabi",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1507054-d23524503-Reviews-Doo_Dee_Boutique_Resort_by_Swiss_Chalet-Ao_Nang_Krabi_Province.html"
    },
    "tags": [
     "aonang"
    ],
    "sources": [
-    "research/krabi-ao-nang.md §1"
-   ]
+    "research/krabi-ao-nang.md §1",
+    "research/stays.md"
+   ],
+   "verdict": "Middle option with a pool and a six-person room; split reviews put it behind Anawin on location and the villas on comfort.",
+   "rooms": "King/Twin bungalows, Family Room, Group Room up to 6 (30-50 m2); 3 rooms or 1 group room",
+   "distances": {
+    "beach": "Ao Nang 10-15 min walk; Nopparat Thara 12 min",
+    "pier": "Nopparat Thara ~1.5 km",
+    "airport": "Krabi ~30 km"
+   },
+   "fitsBudget": true
   },
   "white-house-phi-phi-island": {
    "id": "white-house-phi-phi-island",
    "name": "White House Phi Phi Island",
    "type": "stay",
    "place": "phiphi",
-   "area": "Tonsai",
+   "area": "Tonsai village, Soi Chao Koh",
    "thai": null,
    "tagline": "Simple clean AC rooms in Tonsai, set back from the noise, 5 min from the bars.",
    "priceTHB": 1250,
    "priceINR": null,
-   "priceNote": "About 1,000 to 1,500 THB a room by season (blog figure, undated). Live rates were not readable.",
+   "priceNote": "About 1,000 to 1,500 THB a room by season (blog figure, undated). Live rates were not readable. Contradictory: Hotels.com AU$28 vs Booking 'from $83' vs Trip.com avg USD 100; verify",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 9.0,
+   "scale": "10",
+   "reviews": 44,
+   "reviewSource": "Trip.com 2026-10-24 (Booking 3.7/3; Hotels.com 7.6)",
    "highlights": [
-    "Fits the brief: quiet enough to sleep, close enough to walk to the fire shows"
+    "Friendly hosts",
+    "10 min from pier",
+    "Cheap on some sites"
    ],
-   "praise": [],
-   "complaints": [],
+   "praise": [
+    "Great location, very friendly staff, and everything was quite clean",
+    "Such welcoming hosts and clean rooms",
+    "Staff incredibly friendly and professional"
+   ],
+   "complaints": [
+    "Weak internet, very hard mattresses",
+    "Room opens straight onto the street",
+    "Cockroach; street/construction noise"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=White+House+Phi+Phi+Island+Ko+Phi+Phi",
+    "maps": "https://www.google.com/maps/search/?api=1&query=White+House+Phi+Phi+Island+Tonsai",
     "reviews": "https://www.rexby.com/da/Pragz_klgg/ttd/budget-hotel-in-phi-phi-don-ao-nang",
-    "booking": "https://www.booking.com/searchresults.html?ss=White+House+Phi+Phi"
+    "booking": "https://www.booking.com/hotel/th/white-house-krabi.html",
+    "tripadvisor": "https://www.tripadvisor.in/Hotel_Review-g297927-d32837027-Reviews-White_House_Phi_Phi_Island-Krabi_Town_Krabi_Province.html"
    },
    "tags": [
     "phiphi"
    ],
    "sources": [
-    "research/phi-phi.md §2"
-   ]
+    "research/phi-phi.md §2",
+    "research/stays.md"
+   ],
+   "verdict": "Too few independent reviews to trust; cheap fallback only.",
+   "rooms": "Standard Twin (2 singles) / Standard Double; 2+2+1",
+   "distances": {
+    "beach": "Loh Dalum ~200-400 m",
+    "pier": "700 m / 10 min walk",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": false
   },
   "p2-wood-loft": {
    "id": "p2-wood-loft",
    "name": "P2 Wood Loft",
    "type": "stay",
    "place": "phiphi",
-   "area": "Tonsai",
+   "area": "Centre of Tonsai village",
    "thai": null,
    "tagline": "Modern rooms in the centre of Tonsai village.",
    "priceTHB": 1500,
-   "priceINR": null,
-   "priceNote": "Mid tier, no THB on the guide page.",
+   "priceINR": 7560,
+   "priceNote": "Mid tier, no THB on the guide page. Per night, all rooms: TripAdvisor range $30-138/room; x3 at low end; MakeMyTrip USD 226 likely multi-night",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
-   "highlights": [],
-   "praise": [],
+   "rating": 8.3,
+   "scale": "10",
+   "reviews": 3062,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Agoda 8.7/1,807; TripAdvisor 3.5/43)",
+   "highlights": [
+    "Location 9.4",
+    "Modern loft design",
+    "Large review base"
+   ],
+   "praise": [
+    "It was clean, comfortable and affordable. Great staff",
+    "Located in the middle of Phi Phi",
+    "Recommended by 87% on Agoda"
+   ],
    "complaints": [
-    "Central means noise till 02:00; bring earplugs"
+    "Stench in bathroom, stained linens (Dec 2024)",
+    "Looks beautiful in photos, far from pleasant in reality (May 2026)",
+    "Bathroom 4% positive on Agoda topics"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=P2+Wood+Loft+Ko+Phi+Phi",
-    "booking": "https://www.booking.com/hotel/th/p2-wood-loft-phi-phi-don.xu.html",
-    "reviews": "https://breathingtravel.com/where-to-stay-in-phi-phi-islands/"
+    "maps": "https://www.google.com/maps/search/?api=1&query=P2+Wood+Loft+Phi+Phi",
+    "booking": "https://www.booking.com/hotel/th/p2-wood-loft-phi-phi-don.html",
+    "reviews": "https://breathingtravel.com/where-to-stay-in-phi-phi-islands/",
+    "agoda": "https://www.agoda.com/p2-wood-loft/hotel/koh-phi-phi-th.html",
+    "official": "https://www.p2woodloft.top/en/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d20235214-Reviews-P2_Wood_Loft-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
    },
    "tags": [
     "phiphi"
    ],
    "sources": [
-    "research/phi-phi.md §2"
-   ]
+    "research/phi-phi.md §2",
+    "research/stays.md"
+   ],
+   "verdict": "Central and cheap enough, but bathroom/cleanliness complaints are the pattern; second tier.",
+   "rooms": "Doubles; quad room (2 doubles) sells out; 2+2+1",
+   "distances": {
+    "beach": "Loh Dalum ~300 m",
+    "pier": "5-10 min walk",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": true
   },
   "paradise-pearl-bungalows": {
    "id": "paradise-pearl-bungalows",
    "name": "Paradise Pearl Bungalows",
    "type": "stay",
    "place": "phiphi",
-   "area": "Long Beach",
+   "area": "Long Beach (Hat Yao), north end",
    "thai": null,
    "tagline": "On Long Beach: quiet, good seafood BBQ, a longtail from the bars.",
    "priceTHB": 1800,
    "priceINR": null,
-   "priceNote": "Marginal against the cap; blog tier.",
+   "priceNote": "Marginal against the cap; blog tier. No price readable on any open page; Oyster 'Mid-Range'",
    "when": null,
    "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
+   "rating": 8.9,
+   "scale": "10",
+   "reviews": 1845,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Trip.com 8.9/43)",
    "highlights": [
-    "On the sand, quiet side"
+    "Best beach of the block, Phi Phi Leh view",
+    "Breakfast included, beachfront restaurant",
+    "Location 9.8 on Trip.com"
    ],
-   "praise": [],
+   "praise": [
+    "The absolute best hotel on the island",
+    "Excellent shuttle service to and from the island pier",
+    "The beach in front is amazing"
+   ],
    "complaints": [
-    "Thin walls",
-    "100 to 200 THB longtail each way to Tonsai, may not run late"
+    "Terribly unfriendly staff (Apr 2025)",
+    "Sticky/yellowed sheets, bugs in bed",
+    "Faulty wiring in old rooms; no pool; boat fees"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Paradise+Pearl+Bungalows+Ko+Phi+Phi",
-    "booking": "https://www.booking.com/hotel/th/paradise-pearl-bungalows.xu.html",
-    "reviews": "https://amazinglanta.com/koh-phi-phi-hotels-where-to-stay/"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Paradise+Pearl+Bungalows+Long+Beach+Phi+Phi",
+    "booking": "https://www.booking.com/hotel/th/paradise-pearl-bungalows.html",
+    "reviews": "https://amazinglanta.com/koh-phi-phi-hotels-where-to-stay/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1312449-Reviews-Paradise_Pearl_Bungalows-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
    },
    "tags": [
     "phiphi"
    ],
    "sources": [
-    "research/phi-phi.md §2"
-   ]
+    "research/phi-phi.md §2",
+    "research/stays.md"
+   ],
+   "verdict": "Lovely beach but a one-night stay is spent on boats; only if quiet beats Tonsai bars.",
+   "rooms": "Rooms (some sleep 3) and teak bungalows; family bungalows sleep 3-4; 2+2+1 or 3+2",
+   "distances": {
+    "beach": "on the beach",
+    "pier": "no pier; longtail from Tonsai (free arrival, ~100 THB after); 35-min rough path",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": false
   },
   "big-buddha-hike-from-karon": {
    "id": "big-buddha-hike-from-karon",
@@ -4241,6 +4553,667 @@ window.TRIP = {
    "sources": [
     "research/phi-phi.md §2"
    ]
+  },
+  "casa-blanca-boutique": {
+   "id": "casa-blanca-boutique",
+   "name": "Casa Blanca Boutique Hotel",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Phuket Old Town core",
+   "thai": null,
+   "tagline": "Old Town pick for night 1 if you want to walk to dinner; bring earplugs.",
+   "priceTHB": null,
+   "priceINR": 11760,
+   "priceNote": "Per night, all rooms: Expedia from THB 1,175 (~1,395 with taxes) per room, snippet 2026-10-24, x3; Google typical $36 Per night, all rooms: Expedia from THB 1,175/room snippet x3",
+   "when": null,
+   "book": null,
+   "rating": 9.2,
+   "scale": "10",
+   "reviews": 79,
+   "reviewSource": "Trip.com 2026-10-24 (TripAdvisor 4.5/587)",
+   "highlights": [
+    "Small pool",
+    "Old Town on foot"
+   ],
+   "praise": [
+    "Location was right next to Old Phuket Town",
+    "Amazing stay with friendly staff"
+   ],
+   "complaints": [
+    "Poor soundproofing",
+    "Weak water pressure"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Casa+Blanca+Boutique+Hotel+Phuket",
+    "booking": "https://www.booking.com/searchresults.html?ss=Casa+Blanca+Boutique+Hotel+Phuket",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d2294777-Reviews-Casa_Blanca_Boutique_Hotel-Phuket_Town_Phuket.html"
+   },
+   "tags": [
+    "night1",
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Only Old Town heritage option with a pool; thin walls over 4 nights.",
+   "rooms": "Doubles/twins; 2+2+1",
+   "distances": {
+    "beach": "none",
+    "pier": "Rassada ~3 km",
+    "airport": "~33 km"
+   },
+   "fitsBudget": true
+  },
+  "phi-phi-villa-resort": {
+   "id": "phi-phi-villa-resort",
+   "name": "Phi Phi Villa Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "East end of Tonsai Bay, beachfront",
+   "thai": null,
+   "tagline": "Over budget and the weakest TripAdvisor read; drop.",
+   "priceTHB": null,
+   "priceINR": 23940,
+   "priceNote": "Per night, all rooms: TripAdvisor range $95-435/room x3 at low end: over the 1,780 THB cap",
+   "when": null,
+   "book": null,
+   "rating": 8.1,
+   "scale": "10",
+   "reviews": 4201,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Agoda 8.1/2,269; TripAdvisor 3.2/902)",
+   "highlights": [
+    "Pool and beachfront",
+    "Family rooms",
+    "Grounds praised"
+   ],
+   "praise": [
+    "Sitting on the beach edge was stunning",
+    "Pool is lovely, clean and well looked after",
+    "Just 5m to the pool and 10m to the beach"
+   ],
+   "complaints": [
+    "Construction site two meters from window (Mar 2026)",
+    "Loud aircon kept us awake",
+    "Surprise deposit; hostile front desk reports"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Villa+Resort+Tonsai",
+    "booking": "https://www.booking.com/hotel/th/phi-phi-villa-resort.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d636091-Reviews-Phi_Phi_Villa_Resort-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "phiphi"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Over budget and the weakest TripAdvisor read; drop.",
+   "rooms": "Beach-view rooms, bungalows, villas, family rooms; 2+2+1",
+   "distances": {
+    "beach": "on Tonsai beach (boat traffic)",
+    "pier": "~1 km / 15 min walk",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": false
+  },
+  "ton-sai-tropical": {
+   "id": "ton-sai-tropical",
+   "name": "Ton Sai Tropical Phi Phi Island (Phi Phi Tonsai Place)",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai village, by the pier",
+   "thai": null,
+   "tagline": "First pick for one night if rooms come in at or under 1,780 THB.",
+   "priceTHB": null,
+   "priceINR": 12852,
+   "priceNote": "Per night, all rooms: Booking snippets $51-94/room; x3 at low end ($51 = ~1,525 THB, under cap)",
+   "when": null,
+   "book": null,
+   "rating": 8.8,
+   "scale": "10",
+   "reviews": 1555,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Agoda 8.3; TripAdvisor 3.8/153)",
+   "highlights": [
+    "Best Booking score of Tonsai budget stays",
+    "Steps from the pier",
+    "Value 8.9"
+   ],
+   "praise": [
+    "The loveliest hotel on PhiPhi",
+    "The staff are incredible",
+    "Its a 30 second walk from everything"
+   ],
+   "complaints": [
+    "Construction nearby (2023)",
+    "Alleyway always flooded",
+    "Wet-room bathroom gets soaked"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ton+Sai+Tropical+Phi+Phi+Island",
+    "booking": "https://www.booking.com/hotel/th/phi-phi-ton-sai-place.html",
+    "agoda": "https://www.agoda.com/phi-phi-tonsai-place/hotel/ko-phi-phi-th.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d6481991-Reviews-Phi_Phi_Tonsai_Place-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "phiphi"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "First pick for one night if rooms come in at or under 1,780 THB.",
+   "rooms": "Standard AC rooms, extra bed possible; 2+2+1",
+   "distances": {
+    "beach": "Tonsai ~150 m",
+    "pier": "~2 min walk",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": true
+  },
+  "ivory-phi-phi": {
+   "id": "ivory-phi-phi",
+   "name": "Ivory Phi Phi Island",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Middle of Tonsai village, opposite the market",
+   "thai": null,
+   "tagline": "Right for one cheap night, not for comfort.",
+   "priceTHB": null,
+   "priceINR": 8430,
+   "priceNote": "Per night, all rooms: Travelfish 1,000-1,700 THB/double (snippet); x3 at low end",
+   "when": null,
+   "book": null,
+   "rating": 9.9,
+   "scale": "10",
+   "reviews": 171,
+   "reviewSource": "Hostelworld 2026-10-24 (Trip.com 8.8; TripAdvisor 3.7/282)",
+   "highlights": [
+    "Cheapest well-loved private rooms",
+    "Family-run, remembers names",
+    "Staff and location 10.0 on Hostelworld"
+   ],
+   "praise": [
+    "The best place to stay on the Phi Phi islands",
+    "Very clean, friendly staff, great location",
+    "Knew our names before we even arrived"
+   ],
+   "complaints": [
+    "Salty shower water",
+    "Windowless rooms; night noise, earplugs advised",
+    "Backpacker-grade comfort"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ivory+Phi+Phi+Island+guesthouse",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1804327-Reviews-Ivory_Phi_Phi_Island-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "phiphi"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Right for one cheap night, not for comfort.",
+   "rooms": "10 private doubles/twins (some windowless); 2+2+1",
+   "distances": {
+    "beach": "Loh Dalum 120-400 m",
+    "pier": "3-10 min walk",
+    "airport": "n/a (ferry)"
+   },
+   "fitsBudget": true
+  },
+  "pineapple-guesthouse-karon": {
+   "id": "pineapple-guesthouse-karon",
+   "name": "Pineapple Guesthouse",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon (south-central)",
+   "thai": null,
+   "tagline": "Highest score-per-rupee in Kata/Karon; the triple room solves the fifth adult.",
+   "priceTHB": null,
+   "priceINR": 8250,
+   "priceNote": "Per night, all rooms: Booking snippet ~$32.73/room (undated) x3",
+   "when": null,
+   "book": null,
+   "rating": 9.0,
+   "scale": "10",
+   "reviews": 458,
+   "reviewSource": "Booking.com snippet 2026-10-24 (TripAdvisor 4.3/67)",
+   "highlights": [
+    "Value 9.3, location 9.1",
+    "Triple room",
+    "Free beach gear"
+   ],
+   "praise": [
+    "family-friendly, with spacious private rooms",
+    "Great budget option not far from beach",
+    "basic but adequate"
+   ],
+   "complaints": [
+    "Street noise",
+    "AC not strong enough",
+    "Broken shower door; no pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Pineapple+Guesthouse+Karon",
+    "booking": "https://www.booking.com/hotel/th/pineapple-guesthouse.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215780-d777034-Reviews-Pineapple_Guesthouse-Karon_Phuket.html"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Highest score-per-rupee in Kata/Karon; the triple room solves the fifth adult.",
+   "rooms": "King, Twin and Triple rooms; 2+3 or 2+2+1",
+   "distances": {
+    "beach": "Karon ~5 min walk",
+    "pier": "Rassada ~17 km",
+    "airport": "~45 km"
+   },
+   "fitsBudget": true
+  },
+  "kata-tranquil-villa": {
+   "id": "kata-tranquil-villa",
+   "name": "Kata Tranquil Villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Between Kata and Karon, uphill",
+   "thai": null,
+   "tagline": "Pool and villa feel cheaply, but confirm no renovation works before booking.",
+   "priceTHB": null,
+   "priceINR": 7056,
+   "priceNote": "Per night, all rooms: TripAdvisor range $28-96/room; x3 at low end",
+   "when": null,
+   "book": null,
+   "rating": 9.1,
+   "scale": "10",
+   "reviews": 648,
+   "reviewSource": "Booking.com snippet 2026-10-24 (TripAdvisor 4.6/140)",
+   "highlights": [
+    "Pool at guesthouse money",
+    "Staff praised",
+    "Children stay free"
+   ],
+   "praise": [
+    "The staff are fantastic. Friendly, helpful",
+    "very near to the beach 5 mins walk only",
+    "very good price compared to other accommodations"
+   ],
+   "complaints": [
+    "Unannounced renovation and safety concerns (May 2026)",
+    "No staff on site at night",
+    "3% debit-card fee; hard to find; hill"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Tranquil+Villa+Karon",
+    "booking": "https://www.booking.com/hotel/th/kata-tranquil-villa.html",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215780-d3930954-Reviews-Kata_Tranquil_Villa-Karon_Phuket.html"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Pool and villa feel cheaply, but confirm no renovation works before booking.",
+   "rooms": "22 rooms: garden villas, poolside bungalows, family rooms, rollaways; 2+2+1",
+   "distances": {
+    "beach": "5-20 min walk, uphill return",
+    "pier": "Rassada ~17 km",
+    "airport": "~45 km"
+   },
+   "fitsBudget": true
+  },
+  "kk-karon-kata-boutique": {
+   "id": "kk-karon-kata-boutique",
+   "name": "KK Karon Kata Boutique Hotel",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Between Karon (3 min) and Kata (7 min) beaches",
+   "thai": null,
+   "tagline": "Most hotel-like Kata/Karon option with a triple room; needs a price check.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "All pages 'choose dates'; price not readable",
+   "when": null,
+   "book": null,
+   "rating": 8.6,
+   "scale": "10",
+   "reviews": 212,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Trip.com 8.9/114)",
+   "highlights": [
+    "True triple room",
+    "Rooftop pool",
+    "Both beaches on foot"
+   ],
+   "praise": [
+    "A nice hotel in walking distance to Kata and Karon beaches",
+    "Rooftop pool",
+    "Trip.com 8.9"
+   ],
+   "complaints": [
+    "No balcony or openable window in Superior Triple",
+    "Breakfast basic",
+    "Busy area"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=KK+Karon+Kata+Boutique+Hotel",
+    "booking": "https://www.booking.com/hotel/th/kk-karon-kata-boutique.html",
+    "official": "https://kkkaronkataboutiquehotel.com-phuket.com/"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Most hotel-like Kata/Karon option with a triple room; needs a price check.",
+   "rooms": "Superior Triple 26 m2 (king + single, sleeps 4) + 2BR suite 56 m2; 3+2",
+   "distances": {
+    "beach": "Karon 3 min / Kata 7 min walk",
+    "pier": "Rassada ~17 km",
+    "airport": "~45 km"
+   },
+   "fitsBudget": false
+  },
+  "prima-karon-villa": {
+   "id": "prima-karon-villa",
+   "name": "Prima Karon Beach Villa (Sun Paradise Villas Karon)",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon, ~8-min walk to beach",
+   "thai": null,
+   "tagline": "Needs a live Airbnb price and bathroom count before it counts.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Not readable; Airbnb 45800213 alternative is gone (HTTP 410)",
+   "when": null,
+   "book": null,
+   "rating": 4.88,
+   "scale": "5",
+   "reviews": 68,
+   "reviewSource": "Airbnb snippet 2026-10-24",
+   "highlights": [
+    "Only walkable 3BR villa lead in Kata/Karon",
+    "Sea views, some units with pool"
+   ],
+   "praise": [
+    "comfortable place near the beach with ocean views",
+    "value 4.6"
+   ],
+   "complaints": [
+    "Name overlaps with a 2BR 'Prima Villas by PHR'",
+    "No review text readable"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sun+Paradise+Villas+Karon",
+    "official": "https://www.travelocity.com/Phuket-Hotels-Sun-Paradise-Villas-Karon.h12758973.Hotel-Information"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Needs a live Airbnb price and bathroom count before it counts.",
+   "rooms": "3 bedrooms, up to 6 guests; 2+2+1",
+   "distances": {
+    "beach": "~8 min walk",
+    "pier": "Rassada ~17 km",
+    "airport": "~45 km"
+   },
+   "fitsBudget": false
+  },
+  "xinlor-house": {
+   "id": "xinlor-house",
+   "name": "Xinlor House - Phuket Old Town",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Phuket Old Town, 0.2 km from core",
+   "thai": null,
+   "tagline": "Best-value 9+ in Old Town for people who are out all day.",
+   "priceTHB": null,
+   "priceINR": 9600,
+   "priceNote": "Per night, all rooms: Hotels.com AU$57 (~3,200 INR)/room snippet x3; MakeMyTrip $83 non-refundable deluxe is high",
+   "when": null,
+   "book": null,
+   "rating": 9.1,
+   "scale": "10",
+   "reviews": 611,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Trip.com 9.4/102; TripAdvisor 4.5/45)",
+   "highlights": [
+    "Location/comfort 9.6",
+    "#2 of 50 guest houses",
+    "Family rating 92 (Lastminute)"
+   ],
+   "praise": [
+    "Great place at the heart of the old city, very friendly staff and quiet nights",
+    "Lovely and cozy guest house with old-school decor",
+    "bang on value for money"
+   ],
+   "complaints": [
+    "No elevator",
+    "Small rooms, no kettle",
+    "No pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Xinlor+House+Phuket+Old+Town",
+    "booking": "https://www.booking.com/hotel/th/xinlor-house-phuket-town.html",
+    "official": "https://xinlor-house.phuket-hotel.org/en/",
+    "tripadvisor": "https://www.tripadvisor.co.uk/Hotel_Review-g1215781-d12632163-Reviews-Xinlor_House-Phuket_Town_Phuket.html"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Best-value 9+ in Old Town for people who are out all day.",
+   "rooms": "Deluxe Twin, Standard/Superior Queen, Honeymoon Suite; no family room; 2+2+1",
+   "distances": {
+    "beach": "none",
+    "pier": "Rassada ~3 km",
+    "airport": "32-33 km"
+   },
+   "fitsBudget": true
+  },
+  "solin-house-phuket": {
+   "id": "solin-house-phuket",
+   "name": "Solin House Phuket Town (3BR)",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Wichit, ~10 min drive from Old Town (tagged Talat Yai)",
+   "thai": null,
+   "tagline": "Only interesting if the group rents a car; no 3BR exists inside walkable Old Town.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Not readable",
+   "when": null,
+   "book": null,
+   "rating": 4.91,
+   "scale": "5",
+   "reviews": 35,
+   "reviewSource": "Airbnb snippet 2026-10-24",
+   "highlights": [
+    "Nearest 3BR lead to Old Town",
+    "3 bathrooms, Superhost"
+   ],
+   "praise": [
+    "9.9/31 on a rentals roundup",
+    "Pets welcome"
+   ],
+   "complaints": [
+    "Not walkable to Old Town",
+    "Location tag mismatch"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Soi+Prakaipruk+Wichit+Phuket",
+    "airbnb": "https://www.airbnb.com/rooms/1487224870405549190"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Only interesting if the group rents a car; no 3BR exists inside walkable Old Town.",
+   "rooms": "3 bedrooms, 4 beds, 3 baths, 6 guests; 2+2+1",
+   "distances": {
+    "beach": "Cape Panwa ~10 min drive",
+    "pier": "Rassada ~6 km",
+    "airport": "~35 km"
+   },
+   "fitsBudget": false
+  },
+  "elite-suites-patong": {
+   "id": "elite-suites-patong",
+   "name": "Elite Suites Patong",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Patong, quiet soi; sea 10 min, Bangla 15 min walk",
+   "thai": null,
+   "tagline": "The Patong fallback; walkable to beach and Bangla, expect dated furniture.",
+   "priceTHB": null,
+   "priceINR": 8568,
+   "priceNote": "Per night, all rooms: TripAdvisor range $34-206/room; x3 at low end; family suites higher",
+   "when": null,
+   "book": null,
+   "rating": 8.5,
+   "scale": "10",
+   "reviews": 4966,
+   "reviewSource": "Booking.com snippet 2026-10-24 (Trip.com 9.0/1,334; TripAdvisor 4.3/1,015)",
+   "highlights": [
+    "Only Patong hotel clearing 8.5 in budget",
+    "Pool + pool bar, spacious rooms",
+    "Halal breakfast"
+   ],
+   "praise": [
+    "the service the price and experience is second to none",
+    "Hugely spacious with our own pool",
+    "staff were super lovely and accommodating"
+   ],
+   "complaints": [
+    "Cockroaches in bathroom (Mar 2026)",
+    "Doors not soundproof",
+    "Ancient furniture; no late check-out"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Elite+Suites+Patong",
+    "booking": "https://www.booking.com/searchresults.html?ss=Elite+Suites+Patong",
+    "official": "https://elitesuitesbybauman.com-patong.com/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g297930-d3930710-Reviews-Elite_Suites_Patong-Patong_Kathu_Phuket.html"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "The Patong fallback; walkable to beach and Bangla, expect dated furniture.",
+   "rooms": "Suites, family rooms, 2-bed suites; 3+2 or 2+2+1",
+   "distances": {
+    "beach": "~800 m / 10 min walk",
+    "pier": "Rassada ~15 km",
+    "airport": "~35 km"
+   },
+   "fitsBudget": true
+  },
+  "atease-phuket-patong": {
+   "id": "atease-phuket-patong",
+   "name": "AtEase Phuket Patong",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Hillside off main road, ~3 km from Patong beach",
+   "thai": null,
+   "tagline": "Scores well but is not Patong on foot; only with a car.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Not readable",
+   "when": null,
+   "book": null,
+   "rating": 8.6,
+   "scale": "10",
+   "reviews": null,
+   "reviewSource": "Booking.com snippet 2026-10-24 (TripAdvisor 4.6/559; Trip.com 8.6-8.7/~170)",
+   "highlights": [
+    "Pool, spa, mall shuttle",
+    "Value and service 4.6-4.7"
+   ],
+   "praise": [
+    "Staff consistently praised",
+    "Rooms clean and comfortable"
+   ],
+   "complaints": [
+    "Need a taxi, scooter or car to get anywhere",
+    "Mould smell in rainy season; weak breakfast"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=AtEase+Phuket+Patong",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g297930-d10728427-Reviews-AtEase_Phuket_Patong-Patong_Kathu_Phuket.html"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Scores well but is not Patong on foot; only with a car.",
+   "rooms": "Doubles/twins; 2+2+1",
+   "distances": {
+    "beach": "~3 km, taxi needed",
+    "pier": "Rassada ~14 km",
+    "airport": "~33 km"
+   },
+   "fitsBudget": false
+  },
+  "kalim-seaview-villa-penda": {
+   "id": "kalim-seaview-villa-penda",
+   "name": "Patong Kalim Seaview Villa Penda",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kalim, north Patong; beach 5 min, Bangla 15 min walk",
+   "thai": null,
+   "tagline": "Only walkable 3BR villa lead in Patong; check the nightly rate.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb shows no price without dates",
+   "when": null,
+   "book": null,
+   "rating": 4.94,
+   "scale": "5",
+   "reviews": 32,
+   "reviewSource": "Airbnb 2026-10-24",
+   "highlights": [
+    "Private pool + hot tub, sea view",
+    "Guest Favourite, Superhost",
+    "Walkable to beach"
+   ],
+   "praise": [
+    "Mystic Seaview villa with great location",
+    "Enjoy the pool and hot tub"
+   ],
+   "complaints": [
+    "Only 2 bathrooms for 5 adults",
+    "Value 4.7 lowest category; no review text readable"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kalim+Beach+Patong",
+    "airbnb": "https://www.airbnb.com/rooms/4629989"
+   },
+   "tags": [
+    "phuket4"
+   ],
+   "sources": [
+    "research/stays.md"
+   ],
+   "verdict": "Only walkable 3BR villa lead in Patong; check the nightly rate.",
+   "rooms": "3 bedrooms, 5 beds, 2 baths, max 6; 2+2+1",
+   "distances": {
+    "beach": "Kalim ~5 min walk",
+    "pier": "Rassada ~15 km",
+    "airport": "~33 km"
+   },
+   "fitsBudget": false
   }
  },
  "activities": [

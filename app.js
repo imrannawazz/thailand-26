@@ -123,7 +123,7 @@
     const it = T.items[id]; if (!it) return "";
     const dayN = ctx.page.startsWith("day-") ? Number(ctx.page.slice(4)) : null;
     const price = it.priceINR ? `<span class="fig">${fmt(it.priceINR)}</span><p>INR${it.priceNote ? ". " + h(it.priceNote) : ""}</p>` : it.priceTHB ? `<span class="fig">฿${fmt(it.priceTHB)}</span><p>a head, about ${fmt(inr(it.priceTHB))} INR${it.priceNote ? ". " + h(it.priceNote) : ""}</p>` : it.priceTHB === 0 ? `<span class="fig">Free</span><p>${h(it.priceNote || "")}</p>` : (it.priceNote ? `<span class="fig">—</span><p>${h(it.priceNote)}</p>` : "");
-    const linkNames = { maps: "Maps", booking: "Book", agoda: "Agoda", airbnb: "Airbnb", official: "Official", reviews: "Reviews" };
+    const linkNames = { maps: "Maps", booking: "Booking", agoda: "Agoda", airbnb: "Airbnb", official: "Official", reviews: "Reviews", tripadvisor: "TripAdvisor" };
     const links = Object.entries(it.links || {}).filter(([k, v]) => v).map(([k, v]) => `<a href="${v}" target="_blank" rel="noopener">${linkNames[k] || k} ↗</a>`).join("");
     const picked = dayN && isPicked(dayN, it.id);
     let decOpt = null; for (const d of T.decisions) for (const o of d.options) if (o.item === it.id) decOpt = { d, o };
@@ -135,6 +135,9 @@
       <p class="tagline">${h(it.tagline)}</p>
       ${it.rating ? `<div class="rating"><span class="fig">${it.rating}<small style="font-size:.45em;color:var(--dim)">/${it.scale}</small></span><span>${it.reviews ? fmt(it.reviews) + " reviews · " : ""}${h(it.reviewSource || "")}</span></div>` : ""}
       ${price ? `<div class="price">${price}</div>` : ""}
+      ${it.verdict ? `<h3>Verdict</h3><p class="ink" style="font-weight:500">${h(it.verdict)}</p>` : ""}
+      ${it.rooms ? `<h3>Rooms for five</h3><p>${h(it.rooms)}</p>` : ""}
+      ${it.distances ? `<h3>Distances</h3><p>${Object.entries(it.distances).filter(([k, v]) => v).map(([k, v]) => `${h(k)}: ${h(v)}`).join(" · ")}</p>` : ""}
       ${it.when ? `<h3>When</h3><p>${h(it.when)}</p>` : ""}
       ${it.book ? `<h3>How to book</h3><p>${h(it.book)}</p>` : ""}
       ${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
