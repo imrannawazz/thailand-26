@@ -384,6 +384,97 @@ window.TRIP = {
    ]
   },
   {
+   "id": "L2b",
+   "from": "phuket",
+   "to": "phiphi",
+   "title": "Phuket Town to Ko Phi Phi",
+   "hours": 2,
+   "options": [
+    {
+     "mode": "08:30 ferry from Rassada (Phi Phi Cruiser, Chureang or Andaman Wave)",
+     "duration": "About 2 h; Tonsai about 10:30",
+     "costGroupTHB": 3250,
+     "note": "Roughly 550 to 700 a head on the Phuket to Phi Phi ferries (same boats as the return direction). Rassada is 2.8 km from Horange: a 150 to 250 THB Grab. Exact Wednesday departures and fares being confirmed.",
+     "link": "https://www.phuketferry.com/",
+     "source": "research/transport.md H2, H4 (to confirm)"
+    },
+    {
+     "mode": "Speedboat from Rassada",
+     "duration": "About 1 h",
+     "costGroupTHB": 4000,
+     "note": "750 to 850 a head; bags in the bow; first thing cancelled in weather.",
+     "link": "https://www.bundhayaspeedboat.com/routes",
+     "source": "research/transport.md H4"
+    }
+   ]
+  },
+  {
+   "id": "L3b",
+   "from": "phiphi",
+   "to": "aonang",
+   "title": "Ko Phi Phi to Ao Nang",
+   "hours": 2,
+   "options": [
+    {
+     "mode": "Bundhaya speedboat 13:30 (or 10:30)",
+     "duration": "About 1 h to Nopparat Thara",
+     "costGroupTHB": 4750,
+     "note": "900 to 1,000 a head. The 13:30 leaves the morning free for a sunrise longtail or Viewpoint 2.",
+     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
+     "source": "research/transport.md H3"
+    },
+    {
+     "mode": "Ao Nang Princess ferry 14:30",
+     "duration": "About 2 h via Railay; Ao Nang 16:30",
+     "costGroupTHB": 3250,
+     "note": "615 to 650 a head, 650 includes the van to your Ao Nang hotel. Big boat, bags on deck.",
+     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
+     "source": "research/transport.md H3"
+    },
+    {
+     "mode": "Koh Yao Sun Smile speedboat 13:00",
+     "duration": "About 1 h",
+     "costGroupTHB": 4100,
+     "note": "About 820 a head.",
+     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
+     "source": "research/transport.md H3"
+    }
+   ]
+  },
+  {
+   "id": "L5b",
+   "from": "aonang",
+   "to": "phuket",
+   "title": "Ao Nang to the Phuket beach, early Saturday",
+   "hours": 3,
+   "options": [
+    {
+     "mode": "Private minivan, 07:00 to 09:00 pickup",
+     "duration": "3 to 3.5 h to Kata or Karon",
+     "costGroupTHB": 3700,
+     "note": "3,500 for a 4 to 6 seat van (citytourphuket, fixed price, any pickup time); at the beach by 10:30 to 12:30. The pick.",
+     "link": "https://citytourphuket.com/phuket-to-krabi-transfer/ao-nang-transfer/",
+     "source": "research/transport.md H5"
+    },
+    {
+     "mode": "Shared hotel-pickup van 10:30",
+     "duration": "Patong or Kata about 15:00",
+     "costGroupTHB": 3500,
+     "note": "530 to 780 a head; loses the morning.",
+     "link": "https://www.visitthailandtoday.com/guides/krabi-to-phuket",
+     "source": "research/transport.md H5"
+    },
+    {
+     "mode": "Ao Nang Princess ferry 10:30 to Rassada",
+     "duration": "About 2.5 h, then a van to the beach",
+     "costGroupTHB": 4500,
+     "note": "850 to 900 a head; the daily 10:30 runs from 15 Nov. Lands you in Town, not on the beach.",
+     "link": "https://www.phuketferry.com/route-ao-nang-phuket.html",
+     "source": "research/transport.md H5"
+    }
+   ]
+  },
+  {
    "id": "L6",
    "from": "phuket",
    "to": "airport",
@@ -481,9 +572,10 @@ window.TRIP = {
    ],
    "highlights": [
     "Land, pre-booked van to Phuket Town",
-    "Check in 3PM",
+    "Check in near Rassada pier",
     "Chillva Market from 17:00",
-    "A drink at So Xorry in Old Town"
+    "A drink at So Xorry in Old Town",
+    "Early night: 08:30 ferry tomorrow"
    ],
    "decisions": [
     "day1-hotel"
@@ -507,83 +599,36 @@ window.TRIP = {
     ]
    },
    "tips": [
-    "Lard Yai and Naka are closed on a Tuesday; Chillva is the move. Old Town has no beach, so the doc's 'beach' means a 30-minute Grab."
+    "Lard Yai and Naka are closed on a Tuesday; Chillva is the move. Old Town has no beach, so the doc's 'beach' means a 30-minute Grab.",
+    "A Town hotel is right for the morning ferry: Rassada is 2.8 km from Horange."
    ]
   },
   {
    "n": 2,
    "date": "18 Nov",
    "weekday": "Wednesday",
-   "base": "aonang",
-   "spend": "",
-   "plan": [
-    "Check in Krabi.",
-    "Do Krabi stuff, maybe island tour."
-   ],
-   "highlights": [
-    "Private minivan 08:30, Ao Nang by noon",
-    "Check in",
-    "Ao Thalane kayak 13:00 (your call)",
-    "Klong Haeng market, Wednesday only"
-   ],
-   "decisions": [
-    "aonang-stay",
-    "day2-plan"
-   ],
-   "legs": [
-    "L2"
-   ],
-   "picks": {
-    "do": [
-     "ao-thalane-mangrove-kayak",
-     "klong-haeng-market",
-     "railay-west-and-phra-nang-beach"
-    ],
-    "eat": [
-     "klong-haeng-market",
-     "krua-thara",
-     "jame-food-centre"
-    ],
-    "drink": [
-     "the-last-fisherman-bar",
-     "boogie-bar"
-    ]
-   },
-   "tips": [
-    "Klong Haeng runs Wednesdays and Sundays 16:00 to 21:00, 1.5 km away: the one local market you can actually hit.",
-    "Krabi Town's walking street is Friday to Sunday only."
-   ]
-  },
-  {
-   "n": 3,
-   "date": "19 Nov",
-   "weekday": "Thursday",
    "base": "phiphi",
    "spend": "Spend.",
    "plan": [
-    "Transfer to Phi Phi early morning for snorkeling.",
-    "Return to Krabi, do kayaking."
+    "Transfer to Phi Phi early morning for snorkeling."
    ],
    "highlights": [
-    "09:20 ferry to Phi Phi",
-    "Pileh, Maya Bay, snorkel",
-    "Sleep on the island or back to Ao Nang (your call)",
+    "08:30 ferry from Rassada, Tonsai about 10:30",
+    "Drop bags, dorm plus rooms (your call)",
+    "14:00 to 18:00 private longtail: Pileh, Maya Bay, snorkel, sunset",
     "Fire show at Slinky or Carlito's"
    ],
    "decisions": [
-    "day3",
-    "phiphi-stay"
+    "phiphi-stay",
+    "day2-phiphi"
    ],
    "legs": [
-    "L3"
+    "L2b"
    ],
    "picks": {
     "do": [
-     "princess-divers-phi-phi",
-     "the-dive-ao-nang",
      "private-longtail-from-tonsai",
      "maya-bay",
-     "phi-phi-viewpoint-2",
      "long-beach"
     ],
     "eat": [
@@ -597,47 +642,91 @@ window.TRIP = {
    },
    "tips": [
     "Maya Bay is open on your dates: no swimming, about an hour per group, 400 THB park fee in cash.",
-    "Sunset is 18:02. Nothing on the water fits after a 16:30 return."
+    "Day boats leave Phi Phi Leh by about 14:30, so an afternoon longtail gets Pileh and Maya with far fewer people.",
+    "Good private rooms are scarce and overpriced: a well-reviewed dorm for two or three of you plus one or two private rooms is the researched answer."
+   ]
+  },
+  {
+   "n": 3,
+   "date": "19 Nov",
+   "weekday": "Thursday",
+   "base": "aonang",
+   "spend": "",
+   "plan": [
+    "Return to Krabi.",
+    "Check in Krabi."
+   ],
+   "highlights": [
+    "Sunrise longtail 06:00 to 10:00, or Viewpoint 2 before 09:00",
+    "13:30 speedboat or 14:30 ferry to Ao Nang",
+    "Check in",
+    "Sunset at the Last Fisherman, then Centre Point"
+   ],
+   "decisions": [
+    "aonang-stay"
+   ],
+   "legs": [
+    "L3b"
+   ],
+   "picks": {
+    "do": [
+     "phi-phi-viewpoint-2",
+     "railay-west-and-phra-nang-beach"
+    ],
+    "eat": [
+     "krua-thara",
+     "jame-food-centre"
+    ],
+    "drink": [
+     "the-last-fisherman-bar",
+     "centre-point"
+    ]
+   },
+   "tips": [
+    "Klong Haeng market is Wednesdays and Sundays, so you miss it in this order; Friday's Krabi Town walking street replaces it."
    ]
   },
   {
    "n": 4,
    "date": "20 Nov",
    "weekday": "Friday",
-   "base": "phuket",
+   "base": "aonang",
    "spend": "Spend.",
    "plan": [
-    "Transfer to Phuket, stay in Phuket."
+    "Do Krabi stuff, maybe island tour.",
+    "Do kayaking."
    ],
    "highlights": [
-    "11:00 ferry to Phuket, Town by 13:00 (if on Phi Phi)",
-    "Check in at the Phuket base (your call)",
-    "Karon Temple Market, Fridays",
-    "Bangla Boxing fight night, Fridays"
+    "Morning free or Tiger Cave early",
+    "Ao Thalane kayak 13:00, or Railay climbing (your call)",
+    "Krabi Town Walking Street, Fridays 17:00 to 22:00",
+    "Pack: early van tomorrow"
    ],
    "decisions": [
-    "phuket-area"
+    "day4-krabi"
    ],
-   "legs": [
-    "L4",
-    "L5"
-   ],
+   "legs": [],
    "picks": {
     "do": [
-     "karon-temple-market",
-     "bangla-boxing-stadium-fight-night",
-     "kata-noi-beach"
+     "ao-thalane-mangrove-kayak",
+     "railay-rock-climbing-half-day",
+     "tiger-cave-temple",
+     "chao-fah-pier-night-market"
     ],
     "eat": [
-     "mor-mu-dong",
-     "kan-eang-2"
+     "maharaj-morning-market",
+     "ruen-mai",
+     "kotung",
+     "ali-baba"
     ],
     "drink": [
-     "ska-bar",
-     "bangla-road"
+     "boogie-bar",
+     "reggae-town"
     ]
    },
-   "tips": []
+   "tips": [
+    "Friday is the one night of your stay that Krabi Town's Walking Street (Soi Maharaj 8) is open: 60 THB songthaew, back by taxi after 20:00."
+   ]
   },
   {
    "n": 5,
@@ -646,28 +735,33 @@ window.TRIP = {
    "base": "phuket",
    "spend": "",
    "plan": [
-    "Phuket."
+    "Transfer to Phuket, stay in Phuket."
    ],
    "highlights": [
-    "Boat day: Racha Yai try-dive with SSS Phuket, or the Racha and Coral snorkel",
-    "Naka Weekend Market from 16:00"
+    "Private van 07:00 to 09:00, beach by noon",
+    "Check in at the beach base (your call)",
+    "Swim, chill",
+    "Naka Weekend Market from 16:00, or Ska Bar sunset"
    ],
-   "decisions": [],
-   "legs": [],
+   "decisions": [
+    "phuket-area"
+   ],
+   "legs": [
+    "L5b"
+   ],
    "picks": {
     "do": [
-     "sss-phuket-dsd-racha-yai",
-     "acdc-diving-phuket",
-     "racha-and-coral-islands-speedboat-snorkel",
-     "naka-weekend-market"
+     "kata-noi-beach",
+     "naka-weekend-market",
+     "karon-viewpoint"
     ],
     "eat": [
      "naka-weekend-market",
-     "one-chun"
+     "mor-mu-dong"
     ],
     "drink": [
-     "dibuk-house",
-     "bebop-live-music-bar"
+     "ska-bar",
+     "after-beach-bar"
     ]
    },
    "tips": []
@@ -682,18 +776,18 @@ window.TRIP = {
     "Phuket."
    ],
    "highlights": [
-    "Big Buddha hike from Karon, early",
-    "Nai Harn or Kata Noi beach",
+    "Racha Yai try-dive with SSS Phuket (last safe dive day), or Big Buddha hike",
     "Lard Yai Sunday Walking Street 16:00 to 22:00"
    ],
    "decisions": [],
    "legs": [],
    "picks": {
     "do": [
+     "sss-phuket-dsd-racha-yai",
+     "acdc-diving-phuket",
      "big-buddha-hike-from-karon",
-     "nai-harn-beach",
      "lard-yai-sunday-walking-street",
-     "wat-chalong"
+     "nai-harn-beach"
     ],
     "eat": [
      "lard-yai-sunday-walking-street",
@@ -702,11 +796,12 @@ window.TRIP = {
      "tu-kab-khao"
     ],
     "drink": [
-     "so-xorry"
+     "so-xorry",
+     "dibuk-house"
     ]
    },
    "tips": [
-    "Sunday 22 Nov is Lard Yai, the one night market every guide puts first. Last dive day if anyone dives (no flying within 24 h)."
+    "Sunday 22 Nov is Lard Yai, the one night market every guide puts first, and the last day anyone can dive (no flying within 24 hours)."
    ]
   },
   {
@@ -719,8 +814,8 @@ window.TRIP = {
     "Phuket."
    ],
    "highlights": [
-    "Zipline or a Muay Thai class",
-    "Karon Viewpoint and Promthep sunset",
+    "Hanuman World zipline (products and prices being pulled), or a Muay Thai class",
+    "Promthep Cape sunset",
     "Rawai Seafood Market dinner",
     "Kata Night Market"
    ],
@@ -728,9 +823,9 @@ window.TRIP = {
    "legs": [],
    "picks": {
     "do": [
+     "hanuman-world-zipline",
      "flying-hanuman-zipline",
      "muay-thai-drop-in-class",
-     "karon-viewpoint",
      "promthep-cape-sunset",
      "rawai-seafood-market",
      "kata-night-market"
@@ -905,8 +1000,36 @@ window.TRIP = {
    ]
   },
   {
-   "id": "day2-plan",
-   "title": "Day 2 in Krabi",
+   "id": "day2-phiphi",
+   "title": "Wednesday afternoon on Phi Phi",
+   "place": "phiphi",
+   "options": [
+    {
+     "id": "longtail",
+     "item": "private-longtail-from-tonsai",
+     "costINR": 14893,
+     "unit": "for five: private boat plus park fees",
+     "note": "The research pick: 14:00 to 18:00 after the day boats leave."
+    },
+    {
+     "id": "dsd",
+     "item": "princess-divers-phi-phi",
+     "costINR": 50580,
+     "unit": "for five, try-dive from 3,600 a head",
+     "note": "Only if the group wants the scuba moment here instead of Racha on Sunday."
+    },
+    {
+     "id": "beach",
+     "item": "long-beach",
+     "costINR": 2108,
+     "unit": "for five, longtail taxi",
+     "note": "Cheapest: Long Beach swim and the viewpoint, fire show in the evening."
+    }
+   ]
+  },
+  {
+   "id": "day4-krabi",
+   "title": "Friday in Krabi",
    "place": "aonang",
    "options": [
     {
@@ -925,50 +1048,25 @@ window.TRIP = {
      "id": "fourisland",
      "item": "4-island-longtail-tour",
      "costINR": 21075,
-     "unit": "for five with park fee; needs a full day"
-    }
-   ]
-  },
-  {
-   "id": "day3",
-   "title": "Day 3: how we do Phi Phi",
-   "place": "phiphi",
-   "options": [
-    {
-     "id": "overnight",
-     "item": "private-longtail-from-tonsai",
-     "label": "Sleep one night on Phi Phi, ferry straight to Phuket on Friday",
-     "costINR": 62000,
-     "unit": "for five: boats, room, private longtail, park fee, ferry out, island food",
-     "note": "Research recommendation. Net about 11,000 to 25,000 INR more than the day trip once you drop the second Ao Nang night and the road transfer. Room under 1,780 THB in Tonsai back streets still to confirm."
+     "unit": "for five with park fee; full day from 09:00"
     },
     {
-     "id": "daytrip",
-     "item": "phi-phi-speedboat-day-tour-from-ao-nang",
-     "label": "Shared speedboat day trip, drop kayaking",
-     "costINR": 33400,
-     "unit": "for five: tour, park fee, drinks"
-    },
-    {
-     "id": "earlybird",
-     "item": "early-bird-phi-phi-and-4-islands-tour",
-     "label": "Early-bird tour, Maya Bay almost empty",
-     "costINR": 38000,
-     "unit": "for five, plus park fee"
+     "id": "climb",
+     "item": "railay-rock-climbing-half-day",
+     "costINR": 21075,
+     "unit": "for five, half day"
     },
     {
      "id": "hong",
      "item": "hong-islands-day-tour",
-     "label": "Skip Phi Phi here: Hong Islands plus kayak, Phi Phi from Phuket later",
-     "costINR": 61000,
-     "unit": "for five, both days",
-     "note": "Only if kayaking is non-negotiable."
+     "costINR": 23885,
+     "unit": "for five with park fee; full day"
     }
    ]
   },
   {
    "id": "phuket-area",
-   "title": "Phuket base for the four nights",
+   "title": "Phuket beach base, Saturday to Tuesday",
    "place": "phuket",
    "options": [
     {
@@ -976,7 +1074,7 @@ window.TRIP = {
      "label": "Kata / Karon",
      "costINR": 0,
      "unit": "resorts inside the cap",
-     "note": "Beach plus mild nightlife; Reddit's all-rounder this month; Bolt to Bangla 305 THB; an hour to the airport on the 24th.",
+     "note": "Swimmable by mid-November, mild nightlife, Reddit's all-rounder this month; Bolt to Bangla 305 THB; an hour to the airport on the 24th. Beach villas being researched.",
      "items": [
       "pineapple-guesthouse-karon",
       "kata-tranquil-villa",
@@ -991,11 +1089,27 @@ window.TRIP = {
      ]
     },
     {
+     "id": "naiharn",
+     "label": "Nai Harn / Rawai",
+     "costINR": 0,
+     "unit": "quiet south",
+     "note": "Nai Harn is the quietest proper swimming beach; Rawai seafood market; Promthep sunset; furthest from the airport. Villas being researched.",
+     "items": []
+    },
+    {
+     "id": "kamala",
+     "label": "Kamala / Surin",
+     "costINR": 0,
+     "unit": "calm, near the airport",
+     "note": "Calm beaches, Cafe del Mar sunset, 22 to 24 km from the airport for the 24th; need Grab for everything else.",
+     "items": []
+    },
+    {
      "id": "oldtown",
      "label": "Phuket Old Town",
      "costINR": 0,
-     "unit": "cheapest rooms",
-     "note": "Food and bars, Lard Yai on Sunday, cheapest; no beach (30 to 60 min to one); songthaews stop at 18:00; easy airport run.",
+     "unit": "cheapest rooms, no beach",
+     "note": "Food and bars, Lard Yai on Sunday, cheapest; 30 to 60 min to any beach, so not the brief for these nights.",
      "items": [
       "casa-blanca-boutique",
       "xinlor-house",
@@ -1084,7 +1198,12 @@ window.TRIP = {
     "pier": "Rassada 2.8 km",
     "airport": "34 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.39156,
+    7.88222
+   ],
+   "geo": "exact"
   },
   "pearl-hotel-phuket": {
    "id": "pearl-hotel-phuket",
@@ -1138,7 +1257,12 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "32 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.3922,
+    7.88206
+   ],
+   "geo": "exact"
   },
   "phuket-merlin-hotel": {
    "id": "phuket-merlin-hotel",
@@ -1192,7 +1316,12 @@ window.TRIP = {
     "pier": "Rassada ~2.5-3 km",
     "airport": "26 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.3865,
+    7.89044
+   ],
+   "geo": "exact"
   },
   "homa-phuket-town": {
    "id": "homa-phuket-town",
@@ -1245,7 +1374,12 @@ window.TRIP = {
     "pier": "Rassada ~2-3 km",
     "airport": "24-34 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.37857,
+    7.90812
+   ],
+   "geo": "exact"
   },
   "travelodge-phuket-town": {
    "id": "travelodge-phuket-town",
@@ -1278,7 +1412,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1d"
-   ]
+   ],
+   "lngLat": [
+    98.39,
+    7.885
+   ],
+   "geo": "approx"
   },
   "dara-hotel-phuket": {
    "id": "dara-hotel-phuket",
@@ -1311,7 +1450,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1d"
-   ]
+   ],
+   "lngLat": [
+    98.36817,
+    7.88771
+   ],
+   "geo": "exact"
   },
   "the-memory-at-on-on": {
    "id": "the-memory-at-on-on",
@@ -1363,7 +1507,12 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "34 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "chanalai-flora-resort": {
    "id": "chanalai-flora-resort",
@@ -1398,7 +1547,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.30149,
+    7.8155
+   ],
+   "geo": "exact"
   },
   "chanalai-garden-resort": {
    "id": "chanalai-garden-resort",
@@ -1433,7 +1587,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.29927,
+    7.81335
+   ],
+   "geo": "exact"
   },
   "centara-kata-resort": {
    "id": "centara-kata-resort",
@@ -1468,7 +1627,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.29967,
+    7.82162
+   ],
+   "geo": "exact"
   },
   "kata-sea-breeze-resort": {
    "id": "kata-sea-breeze-resort",
@@ -1503,7 +1667,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.3005,
+    7.81996
+   ],
+   "geo": "exact"
   },
   "baan-karonburi-resort": {
    "id": "baan-karonburi-resort",
@@ -1538,7 +1707,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.29447,
+    7.84357
+   ],
+   "geo": "exact"
   },
   "sugar-marina-resort-art": {
    "id": "sugar-marina-resort-art",
@@ -1573,7 +1747,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1b"
-   ]
+   ],
+   "lngLat": [
+    98.29404,
+    7.84894
+   ],
+   "geo": "exact"
   },
   "patong-mansion-hotel": {
    "id": "patong-mansion-hotel",
@@ -1607,7 +1786,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §1a"
-   ]
+   ],
+   "lngLat": [
+    98.30462,
+    7.89906
+   ],
+   "geo": "exact"
   },
   "ban-preeya-private-pool-villa": {
    "id": "ban-preeya-private-pool-villa",
@@ -1658,7 +1842,12 @@ window.TRIP = {
     "pier": "Nopparat Thara ~5 km",
     "airport": "Krabi ~30 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.84,
+    8.05
+   ],
+   "geo": "approx"
   },
   "smooth-as-silk-pool-villa": {
    "id": "smooth-as-silk-pool-villa",
@@ -1711,7 +1900,12 @@ window.TRIP = {
     "pier": "Nopparat Thara ~2 km",
     "airport": "Krabi 28 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "aonang-nine-poolvilla": {
    "id": "aonang-nine-poolvilla",
@@ -1765,7 +1959,12 @@ window.TRIP = {
     "pier": "Nopparat Thara ~4 km",
     "airport": "Krabi ~17 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "anawin-bungalows": {
    "id": "anawin-bungalows",
@@ -1819,7 +2018,12 @@ window.TRIP = {
     "pier": "Nopparat Thara ~2.5 km",
     "airport": "Krabi ~26 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.82434,
+    8.03341
+   ],
+   "geo": "exact"
   },
   "doo-dee-boutique-resort": {
    "id": "doo-dee-boutique-resort",
@@ -1873,7 +2077,12 @@ window.TRIP = {
     "pier": "Nopparat Thara ~1.5 km",
     "airport": "Krabi ~30 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.805,
+    8.04
+   ],
+   "geo": "approx"
   },
   "white-house-phi-phi-island": {
    "id": "white-house-phi-phi-island",
@@ -1927,7 +2136,12 @@ window.TRIP = {
     "pier": "700 m / 10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "p2-wood-loft": {
    "id": "p2-wood-loft",
@@ -1983,7 +2197,12 @@ window.TRIP = {
     "pier": "5-10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.77317,
+    7.73944
+   ],
+   "geo": "exact"
   },
   "paradise-pearl-bungalows": {
    "id": "paradise-pearl-bungalows",
@@ -2037,7 +2256,12 @@ window.TRIP = {
     "pier": "no pier; longtail from Tonsai (free arrival, ~100 THB after); 35-min rough path",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.785,
+    7.729
+   ],
+   "geo": "approx"
   },
   "big-buddha-hike-from-karon": {
    "id": "big-buddha-hike-from-karon",
@@ -2072,7 +2296,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "racha-and-coral-islands-speedboat-snorkel": {
    "id": "racha-and-coral-islands-speedboat-snorkel",
@@ -2109,7 +2338,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.34,
+    7.83
+   ],
+   "geo": "approx"
   },
   "flying-hanuman-zipline": {
    "id": "flying-hanuman-zipline",
@@ -2140,7 +2374,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.333,
+    7.91
+   ],
+   "geo": "approx"
   },
   "hanuman-world-zipline": {
    "id": "hanuman-world-zipline",
@@ -2171,7 +2410,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
   },
   "muay-thai-drop-in-class": {
    "id": "muay-thai-drop-in-class",
@@ -2203,7 +2447,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx"
   },
   "bangla-boxing-stadium-fight-night": {
    "id": "bangla-boxing-stadium-fight-night",
@@ -2235,7 +2484,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "freedom-beach-hike": {
    "id": "freedom-beach-hike",
@@ -2269,7 +2523,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "nai-harn-beach": {
    "id": "nai-harn-beach",
@@ -2302,7 +2561,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.31007,
+    7.77638
+   ],
+   "geo": "exact"
   },
   "kata-noi-beach": {
    "id": "kata-noi-beach",
@@ -2335,7 +2599,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.31501,
+    7.795
+   ],
+   "geo": "exact"
   },
   "karon-viewpoint": {
    "id": "karon-viewpoint",
@@ -2368,7 +2637,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.30218,
+    7.79725
+   ],
+   "geo": "exact"
   },
   "promthep-cape-sunset": {
    "id": "promthep-cape-sunset",
@@ -2403,7 +2677,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.306,
+    7.76
+   ],
+   "geo": "approx"
   },
   "wat-chalong": {
    "id": "wat-chalong",
@@ -2435,7 +2714,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.33747,
+    7.84626
+   ],
+   "geo": "exact"
   },
   "old-town-walk": {
    "id": "old-town-walk",
@@ -2467,7 +2751,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "lard-yai-sunday-walking-street": {
    "id": "lard-yai-sunday-walking-street",
@@ -2500,7 +2789,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "chillva-market": {
    "id": "chillva-market",
@@ -2532,7 +2826,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.37348,
+    7.90734
+   ],
+   "geo": "exact"
   },
   "naka-weekend-market": {
    "id": "naka-weekend-market",
@@ -2564,7 +2863,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.39,
+    7.885
+   ],
+   "geo": "approx"
   },
   "karon-temple-market": {
    "id": "karon-temple-market",
@@ -2596,7 +2900,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.29781,
+    7.84802
+   ],
+   "geo": "exact"
   },
   "kata-night-market": {
    "id": "kata-night-market",
@@ -2629,7 +2938,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.29822,
+    7.82464
+   ],
+   "geo": "exact"
   },
   "rawai-seafood-market": {
    "id": "rawai-seafood-market",
@@ -2662,7 +2976,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.3288,
+    7.77572
+   ],
+   "geo": "exact"
   },
   "thai-hua-museum": {
    "id": "thai-hua-museum",
@@ -2693,7 +3012,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.38687,
+    7.88561
+   ],
+   "geo": "exact"
   },
   "mee-ton-poe": {
    "id": "mee-ton-poe",
@@ -2722,7 +3046,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3344,
+    7.91094
+   ],
+   "geo": "exact"
   },
   "kopitiam-by-wilai": {
    "id": "kopitiam-by-wilai",
@@ -2751,7 +3080,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.38808,
+    7.88478
+   ],
+   "geo": "exact"
   },
   "go-benz": {
    "id": "go-benz",
@@ -2782,7 +3116,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.38248,
+    7.88471
+   ],
+   "geo": "exact"
   },
   "khao-tom-dibuk": {
    "id": "khao-tom-dibuk",
@@ -2813,7 +3152,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx"
   },
   "chuan-chim": {
    "id": "chuan-chim",
@@ -2844,7 +3188,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx"
   },
   "a-pong-mae-sunee": {
    "id": "a-pong-mae-sunee",
@@ -2875,7 +3224,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.38738,
+    7.88581
+   ],
+   "geo": "exact"
   },
   "hong-khao-tom-pla": {
    "id": "hong-khao-tom-pla",
@@ -2906,7 +3260,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.39322,
+    7.87667
+   ],
+   "geo": "exact"
   },
   "roti-thaew-nam": {
    "id": "roti-thaew-nam",
@@ -2935,7 +3294,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx"
   },
   "one-chun": {
    "id": "one-chun",
@@ -2966,7 +3330,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.39069,
+    7.88578
+   ],
+   "geo": "exact"
   },
   "raya": {
    "id": "raya",
@@ -2995,7 +3364,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3909,
+    7.88593
+   ],
+   "geo": "exact"
   },
   "tu-kab-khao": {
    "id": "tu-kab-khao",
@@ -3026,7 +3400,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.3882,
+    7.88369
+   ],
+   "geo": "exact"
   },
   "krua-praya": {
    "id": "krua-praya",
@@ -3057,7 +3436,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.41,
+    8.03
+   ],
+   "geo": "approx"
   },
   "mor-mu-dong": {
    "id": "mor-mu-dong",
@@ -3088,7 +3472,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.37199,
+    7.84314
+   ],
+   "geo": "exact"
   },
   "laem-hin-seafood": {
    "id": "laem-hin-seafood",
@@ -3117,7 +3506,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.40737,
+    7.93572
+   ],
+   "geo": "exact"
   },
   "kan-eang-2": {
    "id": "kan-eang-2",
@@ -3146,7 +3540,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.34,
+    7.83
+   ],
+   "geo": "approx"
   },
   "salaloy": {
    "id": "salaloy",
@@ -3175,7 +3574,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phuket.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.32576,
+    7.77451
+   ],
+   "geo": "exact"
   },
   "so-xorry": {
    "id": "so-xorry",
@@ -3207,7 +3611,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "dibuk-house": {
    "id": "dibuk-house",
@@ -3238,7 +3647,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "bebop-live-music-bar": {
    "id": "bebop-live-music-bar",
@@ -3270,7 +3684,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "quip-sky-bar": {
    "id": "quip-sky-bar",
@@ -3302,7 +3721,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.39,
+    7.885
+   ],
+   "geo": "approx"
   },
   "ska-bar": {
    "id": "ska-bar",
@@ -3334,7 +3758,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.29828,
+    7.81383
+   ],
+   "geo": "exact"
   },
   "after-beach-bar": {
    "id": "after-beach-bar",
@@ -3366,7 +3795,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.30217,
+    7.80895
+   ],
+   "geo": "exact"
   },
   "heaven-lounge": {
    "id": "heaven-lounge",
@@ -3398,7 +3832,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "bangla-road": {
    "id": "bangla-road",
@@ -3429,7 +3868,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.29656,
+    7.8936
+   ],
+   "geo": "exact"
   },
   "cafe-del-mar": {
    "id": "cafe-del-mar",
@@ -3461,7 +3905,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phuket.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.28388,
+    7.96105
+   ],
+   "geo": "exact"
   },
   "ao-thalane-mangrove-kayak": {
    "id": "ao-thalane-mangrove-kayak",
@@ -3498,7 +3947,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2, §3"
-   ]
+   ],
+   "lngLat": [
+    98.77,
+    8.18
+   ],
+   "geo": "approx"
   },
   "railay-rock-climbing-half-day": {
    "id": "railay-rock-climbing-half-day",
@@ -3529,7 +3983,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.838,
+    8.012
+   ],
+   "geo": "approx"
   },
   "tiger-cave-temple": {
    "id": "tiger-cave-temple",
@@ -3562,7 +4021,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.92591,
+    8.12515
+   ],
+   "geo": "exact"
   },
   "hong-islands-day-tour": {
    "id": "hong-islands-day-tour",
@@ -3594,7 +4058,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.68,
+    8.12
+   ],
+   "geo": "approx"
   },
   "4-island-longtail-tour": {
    "id": "4-island-longtail-tour",
@@ -3626,7 +4095,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "railay-west-and-phra-nang-beach": {
    "id": "railay-west-and-phra-nang-beach",
@@ -3659,7 +4133,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2, §6"
-   ]
+   ],
+   "lngLat": [
+    98.838,
+    8.012
+   ],
+   "geo": "approx"
   },
   "emerald-pool-and-hot-springs": {
    "id": "emerald-pool-and-hot-springs",
@@ -3690,7 +4169,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    99.05,
+    7.95
+   ],
+   "geo": "approx"
   },
   "klong-haeng-market": {
    "id": "klong-haeng-market",
@@ -3724,7 +4208,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.81231,
+    8.0429
+   ],
+   "geo": "exact"
   },
   "chao-fah-pier-night-market": {
    "id": "chao-fah-pier-night-market",
@@ -3758,7 +4247,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.9063,
+    8.0863
+   ],
+   "geo": "approx"
   },
   "ao-nang-landmark-night-market": {
    "id": "ao-nang-landmark-night-market",
@@ -3789,7 +4283,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.81231,
+    8.0429
+   ],
+   "geo": "exact"
   },
   "maharaj-morning-market": {
    "id": "maharaj-morning-market",
@@ -3818,7 +4317,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.9063,
+    8.0863
+   ],
+   "geo": "approx"
   },
   "abdulloh-muslim-restaurant": {
    "id": "abdulloh-muslim-restaurant",
@@ -3847,7 +4351,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.9063,
+    8.0863
+   ],
+   "geo": "approx"
   },
   "ruen-mai": {
    "id": "ruen-mai",
@@ -3876,7 +4385,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.87,
+    8.07
+   ],
+   "geo": "approx"
   },
   "krua-thara": {
    "id": "krua-thara",
@@ -3905,7 +4419,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.8002,
+    8.04709
+   ],
+   "geo": "exact"
   },
   "kotung": {
    "id": "kotung",
@@ -3934,7 +4453,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.9063,
+    8.0863
+   ],
+   "geo": "approx"
   },
   "ali-baba": {
    "id": "ali-baba",
@@ -3963,7 +4487,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "govinda-s": {
    "id": "govinda-s",
@@ -3992,7 +4521,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.83834,
+    8.01142
+   ],
+   "geo": "exact"
   },
   "jame-food-centre": {
    "id": "jame-food-centre",
@@ -4021,7 +4555,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/krabi-ao-nang.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "the-last-fisherman-bar": {
    "id": "the-last-fisherman-bar",
@@ -4053,7 +4592,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "the-beach-bar-ao-nang": {
    "id": "the-beach-bar-ao-nang",
@@ -4085,7 +4629,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "boogie-bar": {
    "id": "boogie-bar",
@@ -4117,7 +4666,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.82216,
+    8.03157
+   ],
+   "geo": "exact"
   },
   "centre-point": {
    "id": "centre-point",
@@ -4148,7 +4702,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "reggae-town": {
    "id": "reggae-town",
@@ -4180,7 +4739,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.8272,
+    8.03306
+   ],
+   "geo": "exact"
   },
   "the-last-bar-railay": {
    "id": "the-last-bar-railay",
@@ -4211,7 +4775,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/krabi-ao-nang.md §5"
-   ]
+   ],
+   "lngLat": [
+    98.84432,
+    8.0129
+   ],
+   "geo": "exact"
   },
   "phi-phi-speedboat-day-tour-from-ao-nang": {
    "id": "phi-phi-speedboat-day-tour-from-ao-nang",
@@ -4249,7 +4818,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §1"
-   ]
+   ],
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx"
   },
   "early-bird-phi-phi-and-4-islands-tour": {
    "id": "early-bird-phi-phi-and-4-islands-tour",
@@ -4283,7 +4857,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §1"
-   ]
+   ],
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx"
   },
   "private-longtail-from-tonsai": {
    "id": "private-longtail-from-tonsai",
@@ -4320,7 +4899,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "maya-bay": {
    "id": "maya-bay",
@@ -4353,7 +4937,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md headline facts"
-   ]
+   ],
+   "lngLat": [
+    98.76612,
+    7.67663
+   ],
+   "geo": "exact"
   },
   "phi-phi-viewpoint-2": {
    "id": "phi-phi-viewpoint-2",
@@ -4383,7 +4972,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §3"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "long-beach": {
    "id": "long-beach",
@@ -4414,7 +5008,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.77668,
+    7.75224
+   ],
+   "geo": "exact"
   },
   "kayak-at-loh-dalum": {
    "id": "kayak-at-loh-dalum",
@@ -4444,7 +5043,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §4"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.744
+   ],
+   "geo": "approx"
   },
   "tonsai-village-food": {
    "id": "tonsai-village-food",
@@ -4472,7 +5076,12 @@ window.TRIP = {
    "tags": [],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "slinky-beach-bar": {
    "id": "slinky-beach-bar",
@@ -4503,7 +5112,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.744
+   ],
+   "geo": "approx"
   },
   "carlito-s": {
    "id": "carlito-s",
@@ -4534,7 +5148,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "ibiza-beach-club": {
    "id": "ibiza-beach-club",
@@ -4565,7 +5184,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/phi-phi.md §2"
-   ]
+   ],
+   "lngLat": [
+    98.776,
+    7.744
+   ],
+   "geo": "approx"
   },
   "casa-blanca-boutique": {
    "id": "casa-blanca-boutique",
@@ -4615,7 +5239,12 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "~33 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "phi-phi-villa-resort": {
    "id": "phi-phi-villa-resort",
@@ -4667,7 +5296,12 @@ window.TRIP = {
     "pier": "~1 km / 15 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.77744,
+    7.73624
+   ],
+   "geo": "exact"
   },
   "ton-sai-tropical": {
    "id": "ton-sai-tropical",
@@ -4720,7 +5354,12 @@ window.TRIP = {
     "pier": "~2 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "ivory-phi-phi": {
    "id": "ivory-phi-phi",
@@ -4771,7 +5410,12 @@ window.TRIP = {
     "pier": "3-10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "pineapple-guesthouse-karon": {
    "id": "pineapple-guesthouse-karon",
@@ -4823,7 +5467,12 @@ window.TRIP = {
     "pier": "Rassada ~17 km",
     "airport": "~45 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.29829,
+    7.83537
+   ],
+   "geo": "exact"
   },
   "kata-tranquil-villa": {
    "id": "kata-tranquil-villa",
@@ -4875,7 +5524,12 @@ window.TRIP = {
     "pier": "Rassada ~17 km",
     "airport": "~45 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.30133,
+    7.83132
+   ],
+   "geo": "exact"
   },
   "kk-karon-kata-boutique": {
    "id": "kk-karon-kata-boutique",
@@ -4927,7 +5581,12 @@ window.TRIP = {
     "pier": "Rassada ~17 km",
     "airport": "~45 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "prima-karon-villa": {
    "id": "prima-karon-villa",
@@ -4975,7 +5634,12 @@ window.TRIP = {
     "pier": "Rassada ~17 km",
     "airport": "~45 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "xinlor-house": {
    "id": "xinlor-house",
@@ -5028,7 +5692,12 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "32-33 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.38597,
+    7.88656
+   ],
+   "geo": "exact"
   },
   "solin-house-phuket": {
    "id": "solin-house-phuket",
@@ -5076,7 +5745,12 @@ window.TRIP = {
     "pier": "Rassada ~6 km",
     "airport": "~35 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx"
   },
   "elite-suites-patong": {
    "id": "elite-suites-patong",
@@ -5129,7 +5803,12 @@ window.TRIP = {
     "pier": "Rassada ~15 km",
     "airport": "~35 km"
    },
-   "fitsBudget": true
+   "fitsBudget": true,
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "atease-phuket-patong": {
    "id": "atease-phuket-patong",
@@ -5177,7 +5856,12 @@ window.TRIP = {
     "pier": "Rassada ~14 km",
     "airport": "~33 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "kalim-seaview-villa-penda": {
    "id": "kalim-seaview-villa-penda",
@@ -5226,7 +5910,12 @@ window.TRIP = {
     "pier": "Rassada ~15 km",
     "airport": "~33 km"
    },
-   "fitsBudget": false
+   "fitsBudget": false,
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "sss-phuket-dsd-racha-yai": {
    "id": "sss-phuket-dsd-racha-yai",
@@ -5270,7 +5959,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.2965,
+    7.8961
+   ],
+   "geo": "approx"
   },
   "acdc-diving-phuket": {
    "id": "acdc-diving-phuket",
@@ -5308,7 +6002,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.34423,
+    7.82789
+   ],
+   "geo": "exact"
   },
   "sunrise-divers-phuket": {
    "id": "sunrise-divers-phuket",
@@ -5343,7 +6042,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.29818,
+    7.83493
+   ],
+   "geo": "exact"
   },
   "houbou-ya-phuket": {
    "id": "houbou-ya-phuket",
@@ -5377,7 +6081,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.365,
+    7.6
+   ],
+   "geo": "approx"
   },
   "the-dive-ao-nang": {
    "id": "the-dive-ao-nang",
@@ -5419,7 +6128,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "mr-dolphin-diving-krabi": {
    "id": "mr-dolphin-diving-krabi",
@@ -5455,7 +6169,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "sawasdee-divers-krabi": {
    "id": "sawasdee-divers-krabi",
@@ -5491,7 +6210,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "local-diving-aonang": {
    "id": "local-diving-aonang",
@@ -5527,7 +6251,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "princess-divers-phi-phi": {
    "id": "princess-divers-phi-phi",
@@ -5567,7 +6296,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.7733,
+    7.74058
+   ],
+   "geo": "exact"
   },
   "adventure-club-phi-phi": {
    "id": "adventure-club-phi-phi",
@@ -5606,7 +6340,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.77246,
+    7.7389
+   ],
+   "geo": "exact"
   },
   "phuket-dive-tours-racha-snorkel": {
    "id": "phuket-dive-tours-racha-snorkel",
@@ -5642,7 +6381,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.29652,
+    7.8256
+   ],
+   "geo": "exact"
   },
   "krabi-4-islands-snorkel": {
    "id": "krabi-4-islands-snorkel",
@@ -5677,7 +6421,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx"
   },
   "hong-islands-trip-thai-tour": {
    "id": "hong-islands-trip-thai-tour",
@@ -5712,7 +6461,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.68,
+    8.12
+   ],
+   "geo": "approx"
   },
   "phi-phi-speedboat-lovely-phuket": {
    "id": "phi-phi-speedboat-lovely-phuket",
@@ -5747,7 +6501,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx"
   },
   "racha-yai": {
    "id": "racha-yai",
@@ -5784,7 +6543,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.30096,
+    7.82353
+   ],
+   "geo": "exact"
   },
   "bida-nok-phi-phi": {
    "id": "bida-nok-phi-phi",
@@ -5819,7 +6583,12 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    98.768,
+    7.685
+   ],
+   "geo": "approx"
   },
   "similan-islands": {
    "id": "similan-islands",
@@ -5855,17 +6624,101 @@ window.TRIP = {
    ],
    "sources": [
     "research/scuba-snorkel.md"
-   ]
+   ],
+   "lngLat": [
+    97.64,
+    8.65
+   ],
+   "geo": "approx"
   }
  },
  "activities": [
+  {
+   "id": "order",
+   "title": "Order of the trip",
+   "question": "Which order of the stops is best for money, travel time and enjoyment?",
+   "status": "ready",
+   "intro": "Three orders were costed from the transport research (snapshot 2026-10-24). A is the doc's original. B is Imran's proposal and is now the default plan. C is the mirror of B. Transport totals are for five people, headline options, excluding the Phi Phi longtail and tours, which are the same in all three.",
+   "verdict": "B. It is the only order with no backtracking (Phuket, Phi Phi, Krabi, Phuket is a loop; A drives to Krabi, boats out to Phi Phi and back, then drives back). It costs about the same or less than A, has about half the pure transit hours, puts Phi Phi on day two when everyone is fresh, lands the Krabi Town walking street on its one open evening (Friday), and gives three unbroken beach nights at the end with Sunday for the dive and Lard Yai. The pier-side hotel on night one becomes useful instead of pointless. Fallback if the Wednesday sea is rough: the ferry becomes the minivan to Ao Nang and Phi Phi becomes a day trip on Thursday, which is plan A. C is the equal alternative if you would rather start with Krabi (Klong Haeng market and Ao Thalane on arrival day) and end Phi Phi with a straight 2-hour ferry to Phuket.",
+   "table": {
+    "head": [
+     "",
+     "A: doc order",
+     "B: Imran's order (default)",
+     "C: mirror"
+    ],
+    "rows": [
+     [
+      "Route",
+      "Phuket Town · Ao Nang · Phi Phi day trip · Phuket 4 nights",
+      "Phuket Town · Phi Phi 1 night · Ao Nang 2 nights · Phuket beach 3 nights",
+      "Phuket Town · Ao Nang 2 nights · Phi Phi 1 night · Phuket beach 3 nights"
+     ],
+     [
+      "Transport, five people",
+      "Van 3,700 + speedboat tour 10,250 to 13,500 + van 3,700 = about 17,650 to 21,000 THB",
+      "Ferry about 3,250 + boat to Ao Nang 3,250 to 4,750 + van 3,700 = about 10,200 to 11,700 THB",
+      "Van 3,700 + ferry 2,600 to 4,750 + ferry to Phuket 2,500 to 3,500 = about 8,800 to 12,000 THB"
+     ],
+     [
+      "Pure transit hours",
+      "About 7 (plus a 7-hour tour day)",
+      "About 7 (2 + 1 to 2 + 3.5)",
+      "About 7 (3.5 + 1 to 2 + 2)"
+     ],
+     [
+      "Backtracking",
+      "Yes: Ao Nang to Phi Phi and back",
+      "None",
+      "None"
+     ],
+     [
+      "Phi Phi",
+      "Maya Bay at 10:30 with the crowds, back by 17:00",
+      "Afternoon longtail after the day boats leave, fire show, sunrise option",
+      "Same as B, on a Friday night (busier)"
+     ],
+     [
+      "Krabi",
+      "Wed afternoon + Thu evening; Klong Haeng market Wed",
+      "Thu afternoon + full Fri; Krabi Town walking street Fri",
+      "Wed afternoon + full Thu; Klong Haeng Wed; Ao Thalane on arrival"
+     ],
+     [
+      "Phuket beach",
+      "Fri to Mon, 4 nights, arriving by road",
+      "Sat to Mon, 3 nights, by road early Saturday",
+      "Sat to Mon, 3 nights, by ferry at 13:00"
+     ],
+     [
+      "Dive day",
+      "Sat or Sun",
+      "Sun 22 (Sat is the transfer)",
+      "Sun 22"
+     ],
+     [
+      "Weather exposure",
+      "Low: one tour day",
+      "Two fixed sea days (Wed, Thu); fallback is plan A",
+      "Two fixed sea days (Fri, Sat)"
+     ],
+     [
+      "Luggage on boats",
+      "No",
+      "Twice",
+      "Twice"
+     ]
+    ]
+   },
+   "perPlace": {}
+  },
   {
    "id": "scuba",
    "title": "Scuba and snorkel",
    "question": "Where is the best scuba or snorkel on this whole trip, and where can beginners try it?",
    "status": "ready",
    "intro": "Nobody needs a certificate for a Discover Scuba Diving day: a briefing, shallow practice, then one or two dives to about 12 m with an instructor. Late November is the start of the dry season on this coast: visibility 10 to 25 m at Racha Yai, seas settling, speedboats still bouncy. Thai marine parks ban oxybenzone sunscreen. No diving within 24 hours of the flight, so Sunday 22 is the last possible dive day.",
-   "verdict": "Best scuba moment: a Racha Yai try-dive from Phuket on Saturday 21 Nov (Sunday 22 as weather fallback) with SSS Phuket in Kata (4.9 from 1,131 reviews, 4,200 THB all-in, pickup included) or ACDC (3,900 THB, two beginners per instructor). Prettier but pricier: a Phi Phi try-dive on Thursday 19 with The Dive Ao Nang (5,200 plus about 600 park fees) or, if you sleep on the island, Princess Divers from 3,600 (4.9 from 2,987 reviews). Cheaper snorkel-only: the 4 Islands longtail from Ao Nang (about 1,000 to 1,600 all-in) or Racha Yai plus Coral from Phuket (about 2,800). Certified divers' stretch: Similans from Khao Lak, open since 15 Oct, but it does not fit this itinerary.",
+   "verdict": "Best scuba moment: a Racha Yai try-dive from Phuket on Sunday 22 Nov (Saturday is the transfer day in the new order) with SSS Phuket in Kata (4.9 from 1,131 reviews, 4,200 THB all-in, pickup included) or ACDC (3,900 THB, two beginners per instructor). Prettier but pricier: a Phi Phi try-dive on Thursday 19 with The Dive Ao Nang (5,200 plus about 600 park fees) or, if you sleep on the island, Princess Divers from 3,600 (4.9 from 2,987 reviews). Cheaper snorkel-only: the 4 Islands longtail from Ao Nang (about 1,000 to 1,600 all-in) or Racha Yai plus Coral from Phuket (about 2,800). Certified divers' stretch: Similans from Khao Lak, open since 15 Oct, but it does not fit this itinerary.",
    "perPlace": {
     "phuket": [
      "sss-phuket-dsd-racha-yai",

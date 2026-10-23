@@ -63,9 +63,28 @@
       map.addLayer({ id: "route-sea", type: "line", source: "routes", filter: ["==", ["get", "kind"], "sea"], layout: { "line-cap": "round" }, paint: { "line-color": opts.palette.route, "line-width": 1.8, "line-dasharray": [1.5, 2.5], "line-opacity": 0.9 } });
       map.addSource("stops", { type: "geojson", data: { type: "FeatureCollection", features: ["phuket", "aonang", "phiphi", "krabi"].map(k => ({ type: "Feature", properties: { name: T.places[k].name }, geometry: { type: "Point", coordinates: T.places[k].lngLat } })) } });
       map.addLayer({ id: "stops", type: "circle", source: "stops", paint: { "circle-radius": 4, "circle-color": opts.palette.route, "circle-opacity": 0.95 } });
+      map.addSource("items", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map.addLayer({ id: "items-all", type: "circle", source: "items", paint: { "circle-radius": 3.5, "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.4, "circle-stroke-width": 0 } });
+      map.addLayer({ id: "items-hot", type: "circle", source: "items", filter: ["==", ["get", "hot"], 1], paint: { "circle-radius": 6, "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.95, "circle-stroke-color": opts.palette.land, "circle-stroke-width": 1.5 } });
+      map.addLayer({ id: "items-label", type: "symbol", source: "items", filter: ["==", ["get", "hot"], 1], layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top", "text-optional": true, "text-max-width": 10 }, paint: { "text-color": opts.palette.markerText || opts.palette.label, "text-halo-color": opts.palette.land, "text-halo-width": 1.2 } });
+      const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8 });
+      for (const layer of ["items-all", "items-hot"]) {
+        map.on("mouseenter", layer, e => { map.getCanvas().style.cursor = "pointer"; const f = e.features[0]; pop.setLngLat(f.geometry.coordinates).setHTML("<span style=\"font:500 12px/1.3 system-ui\">" + f.properties.name + "</span>").addTo(map); });
+        map.on("mouseleave", layer, () => { map.getCanvas().style.cursor = ""; pop.remove(); });
+        map.on("click", layer, e => { const f = e.features[0]; if (opts.onItemClick) opts.onItemClick(f.properties.id); });
+      }
       if (opts.onLoad) opts.onLoad(map);
     });
     return map;
+  }
+  // Show items with coordinates; hot ids get the bigger marker + label. Returns the hot features' bounds or null.
+  function setMarkers(map, items, hotIds) {
+    if (!map || !map.getSource || !map.getSource("items")) return null;
+    const hot = new Set(hotIds || []);
+    const feats = items.filter(it => it.lngLat).map(it => ({ type: "Feature", properties: { id: it.id, name: it.name, hot: hot.has(it.id) ? 1 : 0 }, geometry: { type: "Point", coordinates: it.lngLat } }));
+    map.getSource("items").setData({ type: "FeatureCollection", features: feats });
+    const hf = feats.filter(f => f.properties.hot); if (!hf.length) return null;
+    const b = new maplibregl.LngLatBounds(); hf.forEach(f => b.extend(f.geometry.coordinates)); return b;
   }
   function flyTo(map, placeKey, extra) {
     const p = T.places[placeKey]; if (!p) return;
@@ -78,5 +97,5 @@
     return g;
   }
 
-  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, groupsByBase };
+  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, groupsByBase };
 })();

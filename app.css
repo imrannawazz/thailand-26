@@ -1,13 +1,13 @@
 /* Three-level shell: overview (map + day highlights) → day page → item card. Skinned by [data-skin=k|l]. */
 :root{--ground:#061822;--panel:rgba(6,24,34,.82);--ink:#ece2cb;--note:#8ea4ae;--dim:#4f6672;--accent:#ece2cb;--line:rgba(236,226,203,.18);
   --display:"Avara",Georgia,serif;--text:"Playfair",Georgia,serif;--fig:"Playfair",Georgia,serif;--textstyle:italic;--radius:0}
-:root[data-skin=l]{--ground:#f4f1ea;--panel:rgba(244,241,234,.9);--ink:#1c1c1a;--note:#5f5f5a;--dim:#9a9a92;--accent:#2f5f8c;--line:rgba(28,28,26,.14);
+:root[data-skin=l]{--ground:#f4f1ea;--panel:rgba(244,241,234,.96);--ink:#1c1c1a;--note:#3f3f3b;--dim:#6f6f68;--accent:#2f5f8c;--line:rgba(28,28,26,.14);
   --display:"Jost",system-ui,sans-serif;--text:"Jost",system-ui,sans-serif;--fig:"Jost",system-ui,sans-serif;--textstyle:normal;--radius:2px}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{background:var(--ground);height:100%}
 body{margin:0;height:100%;font-family:var(--text);font-style:var(--textstyle);font-weight:400;color:var(--note);font-size:clamp(15px,1.1vw,17px);line-height:1.45;-webkit-font-smoothing:antialiased;overflow:hidden}
-:root[data-skin=l] body{font-weight:300}
+:root[data-skin=l] body{font-weight:400}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
 #map{position:fixed;inset:0;z-index:0}
@@ -16,7 +16,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .maplibregl-ctrl-bottom-right{bottom:calc(env(safe-area-inset-bottom,0px) + 4px)}
 .shade{position:fixed;inset:0;z-index:0;pointer-events:none}
 :root[data-skin=k] .shade{background:linear-gradient(90deg,rgba(6,24,34,.88) 0%,rgba(6,24,34,.55) 42%,rgba(6,24,34,0) 70%)}
-:root[data-skin=l] .shade{background:linear-gradient(0deg,rgba(244,241,234,.92) 0%,rgba(244,241,234,.55) 45%,rgba(244,241,234,0) 75%)}
+:root[data-skin=l] .shade{background:linear-gradient(0deg,rgba(244,241,234,.9) 0%,rgba(244,241,234,.5) 40%,rgba(244,241,234,0) 70%)}
+:root[data-skin=l] body.has-sheet .shade{background:none}
 
 /* type roles */
 .disp{font-family:var(--display);font-style:normal;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:.9}
@@ -37,7 +38,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 :root[data-skin=l] .brand{font-weight:600;letter-spacing:.02em;text-transform:uppercase;font-size:clamp(14px,1.1vw,16px)}
 .brand small{display:block;font-family:var(--text);font-style:var(--textstyle);font-weight:400;font-size:.6em;letter-spacing:0;color:var(--note);margin-top:.2em;text-transform:none}
 .menu{display:flex;gap:1.4em;flex-wrap:wrap;justify-content:flex-end;font-style:normal;font-size:.9em}
-.menu button{color:var(--note);letter-spacing:.04em;padding:.2em 0;border-bottom:1px solid transparent;transition:color .4s cubic-bezier(.32,.72,0,1)}
+.menu button{color:var(--note);letter-spacing:.04em;padding:.2em 0;white-space:nowrap;border-bottom:1px solid transparent;transition:color .4s cubic-bezier(.32,.72,0,1)}
 .menu button:hover,.menu button:focus-visible{color:var(--ink);border-bottom-color:var(--ink);outline:none}
 .budget{text-align:right;font-style:normal}
 .budget .fig{font-size:clamp(22px,2.2vw,34px);line-height:1}
@@ -45,13 +46,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 
 /* overview */
 .overview{position:fixed;z-index:3;inset:0;pointer-events:none;display:flex;flex-direction:column;justify-content:flex-end}
+body.has-sheet .overview{display:none}
 .overview > *{pointer-events:auto}
 .hl{margin:0 max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));max-width:560px;padding:20px 0 14px}
 :root[data-skin=l] .overview{align-items:center}
 :root[data-skin=l] .hl{text-align:center;max-width:620px}
 .hl .disp{font-size:clamp(44px,7vw,112px);margin:.1em 0 .15em}
 .hl .disp small{display:block;font-size:.26em;font-weight:700;letter-spacing:0;margin-top:.4em}
-:root[data-skin=l] .hl .disp small{font-weight:300;font-size:.3em}
+:root[data-skin=l] .hl .disp small{font-weight:400;font-size:.3em}
 .hl .date{display:flex;align-items:baseline;gap:1em;flex-wrap:wrap}
 :root[data-skin=l] .hl .date{justify-content:center}
 .hl .date .fig{font-size:clamp(28px,3.4vw,52px)}
@@ -74,21 +76,49 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 :root[data-skin=l] .rail button.on .fig{color:var(--accent)}
 
 /* overlays (day page, activity page, essentials) */
-.sheet{position:fixed;inset:0;z-index:8;overflow-y:auto;overscroll-behavior:contain;background:var(--panel);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(60px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));animation:rise .5s cubic-bezier(.32,.72,0,1)}
+.sheet{position:fixed;top:0;bottom:0;left:0;width:min(760px,58vw);z-index:8;overflow-y:auto;overscroll-behavior:contain;background:var(--panel);box-shadow:0 0 0 1px var(--line);padding:calc(16px + env(safe-area-inset-top,0px)) 28px calc(60px + env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));animation:rise .5s cubic-bezier(.32,.72,0,1)}
+.sheet .wrap{max-width:none}
 @keyframes rise{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
 .sheet .wrap{max-width:860px;margin:0 auto}
-:root[data-skin=k] .sheet .wrap{margin-left:max(0px,calc(6vw - 16px))}
+
 .back{display:inline-flex;align-items:center;gap:.5em;font-style:normal;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.72em;color:var(--note);padding:.4em 0;margin-bottom:1.2em}
 .back:hover{color:var(--ink)}
 .sheet h1.disp{font-size:clamp(40px,6vw,96px);margin:.1em 0 .2em}
 .sheet h1.disp small{display:block;font-size:.3em;font-weight:700;letter-spacing:0;margin-top:.4em}
-:root[data-skin=l] .sheet h1.disp small{font-weight:300}
+:root[data-skin=l] .sheet h1.disp small{font-weight:400}
 .lead{max-width:60ch;margin:0 0 1em}
 .sec{margin-top:2.6em}
 .sec h2{font-style:normal;font-weight:500;font-size:.78em;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:0 0 .8em}
 .sec h2 b{color:var(--ink);font-weight:500}
 .hlist{list-style:none;margin:0;padding:0;max-width:48ch}
 .hlist li{margin:0 0 .4em}
+
+/* day tabs */
+.tabs{position:sticky;top:calc(-16px - env(safe-area-inset-top,0px));z-index:2;display:flex;gap:1.6em;overflow-x:auto;scrollbar-width:none;margin:1.2em -28px 0 -24px;padding:.8em 28px .6em 24px;background:var(--panel);border-bottom:1px solid var(--line)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;font-style:normal;font-weight:500;font-size:.8em;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:.3em 0;border-bottom:2px solid transparent;transition:color .4s cubic-bezier(.32,.72,0,1),border-color .4s cubic-bezier(.32,.72,0,1)}
+.tabs button:hover,.tabs button:focus-visible{color:var(--ink);outline:none}
+.tabs button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.pane{padding-top:.4em}
+.pane > .sec:first-child{margin-top:1.4em}
+.linkish{font:inherit;color:var(--accent);text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+.maplibregl-popup-content{background:var(--ground);color:var(--ink);padding:6px 9px;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{border-top-color:var(--ground)}
+
+/* day chips (assign an item to a day) */
+.chips{display:inline-flex;gap:.35em;margin-left:.6em;vertical-align:middle}
+.chips button{font-style:normal;font-weight:500;font-size:.7em;letter-spacing:.04em;min-width:1.9em;padding:.15em .45em;border:1px solid var(--line);border-radius:999px;color:var(--dim);transition:color .3s,border-color .3s,background .3s}
+.chips button:hover{color:var(--ink);border-color:var(--ink)}
+.chips button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.chips .lbl{font-style:normal;font-size:.7em;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);align-self:center;margin-right:.2em}
+
+/* comparison table */
+.tablewrap{overflow-x:auto}
+table.cmp{border-collapse:collapse;width:100%;min-width:640px;font-size:.9em;font-style:normal}
+table.cmp th,table.cmp td{text-align:left;vertical-align:top;padding:.6em .8em .6em 0;border-top:1px solid var(--line)}
+table.cmp thead th{font-weight:500;font-size:.78em;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);border-top:0}
+table.cmp tbody th{font-weight:500;color:var(--ink);width:14ch}
+table.cmp td:nth-child(3){color:var(--ink)}
 
 /* item rows (cards) */
 .row{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4vw;align-items:baseline;padding:.6em 0;border-top:1px solid var(--line);cursor:pointer;transition:opacity .4s cubic-bezier(.32,.72,0,1)}
@@ -130,7 +160,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .card ul{margin:0;padding-left:1.1em}
 .card li{margin:0 0 .35em}
 .quote{color:var(--ink);font-style:italic}
-:root[data-skin=l] .quote{font-style:italic;font-weight:300}
+:root[data-skin=l] .quote{font-style:italic;font-weight:400}
 .links{display:flex;flex-wrap:wrap;gap:.6em;margin:.6em 0 0}
 .links a{display:inline-flex;align-items:center;gap:.4em;font-style:normal;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.72em;color:var(--ink);text-decoration:none;padding:.6em 1em;border:1px solid var(--line);border-radius:999px;transition:border-color .4s cubic-bezier(.32,.72,0,1),background .4s cubic-bezier(.32,.72,0,1)}
 .links a:hover{border-color:var(--ink)}
@@ -181,6 +211,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
   .row .fig,.opt .fig{text-align:left;font-size:clamp(18px,5.5vw,26px);white-space:normal}
   .row .fig small,.opt .fig small{display:inline;margin-left:.5em;text-align:left}
   .card .inner{width:100%}
+  .sheet{top:34vh;width:100%;border-radius:14px 14px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.12);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .tabs{margin:1em -16px 0;padding:.7em 16px .5em;gap:1.3em}
   :root[data-skin=k] .sheet .wrap{margin-left:0}
   :root[data-skin=k] .shade{background:linear-gradient(0deg,rgba(6,24,34,.92) 0%,rgba(6,24,34,.6) 50%,rgba(6,24,34,.1) 80%)}
 }
