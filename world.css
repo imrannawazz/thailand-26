@@ -195,3 +195,7 @@ body.map-moving .sheet,body.map-moving .card .inner,body.map-moving .top,body.ma
 .st.none{background:rgba(255,255,255,.1);color:var(--dim)}
 .stop .leg{margin-top:.45em;padding-top:.45em;border-top:1px dashed var(--line);font-size:.84em;color:var(--note);font-style:normal}
 .stop .leg b{color:#fff;font-weight:500}
+
+/* the budget pill never wraps; its long unit text hides on narrow screens */
+:root[data-skin=l] .budget-pill{white-space:nowrap}
+@media (max-width:1100px){:root[data-skin=l] .budget-pill .unit{font-size:.7em}}
