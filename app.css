@@ -84,8 +84,8 @@ body.has-sheet .overview{display:none}
 .open{display:inline-flex;align-items:center;gap:.6em;margin-top:1em;font-style:normal;font-weight:600;color:var(--ink);letter-spacing:.06em;text-transform:uppercase;font-size:.78em;padding:.7em 0;border-bottom:1px solid var(--ink)}
 .open .arrow{display:inline-block;transition:transform .2s cubic-bezier(.23,1,.32,1)}
 :root[data-skin=l] .open{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
-.rail{display:flex;gap:clamp(14px,3vw,40px);overflow-x:auto;scrollbar-width:none;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-:root[data-skin=l] .rail{justify-content:center}
+.rail{display:flex;align-self:stretch;width:100%;max-width:100%;gap:clamp(14px,3vw,40px);overflow-x:auto;scrollbar-width:none;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+:root[data-skin=l] .rail>button:first-child{margin-left:auto}:root[data-skin=l] .rail>button:last-child{margin-right:auto}  /* centred when it fits, scrollable from the first day when it does not */
 .rail::-webkit-scrollbar{display:none}
 .rail button{flex:0 0 auto;color:var(--dim);font-style:normal;text-align:left;transition:color .2s ease,transform .2s cubic-bezier(.23,1,.32,1)}
 .rail button .fig{display:block;color:inherit;font-size:clamp(20px,2.2vw,32px);line-height:1}
@@ -406,7 +406,7 @@ p.avail a{color:inherit}
 .row.just{animation:glow .9s ease-out}
 @keyframes glow{from{background:color-mix(in srgb,var(--accent) 14%,transparent);box-shadow:inset 3px 0 0 var(--accent)}to{background:transparent;box-shadow:inset 3px 0 0 transparent}}
 .rail button .fig{position:relative}
-.ldot{position:absolute;top:-2px;right:-10px;width:6px;height:6px;border-radius:50%;border:1.5px solid var(--dim);background:transparent}
+.ldot{position:absolute;top:-2px;left:-9px;width:6px;height:6px;border-radius:50%;border:1.5px solid var(--dim);background:transparent}
 .rail button.locked .ldot{background:var(--accent);border-color:var(--accent)}
 .hl .decided{margin:.9em 0 0;color:var(--dim)}
 .hl .decided:empty{display:none}
