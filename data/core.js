@@ -106,7 +106,8 @@
   }
   function flyTo(map, placeKey, extra) {
     const p = T.places[placeKey]; if (!p) return;
-    map.flyTo(Object.assign({ center: p.lngLat, zoom: p.zoom, duration: 2400, essential: true, curve: 1.3 }, extra || {}));
+    const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    map.flyTo(Object.assign({ center: p.lngLat, zoom: p.zoom, duration: reduce ? 0 : (window.innerWidth <= 720 ? 800 : 1100), curve: 1.3 }, extra || {}));
   }
 
   function groupsByBase() {
@@ -115,5 +116,14 @@
     return g;
   }
 
-  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, setZones, setMeasure, groupsByBase };
+  // one soft ring around a marker, once (after a lock)
+  function pulse(map, id) {
+    if (!map || !map.getSource || !map.getSource("items")) return;
+    if (!map.getLayer("items-pulse")) map.addLayer({ id: "items-pulse", type: "circle", source: "items", filter: ["==", ["get", "id"], "__none__"], paint: { "circle-radius": 6, "circle-color": "#2f5f8c", "circle-opacity": 0.5, "circle-stroke-width": 0 } });
+    map.setFilter("items-pulse", ["==", ["get", "id"], id]);
+    const t0 = performance.now(), dur = 900;
+    const step = now => { const q = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - q, 2); map.setPaintProperty("items-pulse", "circle-radius", 6 + 22 * e); map.setPaintProperty("items-pulse", "circle-opacity", 0.5 * (1 - q)); if (q < 1) requestAnimationFrame(step); else map.setFilter("items-pulse", ["==", ["get", "id"], "__none__"]); };
+    requestAnimationFrame(step);
+  }
+  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, setZones, setMeasure, groupsByBase, pulse };
 })();

@@ -27738,6 +27738,11 @@ window.TRIP = {
    "k": "Budget frame",
    "v": "Excluding flights, with stays at your 3 to 5K caps: about 60,000 INR per head low to 1,04,000 mid; realistic target 75,000 to 85,000 each.",
    "src": "research/essentials.md"
+  },
+  {
+   "k": "About the numbers",
+   "v": "Every price is a dated snapshot, not a quote: research prices were read 24 Oct 2026 for late-October or our own dates, availability was checked on Booking.com, Trip.com and Airbnb on 24 Oct, and the group's own prices and marks carry the name and date of whoever added them. Beach distances come from map pins; where a listing only gives its area the card says close, a short drive or far. Scores are out of 100: reviews 35, budget 30, beach 20, pool 15.",
+   "src": ""
   }
  ]
 };

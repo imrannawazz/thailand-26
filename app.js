@@ -4,6 +4,15 @@
 (function () {
   const T = window.TRIP, C = window.CORE;
   const h = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // haptics: Android through navigator.vibrate; iOS Safari has no vibration API, but toggling a native switch input plays a tap (iOS 17.4+)
+  let hapticSwitch = null;
+  const haptic = kind => { try {
+    if ("vibrate" in navigator && navigator.vibrate(kind === "success" ? [12, 40, 12] : 8)) return;
+    if (!hapticSwitch) { hapticSwitch = document.createElement("label"); hapticSwitch.innerHTML = '<input type="checkbox" switch aria-hidden="true" tabindex="-1">'; hapticSwitch.style.cssText = "position:fixed;left:0;top:0;width:1px;height:1px;opacity:.01;overflow:hidden;pointer-events:none"; document.body.appendChild(hapticSwitch); }
+    hapticSwitch.click();
+  } catch (e) {} };
+  // numbers tick to their new value instead of jumping
+  const tick = (el, from, to) => { if (!el) return; if (from === undefined || from === to || isNaN(from)) { el.textContent = fmt(to); return; } const t0 = performance.now(), dur = 320; const step = now => { const q = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - q, 3); el.textContent = fmt(Math.round(from + (to - from) * e)); if (q < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); setTimeout(() => { el.textContent = fmt(to); }, dur + 60); };
   // research text marks item mentions as [[text|item-id]]; render those as links that open the card
   const rich = s => h(s).replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, (m, t, id) => T.items[id] ? `<button class="linkish inline" data-item="${id}">${t}</button>` : t);
   const $ = sel => document.querySelector(sel);
@@ -23,8 +32,8 @@
   const today = () => new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   // A / B / Z tiers, one per person per item (A love it, B would go, Z no)
   const TIER_LABEL = { A: "A · love it", B: "B · would go", Z: "Z · no" };
-  function setTier(id, t) { const w = who(); if (!w) return gate(); S.setTier(id, w, S.tierOf(id, w) === t ? null : t); }
-  const tiersByLetter = id => { const out = { A: [], B: [], Z: [] }; for (const x of S.tiersFor(id)) (out[x.tier] || []).push(x.who); return out; };
+  function setTier(id, t) { const w = who(); if (!w) return gate(); haptic(); S.setTier(id, w, S.tierOf(id, w) === t ? null : t); }
+  const tiersByLetter = id => { const out = { A: [], B: [], Z: [] }; for (const x of S.tiersFor(id)) (out[x.tier] || []).push(x.who); for (const w of rejectedBy(id)) if (!out.Z.includes(w)) out.Z.push(w); return out; };
   const tierTags = id => { const g = tiersByLetter(id); return ["A", "B", "Z"].filter(k => g[k].length).map(k => `<span class="act tier t${k}" title="${k} tier: ${h(g[k].join(", "))}">${k} · ${h(g[k].join(", "))}</span>`).join(""); };
   function toggleReject(id) { const w = who(); if (!w) return gate(); S.setReject(id, w, !S.rejectsFor(id).includes(w)); }
   function addComment(id, text) { const w = who(); if (!w) return gate(); if (!text.trim()) return; S.addComment(id, w, text.trim()); }
@@ -38,7 +47,7 @@
   const lockMeta = dId => { const l = S.locks()[dId]; return l ? `${l.who || "someone"}${l.at ? " · " + when(l.at) : ""}` : ""; };
   const optLabel = (o) => o ? (o.label || (o.item && T.items[o.item] && T.items[o.item].name) || o.id) : "";
   const pickWho = id => (S.pickOf(id) || {}).who || null;
-  const tagsFor = id => `${tierTags(id)}${rejectedBy(id).length ? `<span class="act rej" title="Not for: ${h(rejectedBy(id).join(", "))}">✕ ${h(rejectedBy(id).join(", "))}</span>` : ""}${commentCount(id) ? `<span class="act" title="Comments">${commentCount(id)} comment${commentCount(id) === 1 ? "" : "s"}</span>` : ""}`;
+  const tagsFor = id => `${tierTags(id)}${commentCount(id) ? `<span class="act" title="Comments">${commentCount(id)} comment${commentCount(id) === 1 ? "" : "s"}</span>` : ""}`;
 
   // ---- picks (items added to a day) ----
   const picks = new Proxy({}, { get: (_, day) => S.picksByDay()[day] || [], ownKeys: () => Object.keys(S.picksByDay()), getOwnPropertyDescriptor: () => ({ enumerable: true, configurable: true }) });
@@ -48,14 +57,19 @@
   // Old Town things sit on day 1 (and Sunday, Lard Yai); beach things sit on days 5 to 7.
   const daysForItem = it => T.days.filter(d => (d.base === it.place || (it.place === "krabi" && d.base === "aonang")) && (!d.zones || !it.zone || d.zones.includes(it.zone))).map(d => d.n);
   const dayOfPick = id => (S.pickOf(id) || {}).day || null;
-  function assign(id, day) { const w = who(); if (!w) return gate(); S.setPick(id, day ? Number(day) : null, w); }
+  function assign(id, day) { const w = who(); if (!w) return gate(); haptic(); S.setPick(id, day ? Number(day) : null, w); }
   function chips(it) {
     const days = daysForItem(it); if (!days.length) return "";
     const on = dayOfPick(it.id);
     return `<span class="chips"><span class="lbl">Day</span>${days.map(n => `<button data-assign="${it.id}" data-day="${n}" class="${on === n ? "on" : ""}" aria-pressed="${on === n}" title="Put on day ${n}">${n}</button>`).join("")}${on ? `<button data-assign="${it.id}" data-day="" title="Remove from the plan">×</button>` : ""}</span>`;
   }
-  function togglePick(day, id) { const w = who(); if (!w) return gate(); S.setPick(id, isPicked(day, id) ? null : Number(day), w); }
-  const lockWith = (dId, oId) => { const w = who(); if (!w) return gate(); C.lock(dId, oId, w); };
+  function togglePick(day, id) { const w = who(); if (!w) return gate(); haptic(); S.setPick(id, isPicked(day, id) ? null : Number(day), w); }
+  let lockJust = null, lockJustRow = null;
+  const lockWith = (dId, oId) => { const w = who(); if (!w) return gate(); const d = C.decision(dId), o = d && d.options.find(x => x.id === oId);
+    const willLock = !(S.locks()[dId] && S.locks()[dId].optionId === oId);
+    haptic(willLock ? "success" : "light"); lockJust = o && o.item || null; lockJustRow = dId + ":" + oId; clearTimeout(lockWith.tm); lockWith.tm = setTimeout(() => { lockJust = null; lockJustRow = null; }, 1200);
+    if (willLock && o && o.item && mapReady()) C.pulse(map, o.item);
+    C.lock(dId, oId, w); };
   // a price someone typed in, normalised: stays to all five for one night, everything else to all five
   const nightsOf = it => it.stayDates ? Math.max(1, Math.round((new Date(it.stayDates[1]) - new Date(it.stayDates[0])) / 864e5)) : 1;
   const hasPrice = it => !!it.priceINR || it.priceTHB != null;
@@ -96,7 +110,7 @@
   function base(r) { return r.page + (r.tab ? "/t-" + r.tab : ""); }
   function closeTop() { const r = route(); measureFocus = null; if (r.item) go(base(r)); else go(""); }
   window.addEventListener("hashchange", render);
-  document.addEventListener("keydown", e => { if (e.key === "Escape") closeTop(); if (!route().page) { if (e.key === "ArrowRight") selectDay(Math.min(7, current + 1)); if (e.key === "ArrowLeft") selectDay(Math.max(0, current - 1)); } });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeTop(); if (!route().page) { if (e.key === "ArrowRight") selectDay(Math.min(7, current + 1), true); if (e.key === "ArrowLeft") selectDay(Math.max(0, current - 1), true); } });
 
   // ---- map ----
   let map, focused = null;
@@ -105,9 +119,9 @@
     if (w > 720) return sheetOpen ? { left: Math.min(760, Math.round(w * .58)) + 40, right: 50, top: 110, bottom: 60 } : { left: 60, right: 60, top: 120, bottom: Math.round(hgt * .42) };
     return sheetOpen ? { left: 24, right: 24, top: 90, bottom: Math.round(hgt * .66) + 16 } : { left: 20, right: 20, top: 100, bottom: Math.round(hgt * .6) };
   }
-  function focusPlace(place, sheetOpen) {
+  function focusPlace(place, sheetOpen, extra) {
     if (!map) return; focused = place;
-    C.flyTo(map, place, { padding: mapPadding(sheetOpen), pitch: 0, bearing: 0, zoom: PLACE(place).zoom - 0.4 });
+    C.flyTo(map, place, Object.assign({ padding: mapPadding(sheetOpen), pitch: 0, bearing: 0, zoom: PLACE(place).zoom - 0.4 }, extra || {}));
   }
   const mapReady = () => map && map.getSource && map.getSource("items");
 
@@ -268,7 +282,7 @@
       const meta = it && it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""} · ${it.reviewSource || ""}` : "";
       const price = o.costINR ? `${fmt(o.costINR)}<small>INR · ${h(o.unit || "")}</small>` : `<small>${h(o.unit || "price pending")}</small>`;
       const sub = (o.items || []).length ? `<span class="meta">${o.items.length} stays inside the cap: ${o.items.slice(0, 3).map(i => h(T.items[i].name)).join(", ")}${o.items.length > 3 ? "…" : ""}</span>` : "";
-      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked by " + h(lockMeta(d.id)) : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${it && it.type === "stay" ? availLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
+      return `<div class="row ${st} ${lockJustRow === d.id + ":" + o.id ? "just" : ""}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked by " + h(lockMeta(d.id)) : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${it && it.type === "stay" ? availLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
     }).join("");
     return `<div class="sec"><h2>Decide: <b>${h(d.title)}</b></h2>${rows}<p class="small pending" style="margin:.6em 0 0">Tap a name for the full card. Lock to count it in the budget; tap again to unlock.</p></div>`;
   }
@@ -321,14 +335,18 @@
       ${d.tips.length ? `<div class="sec"><h2>From the research</h2><ul class="hlist">${d.tips.map(x => `<li>${rich(x)}</li>`).join("")}</ul></div>` : ""}
       <div class="sec"><h2>Locked for this day</h2>${locked.length ? locked.map(({ dec, o }) => { const it = o.item ? T.items[o.item] : null; return `<div class="row locked" role="button" tabindex="0" ${it ? `data-item="${it.id}"` : `data-tab="decide"`}><div><span class="name">${h(o.label || (it && it.name) || o.id)}</span><span class="meta">${h(dec.title)}</span></div><div class="fig">${o.costINR ? fmt(o.costINR) + "<small>INR</small>" : "—"}</div></div>`; }).join("") : `<p class="pending">Nothing locked yet.</p>`}${open.length ? `<p class="small" style="margin:.8em 0 0">Still open: ${open.map(dec => `<button class="linkish" data-tab="decide">${h(dec.title)}</button>`).join(", ")}.</p>` : ""}</div>
       <div class="sec"><h2>Added to this day</h2>${added.length ? added.map(id => itemRow(id, { day: n })).join("") : `<p class="pending">Nothing added yet. Open any place and tap "Add to day ${n}".</p>`}</div>
-      <div class="sec"><h2>Day cost so far</h2><p><span class="fig" style="font-size:clamp(26px,3vw,44px)">${cost ? fmt(cost) : "—"}</span> <span class="small">INR for five${cost ? ", " + fmt(cost / T.travellers) + " each" : ""}. Locked choices plus added items; transport and food you have not added are not in it.</span></p></div>`;
+      <div class="sec"><h2>Day cost so far</h2><p><span class="fig" style="font-size:clamp(26px,3vw,44px)">${cost ? fmt(cost) : "0"}</span> <span class="small">INR for five${cost ? ", " + fmt(cost / T.travellers) + " each. Locked choices plus added items; transport and food you have not added are not in it." : ". Nothing counted yet: lock a stay in Decide, or add a place with its day chips."}</span></p></div>`;
   }
 
   // ---- pages ----
   function overview() {
     const d = T.days[current], p = PLACE(d.base);
-    $("#hl").innerHTML = `<div class="date"><span class="fig">${h(d.date)}</span><span>Day ${d.n}, ${h(d.weekday)}${d.spend ? ". " + h(d.spend) : ""}</span></div><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1><ul>${d.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul><p class="one small">${h(d.highlights[0])}${d.highlights[1] ? " · " + h(d.highlights[1]) : ""}</p><button class="open" data-go="day-${d.n}">Open the day <span aria-hidden="true">→</span></button>`;
-    document.querySelectorAll(".rail button").forEach((b, i) => b.classList.toggle("on", i === current));
+    $("#hl").innerHTML = `<div class="date"><span class="fig">${h(d.date)}</span><span>Day ${d.n}, ${h(d.weekday)}${d.spend ? ". " + h(d.spend) : ""}</span></div><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1><ul>${d.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul><p class="one small">${h(d.highlights[0])}${d.highlights[1] ? " · " + h(d.highlights[1]) : ""}</p><button class="open" data-go="day-${d.n}">Open the day <span class="arrow" aria-hidden="true">→</span></button><p class="small decided"></p>`;
+    const blocks = T.decisions.filter(x => x.block), done = blocks.filter(x => C.lockedOption(x)).length;
+    const dl = $("#hl .decided"); if (dl) dl.innerHTML = `<b class="ink">${done} of ${blocks.length}</b> stays decided · <button class="linkish" data-go="stays">Hotels</button>`;
+    const rail = $("#rail");
+    document.querySelectorAll(".rail button").forEach((b, i) => { b.classList.toggle("on", i === current); const dec = stayDecOf(T.days[i]); b.classList.toggle("locked", !!(dec && C.lockedOption(dec))); });
+    const cur = rail && rail.children[current]; if (cur) rail.scrollTo({ left: Math.max(0, cur.offsetLeft - rail.clientWidth / 2 + cur.offsetWidth / 2), behavior: overview.ran ? "smooth" : "auto" }); overview.ran = true;
   }
   function dayTabs(d) {
     const key = d.base === "aonang" ? "krabi" : d.base;
@@ -343,8 +361,10 @@
     if (T.local[d.base]) tabs.push(["around", "Around"]);
     if (T.reddit[key]) tabs.push(["reddit", "Reddit"]);
     tabs.push(["notes", "Notes"]);
-    return tabs;
+    const ORDER = ["itinerary", "stay", "decide", "do", "eat", "drink", "travel", "dive", "around", "reddit", "notes"];
+    return tabs.sort((a, b) => ORDER.indexOf(a[0]) - ORDER.indexOf(b[0]));
   }
+  let moreTabs = false;
   const LIST_TABS = new Set(["stay", "do", "eat", "drink", "dive"]);
   function dayPage(n, tab) {
     const d = T.days.find(x => x.n === n); if (!d) return null;
@@ -367,7 +387,7 @@
       <h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>
       <p class="subline">Day ${d.n} · ${h(d.weekday)} ${h(d.date)}${d.spend ? " · " + h(d.spend) : ""}</p>
       ${T.guides[d.base] ? `<p class="small" style="margin:-.2em 0 .4em"><button class="linkish" data-go="place-${d.base}">About ${h(p.name)}: areas on the map and our take →</button></p>` : ""}
-      <nav class="tabs" aria-label="Day sections">${tabs.map(([id, label]) => `<button class="${id === tab ? "on" : ""}" data-tab="${id}" aria-selected="${id === tab}">${label}</button>`).join("")}</nav>
+      <nav class="tabs" aria-label="Day sections">${(() => { const N = 6, all = moreTabs || tabs.findIndex(t => t[0] === tab) >= N; const vis = all ? tabs : tabs.slice(0, N); return vis.map(([id, label]) => `<button class="${id === tab ? "on" : ""}" data-tab="${id}" aria-selected="${id === tab}">${label}</button>`).join("") + (!all && tabs.length > N ? `<button class="more" data-moretabs>More <span aria-hidden="true">▾</span></button>` : ""); })()}</nav>
       <div class="pane" id="pane">${pane}</div></div>` };
   }
   function actPage(id) {
@@ -387,7 +407,7 @@
     const p = PLACE(place);
     const body = tab === "guide" ? guideTab(place, g) : linksBlock(place, null) + planPage(place, true);
     return { tab, html: `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${h(g.title)}<small>${h(p.thai)}</small></h1>
-      <nav class="tabs" aria-label="Place sections"><button class="${tab === "guide" ? "on" : ""}" data-tab="guide">Guide</button><button class="${tab === "choose" ? "on" : ""}" data-tab="choose">Choose</button></nav>
+      <nav class="tabs" aria-label="Place sections"><button class="${tab === "guide" ? "on" : ""}" data-tab="guide">Guide</button><button class="${tab === "choose" ? "on" : ""}" data-tab="choose">Everything here</button></nav>
       <div class="pane" id="pane">${body}</div></div>` };
   }
   function planPage(place, inner) {
@@ -441,7 +461,7 @@
     const costOf = (d, it) => { const o = d.options.find(x => x.item === it.id); if (o && o.costINR) return o.costINR; const u = userPrice(it); return u ? u.groupINR * nights(d) : 0; };
     const stayRow = (d, it, locked) => {
       const o = d.options.find(x => x.item === it.id), cost = costOf(d, it);
-      return `<div class="row hrow ${locked ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${tierTags(it.id)}${rejectedBy(it.id).length ? `<span class="act rej">✕ ${h(rejectedBy(it.id).join(", "))}</span>` : ""}
+      return `<div class="row hrow ${locked ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${tierTags(it.id)}
         ${locked ? `<span class="lockline">Locked by <b>${h(lockMeta(d.id))}</b></span>` : S.pickOf(it.id) ? `<span class="meta">On day ${S.pickOf(it.id).day}${S.pickOf(it.id).who ? ", added by " + h(S.pickOf(it.id).who) : ""}</span>` : ""}
         <span class="meta">${h(it.zoneName || it.area || "")}</span>${availLine(it, false)}${beachLine(it, false)}
         ${o ? `<span class="hact"><button class="${locked ? "ghost" : ""}" data-lockcard="${d.id}" data-opt="${o.id}">${locked ? "Unlock" : "Lock for this stop"}</button></span>` : ""}</div>
@@ -491,6 +511,12 @@
       <p class="tagline">${h(it.tagline)}</p>
       ${it.rating ? `<div class="rating"><span class="fig">${it.rating}<small style="font-size:.45em;color:var(--dim)">/${it.scale}</small></span><span>${it.reviews ? fmt(it.reviews) + " reviews · " : ""}${h(it.reviewSource || "")}</span></div>` : ""}
       ${price ? `<div class="price">${price}</div>` : ""}${priceBlock(it)}${""}
+      ${availLine(it, true)}${it.type === "stay" ? `<p class="markrow">${marked(it) ? `<button class="linkish small" data-unavail="${it.id}" data-on="0">Undo: it is available after all</button>` : `<button class="linkish small" data-unavail="${it.id}" data-on="1">Mark unavailable for our dates</button>${availOf(it) === "no" ? "" : " <span class=\"small pending\">· checked the link and it is full? one tap hides it for everyone</span>"}`}</p>` : ""}${beachLine(it, true)}
+      <h3>The five of us</h3>
+      ${decOpt && decOpt.d.block ? (() => { const lo = C.lockedOption(decOpt.d); return lo && lo.id !== decOpt.o.id ? `<p class="small lockline">${h(decOpt.d.blockLabel)} is locked to <b>${h(optLabel(lo))}</b> by ${h(lockMeta(decOpt.d.id))}. <button class="linkish small" data-go="stays">See all hotels</button></p>` : lo ? `<p class="small lockline">Locked for ${h(decOpt.d.blockLabel)} by <b>${h(lockMeta(decOpt.d.id))}</b>.</p>` : ""; })() : ""}
+      <div class="tierset" role="group" aria-label="Your tier">${["A", "B", "Z"].map(k => `<button class="t${k} ${who() && S.tierOf(it.id, who()) === k ? "on" : ""}" data-tier="${it.id}" data-t="${k}" aria-pressed="${!!(who() && S.tierOf(it.id, who()) === k)}">${TIER_LABEL[k]}</button>`).join("")}</div>
+      <p class="small">${(() => { const g = tiersByLetter(it.id); const rated = ["A", "B", "Z"].filter(k => g[k].length); return rated.length ? rated.map(k => `${k}: <b class="ink">${h(g[k].join(", "))}</b>`).join(" · ") + `. Not rated: ${h(NAMES.filter(n => !S.tierOf(it.id, n)).join(", ") || "nobody")}.` : `Nobody has rated this yet. ${who() ? `Rating as <b class="ink">${h(who())}</b>; tap your tier again to clear it.` : ""}`; })()}</p>
+      <div class="cta decide">${decOpt ? `<button class="lockbtn ${lockJust === it.id ? "just" : ""}" data-lockcard="${decOpt.d.id}" data-opt="${decOpt.o.id}"><span class="lbl">${lockedHere ? `Locked by ${h(lockMeta(decOpt.d.id))} · unlock` : decOpt.d.blockLabel ? `Lock for ${h(decOpt.d.blockLabel)}` : "Lock as our choice"}</span></button>` : (daysForItem(it).length ? `<span class="small" style="align-self:center">On the plan:</span>${chips(it)}` : "")}</div>
       ${it.score && it.score.total !== null && it.score.total !== undefined ? `<h3>Score</h3><div class="rating"><span class="fig">${it.score.total}<small style="font-size:.45em;color:var(--dim)">/100</small></span><span>${["reviews", "budget", "beach", "pool"].filter(k => it.score.weights[k]).map(k => `${k} ${it.score.parts[k] === null ? "?" : it.score.parts[k]}`).join(" · ")}${it.score.unknown.length ? ` · unknown: ${it.score.unknown.join(", ")}` : ""}</span></div>${it.type === "stay" ? `<p class="small">${h(factsLine(it))}</p>` : ""}` : ""}
       ${it.position ? `<h3>Position</h3><p>${[it.position.pier !== null && it.position.pier !== undefined ? it.position.pier + " min from the pier" : "", it.position.lohdalum !== null && it.position.lohdalum !== undefined ? it.position.lohdalum + " min to the Loh Dalum bars" : "", it.position.viewpoint !== null && it.position.viewpoint !== undefined ? it.position.viewpoint + " min to the viewpoint stairs" : "", it.position.noise ? "noise: " + it.position.noise : "", it.position.ac === true ? "AC" : it.position.ac === false ? "fan only" : ""].filter(Boolean).join(" · ")}</p>` : ""}
       ${(() => { const m = measureFor(it); return m ? `<h3>On the map</h3><div class="measure">${m.targets.map(t => `<button data-measure="${h(t.name)}" class="${t.primary ? "on" : ""}"><span class="mname">${h(t.name)}${t.note ? ` <span class="small pending">${h(t.note)}</span>` : ""}</span><span class="mdist">${h(t.label)}</span></button>`).join("")}</div><p class="small pending" style="margin:.3em 0 0">Straight-line distance times 1.35 for roads; walking 4.8 km/h, car about 30 km/h.${m.approx ? " This pin is approximate (area level), so treat these as rough." : ""}</p>` : ""; })()}
@@ -499,19 +525,14 @@
       ${it.distances ? `<h3>Distances</h3><p>${Object.entries(it.distances).filter(([k, v]) => v).map(([k, v]) => `${h(k)}: ${h(v)}`).join(" · ")}</p>` : ""}
       ${it.when ? `<h3>When</h3><p>${h(it.when)}</p>` : ""}
       ${it.book ? `<h3>How to book</h3><p>${h(it.book)}</p>` : ""}
-      ${availLine(it, true)}${it.type === "stay" ? `<p class="markrow">${marked(it) ? `<button class="linkish small" data-unavail="${it.id}" data-on="0">Undo: it is available after all</button>` : `<button class="linkish small" data-unavail="${it.id}" data-on="1">Mark unavailable for our dates</button>${availOf(it) === "no" ? "" : " <span class=\"small pending\">· checked the link and it is full? one tap hides it for everyone</span>"}`}</p>` : ""}${beachLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
+      ${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.praise.length ? `<h3>Guests praise</h3><ul>${it.praise.map(x => `<li class="quote">${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.complaints.length ? `<h3>Watch out</h3><ul>${it.complaints.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}
       <h3>Links</h3><div class="links">${links}</div>
-      <h3>The five of us</h3>
-      ${decOpt && decOpt.d.block ? (() => { const lo = C.lockedOption(decOpt.d); return lo && lo.id !== decOpt.o.id ? `<p class="small lockline">${h(decOpt.d.blockLabel)} is locked to <b>${h(optLabel(lo))}</b> by ${h(lockMeta(decOpt.d.id))}. <button class="linkish small" data-go="stays">See all hotels</button></p>` : lo ? `<p class="small lockline">Locked for ${h(decOpt.d.blockLabel)} by <b>${h(lockMeta(decOpt.d.id))}</b>.</p>` : ""; })() : ""}
-      <div class="tierset" role="group" aria-label="Your tier">${["A", "B", "Z"].map(k => `<button class="t${k} ${who() && S.tierOf(it.id, who()) === k ? "on" : ""}" data-tier="${it.id}" data-t="${k}" aria-pressed="${!!(who() && S.tierOf(it.id, who()) === k)}">${TIER_LABEL[k]}</button>`).join("")}</div>
-      <p class="small">${(() => { const g = tiersByLetter(it.id); const rated = ["A", "B", "Z"].filter(k => g[k].length); return rated.length ? rated.map(k => `${k}: <b class="ink">${h(g[k].join(", "))}</b>`).join(" · ") + `. Not rated: ${h(NAMES.filter(n => !S.tierOf(it.id, n)).join(", ") || "nobody")}.` : `Nobody has rated this yet. ${who() ? `Rating as <b class="ink">${h(who())}</b>; tap your tier again to clear it.` : ""}`; })()}</p>
-      <p class="small">${rejectedBy(it.id).length ? `Not for: <b class="ink">${h(rejectedBy(it.id).join(", "))}</b>.` : "Nobody has ruled this out."}${pickWho(it.id) ? ` Added to a day by ${h(pickWho(it.id))}.` : ""}</p>
-      <div class="cta" style="margin-top:.4em"><button class="ghost" data-reject="${it.id}">${who() && rejectedBy(it.id).includes(who()) ? "Undo: not for me" : "Not for me"}</button></div>
+
       <div class="notes" style="margin-top:1em">${S.commentsFor(it.id).map(c => `<p class="item"><b>${h(c.who)}</b> ${h(c.body)} <span class="small pending">${h(c.at)}</span>${c.who === who() ? ` <button class="linkish small" data-cdel="${c.id}">remove</button>` : ""}</p>`).join("") || `<p class="pending">No comments yet.</p>`}<form data-comment="${it.id}"><textarea placeholder="${who() ? "Comment as " + h(who()) : "Pick your name to comment"}"></textarea><button type="submit">Add</button></form></div>
-      <div class="cta">${decOpt ? `<button data-lockcard="${decOpt.d.id}" data-opt="${decOpt.o.id}">${lockedHere ? `Locked by ${h(lockMeta(decOpt.d.id))} · unlock` : decOpt.d.blockLabel ? `Lock for ${h(decOpt.d.blockLabel)}` : "Lock as our choice"}</button>` : (daysForItem(it).length ? `<span class="small" style="align-self:center">On the plan:</span>${chips(it)}` : "")}<button class="ghost" data-close="item">Close</button></div>
+      <div class="cta"><button class="ghost" data-close="item">Close</button></div>
       ${decOpt ? `<p class="small pending">Part of the decision "${h(decOpt.d.title)}"${decOpt.o.costINR ? ": " + fmt(decOpt.o.costINR) + " INR, " + h(decOpt.o.unit || "") : ""}.</p>` : ""}
       <p class="src">Snapshot ${h(T.snapshot)}. Sources: ${it.sources.map(h).join("; ")}. Prices move; check the link before paying.</p>
     </div>`;
@@ -521,7 +542,10 @@
   let lastKey = "";
   function render() {
     const r = route(), b = budget();
-    $("#budget").innerHTML = `<button class="budget-pill" data-go="budget" title="${fmt(b.total)} INR for five"><span class="fig">${fmt(b.perHead)}</span><span class="unit">INR a head</span></button>`;
+    const fl = b.flights / T.travellers, rest = b.perHead - fl;
+    $("#budget").innerHTML = `<button class="budget-pill" data-go="budget" title="${fmt(b.total)} INR for five · flights ${fmt(fl)} a head${rest > 0 ? " + " + fmt(rest) + " planned" : ""}"><span class="fig">${fmt(render.prevHead ?? b.perHead)}</span><span class="unit">INR a head<span class="split">${rest > 0 ? ` · flights ${fmt(fl)} + ${fmt(rest)} plan` : " · flights only so far"}</span></span></button>`;
+    tick($("#budget .fig"), render.prevHead, b.perHead); render.prevHead = b.perHead;
+    const st = $("#synctext"); if (st) st.textContent = S.mode === "shared" ? "Shared with the five · " + S.status : "Saved in this browser only";
     document.querySelectorAll("#menu [data-go]").forEach(el => el.classList.toggle("on", location.hash.replace(/^#/, "").split("/")[0] === el.dataset.go));
     document.querySelectorAll("#menu .dd-btn").forEach(el => { const cur = location.hash.replace(/^#/, "").split("/")[0]; el.classList.toggle("on", [...el.parentElement.querySelectorAll("[data-go]")].some(x => x.dataset.go === cur)); });
     const live = S.mode === "shared" && /live/.test(S.status), off = S.mode === "shared" && !live;
@@ -568,15 +592,15 @@
       const m = openItem ? measureFor(openItem) : null;
       const mb = C.setMeasure(map, m && m.home, m ? m.targets : []);
       const cardPad = () => { const w = innerWidth; return w > 720 ? { left: 40, right: Math.min(620, w) + 40, top: 90, bottom: 40 } : { left: 24, right: 24, top: 110, bottom: Math.round(innerHeight * .55) }; };
-      if (openItem && mb) { const focus = m.targets.find(t => t.primary); const fb = new maplibregl.LngLatBounds(); fb.extend(openItem.lngLat); if (focus) fb.extend(focus.lngLat); m.targets.slice(0, 3).forEach(t => fb.extend(t.lngLat)); map.fitBounds(fb, { padding: cardPad(), maxZoom: 15, duration: 1100 }); }
+      if (openItem && mb) { const focus = m.targets.find(t => t.primary); const fb = new maplibregl.LngLatBounds(); fb.extend(openItem.lngLat); if (focus) fb.extend(focus.lngLat); m.targets.slice(0, 3).forEach(t => fb.extend(t.lngLat)); map.fitBounds(fb, { padding: cardPad(), maxZoom: 15, duration: 800 }); }
       else if (gp && changed) focusPlace(gp, true);
-      else if (changed && bounds && (d && LIST_TABS.has(tab) || r.page.startsWith("act-"))) map.fitBounds(bounds, { padding: mapPadding(!!page), maxZoom: 14, duration: 1400 });
+      else if (changed && bounds && (d && LIST_TABS.has(tab) || r.page.startsWith("act-"))) map.fitBounds(bounds, { padding: mapPadding(!!page), maxZoom: 14, duration: 700 });
       else if (changed || place !== focused) focusPlace(place, !!page);
     }
     lastKey = key;
   }
-  function selectDay(i) {
-    current = i; overview(); const d = T.days[i]; focusPlace(d.base, false);
+  function selectDay(i, instant) {
+    current = i; overview(); const d = T.days[i]; focusPlace(d.base, false, instant ? { duration: 0 } : null);
     if (mapReady()) C.setMarkers(map, ITEMS.filter(it => samePlace(it, d.base) && (!d.zones || !it.zone || d.zones.includes(it.zone))), [...d.picks.do, ...d.picks.eat, ...d.picks.drink]);
   }
 
@@ -584,13 +608,14 @@
   document.addEventListener("click", e => {
     const go_ = e.target.closest("[data-go]"); if (go_) { go(go_.dataset.go); return; }
     const close = e.target.closest("[data-close]"); if (close) { closeTop(); return; }
+    if (e.target.closest("[data-moretabs]")) { moreTabs = true; render(); return; }
     const tabBtn = e.target.closest("[data-tab]"); if (tabBtn) { go(route().page + "/t-" + tabBtn.dataset.tab); return; }
     const as = e.target.closest("[data-assign]"); if (as) { e.stopPropagation(); assign(as.dataset.assign, as.dataset.day ? Number(as.dataset.day) : null); return; }
     if (e.target.closest("[data-ftoggle]")) { SF.open = !SF.open; render(); return; }
-    const ms = e.target.closest("[data-measure]"); if (ms) { measureFocus = measureFocus === ms.dataset.measure ? null : ms.dataset.measure; const it = T.items[route().item]; const m = measureFor(it); C.setMeasure(map, m.home, m.targets); document.querySelectorAll("[data-measure]").forEach(b => b.classList.toggle("on", b.dataset.measure === (measureFocus || m.targets.find(t => t.primary).name))); const t = m.targets.find(x => x.primary); if (t) { const b = new maplibregl.LngLatBounds(); b.extend(m.home.lngLat); b.extend(t.lngLat); map.fitBounds(b, { padding: innerWidth > 720 ? { left: 60, right: Math.min(620, innerWidth) + 60, top: 110, bottom: 60 } : { left: 30, right: 30, top: 120, bottom: Math.round(innerHeight * .58) }, maxZoom: 15.5, duration: 900 }); } return; }
+    const ms = e.target.closest("[data-measure]"); if (ms) { measureFocus = measureFocus === ms.dataset.measure ? null : ms.dataset.measure; const it = T.items[route().item]; const m = measureFor(it); C.setMeasure(map, m.home, m.targets); document.querySelectorAll("[data-measure]").forEach(b => b.classList.toggle("on", b.dataset.measure === (measureFocus || m.targets.find(t => t.primary).name))); const t = m.targets.find(x => x.primary); if (t) { const b = new maplibregl.LngLatBounds(); b.extend(m.home.lngLat); b.extend(t.lngLat); map.fitBounds(b, { padding: innerWidth > 720 ? { left: 60, right: Math.min(620, innerWidth) + 60, top: 110, bottom: 60 } : { left: 30, right: 30, top: 120, bottom: Math.round(innerHeight * .58) }, maxZoom: 15.5, duration: 700 }); } return; }
     const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort" || k === "zone" || k === "avail" || k === "tier" || k === "tierBy") SF[k] = v; else if (k === "allZones") SF.allZones = v === "1"; else SF[k] = !SF[k]; if (k === "sort" && v !== "near" && SF.sort === "near") SF.sort = v; render(); return; }
     if (e.target.id === "card" || e.target.classList.contains("sheet-backdrop")) { closeTop(); return; }
-    const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 900 }); } return; }
+    const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 700 }); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }
     const lc = e.target.closest("[data-lockcard]"); if (lc) { lockWith(lc.dataset.lockcard, lc.dataset.opt); return; }
     const rail = e.target.closest(".rail button"); if (rail) { selectDay(Number(rail.dataset.i)); return; }
@@ -612,7 +637,7 @@
     const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
   document.addEventListener("click", e => {
     const del = e.target.closest("[data-misc-del]"); if (del) { removeMisc(del.dataset.miscDel); return; }
-    const ua = e.target.closest("[data-unavail]"); if (ua) { e.stopPropagation(); const w = who(); if (!w) return gate(); S.setUnavail(ua.dataset.unavail, w, ua.dataset.on === "1", null); return; }
+    const ua = e.target.closest("[data-unavail]"); if (ua) { e.stopPropagation(); const w = who(); if (!w) return gate(); haptic(); S.setUnavail(ua.dataset.unavail, w, ua.dataset.on === "1", null); return; }
     const tb = e.target.closest("[data-tier]"); if (tb) { e.stopPropagation(); setTier(tb.dataset.tier, tb.dataset.t); return; }
     const rj = e.target.closest("[data-reject]"); if (rj) { toggleReject(rj.dataset.reject); return; }
     const cd = e.target.closest("[data-cdel]"); if (cd) { removeComment(cd.dataset.cdel); return; }
@@ -636,7 +661,7 @@
   document.addEventListener("input", e => { if (e.target.id === "fsearch") { const el = e.target, pos = el.selectionStart; SF.q = el.value; if (!SF.q && SF.sort === "near") SF.sort = "score"; render(); const n = $("#fsearch"); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } } });
   // a short notice when someone else locks or unlocks while the app is open
   let lockSnap = null;
-  const toast = msg => { let t = document.getElementById("toast"); if (!t) { t = document.createElement("div"); t.id = "toast"; t.setAttribute("role", "status"); t.setAttribute("aria-live", "polite"); document.body.appendChild(t); } t.textContent = msg; t.classList.add("on"); clearTimeout(toast.tm); toast.tm = setTimeout(() => t.classList.remove("on"), 5000); };
+  const toast = msg => { let t = document.getElementById("toast"); if (!t) { t = document.createElement("div"); t.id = "toast"; t.setAttribute("role", "status"); t.setAttribute("aria-live", "polite"); document.body.appendChild(t); t.addEventListener("click", () => t.classList.remove("on")); let ty = null; t.addEventListener("touchstart", e => { ty = e.touches[0].clientY; }, { passive: true }); t.addEventListener("touchmove", e => { if (ty !== null && e.touches[0].clientY - ty > 24) { t.classList.remove("on"); ty = null; } }, { passive: true }); } t.textContent = msg; t.classList.add("on"); clearTimeout(toast.tm); toast.tm = setTimeout(() => t.classList.remove("on"), 5000); };
   const lockState = () => JSON.stringify({ l: S.locks(), u: S.unlocks() });
   S.ready.then(() => { lockSnap = { locks: { ...S.locks() }, unlocks: { ...S.unlocks() } }; });
   S.onChange(() => {
@@ -654,12 +679,29 @@
   let hoverId = null;
   document.addEventListener("mouseover", e => { const row = e.target.closest && e.target.closest(".row[data-item]"); const id = row ? row.dataset.item : null; if (id === hoverId) return; hoverId = id; document.querySelectorAll(".row.hl-hover").forEach(r => r.classList.remove("hl-hover")); if (row) row.classList.add("hl-hover"); if (mapReady() && map.getLayer("items-hot")) { map.setPaintProperty("items-hot", "circle-radius", ["case", ["==", ["get", "id"], id || ""], 10, 6]); map.setPaintProperty("items-all", "circle-radius", ["case", ["==", ["get", "id"], id || ""], 9, 3.5]); map.setPaintProperty("items-all", "circle-opacity", ["case", ["==", ["get", "id"], id || ""], 1, 0.4]); } });
 
+  // ---- phones: drag the sheet or the card down to close it (only when its content is scrolled to the top) ----
+  (function dragDismiss() {
+    if (!matchMedia("(max-width:720px)").matches) return;
+    const setup = (el, scroller) => {
+      let y0 = null, t0 = 0, dy = 0;
+      const target = () => el.querySelector(".inner") || el;
+      el.addEventListener("touchstart", e => { const sc = scroller(); if (!sc || sc.scrollTop > 2 || e.touches.length > 1) { y0 = null; return; } y0 = e.touches[0].clientY; t0 = Date.now(); dy = 0; }, { passive: true });
+      el.addEventListener("touchmove", e => { if (y0 === null) return; dy = e.touches[0].clientY - y0; const tg = target(); if (dy <= 0) { tg.style.transform = ""; return; } tg.style.transition = "none"; tg.style.transform = `translateY(${Math.round(dy * 0.8)}px)`; if (e.cancelable) e.preventDefault(); }, { passive: false });
+      el.addEventListener("touchend", () => { if (y0 === null) return; const v = dy / Math.max(1, Date.now() - t0), tg = target(); tg.style.transition = "transform .22s cubic-bezier(.23,1,.32,1)";
+        if (dy > 90 || v > 0.6) { tg.style.transform = "translateY(110%)"; setTimeout(() => { tg.style.transition = ""; tg.style.transform = ""; closeTop(); }, 190); }
+        else { tg.style.transform = ""; setTimeout(() => { tg.style.transition = ""; }, 240); }
+        y0 = null; dy = 0; });
+    };
+    setup($("#sheet"), () => $("#sheet")); setup($("#card"), () => $("#card").querySelector(".inner"));
+  })();
+
   // ---- boot ----
   const gateEl = document.createElement("section"); gateEl.id = "gate"; gateEl.className = "gate"; gateEl.hidden = !!who();
-  gateEl.innerHTML = `<div class="gatebox"><p class="eyebrow">Who is this?</p><h1 class="disp" style="font-size:clamp(28px,4vw,48px);margin:.2em 0 .5em">Pick your name</h1><p class="small">Locks, picks, comments and budget lines get tagged with it. You can switch any time.</p><div class="names">${NAMES.map(n => `<button data-name="${n}" class="${who() === n ? "on" : ""}">${n}</button>`).join("")}</div></div>`;
+  gateEl.innerHTML = `<div class="gatebox"><p class="eyebrow">Who is this?</p><h1 class="disp" style="font-size:clamp(28px,4vw,48px);margin:.2em 0 .5em">Pick your name</h1><p class="small">Locks, picks, comments and budget lines get tagged with it. You can switch any time.</p><div class="names">${NAMES.map(n => `<button data-name="${n}" class="${who() === n ? "on" : ""}">${n}</button>`).join("")}</div><p class="small sync" id="synctext"></p></div>`;
   document.body.appendChild(gateEl);
 
-  $("#rail").innerHTML = T.days.map((d, i) => `<button data-i="${i}"><span class="fig">${h(d.date.split(" ")[0])}</span><small>${h(d.weekday.slice(0, 3))} · ${h(PLACE(d.base).name)}</small></button>`).join("");
+  const stayDecOf = d => (d.decisions || []).map(id => C.decision(id)).find(x => x && x.block) || null;
+  $("#rail").innerHTML = T.days.map((d, i) => `<button data-i="${i}"><span class="fig">${h(d.date.split(" ")[0])}${stayDecOf(d) ? `<i class="ldot" aria-hidden="true"></i>` : ""}</span><small>${h(d.weekday.slice(0, 3))} · ${h(PLACE(d.base).name)}</small></button>`).join("");
   $("#menu").innerHTML = `<button class="nav-link" data-go="">Days</button>
     <div class="dd"><button class="nav-link dd-btn" aria-expanded="false" aria-haspopup="true">Places</button><div class="dd-panel" role="menu"><button role="menuitem" data-go="place-phuket">Phuket</button><button role="menuitem" data-go="place-phiphi">Phi Phi</button><button role="menuitem" data-go="place-aonang">Krabi and Ao Nang</button></div></div>
     <div class="dd"><button class="nav-link dd-btn" aria-expanded="false" aria-haspopup="true">Guides</button><div class="dd-panel" role="menu">${T.activities.map(a => `<button role="menuitem" data-go="act-${a.id}">${h(a.title)}</button>`).join("")}<button role="menuitem" data-go="essentials">Essentials</button></div></div>
