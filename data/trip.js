@@ -387,24 +387,48 @@ window.TRIP = {
    "id": "L2b",
    "from": "phuket",
    "to": "phiphi",
-   "title": "Phuket Town to Ko Phi Phi",
+   "title": "Phuket Town to Ko Phi Phi, Wednesday",
    "hours": 2,
    "options": [
     {
-     "mode": "08:30 ferry from Rassada (Phi Phi Cruiser, Chureang or Andaman Wave)",
+     "mode": "Ao Nang Princess ferry 08:30 with free hotel pickup",
      "duration": "About 2 h; Tonsai about 10:30",
-     "costGroupTHB": 3250,
-     "note": "Roughly 550 to 700 a head on the Phuket to Phi Phi ferries (same boats as the return direction). Rassada is 2.8 km from Horange: a 150 to 250 THB Grab. Exact Wednesday departures and fares being confirmed.",
-     "link": "https://www.phuketferry.com/",
-     "source": "research/transport.md H2, H4 (to confirm)"
+     "costGroupTHB": 4500,
+     "note": "900 a head and the van from Phuket Town, Patong, Kata, Karon or Chalong is included. Non-refundable. 20 kg bags. The easy option.",
+     "link": "https://www.aonangtravel.com/",
+     "source": "research/hanuman-and-ferries.md F-A3"
     },
     {
-     "mode": "Speedboat from Rassada",
+     "mode": "Phi Phi Cruiser ferry 08:30",
+     "duration": "About 2 h, passes the front of Maya Bay",
+     "costGroupTHB": 2250,
+     "note": "450 a head, free luggage, free cancellation 24 h out. Plus a 150 to 250 THB Grab to Rassada.",
+     "link": "https://www.phiphicruiser.com/",
+     "source": "research/hanuman-and-ferries.md F-A1"
+    },
+    {
+     "mode": "Andaman Wave Master ferry 08:30, Gate 3",
+     "duration": "About 2 h, Maya Bay drive-by",
+     "costGroupTHB": 3000,
+     "note": "600 a head; two 25-inch bags each included.",
+     "link": "https://www.andamanwavemaster.com/",
+     "source": "research/hanuman-and-ferries.md F-A2"
+    },
+    {
+     "mode": "Speedboat 08:30 (Andaman Wave or Bundhaya)",
      "duration": "About 1 h",
-     "costGroupTHB": 4000,
-     "note": "750 to 850 a head; bags in the bow; first thing cancelled in weather.",
+     "costGroupTHB": 4250,
+     "note": "800 to 900 a head; bags in the bow; first thing cancelled in weather.",
      "link": "https://www.bundhayaspeedboat.com/routes",
-     "source": "research/transport.md H4"
+     "source": "research/hanuman-and-ferries.md F-A4, F-A5"
+    },
+    {
+     "mode": "Later ferries 11:00, 13:30, 15:00",
+     "duration": "About 2 h",
+     "costGroupTHB": 2500,
+     "note": "450 to 600 a head. The 11:00 still lands you by 13:00 for the 14:00 longtail tours; the afternoon ones do not.",
+     "link": "https://www.rassadapier.net/",
+     "source": "research/hanuman-and-ferries.md F-A6, F-A7"
     }
    ]
   },
@@ -412,32 +436,40 @@ window.TRIP = {
    "id": "L3b",
    "from": "phiphi",
    "to": "aonang",
-   "title": "Ko Phi Phi to Ao Nang",
+   "title": "Ko Phi Phi to Ao Nang, Thursday",
    "hours": 2,
    "options": [
     {
-     "mode": "Bundhaya speedboat 13:30 (or 10:30)",
-     "duration": "About 1 h to Nopparat Thara",
-     "costGroupTHB": 4750,
-     "note": "900 to 1,000 a head. The 13:30 leaves the morning free for a sunrise longtail or Viewpoint 2.",
-     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
-     "source": "research/transport.md H3"
-    },
-    {
-     "mode": "Ao Nang Princess ferry 14:30",
-     "duration": "About 2 h via Railay; Ao Nang 16:30",
+     "mode": "Ao Nang Princess ferry 14:30, free van to the hotel",
+     "duration": "About 2 h via Railay; Ao Nang about 16:30",
      "costGroupTHB": 3250,
-     "note": "615 to 650 a head, 650 includes the van to your Ao Nang hotel. Big boat, bags on deck.",
-     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
-     "source": "research/transport.md H3"
+     "note": "650 a head including the van to Ao Nang, Klong Muang, Tubkaek or Krabi Town hotels. Check in at Tonsai 30 min before. Leaves the morning free for a sunrise longtail. The pick.",
+     "link": "https://www.aonangtravel.com/",
+     "source": "research/hanuman-and-ferries.md F-B2"
     },
     {
      "mode": "Koh Yao Sun Smile speedboat 13:00",
-     "duration": "About 1 h",
-     "costGroupTHB": 4100,
-     "note": "About 820 a head.",
+     "duration": "About 1 h, one stop",
+     "costGroupTHB": 4250,
+     "note": "850 a head.",
      "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
-     "source": "research/transport.md H3"
+     "source": "research/hanuman-and-ferries.md F-B3"
+    },
+    {
+     "mode": "Bundhaya speedboat 10:30",
+     "duration": "About 1 h to Nopparat Thara",
+     "costGroupTHB": 5000,
+     "note": "1,000 a head. There is no 13:30 Bundhaya from Phi Phi, despite what some pages say.",
+     "link": "https://www.bundhayaspeedboat.com/routes",
+     "source": "research/hanuman-and-ferries.md F-B1"
+    },
+    {
+     "mode": "Andaman Wave Master ferry 10:30 to Krabi Town (Klong Jilad)",
+     "duration": "About 2 h, then 45 min by road to Ao Nang",
+     "costGroupTHB": 2750,
+     "note": "550 a head; sold by aggregators as Songserm. Only if you want Krabi Town first.",
+     "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
+     "source": "research/hanuman-and-ferries.md F-B6"
     }
    ]
   },
@@ -445,32 +477,40 @@ window.TRIP = {
    "id": "L5b",
    "from": "aonang",
    "to": "phuket",
-   "title": "Ao Nang to the Phuket beach, early Saturday",
+   "title": "Ao Nang to the Phuket beach, Saturday",
    "hours": 3,
    "options": [
     {
-     "mode": "Private minivan, 07:00 to 09:00 pickup",
-     "duration": "3 to 3.5 h to Kata or Karon",
-     "costGroupTHB": 3700,
-     "note": "3,500 for a 4 to 6 seat van (citytourphuket, fixed price, any pickup time); at the beach by 10:30 to 12:30. The pick.",
-     "link": "https://citytourphuket.com/phuket-to-krabi-transfer/ao-nang-transfer/",
-     "source": "research/transport.md H5"
-    },
-    {
-     "mode": "Shared hotel-pickup van 10:30",
-     "duration": "Patong or Kata about 15:00",
+     "mode": "Private minivan, pickup time of your choice",
+     "duration": "About 3 h to Kata or Karon",
      "costGroupTHB": 3500,
-     "note": "530 to 780 a head; loses the morning.",
-     "link": "https://www.visitthailandtoday.com/guides/krabi-to-phuket",
-     "source": "research/transport.md H5"
+     "note": "3,500 for a 4 to 6 seat van (citytourphuket / Unicorn), 3,900 for 7 to 9. The operator says early morning until evening with no surcharge listed; a 06:00 to 07:00 pickup looks bookable but was not explicitly confirmed. 48 h cancellation. The pick.",
+     "link": "https://citytourphuket.com/phuket-to-krabi-transfer/ao-nang-transfer/",
+     "source": "research/hanuman-and-ferries.md F-C1"
     },
     {
-     "mode": "Ao Nang Princess ferry 10:30 to Rassada",
-     "duration": "About 2.5 h, then a van to the beach",
+     "mode": "Ao Nang Princess ferry 10:30 to Rassada, free hotel pickup",
+     "duration": "About 2 h; Rassada 12:30, then a van to the beach",
      "costGroupTHB": 4500,
-     "note": "850 to 900 a head; the daily 10:30 runs from 15 Nov. Lands you in Town, not on the beach.",
-     "link": "https://www.phuketferry.com/route-ao-nang-phuket.html",
-     "source": "research/transport.md H5"
+     "note": "900 a head (12Go about 850). Runs daily from 15 Nov, so it operates on the 21st. Lands you in Town, not on the beach.",
+     "link": "https://www.aonangtravel.com/",
+     "source": "research/hanuman-and-ferries.md F-C4"
+    },
+    {
+     "mode": "Green Planet speedboat 10:00 to Laem Hin",
+     "duration": "About 1.5 h, via Koh Yao",
+     "costGroupTHB": 5000,
+     "note": "1,000 a head; earliest boat of the day; Laem Hin is on the east coast, far from the beaches.",
+     "link": "https://www.phuketferry.com/",
+     "source": "research/hanuman-and-ferries.md F-C6"
+    },
+    {
+     "mode": "Shared van 05:30 (438 Phuket Krabi Transport)",
+     "duration": "About 3 h to Phuket Town",
+     "costGroupTHB": 2750,
+     "note": "550 a head; a 2024 listing, verify. Krabi bus terminal vans from 06:00 at 260 to 320 are the cheapest but need two extra hops.",
+     "link": "https://12go.asia/",
+     "source": "research/hanuman-and-ferries.md F-C3"
     }
    ]
   },
@@ -613,9 +653,9 @@ window.TRIP = {
     "Transfer to Phi Phi early morning for snorkeling."
    ],
    "highlights": [
-    "08:30 ferry from Rassada, Tonsai about 10:30",
+    "08:30 Ao Nang Princess ferry with hotel pickup, Tonsai about 10:30",
     "Drop bags, dorm plus rooms (your call)",
-    "14:00 to 18:00 private longtail: Pileh, Maya Bay, snorkel, sunset",
+    "14:00 to 18:00 longtail: Pileh, Maya Bay, snorkel, sunset",
     "Fire show at Slinky or Carlito's"
    ],
    "decisions": [
@@ -814,7 +854,7 @@ window.TRIP = {
     "Phuket."
    ],
    "highlights": [
-    "Hanuman World zipline (products and prices being pulled), or a Muay Thai class",
+    "Hanuman World, 08:00 or 10:00 session (pick a package), or a Muay Thai class",
     "Promthep Cape sunset",
     "Rawai Seafood Market dinner",
     "Kata Night Market"
@@ -840,7 +880,9 @@ window.TRIP = {
      "heaven-lounge"
     ]
    },
-   "tips": []
+   "tips": [
+    "Hanuman World: take the 08:00 or 10:00 session and do the roller and luge before 11:00, when the queues start. World C+ (2,490) covers the roller, the skywalk and four ziplines in 90 minutes; the zipline-only tickets skip the meal. Flying Hanuman in Kathu has the same 4.8 rating with more reviews if you want ziplines only."
+   ]
   },
   {
    "n": 8,
@@ -2383,33 +2425,48 @@ window.TRIP = {
   },
   "hanuman-world-zipline": {
    "id": "hanuman-world-zipline",
-   "name": "Hanuman World zipline",
+   "name": "Hanuman World (the park)",
    "type": "do",
    "place": "phuket",
    "area": "Wichit",
    "thai": null,
-   "tagline": "The other zipline, with luge combos, between Town and Chalong.",
-   "priceTHB": 1990,
+   "tagline": "Zipline park in Wichit between Town and Chalong: ziplines, 800 m roller zipline, 300 m skywalk, luge, slingshot. Pick a package below; all include the free shuttle, insurance and a guide.",
+   "priceTHB": null,
    "priceINR": null,
-   "priceNote": "World D+ 1,990 up to A+ 3,490 THB.",
-   "when": "1 to 3 h; last entry 15:00",
-   "book": null,
-   "rating": null,
-   "scale": null,
-   "reviews": null,
-   "reviewSource": null,
-   "highlights": [],
-   "praise": [],
-   "complaints": [],
+   "priceNote": "Priced per package; see the Hanuman World items. No child rate: everyone from age 4 pays adult.",
+   "when": "08:00 to 18:00, last admission 15:00; zipline sessions 08:00, 10:00, 13:00, 15:00. Roller, skywalk and luge are walk-up and queue after about 11:00.",
+   "book": "Official site (full price) or phukettoursdirect (about 100 to 200 THB less). Book the shuttle at least 4 hours before the session. Refund: more than 24 h out, full minus 5 percent; inside 24 h, reschedule only.",
+   "rating": 4.8,
+   "scale": "5",
+   "reviews": 1945,
+   "reviewSource": "TripAdvisor, read 2026-10-24 (Google 4.7 from 9,628 via aggregator; Trip.com 4.6 from 352)",
+   "highlights": [
+    "TripAdvisor number 1 of 22 things to do in Wichit",
+    "Free shared shuttle from Patong, Kata, Karon, Phuket Town, Chalong, Rawai and Kamala",
+    "Chalong 15 min, Patong 30 to 40 min; Kata about 30 to 45 min and Old Town 25 to 35 min (estimates from the shuttle timetable)"
+   ],
+   "praise": [
+    "Guides and staff get the most praise",
+    "The roller zipline is the favourite",
+    "Luge: like a real-life Mario Kart"
+   ],
+   "complaints": [
+    "Queues: an Aug 2026 review says a 3-hour activity took 7 hours; 1.5-hour waits reported",
+    "Steep hill walks between platforms",
+    "Vegetarian buffet is thin: 6 of 12 dishes"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World+zipline+Phuket",
-    "official": "https://www.hanumanworldphuket.com/"
+    "maps": "https://maps.app.goo.gl/5xjTs2oHzxMQuZ9C9",
+    "official": "https://www.hanumanworldphuket.com/",
+    "reviews": "https://www.tripadvisor.com/Attraction_Review-g1215780-d10407208-Reviews-Hanuman_World-Wichit_Phuket.html"
    },
    "tags": [
-    "adventure"
+    "adventure",
+    "hanuman"
    ],
    "sources": [
-    "research/phuket.md §3"
+    "research/phuket.md §3",
+    "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
     98.3514,
@@ -6630,6 +6687,606 @@ window.TRIP = {
     8.65
    ],
    "geo": "approx"
+  },
+  "hanuman-h1": {
+   "id": "hanuman-h1",
+   "name": "Hanuman World: World A+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "32 platforms, 16 ziplines, 5 sky bridges, 3 abseils, roller zipline 800m, skywalk 300m, meal, hotel transfer, insurance.",
+   "priceTHB": 3490,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 180 min",
+   "book": "Free shared shuttle Patong/Kata/Karon/Phuket Town (+Chalong, Rawai, Kamala, Bangtao, Panwa etc. per reseller); northern zones +500 THB pp (200 from 2nd); private van 2,500/vehicle; luggage 300/piece; book >=4h before session",
+   "rating": 4.8,
+   "scale": 5,
+   "reviews": 1945,
+   "reviewSource": "https://www.tripadvisor.com/Attraction_Review-g2315814-d10088222-Reviews-Hanuman_World-Wichit_Phuket_Town_Phuket.html",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+World+A++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=world-a-plus",
+    "reseller": "https://phukettoursdirect.com/hanuman-world.html (3,290 THB)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h2": {
+   "id": "hanuman-h2",
+   "name": "Hanuman World: World B+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "18 platforms, 9 ziplines, 2 sky bridges, 3 abseils, roller, skywalk, meal, transfer, insurance.",
+   "priceTHB": 2990,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 120 min",
+   "book": "as H1",
+   "rating": 4.7,
+   "scale": 5,
+   "reviews": 9628,
+   "reviewSource": "Google via https://www.visitthailandtoday.com/activities-tours/phuket/hanuman-world",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+World+B++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=world-b-plus",
+    "reseller": "https://phukettoursdirect.com/hanuman-world.html (2,790 THB)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h3": {
+   "id": "hanuman-h3",
+   "name": "Hanuman World: World C+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "10 platforms, 4 ziplines, 1 sky bridge, 2 abseils, roller, skywalk, meal, transfer, insurance.",
+   "priceTHB": 2490,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 90 min",
+   "book": "as H1",
+   "rating": 4.8,
+   "scale": 5,
+   "reviews": 1945,
+   "reviewSource": "TripAdvisor (attraction)",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+World+C++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=world-c-plus",
+    "reseller": "https://phukettoursdirect.com/hanuman-world.html (2,390 THB)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h4": {
+   "id": "hanuman-h4",
+   "name": "Hanuman World: World D+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "Roller zipline 800m + skywalk 300m + meal + transfer + insurance; no ziplines.",
+   "priceTHB": 1990,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 60 min",
+   "book": "as H1",
+   "rating": 4.8,
+   "scale": 5,
+   "reviews": 1945,
+   "reviewSource": "TripAdvisor (attraction)",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+World+D++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=world-d-plus"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h5": {
+   "id": "hanuman-h5",
+   "name": "Hanuman World: Luge 2 Rides + World A+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "World A+ plus 2 luge rides pp.",
+   "priceTHB": 4290,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 180 min",
+   "book": "as H1; luge height 110cm solo / 85cm tandem",
+   "rating": 4.65,
+   "scale": 5,
+   "reviews": 84,
+   "reviewSource": "GetYourGuide snippet (24-84 reviews, 4.6-4.7)",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Luge+2+Rides+++World+A++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=luge-2-rides-world-a-plus",
+    "reseller": "https://www.getyourguide.com/phuket-city-l187/phuket-hanuman-luge-ticket-combined-with-zipline-world-t926759/ (from US$98)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h6": {
+   "id": "hanuman-h6",
+   "name": "Hanuman World: Luge 2 Rides + World B+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "World B+ plus 2 luge rides.",
+   "priceTHB": 3790,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 120 min",
+   "book": "as H1",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Luge+2+Rides+++World+B++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=luge-2-rides-world-b-plus"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h7": {
+   "id": "hanuman-h7",
+   "name": "Hanuman World: Luge 2 Rides + World C+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "World C+ plus 2 luge rides.",
+   "priceTHB": 3290,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 90 min",
+   "book": "as H1",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Luge+2+Rides+++World+C++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=luge-2-rides-world-c-plus"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h8": {
+   "id": "hanuman-h8",
+   "name": "Hanuman World: Luge 2 Rides + World D+",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "World D+ plus 2 luge rides.",
+   "priceTHB": 2790,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 60 min",
+   "book": "as H1",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Luge+2+Rides+++World+D++Phuket",
+    "official": "https://www.hanumanworldphuket.com/booking?package=luge-2-rides-world-d-plus"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h9": {
+   "id": "hanuman-h9",
+   "name": "Hanuman World: Zipline 32 Platforms",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "32 platforms, 16 ziplines, 5 bridges, 3 abseils, transfer, insurance; no meal (buffet add-on 350/240).",
+   "priceTHB": 2900,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 60 min",
+   "book": "as H1",
+   "rating": 4.45,
+   "scale": 5,
+   "reviews": 201,
+   "reviewSource": "GetYourGuide snippet https://www.getyourguide.com/phuket-l32123/phuket-hanuman-world-zip-line-adventure-t402667/",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Zipline+32+Platforms+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/zipline",
+    "reseller": "https://phukettoursdirect.com/hanuman-world.html (2,700 THB)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h10": {
+   "id": "hanuman-h10",
+   "name": "Hanuman World: Zipline 18 Platforms",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "18 platforms, 9 ziplines, 2 bridges, 3 abseils, transfer, insurance; no meal.",
+   "priceTHB": 2200,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 45 min",
+   "book": "as H1",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Zipline+18+Platforms+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/zipline",
+    "reseller": "https://phukettoursdirect.com/hanuman-world.html (2,100 THB)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h11": {
+   "id": "hanuman-h11",
+   "name": "Hanuman World: Zipline 10 Platforms",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "10 platforms, 4 ziplines, 1 bridge, 2 abseils, transfer, insurance; no meal.",
+   "priceTHB": 1500,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 20 min",
+   "book": "as H1",
+   "rating": 4.65,
+   "scale": 5,
+   "reviews": 1300,
+   "reviewSource": "Klook snippet (4.6-4.7, ~1.2-1.3K reviews, 40K+ booked)",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Zipline+10+Platforms+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/zipline",
+    "reseller": "https://www.klook.com/activity/3732-zipline-adventure-hanuman-world-phuket-skywalk/ (US$23.49-25.45, tier unconfirmed)"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h12": {
+   "id": "hanuman-h12",
+   "name": "Hanuman World: Roller Zipline (stand-alone)",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "800m roller zipline; 30-100kg, age 8-60; insurance, guide.",
+   "priceTHB": 1000,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 5 min",
+   "book": "no transfer stated",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Roller+Zipline+(stand-alone)+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/roller"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h13": {
+   "id": "hanuman-h13",
+   "name": "Hanuman World: Skywalk (stand-alone)",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "300m canopy walkway; insurance, guide.",
+   "priceTHB": 500,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 20 min",
+   "book": "no transfer stated",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Skywalk+(stand-alone)+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/skywalk"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h14": {
+   "id": "hanuman-h14",
+   "name": "Hanuman World: Hanuman Luge (stand-alone, 1 ride)",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "Gravity cart, 650m and 1.2km tracks; 990 for 3 rides, 1,990 unlimited (phuket101).",
+   "priceTHB": 790,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 3 min",
+   "book": "no transfer",
+   "rating": 4.65,
+   "scale": 5,
+   "reviews": 19,
+   "reviewSource": "Klook snippet (14-19 reviews)",
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Hanuman+Luge+(stand-alone,+1+ride)+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/luge",
+    "reseller": "Klook Luge Kart US$20.75-20.79"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h15": {
+   "id": "hanuman-h15",
+   "name": "Hanuman World: Slingshot 1 launch",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "single launch; 40-90kg, age 12-60; insurance.",
+   "priceTHB": 350,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 5 min",
+   "book": "no transfer",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Slingshot+1+launch+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/slingshot"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
+  },
+  "hanuman-h16": {
+   "id": "hanuman-h16",
+   "name": "Hanuman World: Slingshot 2 Rounds + 5 Photos",
+   "type": "do",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "2 launches + 5 pro photos; insurance.",
+   "priceTHB": 500,
+   "priceINR": null,
+   "priceNote": "Per person, official price; children from age 4 pay the same. Resellers about 100 to 200 THB less.",
+   "when": "About 10 min",
+   "book": "no transfer",
+   "rating": null,
+   "scale": 5,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Hanuman+World:+Slingshot+2+Rounds+++5+Photos+Phuket",
+    "official": "https://www.hanumanworldphuket.com/packages/slingshot"
+   },
+   "tags": [
+    "adventure",
+    "hanuman"
+   ],
+   "sources": [
+    "research/hanuman-and-ferries.md"
+   ],
+   "lngLat": [
+    98.3514,
+    7.87718
+   ],
+   "geo": "exact"
   }
  },
  "activities": [
@@ -6657,7 +7314,7 @@ window.TRIP = {
      [
       "Transport, five people",
       "Van 3,700 + speedboat tour 10,250 to 13,500 + van 3,700 = about 17,650 to 21,000 THB",
-      "Ferry about 3,250 + boat to Ao Nang 3,250 to 4,750 + van 3,700 = about 10,200 to 11,700 THB",
+      "Ferry 2,250 to 4,500 + boat to Ao Nang 3,250 to 4,250 + van 3,500 = about 9,000 to 12,250 THB",
       "Van 3,700 + ferry 2,600 to 4,750 + ferry to Phuket 2,500 to 3,500 = about 8,800 to 12,000 THB"
      ],
      [
