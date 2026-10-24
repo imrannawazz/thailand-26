@@ -1,0 +1,15 @@
+{
+  "name": "Thailand 26",
+  "short_name": "Thailand 26",
+  "description": "Our Thailand trip, 17 to 24 November 2026: days, stays, decisions and budget for the five of us.",
+  "start_url": "L.html?app=1",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f1ea",
+  "theme_color": "#f4f1ea",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

@@ -4,6 +4,8 @@
 (function () {
   const T = window.TRIP, C = window.CORE;
   const h = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // research text marks item mentions as [[text|item-id]]; render those as links that open the card
+  const rich = s => h(s).replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, (m, t, id) => T.items[id] ? `<button class="linkish inline" data-item="${id}">${t}</button>` : t);
   const $ = sel => document.querySelector(sel);
   const PLACE = k => T.places[k] || { name: k, thai: "" };
   const fmt = C.fmtINR;
@@ -94,7 +96,7 @@
   const mapReady = () => map && map.getSource && map.getSource("items");
 
   // ---- stay filters and sort ----
-  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, allZones: false, open: innerWidth > 720 };
+  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, avail: "all", allZones: false, open: innerWidth > 720 };
   const chosenByUs = id => !!S.pickOf(id) || Object.values(S.locks()).some(l => { for (const d of T.decisions) for (const o of d.options) if (o.id === l.optionId && (o.item === id || (o.items || []).includes(id))) return true; return false; });
   const fromDoc = it => it.tags.includes("docpick") || it.tags.includes("selfpick");
   const dist = (a, b) => Math.hypot((a[0] - b[0]) * Math.cos(8 * Math.PI / 180), a[1] - b[1]);
@@ -115,6 +117,7 @@
     if (SF.zone !== "all") out = out.filter(it => it.zone === SF.zone);
     if (SF.ours) out = out.filter(it => chosenByUs(it.id));
     if (SF.doc) out = out.filter(fromDoc);
+    if (SF.avail !== "all") out = out.filter(it => availOf(it) === SF.avail);
     const target = SF.sort === "near" ? searchTarget(out[0] ? out[0].place : "phuket") : null;
     if (!target) out = out.filter(matchesQ);
     const near = it => target && it.lngLat ? dist(it.lngLat, target.lngLat) : 1e9;
@@ -123,17 +126,29 @@
     return out.sort((a, b) => key(a) - key(b) || ((b.score && b.score.total) || 0) - ((a.score && a.score.total) || 0));
   }
   function filterBar(count, place) {
-    const chip = (k, v, label) => `<button class="${(k === "kind" || k === "zone" ? SF[k] === v : SF[k]) ? "on" : ""}" data-f="${k}" data-v="${v}">${label}</button>`;
+    const chip = (k, v, label) => `<button class="${(k === "kind" || k === "zone" || k === "avail" ? SF[k] === v : SF[k]) ? "on" : ""}" data-f="${k}" data-v="${v}">${label}</button>`;
     const g = T.guides[place === "krabi" ? "aonang" : place];
     const pool = poolOf("stay", place); const zoneChips = g ? g.zones.filter(z => pool.some(it => it.zone === z.id)).map(z => chip("zone", z.id, `${z.name.split(" and ")[0].split(",")[0]} · ${pool.filter(it => it.zone === z.id).length}`)).join("") : "";
     const target = searchTarget(place);
-    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.budget, SF.ours, SF.doc, SF.sort !== "score"].filter(Boolean).length;
+    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.budget, SF.ours, SF.doc, SF.avail !== "all", SF.sort !== "score"].filter(Boolean).length;
     return `<div class="fsearchrow"><input class="fsearch" id="fsearch" type="search" value="${h(SF.q)}" placeholder="Search a name or area: Rassada, Old Town, pool villa" autocomplete="off"><button class="ftoggle ${SF.open ? "on" : ""}" data-ftoggle aria-expanded="${!!SF.open}">Filters${active ? ` · ${active}` : ""}</button></div>${SF.q ? `<p class="small pending" style="margin:.3em 0 0">${target ? `Matched ${h(target.name)}; sort by "Nearest to" below.` : "Text match on names and areas."}</p>` : ""}<div class="fbar ${SF.open ? "" : "collapsed"}">
       <span class="lbl">Area</span>${chip("zone", "all", "All")}${zoneChips}
       <span class="lbl">Show</span>${chip("kind", "all", "All")}${chip("kind", "villa", "Villas")}${chip("kind", "hotel", "Hotels")}${chip("kind", "hostel", "Hostels")}
       <span class="lbl">Only</span>${chip("pool", true, "Pool")}${chip("walk", true, "Walk to beach")}${chip("budget", true, "Inside budget")}${chip("ours", true, "Chosen by us")}${chip("doc", true, "From the doc")}
+      <span class="lbl">On our dates</span>${chip("avail", "all", "Any")}${chip("avail", "yes", `Available · ${pool.filter(it => availOf(it) === "yes").length}`)}${chip("avail", "no", `Not available · ${pool.filter(it => availOf(it) === "no").length}`)}${chip("avail", "unchecked", `Not checked · ${pool.filter(it => availOf(it) === "unchecked").length}`)}
       <span class="lbl">Sort</span>${["score", "price", "rating", "beach"].map(v => `<button class="${SF.sort === v ? "on" : ""}" data-f="sort" data-v="${v}">${{ score: "Best score", price: "Cheapest", rating: "Reviews", beach: "Nearest beach" }[v]}</button>`).join("")}${target ? `<button class="${SF.sort === "near" ? "on" : ""}" data-f="sort" data-v="near">Nearest to ${h(target.name)}</button>` : ""}
       <span class="lbl">${count} shown</span></div>`;
+  }
+  // availability on our nights, read from Booking.com: yes (fits all five) / no (sold out, too few rooms, or not bookable) / unchecked
+  const availOf = it => { const a = it.avail; if (!a || !a.status || a.status === "unchecked") return "unchecked"; return a.status === "yes" ? "yes" : "no"; };
+  const NIGHTS = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  const range = (a, b) => { const x = NIGHTS(a).split(" "), y = NIGHTS(b).split(" "); return x[1] === y[1] ? `${x[0]}–${y[0]} ${y[1]}` : `${NIGHTS(a)} – ${NIGHTS(b)}`; };
+  function availLine(it, long) {
+    const a = it.avail; if (!a || !a.status || a.status === "unchecked") return long && it.type === "stay" ? `<p class="avail unk">Not checked for our nights yet${it.stayDates ? ` (${range(it.stayDates[0], it.stayDates[1])})` : ""}. Open the booking link: it already carries the dates and five adults.</p>` : "";
+    const when = range(a.checkin, a.checkout);
+    if (a.status === "yes") return long ? `<p class="avail yes"><b>Available ${when}</b> on ${h(a.source)}: ${h(a.pick)}. ${fmt(a.totalINR)} INR for the stay, about <b>${fmt(a.perHeadNight)} INR a head a night</b>${a.memberINR && a.memberINR < a.totalINR ? `; ${fmt(a.memberINR)} with Booking's free sign-in price` : ""}. Checked ${h(a.checked)}.${a.url ? ` <a href="${a.url}" target="_blank" rel="noopener">Book these dates ↗</a>` : ""}</p>` : `<span class="avail yes">Available ${when} · ${fmt(a.perHeadNight)} a head</span>`;
+    const why = { partial: "not enough rooms left for five", no: "sold out", closed: "not taking bookings online" }[a.status] || "not available";
+    return long ? `<p class="avail no"><b>Not available ${when}</b> on ${h(a.source)}: ${why}${a.note ? ". " + h(a.note) : ""}. Checked ${h(a.checked)}.</p>` : `<span class="avail no">Not available ${when}: ${why}</span>`;
   }
   function scoreBadge(it) { return it.score && it.score.total !== null && it.score.total !== undefined ? `<span class="score" title="Score out of 100: reviews, budget, beach, pool">${it.score.total}</span>` : ""; }
   function factsLine(it) {
@@ -191,7 +206,7 @@
     const meta = [it.area, it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}` : null, it.when].filter(Boolean).join(" · ");
     const facts = it.type === "stay" ? factsLine(it) : "";
     const thumb = it.images && it.images.length ? `<img class="thumb" src="${it.images[0]}" alt="" loading="lazy">` : "";
-    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""} ${thumb ? "has-thumb" : ""}" role="button" tabindex="0" data-item="${it.id}">${thumb}<div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
+    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""} ${thumb ? "has-thumb" : ""}" role="button" tabindex="0" data-item="${it.id}">${thumb}<div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${it.type === "stay" ? availLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
   }
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
@@ -203,7 +218,7 @@
       const meta = it && it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""} · ${it.reviewSource || ""}` : "";
       const price = o.costINR ? `${fmt(o.costINR)}<small>INR · ${h(o.unit || "")}</small>` : `<small>${h(o.unit || "price pending")}</small>`;
       const sub = (o.items || []).length ? `<span class="meta">${o.items.length} stays inside the cap: ${o.items.slice(0, 3).map(i => h(T.items[i].name)).join(", ")}${o.items.length > 3 ? "…" : ""}</span>` : "";
-      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" + (lockWho(d.id) ? " by " + h(lockWho(d.id)) : "") : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
+      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" + (lockWho(d.id) ? " by " + h(lockWho(d.id)) : "") : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${it && it.type === "stay" ? availLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
     }).join("");
     return `<div class="sec"><h2>Decide: <b>${h(d.title)}</b></h2>${rows}<p class="small pending" style="margin:.6em 0 0">Tap a name for the full card. Lock to count it in the budget; tap again to unlock.</p></div>`;
   }
@@ -253,7 +268,7 @@
     const cost = dayCost(n);
     const F = T.flights, fl = F && (n === 1 ? F.out : n === 8 ? F.back : null);
     return `${fl ? `<div class="sec"><h2>${n === 1 ? "Flight in" : "Flight home"}</h2><div class="opt"><div><span class="name">${h(fl.flight)}</span><span class="dur">${h(fl.from)} ${h(fl.dep)} → ${h(fl.to)} ${h(fl.arr)} · ${h(fl.duration)} · ${h(fl.date)}</span><span class="small">${h(fl.bags)} · PNR ${h(fl.pnr)}</span></div><div class="fig">${fmt(F.perHeadINR)}<small>INR a head, round trip</small></div></div></div>` : ""}<div class="sec"><h2>The day</h2><ul class="hlist">${d.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul><p class="small pending" style="margin:.8em 0 0">The doc said: ${d.plan.map(h).join(" ")}</p></div>
-      ${d.tips.length ? `<div class="sec"><h2>From the research</h2><ul class="hlist">${d.tips.map(x => `<li>${h(x)}</li>`).join("")}</ul></div>` : ""}
+      ${d.tips.length ? `<div class="sec"><h2>From the research</h2><ul class="hlist">${d.tips.map(x => `<li>${rich(x)}</li>`).join("")}</ul></div>` : ""}
       <div class="sec"><h2>Locked for this day</h2>${locked.length ? locked.map(({ dec, o }) => { const it = o.item ? T.items[o.item] : null; return `<div class="row locked" role="button" tabindex="0" ${it ? `data-item="${it.id}"` : `data-tab="decide"`}><div><span class="name">${h(o.label || (it && it.name) || o.id)}</span><span class="meta">${h(dec.title)}</span></div><div class="fig">${o.costINR ? fmt(o.costINR) + "<small>INR</small>" : "—"}</div></div>`; }).join("") : `<p class="pending">Nothing locked yet.</p>`}${open.length ? `<p class="small" style="margin:.8em 0 0">Still open: ${open.map(dec => `<button class="linkish" data-tab="decide">${h(dec.title)}</button>`).join(", ")}.</p>` : ""}</div>
       <div class="sec"><h2>Added to this day</h2>${added.length ? added.map(id => itemRow(id, { day: n })).join("") : `<p class="pending">Nothing added yet. Open any place and tap "Add to day ${n}".</p>`}</div>
       <div class="sec"><h2>Day cost so far</h2><p><span class="fig" style="font-size:clamp(26px,3vw,44px)">${cost ? fmt(cost) : "—"}</span> <span class="small">INR for five${cost ? ", " + fmt(cost / T.travellers) + " each" : ""}. Locked choices plus added items; transport and food you have not added are not in it.</span></p></div>`;
@@ -310,11 +325,11 @@
     return `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${h(a.title)}</h1><p class="lead ink" style="font-weight:500">${h(a.question)}</p><p class="lead">${h(a.intro)}</p><div class="sec"><h2>The pick</h2><p class="lead">${h(a.verdict)}</p></div>${a.table ? `<div class="sec tablewrap"><table class="cmp"><thead><tr>${a.table.head.map(x => `<th>${h(x)}</th>`).join("")}</tr></thead><tbody>${a.table.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${h(c)}</td>` : `<th scope="row">${h(c)}</th>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}${Object.entries(a.perPlace).filter(([pl, ids]) => ids.length).map(([pl, ids]) => `<div class="sec"><h2>In <b>${h(PLACE(pl).name)}</b></h2>${ids.map(i => itemRow(i, {})).join("")}</div>`).join("")}</div>`;
   }
   function guideTab(place, g) {
-    const zones = g.zones.map(z => `<div class="row zone" role="button" tabindex="0" data-zone="${z.id}"><div><span class="name">${h(z.name)}</span><span class="meta">${h(z.for)}</span><span class="meta ink" style="font-weight:500">${h(z.take)}</span>${z.items.length ? `<span class="meta">${z.items.slice(0, 4).map(i => `<button class="linkish small" data-item="${i}">${h(T.items[i].name)}</button>`).join(" · ")}${z.items.length > 4 ? ` · ${z.items.length - 4} more in Choose` : ""}</span>` : ""}</div><div class="fig" style="font-size:1em;color:var(--dim)">${z.items.length || ""}</div></div>`).join("");
+    const zones = g.zones.map(z => `<div class="row zone" role="button" tabindex="0" data-zone="${z.id}"><div><span class="name">${h(z.name)}</span><span class="meta">${h(z.for)}</span><span class="meta ink" style="font-weight:500">${rich(z.take)}</span>${z.items.length ? `<span class="meta">${z.items.slice(0, 4).map(i => `<button class="linkish small" data-item="${i}">${h(T.items[i].name)}</button>`).join(" · ")}${z.items.length > 4 ? ` · ${z.items.length - 4} more in Choose` : ""}</span>` : ""}</div><div class="fig" style="font-size:1em;color:var(--dim)">${z.items.length || ""}</div></div>`).join("");
     const plan = g.plan ? `<div class="sec tablewrap"><h2>The plan, hour by hour</h2><table class="cmp plan"><thead><tr><th>Time</th><th>What</th><th>Where</th><th>Cost</th><th>Note</th></tr></thead><tbody>${g.plan.map(r => `<tr>${r.map((c, i) => i === 0 ? `<th scope="row">${h(c)}</th>` : `<td>${h(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
     return `<p class="lead">${h(g.tagline)}</p>${g.status === "refining" ? `<p class="small pending">Research still refining this guide: east-Tonsai stays, snorkel timing and the recommended split land here when it finishes.</p>` : ""}
       <div class="sec"><h2>The areas <b>on the map</b></h2><p class="small pending" style="margin:0 0 .6em">Tap an area to zoom the map to it.</p>${zones}</div>
-      <div class="sec"><h2>Our take</h2><ul class="hlist">${g.recos.map(x => `<li>${h(x)}</li>`).join("")}</ul></div>${plan}`;
+      <div class="sec"><h2>Our take</h2><ul class="hlist">${g.recos.map(x => `<li>${rich(x)}</li>`).join("")}</ul></div>${plan}`;
   }
   function placePage(place, tab) {
     const g = T.guides[place]; if (!g) return null;
@@ -333,7 +348,7 @@
     return `${inner ? "" : `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>`}
       <p class="lead">Everything researched for ${h(p.name)} in one list. Tap a day number to put an item on that day; tap another number to move it. Each item only offers the days it fits: Old Town on day 1 and Sunday, the beaches on days 5 to 7. What you choose shows up in each day's Itinerary tab and in the budget.</p>
       <div class="sec"><h2>Chosen so far</h2>${picked.length ? picked.map(it => `<div class="row locked" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span></div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : "free"}</div></div>`).join("") + `<p class="small" style="margin-top:.8em">Adds <b class="ink">${fmt(sub)} INR</b> to the budget, ${fmt(sub / T.travellers)} each.</p>` : `<p class="pending">Nothing chosen yet.</p>`}</div>
-      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length, place) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
+      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length, place) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.type === "stay" ? availLine(it, false) : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
   }
   function budgetPage() {
     const b = budget(), F = T.flights;
@@ -347,6 +362,17 @@
     return `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${fmt(b.perHead)}<small>INR a head so far · ${fmt(b.total)} for five</small></h1>
       <p class="lead">Everything below is per person unless it says otherwise. Flights are booked. Locking a stay or a day choice, or putting an item on a day, adds its share here. Anything else goes in Miscellaneous.</p>
       <div class="sec"><h2>Where it goes, per head</h2><div class="opt"><div><span class="name">Flights</span></div><div class="fig">${ph(b.flights)}<small>booked</small></div></div><div class="opt"><div><span class="name">Locked and chosen</span><span class="dur">stays, day choices, items on days</span></div><div class="fig">${ph(b.chosen)}<small>a head</small></div></div><div class="opt"><div><span class="name">Miscellaneous</span><span class="dur">${misc.length} line${misc.length === 1 ? "" : "s"}</span></div><div class="fig">${ph(b.misc)}<small>a head</small></div></div></div>
+      ${(() => {
+        // the first two nights against the 3,000 a head cap, on dated prices: the locked option, else the best open option inside the cap
+        const N = [["day1-hotel", "Night 1 · Phuket Town · 17 Nov"], ["phiphi-stay", "Night 2 · Phi Phi · 18 Nov"]].map(([id, label]) => {
+          const d = T.decisions.find(x => x.id === id); if (!d) return null;
+          const locked = C.lockedOption(d);
+          const o = locked || d.options.find(o => o.avail === "yes" && o.costINR && o.costINR / T.travellers <= 3000);
+          return o ? { label, o, it: o.item ? T.items[o.item] : null, locked: !!locked } : { label };
+        }).filter(Boolean);
+        const sum = N.reduce((a, n) => a + (n.o ? n.o.costINR : 0), 0);
+        return `<div class="sec"><h2>First two nights <b>${fmt(sum / T.travellers)} INR a head</b></h2>${N.map(n => n.o ? row(h(n.o.label || (n.it && n.it.name) || n.o.id), `${n.label} · ${n.locked ? "locked" : "best open option inside the cap, not locked yet"}`, n.o.costINR, `<span class="small" style="display:block">${fmt(n.o.costINR / T.travellers)} INR a head${n.it && n.it.avail && n.it.avail.status === "yes" ? `, ${h(n.it.avail.source)} for our date, checked ${h(n.it.avail.checked)}` : n.o.avail === "yes" ? ", checked 24 Oct" : ""}</span>`) : row(n.label, "nothing open inside the cap", 0)).join("")}<p class="small pending" style="margin:.6em 0 0">${N.every(n => n.o && n.o.costINR / T.travellers <= 3000) ? "Both nights fit the 3,000 a head cap" : "Over the 3,000 a head cap on at least one night"} on prices re-checked for our dates.${N.some(n => n.o && !n.locked) ? " Unlocked nights count in the totals above once someone locks them in Decide." : ""}</p></div>`;
+      })()}
       <div class="sec notes"><h2>Miscellaneous</h2>${miscRows || `<p class="pending">Nothing yet. Visa cash float, SIMs, insurance, tips, a night out: type a name and a number.</p>`}
         <form id="miscform" class="miscform"><input id="misc-name" placeholder="What (e.g. eSIM, travel insurance)" required><input id="misc-inr" type="number" min="1" step="1" inputmode="numeric" placeholder="INR" required><select id="misc-per"><option value="head">a head</option><option value="group">for the group</option></select><button type="submit">Add</button></form>
         <p class="small who" style="margin-top:.8em">Adding as <b class="ink">${h(who() || "nobody yet")}</b> · <button class="linkish" data-gate>switch name</button></p></div>
@@ -364,7 +390,7 @@
     const dayN = ctx.page.startsWith("day-") ? Number(ctx.page.slice(4)) : null;
     const price = it.priceINR ? `<span class="fig">${fmt(it.priceINR)}</span><p>INR${it.priceNote ? ". " + h(it.priceNote) : ""}</p>` : it.priceTHB ? `<span class="fig">฿${fmt(it.priceTHB)}</span><p>a head, about ${fmt(inr(it.priceTHB))} INR${it.priceNote ? ". " + h(it.priceNote) : ""}</p>` : it.priceTHB === 0 ? `<span class="fig">Free</span><p>${h(it.priceNote || "")}</p>` : (it.priceNote ? `<span class="fig">—</span><p>${h(it.priceNote)}</p>` : "");
     const linkNames = { maps: "Maps", booking: "Booking", agoda: "Agoda", airbnb: "Airbnb", official: "Official", reviews: "Reviews", tripadvisor: "TripAdvisor" };
-    const links = Object.entries(it.links || {}).filter(([k, v]) => v).map(([k, v]) => `<a href="${v}" target="_blank" rel="noopener">${linkNames[k] || k} ↗</a>`).join("");
+    const links = Object.entries(it.links || {}).filter(([k, v]) => v).map(([k, v]) => `<a href="${v}" target="_blank" rel="noopener">${/trip\.com/.test(v) ? "Trip.com" : linkNames[k] || k}${it.stayDates && /booking\.com\/hotel|agoda\.com\/(?!search)|trip\.com\/hotels\/detail|airbnb\.[a-z.]+\/rooms/.test(v) ? " · our dates" : ""} ↗</a>`).join("");
     const picked = dayN && isPicked(dayN, it.id);
     let decOpt = null; for (const d of T.decisions) for (const o of d.options) if (o.item === it.id) decOpt = { d, o };
     const lockedHere = decOpt && C.state.locks[decOpt.d.id] === decOpt.o.id;
@@ -384,7 +410,7 @@
       ${it.distances ? `<h3>Distances</h3><p>${Object.entries(it.distances).filter(([k, v]) => v).map(([k, v]) => `${h(k)}: ${h(v)}`).join(" · ")}</p>` : ""}
       ${it.when ? `<h3>When</h3><p>${h(it.when)}</p>` : ""}
       ${it.book ? `<h3>How to book</h3><p>${h(it.book)}</p>` : ""}
-      ${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
+      ${availLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.praise.length ? `<h3>Guests praise</h3><ul>${it.praise.map(x => `<li class="quote">${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.complaints.length ? `<h3>Watch out</h3><ul>${it.complaints.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}
@@ -466,7 +492,7 @@
     const as = e.target.closest("[data-assign]"); if (as) { e.stopPropagation(); assign(as.dataset.assign, as.dataset.day ? Number(as.dataset.day) : null); return; }
     if (e.target.closest("[data-ftoggle]")) { SF.open = !SF.open; render(); return; }
     const ms = e.target.closest("[data-measure]"); if (ms) { measureFocus = measureFocus === ms.dataset.measure ? null : ms.dataset.measure; const it = T.items[route().item]; const m = measureFor(it); C.setMeasure(map, m.home, m.targets); document.querySelectorAll("[data-measure]").forEach(b => b.classList.toggle("on", b.dataset.measure === (measureFocus || m.targets.find(t => t.primary).name))); const t = m.targets.find(x => x.primary); if (t) { const b = new maplibregl.LngLatBounds(); b.extend(m.home.lngLat); b.extend(t.lngLat); map.fitBounds(b, { padding: innerWidth > 720 ? { left: 60, right: Math.min(620, innerWidth) + 60, top: 110, bottom: 60 } : { left: 30, right: 30, top: 120, bottom: Math.round(innerHeight * .58) }, maxZoom: 15.5, duration: 900 }); } return; }
-    const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort" || k === "zone") SF[k] = v; else if (k === "allZones") SF.allZones = v === "1"; else SF[k] = !SF[k]; if (k === "sort" && v !== "near" && SF.sort === "near") SF.sort = v; render(); return; }
+    const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort" || k === "zone" || k === "avail") SF[k] = v; else if (k === "allZones") SF.allZones = v === "1"; else SF[k] = !SF[k]; if (k === "sort" && v !== "near" && SF.sort === "near") SF.sort = v; render(); return; }
     if (e.target.id === "card" || e.target.classList.contains("sheet-backdrop")) { closeTop(); return; }
     const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 900 }); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }

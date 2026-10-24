@@ -1,7 +1,7 @@
 /* Three-level shell: overview (map + day highlights) → day page → item card. Skinned by [data-skin=k|l]. */
-:root{--ground:#061822;--panel:rgba(6,24,34,.82);--ink:#ece2cb;--note:#8ea4ae;--dim:#4f6672;--accent:#ece2cb;--line:rgba(236,226,203,.18);
+:root{--ground:#061822;--panel:rgba(6,24,34,.82);--ink:#ece2cb;--note:#8ea4ae;--dim:#4f6672;--accent:#ece2cb;--line:rgba(236,226,203,.18);--ok:#9fd3a8;--no:#f0a090;
   --display:"Avara",Georgia,serif;--text:"Playfair",Georgia,serif;--fig:"Playfair",Georgia,serif;--textstyle:italic;--radius:0}
-:root[data-skin=l]{--ground:#f4f1ea;--panel:rgba(244,241,234,.96);--ink:#1c1c1a;--note:#3f3f3b;--dim:#6f6f68;--accent:#2f5f8c;--line:rgba(28,28,26,.14);
+:root[data-skin=l]{--ground:#f4f1ea;--panel:rgba(244,241,234,.96);--ink:#1c1c1a;--note:#3f3f3b;--dim:#6f6f68;--accent:#2f5f8c;--line:rgba(28,28,26,.14);--ok:#2e6b3f;--no:#9a3b2e;
   --display:"Jost",system-ui,sans-serif;--text:"Jost",system-ui,sans-serif;--fig:"Jost",system-ui,sans-serif;--textstyle:normal;--radius:2px}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -144,6 +144,14 @@ table.plan th{width:6ch}
 .zone .meta.ink{color:var(--ink)}
 .zone.locked{background:rgba(47,95,140,.06);margin:0 -8px;padding-left:8px;padding-right:8px}
 .linkish.small{font-size:.9em}
+.linkish.inline{font-weight:500;text-decoration-thickness:1px}
+.avail{display:block;font-size:.88em;margin-top:.15em}
+.avail.yes{color:var(--ok)}
+.avail.no{color:var(--no)}
+.avail.unk{color:var(--dim)}
+p.avail{margin:.2em 0 .9em;padding:.55em .7em;border-left:3px solid currentColor;background:color-mix(in srgb,currentColor 7%,transparent);font-size:.92em;line-height:1.45}
+p.avail b{font-weight:600}
+p.avail a{color:inherit}
 
 /* filter bar + score */
 .fbar{display:flex;flex-wrap:wrap;gap:.4em .5em;align-items:center;margin:0 0 .9em}
