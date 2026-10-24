@@ -1478,7 +1478,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.03,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.93,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "pearl-hotel-phuket": {
    "id": "pearl-hotel-phuket",
@@ -1593,7 +1606,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.99,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.9,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "phuket-merlin-hotel": {
    "id": "phuket-merlin-hotel",
@@ -1708,7 +1734,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 4.07,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.95,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "homa-phuket-town": {
    "id": "homa-phuket-town",
@@ -1821,7 +1860,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 6.22,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Patong beach",
+     "km": 9.3,
+     "swim": "yes",
+     "why": "Lifeguards, calm in high season; busy, jet skis."
+    }
+   }
   },
   "travelodge-phuket-town": {
    "id": "travelodge-phuket-town",
@@ -1917,7 +1969,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.37,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.27,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "dara-hotel-phuket": {
    "id": "dara-hotel-phuket",
@@ -2013,7 +2078,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 4.9,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Patong beach",
+     "km": 8.11,
+     "swim": "yes",
+     "why": "Lifeguards, calm in high season; busy, jet skis."
+    }
+   }
   },
   "the-memory-at-on-on": {
    "id": "the-memory-at-on-on",
@@ -2127,7 +2205,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "chanalai-flora-resort": {
    "id": "chanalai-flora-resort",
@@ -2226,7 +2317,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.5,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "chanalai-garden-resort": {
    "id": "chanalai-garden-resort",
@@ -2325,7 +2423,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.52,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "centara-kata-resort": {
    "id": "centara-kata-resort",
@@ -2424,7 +2529,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.24,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "kata-sea-breeze-resort": {
    "id": "kata-sea-breeze-resort",
@@ -2524,7 +2636,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.12,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "baan-karonburi-resort": {
    "id": "baan-karonburi-resort",
@@ -2623,7 +2742,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.17,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 2.73,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "sugar-marina-resort-art": {
    "id": "sugar-marina-resort-art",
@@ -2722,7 +2854,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.56,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.33,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "patong-mansion-hotel": {
    "id": "patong-mansion-hotel",
@@ -2820,7 +2965,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Patong beach",
+    "km": 1.11,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": false
+   }
   },
   "ban-preeya-private-pool-villa": {
    "id": "ban-preeya-private-pool-villa",
@@ -2927,7 +3079,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 3.05,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "smooth-as-silk-pool-villa": {
    "id": "smooth-as-silk-pool-villa",
@@ -3040,7 +3199,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "aonang-nine-poolvilla": {
    "id": "aonang-nine-poolvilla",
@@ -3154,7 +3320,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "anawin-bungalows": {
    "id": "anawin-bungalows",
@@ -3270,7 +3443,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.53,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": false
+   }
   },
   "doo-dee-boutique-resort": {
    "id": "doo-dee-boutique-resort",
@@ -3384,7 +3564,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Nopparat Thara beach",
+    "km": 0.78,
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Pai Plong beach",
+     "km": 2.06,
+     "swim": "yes",
+     "why": "Small calm cove over the headland from Ao Nang (general)."
+    }
+   }
   },
   "white-house-phi-phi-island": {
    "id": "white-house-phi-phi-island",
@@ -3500,7 +3693,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "p2-wood-loft": {
    "id": "p2-wood-loft",
@@ -3619,7 +3825,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.43,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.75,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "paradise-pearl-bungalows": {
    "id": "paradise-pearl-bungalows",
@@ -3736,7 +3955,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Long Beach",
+    "km": 0.0,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "big-buddha-hike-from-karon": {
    "id": "big-buddha-hike-from-karon",
@@ -3779,7 +4005,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "karon",
    "zoneName": "Karon",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "racha-and-coral-islands-speedboat-snorkel": {
    "id": "racha-and-coral-islands-speedboat-snorkel",
@@ -3824,7 +4063,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 2.47,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 4.61,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "flying-hanuman-zipline": {
    "id": "flying-hanuman-zipline",
@@ -3863,7 +4115,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Patong beach",
+    "km": 4.47,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": true
+   }
   },
   "hanuman-world-zipline": {
    "id": "hanuman-world-zipline",
@@ -3917,7 +4176,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 5.75,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Patong beach",
+     "km": 6.56,
+     "swim": "yes",
+     "why": "Lifeguards, calm in high season; busy, jet skis."
+    }
+   }
   },
   "muay-thai-drop-in-class": {
    "id": "muay-thai-drop-in-class",
@@ -3957,7 +4229,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "bangla-boxing-stadium-fight-night": {
    "id": "bangla-boxing-stadium-fight-night",
@@ -3997,7 +4282,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "patong",
    "zoneName": "Patong",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Patong beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": true
+   }
   },
   "freedom-beach-hike": {
    "id": "freedom-beach-hike",
@@ -4039,7 +4331,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "karon",
    "zoneName": "Karon",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "nai-harn-beach": {
    "id": "nai-harn-beach",
@@ -4080,7 +4385,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 0.67,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": false
+   }
   },
   "kata-noi-beach": {
    "id": "kata-noi-beach",
@@ -4121,7 +4433,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 2.39,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": false
+   }
   },
   "karon-viewpoint": {
    "id": "karon-viewpoint",
@@ -4162,7 +4481,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 1.65,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "promthep-cape-sunset": {
    "id": "promthep-cape-sunset",
@@ -4205,7 +4531,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ya Nui beach",
+    "km": 0.71,
+    "swim": "yes",
+    "why": "Small calm cove with rocks; snorkel round the islet. Water shoes.",
+    "approx": true
+   }
   },
   "wat-chalong": {
    "id": "wat-chalong",
@@ -4245,7 +4578,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 3.83,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 5.13,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "old-town-walk": {
    "id": "old-town-walk",
@@ -4285,7 +4631,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "lard-yai-sunday-walking-street": {
    "id": "lard-yai-sunday-walking-street",
@@ -4326,7 +4685,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "chillva-market": {
    "id": "chillva-market",
@@ -4366,7 +4738,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 6.36,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Patong beach",
+     "km": 8.74,
+     "swim": "yes",
+     "why": "Lifeguards, calm in high season; busy, jet skis."
+    }
+   }
   },
   "naka-weekend-market": {
    "id": "naka-weekend-market",
@@ -4406,7 +4791,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "karon-temple-market": {
    "id": "karon-temple-market",
@@ -4446,7 +4844,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "karon",
    "zoneName": "Karon",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.69,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.18,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "kata-night-market": {
    "id": "kata-night-market",
@@ -4487,7 +4898,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.59,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "rawai-seafood-market": {
    "id": "rawai-seafood-market",
@@ -4528,7 +4946,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.19,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.73,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "thai-hua-museum": {
    "id": "thai-hua-museum",
@@ -4567,7 +4998,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.55,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.43,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "mee-ton-poe": {
    "id": "mee-ton-poe",
@@ -4604,7 +5048,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "patong",
    "zoneName": "Patong",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Patong beach",
+    "km": 4.65,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": false
+   }
   },
   "kopitiam-by-wilai": {
    "id": "kopitiam-by-wilai",
@@ -4641,7 +5092,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.42,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.3,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "go-benz": {
    "id": "go-benz",
@@ -4680,7 +5144,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.67,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.47,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "khao-tom-dibuk": {
    "id": "khao-tom-dibuk",
@@ -4719,7 +5196,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.81,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.72,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "chuan-chim": {
    "id": "chuan-chim",
@@ -4758,7 +5248,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.81,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.72,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "a-pong-mae-sunee": {
    "id": "a-pong-mae-sunee",
@@ -4797,7 +5300,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.55,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.43,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hong-khao-tom-pla": {
    "id": "hong-khao-tom-pla",
@@ -4836,7 +5352,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.38,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.29,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "roti-thaew-nam": {
    "id": "roti-thaew-nam",
@@ -4873,7 +5402,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.81,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.72,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "one-chun": {
    "id": "one-chun",
@@ -4912,7 +5454,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.44,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.34,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "raya": {
    "id": "raya",
@@ -4949,7 +5504,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.45,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.35,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "tu-kab-khao": {
    "id": "tu-kab-khao",
@@ -4988,7 +5556,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.3,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.18,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "krua-praya": {
    "id": "krua-praya",
@@ -5027,7 +5608,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nai Yang beach",
+    "km": 3.43,
+    "swim": "yes",
+    "why": "Calm and shady in high season, by the airport (general).",
+    "approx": true
+   }
   },
   "mor-mu-dong": {
    "id": "mor-mu-dong",
@@ -5066,7 +5654,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 2.89,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 6.04,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "laem-hin-seafood": {
    "id": "laem-hin-seafood",
@@ -5103,7 +5704,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 8.91,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Patong beach",
+     "km": 13.14,
+     "swim": "yes",
+     "why": "Lifeguards, calm in high season; busy, jet skis."
+    }
+   }
   },
   "kan-eang-2": {
    "id": "kan-eang-2",
@@ -5140,7 +5754,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 2.47,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 4.61,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "salaloy": {
    "id": "salaloy",
@@ -5177,7 +5804,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.36,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.41,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "so-xorry": {
    "id": "so-xorry",
@@ -5217,7 +5857,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "dibuk-house": {
    "id": "dibuk-house",
@@ -5256,7 +5909,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "bebop-live-music-bar": {
    "id": "bebop-live-music-bar",
@@ -5296,7 +5962,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "quip-sky-bar": {
    "id": "quip-sky-bar",
@@ -5336,7 +6015,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.37,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.27,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ska-bar": {
    "id": "ska-bar",
@@ -5376,7 +6068,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.48,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "after-beach-bar": {
    "id": "after-beach-bar",
@@ -5416,7 +6115,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.75,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "heaven-lounge": {
    "id": "heaven-lounge",
@@ -5456,7 +6162,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "karon",
    "zoneName": "Karon",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "bangla-road": {
    "id": "bangla-road",
@@ -5495,7 +6214,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "patong",
    "zoneName": "Patong",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Patong beach",
+    "km": 0.32,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": false
+   }
   },
   "cafe-del-mar": {
    "id": "cafe-del-mar",
@@ -5535,7 +6261,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 1.09,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": false
+   }
   },
   "ao-thalane-mangrove-kayak": {
    "id": "ao-thalane-mangrove-kayak",
@@ -5580,7 +6313,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "thalane",
    "zoneName": "Ao Thalane",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Khao Thong coast",
+    "km": 8.36,
+    "swim": "ask",
+    "why": "Mangrove shore: some stretches have sand at high tide. Ask the host where to swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Tubkaek beach",
+     "km": 8.46,
+     "swim": "yes",
+     "why": "Calm, views of Hong islands (general)."
+    }
+   }
   },
   "railay-rock-climbing-half-day": {
    "id": "railay-rock-climbing-half-day",
@@ -5619,7 +6365,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay West",
+    "km": 0.16,
+    "swim": "yes",
+    "why": "Clear, calm, longtail access only.",
+    "approx": true
+   }
   },
   "tiger-cave-temple": {
    "id": "tiger-cave-temple",
@@ -5660,7 +6413,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "tigercave",
    "zoneName": "Tiger Cave Temple",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 15.5,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 15.66,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "hong-islands-day-tour": {
    "id": "hong-islands-day-tour",
@@ -5700,7 +6466,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "thalane",
    "zoneName": "Ao Thalane",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tubkaek beach",
+    "km": 6.7,
+    "swim": "yes",
+    "why": "Calm, views of Hong islands (general).",
+    "approx": true
+   }
   },
   "4-island-longtail-tour": {
    "id": "4-island-longtail-tour",
@@ -5740,7 +6513,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Phra Nang beach",
+    "km": 0.28,
+    "swim": "yes",
+    "why": "The best swim in Krabi: calm, white sand, under the cliffs.",
+    "approx": true
+   }
   },
   "railay-west-and-phra-nang-beach": {
    "id": "railay-west-and-phra-nang-beach",
@@ -5781,7 +6561,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay West",
+    "km": 0.16,
+    "swim": "yes",
+    "why": "Clear, calm, longtail access only.",
+    "approx": true
+   }
   },
   "emerald-pool-and-hot-springs": {
    "id": "emerald-pool-and-hot-springs",
@@ -5820,7 +6607,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "krabitown",
    "zoneName": "Krabi Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Phra Nang beach",
+    "km": 24.0,
+    "swim": "yes",
+    "why": "The best swim in Krabi: calm, white sand, under the cliffs.",
+    "approx": true
+   }
   },
   "klong-haeng-market": {
    "id": "klong-haeng-market",
@@ -5862,7 +6656,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "nopparat",
    "zoneName": "Nopparat Thara",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nopparat Thara beach",
+    "km": 1.38,
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 1.72,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "chao-fah-pier-night-market": {
    "id": "chao-fah-pier-night-market",
@@ -5904,7 +6711,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "krabitown",
    "zoneName": "Krabi Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 10.79,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 11.29,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "ao-nang-landmark-night-market": {
    "id": "ao-nang-landmark-night-market",
@@ -5943,7 +6763,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "nopparat",
    "zoneName": "Nopparat Thara",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nopparat Thara beach",
+    "km": 1.38,
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 1.72,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "maharaj-morning-market": {
    "id": "maharaj-morning-market",
@@ -5980,7 +6813,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "krabitown",
    "zoneName": "Krabi Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 10.79,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 11.29,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "abdulloh-muslim-restaurant": {
    "id": "abdulloh-muslim-restaurant",
@@ -6017,7 +6863,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "krabitown",
    "zoneName": "Krabi Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 10.79,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 11.29,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "ruen-mai": {
    "id": "ruen-mai",
@@ -6054,7 +6913,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "nathai",
    "zoneName": "Na Thai, inland",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 6.99,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "krua-thara": {
    "id": "krua-thara",
@@ -6091,7 +6957,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "nopparat",
    "zoneName": "Nopparat Thara",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Nopparat Thara beach",
+    "km": 0.23,
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 2.98,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "kotung": {
    "id": "kotung",
@@ -6128,7 +7007,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "krabitown",
    "zoneName": "Krabi Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 10.79,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Nang beach",
+     "km": 11.29,
+     "swim": "yes",
+     "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+    }
+   }
   },
   "ali-baba": {
    "id": "ali-baba",
@@ -6165,7 +7057,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "govinda-s": {
    "id": "govinda-s",
@@ -6202,7 +7101,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay West",
+    "km": 0.15,
+    "swim": "yes",
+    "why": "Clear, calm, longtail access only.",
+    "approx": false
+   }
   },
   "jame-food-centre": {
    "id": "jame-food-centre",
@@ -6239,7 +7145,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "the-last-fisherman-bar": {
    "id": "the-last-fisherman-bar",
@@ -6279,7 +7192,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "the-beach-bar-ao-nang": {
    "id": "the-beach-bar-ao-nang",
@@ -6319,7 +7239,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "boogie-bar": {
    "id": "boogie-bar",
@@ -6359,7 +7286,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.22,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": false
+   }
   },
   "centre-point": {
    "id": "centre-point",
@@ -6398,7 +7332,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "reggae-town": {
    "id": "reggae-town",
@@ -6438,7 +7379,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.76,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": false
+   }
   },
   "the-last-bar-railay": {
    "id": "the-last-bar-railay",
@@ -6477,7 +7425,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Railay East",
+    "km": 0.39,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Railay West",
+     "km": 0.83,
+     "swim": "yes",
+     "why": "Clear, calm, longtail access only."
+    }
+   }
   },
   "phi-phi-speedboat-day-tour-from-ao-nang": {
    "id": "phi-phi-speedboat-day-tour-from-ao-nang",
@@ -6523,7 +7484,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 6.08,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "early-bird-phi-phi-and-4-islands-tour": {
    "id": "early-bird-phi-phi-and-4-islands-tour",
@@ -6565,7 +7533,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 6.08,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "private-longtail-from-tonsai": {
    "id": "private-longtail-from-tonsai",
@@ -6610,7 +7585,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 6.08,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "maya-bay": {
    "id": "maya-bay",
@@ -6651,7 +7633,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 6.18,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": false
+   }
   },
   "phi-phi-viewpoint-2": {
    "id": "phi-phi-viewpoint-2",
@@ -6689,7 +7678,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.48,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.48,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "long-beach": {
    "id": "long-beach",
@@ -6728,7 +7730,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.81,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 2.74,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "kayak-at-loh-dalum": {
    "id": "kayak-at-loh-dalum",
@@ -6766,7 +7781,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "tonsai-village-food": {
    "id": "tonsai-village-food",
@@ -6802,7 +7830,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "slinky-beach-bar": {
    "id": "slinky-beach-bar",
@@ -6841,7 +7882,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "carlito-s": {
    "id": "carlito-s",
@@ -6880,7 +7934,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "ibiza-beach-club": {
    "id": "ibiza-beach-club",
@@ -6919,7 +7986,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "casa-blanca-boutique": {
    "id": "casa-blanca-boutique",
@@ -7029,7 +8109,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ton-sai-tropical": {
    "id": "ton-sai-tropical",
@@ -7144,7 +8237,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "ivory-phi-phi": {
    "id": "ivory-phi-phi",
@@ -7270,7 +8376,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pineapple-guesthouse-karon": {
    "id": "pineapple-guesthouse-karon",
@@ -7384,7 +8503,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 1.12,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 1.77,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "kata-tranquil-villa": {
    "id": "kata-tranquil-villa",
@@ -7496,7 +8628,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 1.33,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "kk-karon-kata-boutique": {
    "id": "kk-karon-kata-boutique",
@@ -7610,7 +8749,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "prima-karon-villa": {
    "id": "prima-karon-villa",
@@ -7713,7 +8859,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "xinlor-house": {
    "id": "xinlor-house",
@@ -7828,7 +8987,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.69,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.55,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "solin-house-phuket": {
    "id": "solin-house-phuket",
@@ -7944,7 +9116,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "elite-suites-patong": {
    "id": "elite-suites-patong",
@@ -8057,7 +9242,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Patong beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": true
+   }
   },
   "atease-phuket-patong": {
    "id": "atease-phuket-patong",
@@ -8154,7 +9346,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Patong beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": true
+   }
   },
   "kalim-seaview-villa-penda": {
    "id": "kalim-seaview-villa-penda",
@@ -8252,7 +9451,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Patong beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis.",
+    "approx": true
+   }
   },
   "sss-phuket-dsd-racha-yai": {
    "id": "sss-phuket-dsd-racha-yai",
@@ -8304,7 +9510,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "acdc-diving-phuket": {
    "id": "acdc-diving-phuket",
@@ -8350,7 +9563,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 1.95,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 5.01,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "sunrise-divers-phuket": {
    "id": "sunrise-divers-phuket",
@@ -8393,7 +9619,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "karon",
    "zoneName": "Karon",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Karon beach",
+    "km": 1.16,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 1.72,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "houbou-ya-phuket": {
    "id": "houbou-ya-phuket",
@@ -8435,7 +9674,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Laem Ka beach",
+    "km": 19.29,
+    "swim": "tide",
+    "why": "Sheltered east-facing cove, shallow and rocky; swim at high tide (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Ya Nui beach",
+     "km": 19.62,
+     "swim": "yes",
+     "why": "Small calm cove with rocks; snorkel round the islet. Water shoes."
+    }
+   }
   },
   "the-dive-ao-nang": {
    "id": "the-dive-ao-nang",
@@ -8485,7 +9737,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "mr-dolphin-diving-krabi": {
    "id": "mr-dolphin-diving-krabi",
@@ -8529,7 +9788,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "sawasdee-divers-krabi": {
    "id": "sawasdee-divers-krabi",
@@ -8573,7 +9839,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "local-diving-aonang": {
    "id": "local-diving-aonang",
@@ -8617,7 +9890,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "strip",
    "zoneName": "Ao Nang strip",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "princess-divers-phi-phi": {
    "id": "princess-divers-phi-phi",
@@ -8665,7 +9945,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.49,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.82,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "adventure-club-phi-phi": {
    "id": "adventure-club-phi-phi",
@@ -8712,7 +10005,20 @@ window.TRIP = {
    "geo": "exact",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.47,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.77,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "phuket-dive-tours-racha-snorkel": {
    "id": "phuket-dive-tours-racha-snorkel",
@@ -8756,7 +10062,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.75,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "krabi-4-islands-snorkel": {
    "id": "krabi-4-islands-snorkel",
@@ -8799,7 +10112,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Phra Nang beach",
+    "km": 0.28,
+    "swim": "yes",
+    "why": "The best swim in Krabi: calm, white sand, under the cliffs.",
+    "approx": true
+   }
   },
   "hong-islands-trip-thai-tour": {
    "id": "hong-islands-trip-thai-tour",
@@ -8842,7 +10162,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "thalane",
    "zoneName": "Ao Thalane",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tubkaek beach",
+    "km": 6.7,
+    "swim": "yes",
+    "why": "Calm, views of Hong islands (general).",
+    "approx": true
+   }
   },
   "phi-phi-speedboat-lovely-phuket": {
    "id": "phi-phi-speedboat-lovely-phuket",
@@ -8885,7 +10212,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 2.81,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 8.72,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "racha-yai": {
    "id": "racha-yai",
@@ -8930,7 +10270,14 @@ window.TRIP = {
    "geo": "exact",
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.48,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": false
+   }
   },
   "bida-nok-phi-phi": {
    "id": "bida-nok-phi-phi",
@@ -8973,7 +10320,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 5.24,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "similan-islands": {
    "id": "similan-islands",
@@ -9058,7 +10412,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h2": {
    "id": "hanuman-h2",
@@ -9099,7 +10466,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h3": {
    "id": "hanuman-h3",
@@ -9140,7 +10520,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h4": {
    "id": "hanuman-h4",
@@ -9180,7 +10573,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h5": {
    "id": "hanuman-h5",
@@ -9221,7 +10627,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h6": {
    "id": "hanuman-h6",
@@ -9261,7 +10680,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h7": {
    "id": "hanuman-h7",
@@ -9301,7 +10733,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h8": {
    "id": "hanuman-h8",
@@ -9341,7 +10786,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h9": {
    "id": "hanuman-h9",
@@ -9382,7 +10840,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h10": {
    "id": "hanuman-h10",
@@ -9423,7 +10894,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h11": {
    "id": "hanuman-h11",
@@ -9464,7 +10948,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h12": {
    "id": "hanuman-h12",
@@ -9504,7 +11001,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h13": {
    "id": "hanuman-h13",
@@ -9544,7 +11054,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h14": {
    "id": "hanuman-h14",
@@ -9585,7 +11108,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h15": {
    "id": "hanuman-h15",
@@ -9625,7 +11161,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "hanuman-h16": {
    "id": "hanuman-h16",
@@ -9665,7 +11214,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "s2-voyagers": {
    "id": "s2-voyagers",
@@ -9773,7 +11335,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.29,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.98,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-by-the-beach": {
    "id": "s2-by-the-beach",
@@ -9873,7 +11448,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-dormsin": {
    "id": "s2-dormsin",
@@ -9998,7 +11586,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.4,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.71,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-blue-flow": {
    "id": "s2-blue-flow",
@@ -10110,7 +11711,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-blanco-beach-bar": {
    "id": "s2-blanco-beach-bar",
@@ -10222,7 +11836,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.37,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.98,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-phi-phi-hotel": {
    "id": "s2-phi-phi-hotel",
@@ -10333,7 +11960,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.53,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.88,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-panmanee": {
    "id": "s2-panmanee",
@@ -10452,7 +12092,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.52,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.81,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-kitty-guest-house": {
    "id": "s2-kitty-guest-house",
@@ -10566,7 +12219,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.27,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 2.23,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "s2-katamanda-e5": {
    "id": "s2-katamanda-e5",
@@ -10665,7 +12331,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.18,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": true
+   }
   },
   "s2-villa-beachside-kata-noi": {
    "id": "s2-villa-beachside-kata-noi",
@@ -10764,7 +12437,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.18,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": true
+   }
   },
   "s2-kata-3br-pool-villa": {
    "id": "s2-kata-3br-pool-villa",
@@ -10861,7 +12541,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "s2-kata-townhouse-1": {
    "id": "s2-kata-townhouse-1",
@@ -10959,7 +12646,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "s2-karon-apt704": {
    "id": "s2-karon-apt704",
@@ -11059,7 +12753,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "s2-karon-exclusive-8638782": {
    "id": "s2-karon-exclusive-8638782",
@@ -11156,7 +12863,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "s2-karon-334sqm": {
    "id": "s2-karon-334sqm",
@@ -11251,7 +12971,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "s2-rawai-walk-to-beach": {
    "id": "s2-rawai-walk-to-beach",
@@ -11355,7 +13088,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 0.35,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": true
+   }
   },
   "s2-villa-vipa": {
    "id": "s2-villa-vipa",
@@ -11454,7 +13194,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Tri Trang beach",
+    "km": 0.59,
+    "swim": "yes",
+    "why": "Small calm cove south of Patong (general).",
+    "approx": false
+   }
   },
   "s2-shanti-bangtao": {
    "id": "s2-shanti-bangtao",
@@ -11548,7 +13295,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "s2-bangtao-soi4-sleeps9": {
    "id": "s2-bangtao-soi4-sleeps9",
@@ -11641,7 +13395,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "s2-bangtao-laguna-pool-villa": {
    "id": "s2-bangtao-laguna-pool-villa",
@@ -11743,7 +13504,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "s2-surin-large-villa": {
    "id": "s2-surin-large-villa",
@@ -11836,7 +13604,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Surin beach",
+    "km": 0.28,
+    "swim": "care",
+    "why": "Rips (Phuket101); lifeguards, swim between the flags.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kamala beach",
+     "km": 2.35,
+     "swim": "yes",
+     "why": "Long calm beach with lifeguards."
+    }
+   }
   },
   "s2-mantra-kata-noi": {
    "id": "s2-mantra-kata-noi",
@@ -11932,7 +13713,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.69,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "s2-kata-noi-resort": {
    "id": "s2-kata-noi-resort",
@@ -12020,7 +13808,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata Noi beach",
+    "km": 0.65,
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November.",
+    "approx": false
+   }
   },
   "s2-kata-beachwalk": {
    "id": "s2-kata-beachwalk",
@@ -12118,7 +13913,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "s2-princess-kamala": {
    "id": "s2-princess-kamala",
@@ -12215,7 +14017,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "at-kamala-hotel": {
    "id": "at-kamala-hotel",
@@ -12311,7 +14120,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.25,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": false
+   }
   },
   "s2-best-western-bangtao": {
    "id": "s2-best-western-bangtao",
@@ -12407,7 +14223,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "pp-rimlay": {
    "id": "pp-rimlay",
@@ -12530,7 +14353,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-villa-resort": {
    "id": "pp-villa-resort",
@@ -12651,7 +14487,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.17,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.16,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-hangover": {
    "id": "pp-hangover",
@@ -12749,7 +14598,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-tropical-garden": {
    "id": "pp-tropical-garden",
@@ -12866,7 +14728,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.48,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.48,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-ingphu": {
    "id": "pp-ingphu",
@@ -12980,7 +14855,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-harbour-view": {
    "id": "pp-harbour-view",
@@ -13088,7 +14976,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-chaokoh-hostel": {
    "id": "pp-chaokoh-hostel",
@@ -13200,7 +15101,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-pier-bargain": {
    "id": "pp-op-pier-bargain",
@@ -13246,7 +15160,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-visa-travel": {
    "id": "pp-op-visa-travel",
@@ -13294,7 +15221,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-blue-flow": {
    "id": "pp-op-blue-flow",
@@ -13341,7 +15281,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-mr-chet": {
    "id": "pp-op-mr-chet",
@@ -13386,7 +15339,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-phiphitours": {
    "id": "pp-op-phiphitours",
@@ -13432,7 +15398,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp-op-gyg-private": {
    "id": "pp-op-gyg-private",
@@ -13478,7 +15457,14 @@ window.TRIP = {
    "geo": "approx",
    "zone": "leh",
    "zoneName": "Phi Phi Leh",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Long Beach",
+    "km": 6.08,
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail.",
+    "approx": true
+   }
   },
   "pp-op-gyg-shared": {
    "id": "pp-op-gyg-shared",
@@ -13523,7 +15509,20 @@ window.TRIP = {
    "geo": "approx",
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
-   "images": []
+   "images": [],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-pp-charlie-beach-resort": {
    "id": "pp2-pp-charlie-beach-resort",
@@ -13644,7 +15643,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Loh Dalum beach",
+    "km": 0.08,
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.99,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-phi-phi-andaman-beach-resort": {
    "id": "pp2-phi-phi-andaman-beach-resort",
@@ -13761,7 +15773,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-phi-phi-arboreal-resort": {
    "id": "pp2-phi-phi-arboreal-resort",
@@ -13878,7 +15903,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-bayview-resort-phi-phi": {
    "id": "pp2-bayview-resort-phi-phi",
@@ -13994,7 +16032,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Laem Hin (east Tonsai)",
+    "km": 0.2,
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general).",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.19,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-chaokoh-phi-phi-hotel-resort": {
    "id": "pp2-chaokoh-phi-phi-hotel-resort",
@@ -14111,7 +16162,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-phi-phi-banyan-villa": {
    "id": "pp2-phi-phi-banyan-villa",
@@ -14227,7 +16291,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.41,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.69,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "ab-lotus-house-phuket": {
    "id": "ab-lotus-house-phuket",
@@ -14337,7 +16414,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.91,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.81,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-apo-house-old-town": {
    "id": "ab-apo-house-old-town",
@@ -14447,7 +16537,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-genesis-home-garden": {
    "id": "ab-genesis-home-garden",
@@ -14558,7 +16661,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 2.47,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 4.61,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "ab-3br-modern-old-town": {
    "id": "ab-3br-modern-old-town",
@@ -14670,7 +16786,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-oldtown-3br-central-festival": {
    "id": "ab-oldtown-3br-central-festival",
@@ -14781,7 +16910,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.37,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": false,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.26,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-little-homestay-in-town": {
    "id": "ab-little-homestay-in-town",
@@ -14891,7 +17033,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.49,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.36,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-brand-new-2br-apartment-wichit": {
    "id": "ab-brand-new-2br-apartment-wichit",
@@ -15001,7 +17156,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.23,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 7.63,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-genesis-urban-old-town": {
    "id": "ab-genesis-urban-old-town",
@@ -15114,7 +17282,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-17",
     "2026-11-18"
-   ]
+   ],
+   "beach": {
+    "name": "Saphan Hin (Town shore)",
+    "km": 3.91,
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming.",
+    "approx": true,
+    "swimNear": {
+     "name": "Ao Yon beach",
+     "km": 9.81,
+     "swim": "yes",
+     "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+    }
+   }
   },
   "ab-lilas-house": {
    "id": "ab-lilas-house",
@@ -15211,7 +17392,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-lily-house": {
    "id": "ab-lily-house",
@@ -15310,7 +17498,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-ban-proud-aonang": {
    "id": "ab-ban-proud-aonang",
@@ -15406,7 +17601,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-baan-aonang-hot-tub": {
    "id": "ab-baan-aonang-hot-tub",
@@ -15503,7 +17705,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-ao-nang-townhouse": {
    "id": "ab-ao-nang-townhouse",
@@ -15601,7 +17810,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Nopparat Thara beach",
+    "km": 0.78,
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Pai Plong beach",
+     "km": 2.06,
+     "swim": "yes",
+     "why": "Small calm cove over the headland from Ao Nang (general)."
+    }
+   }
   },
   "ab-hello-yellow-hideaway": {
    "id": "ab-hello-yellow-hideaway",
@@ -15698,7 +17920,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-butterfly-garden-home": {
    "id": "ab-butterfly-garden-home",
@@ -15797,7 +18026,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 6.99,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-dom-dolly-pool-vila": {
    "id": "ab-dom-dolly-pool-vila",
@@ -15891,7 +18127,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-3bdr-pool-villa-8min": {
    "id": "ab-3bdr-pool-villa-8min",
@@ -15989,7 +18232,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-aonang-sweet-blue-sea": {
    "id": "ab-aonang-sweet-blue-sea",
@@ -16087,7 +18337,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-bens-pool-villa": {
    "id": "ab-bens-pool-villa",
@@ -16187,7 +18444,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-aonang-pool-villa-rooftop": {
    "id": "ab-aonang-pool-villa-rooftop",
@@ -16287,7 +18551,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-haven-grand-g5": {
    "id": "ab-haven-grand-g5",
@@ -16383,7 +18654,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-blue-nara": {
    "id": "ab-blue-nara",
@@ -16479,7 +18757,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-blue-sand-sea": {
    "id": "ab-blue-sand-sea",
@@ -16575,7 +18860,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-quiet-pool-villa-711": {
    "id": "ab-quiet-pool-villa-711",
@@ -16671,7 +18963,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-cozy-pool-house-aonang": {
    "id": "ab-cozy-pool-house-aonang",
@@ -16769,7 +19068,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-smile-pool-villa-aonang": {
    "id": "ab-smile-pool-villa-aonang",
@@ -16865,7 +19171,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-train-villas-platform-3": {
    "id": "ab-train-villas-platform-3",
@@ -16962,7 +19275,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Railay East",
+    "km": 1.19,
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Railay West",
+     "km": 1.75,
+     "swim": "yes",
+     "why": "Clear, calm, longtail access only."
+    }
+   }
   },
   "ab-aonang-brandnew-2br": {
    "id": "ab-aonang-brandnew-2br",
@@ -17059,7 +19385,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "ab-baan-tamachart-phi-phi": {
    "id": "ab-baan-tamachart-phi-phi",
@@ -17170,7 +19503,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "ab-shared-dorm-phi-phi": {
    "id": "ab-shared-dorm-phi-phi",
@@ -17280,7 +19626,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.12,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": true,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.38,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "ab-green-haven-nai-harn": {
    "id": "ab-green-haven-nai-harn",
@@ -17376,7 +19735,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 0.35,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": true
+   }
   },
   "ab-zen-pool-villa-rawai": {
    "id": "ab-zen-pool-villa-rawai",
@@ -17474,7 +19840,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-prima-3br-villa": {
    "id": "ab-prima-3br-villa",
@@ -17570,7 +19949,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 2.18,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.44,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-balinese-bliss-rawai": {
    "id": "ab-balinese-bliss-rawai",
@@ -17668,7 +20060,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-b7-tropical-vacation-villa": {
    "id": "ab-b7-tropical-vacation-villa",
@@ -17764,7 +20169,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-b3-tropical-vacation-villa": {
    "id": "ab-b3-tropical-vacation-villa",
@@ -17860,7 +20278,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-a9-rawai-detached-villa": {
    "id": "ab-a9-rawai-detached-villa",
@@ -17958,7 +20389,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-private-pool-villa-rawai-beach": {
    "id": "ab-private-pool-villa-rawai-beach",
@@ -18056,7 +20500,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-rawayna-200m": {
    "id": "ab-rawayna-200m",
@@ -18154,7 +20611,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-family-bali-style-nai-harn": {
    "id": "ab-family-bali-style-nai-harn",
@@ -18253,7 +20723,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 0.35,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": true
+   }
   },
   "ab-rawai-sun-breeze": {
    "id": "ab-rawai-sun-breeze",
@@ -18351,7 +20828,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-solas-pool-villa": {
    "id": "ab-solas-pool-villa",
@@ -18451,7 +20941,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-elegant-thai-villa": {
    "id": "ab-elegant-thai-villa",
@@ -18547,7 +21050,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-new-celine-villa": {
    "id": "ab-new-celine-villa",
@@ -18644,7 +21160,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-peony-villa": {
    "id": "ab-peony-villa",
@@ -18744,7 +21273,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-villa-silk": {
    "id": "ab-villa-silk",
@@ -18841,7 +21383,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-sz-rawai-beach-100m": {
    "id": "ab-sz-rawai-beach-100m",
@@ -18938,7 +21493,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-family-sea-view-saiyuan": {
    "id": "ab-family-sea-view-saiyuan",
@@ -19036,7 +21604,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-villa-natali": {
    "id": "ab-villa-natali",
@@ -19131,7 +21712,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-naiharn-bali-style-4br": {
    "id": "ab-naiharn-bali-style-4br",
@@ -19231,7 +21825,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Nai Harn beach",
+    "km": 0.35,
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard.",
+    "approx": true
+   }
   },
   "ab-panoramic-seaview-elevate": {
    "id": "ab-panoramic-seaview-elevate",
@@ -19331,7 +21932,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Rawai beach",
+    "km": 0.25,
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Nai Harn beach",
+     "km": 2.56,
+     "swim": "yes",
+     "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+    }
+   }
   },
   "ab-karon-beachfront-condo": {
    "id": "ab-karon-beachfront-condo",
@@ -19428,7 +22042,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "ab-baan-angelo-kata-hill": {
    "id": "ab-baan-angelo-kata-hill",
@@ -19526,7 +22153,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "ab-karon-5min-walk-condo": {
    "id": "ab-karon-5min-walk-condo",
@@ -19625,7 +22259,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "ab-unit-2b-kata-beach": {
    "id": "ab-unit-2b-kata-beach",
@@ -19723,7 +22364,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "ab-b8-serviced-apartment-karon": {
    "id": "ab-b8-serviced-apartment-karon",
@@ -19821,7 +22469,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.69,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": false,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "ab-big-2br-kata": {
    "id": "ab-big-2br-kata",
@@ -19919,7 +22580,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "ab-areca-holiday-home-11": {
    "id": "ab-areca-holiday-home-11",
@@ -20016,7 +22684,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Karon beach",
+    "km": 0.35,
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 3.12,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "ab-duplex-3br-kamala": {
    "id": "ab-duplex-3br-kamala",
@@ -20115,7 +22796,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-tw2-pool-villa-kamala": {
    "id": "ab-tw2-pool-villa-kamala",
@@ -20213,7 +22901,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-lake-view-3br-bangtao": {
    "id": "ab-lake-view-3br-bangtao",
@@ -20312,7 +23007,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-surin-park-penthouse": {
    "id": "ab-surin-park-penthouse",
@@ -20410,7 +23112,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Surin beach",
+    "km": 0.28,
+    "swim": "care",
+    "why": "Rips (Phuket101); lifeguards, swim between the flags.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kamala beach",
+     "km": 2.35,
+     "swim": "yes",
+     "why": "Long calm beach with lifeguards."
+    }
+   }
   },
   "ab-4-bed-bungalow-bang-tao": {
    "id": "ab-4-bed-bungalow-bang-tao",
@@ -20507,7 +23222,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-villa-close-to-beach-sleeps-9": {
    "id": "ab-villa-close-to-beach-sleeps-9",
@@ -20602,7 +23324,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-3br-villa-shared-pool-kamala": {
    "id": "ab-3br-villa-shared-pool-kamala",
@@ -20701,7 +23430,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-tropical-vibes-only-kamala": {
    "id": "ab-tropical-vibes-only-kamala",
@@ -20799,7 +23535,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-n2-pool-villa-kamala": {
    "id": "ab-n2-pool-villa-kamala",
@@ -20897,7 +23640,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-peaceful-bliss-kamala": {
    "id": "ab-peaceful-bliss-kamala",
@@ -20992,7 +23742,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-sunset-lake-villa-bangtao": {
    "id": "ab-sunset-lake-villa-bangtao",
@@ -21090,7 +23847,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.6,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-n25-kamala-nature": {
    "id": "ab-n25-kamala-nature",
@@ -21188,7 +23952,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kamala beach",
+    "km": 0.4,
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards.",
+    "approx": true
+   }
   },
   "ab-tropical-chalet-3br": {
    "id": "ab-tropical-chalet-3br",
@@ -21285,7 +24056,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 1.32,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-laguna-parkside-townhouse": {
    "id": "ab-laguna-parkside-townhouse",
@@ -21380,7 +24158,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 0.95,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-3bed-pool-villa-thalang": {
    "id": "ab-3bed-pool-villa-thalang",
@@ -21475,7 +24260,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Bang Tao beach",
+    "km": 1.32,
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags.",
+    "approx": true
+   }
   },
   "ab-s101-chalong": {
    "id": "ab-s101-chalong",
@@ -21572,7 +24364,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Chalong bay",
+    "km": 2.47,
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim.",
+    "approx": true,
+    "swimNear": {
+     "name": "Kata beach",
+     "km": 4.61,
+     "swim": "yes",
+     "why": "Lifeguards; swim between the flags, rips on swell days."
+    }
+   }
   },
   "ab-ao-yon-oceanfront-4br": {
    "id": "ab-ao-yon-oceanfront-4br",
@@ -21670,7 +24475,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-21",
     "2026-11-24"
-   ]
+   ],
+   "beach": {
+    "name": "Kata beach",
+    "km": 0.17,
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days.",
+    "approx": true
+   }
   },
   "pp2-chang-grand": {
    "id": "pp2-chang-grand",
@@ -21778,7 +24590,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.21,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.47,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-jj-bungalow": {
    "id": "pp2-jj-bungalow",
@@ -21883,7 +24708,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.28,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.56,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "pp2-green-hill": {
    "id": "pp2-green-hill",
@@ -21986,7 +24824,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-18",
     "2026-11-19"
-   ]
+   ],
+   "beach": {
+    "name": "Tonsai beach",
+    "km": 0.33,
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide.",
+    "approx": false,
+    "swimNear": {
+     "name": "Long Beach",
+     "km": 1.45,
+     "swim": "yes",
+     "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+    }
+   }
   },
   "wl-17213212": {
    "id": "wl-17213212",
@@ -22092,7 +24943,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Khao Thong coast",
+    "km": 0.0,
+    "swim": "ask",
+    "why": "Mangrove shore: some stretches have sand at high tide. Ask the host where to swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Tubkaek beach",
+     "km": 2.81,
+     "swim": "yes",
+     "why": "Calm, views of Hong islands (general)."
+    }
+   }
   },
   "wl-27994008": {
    "id": "wl-27994008",
@@ -22197,7 +25061,20 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Khao Thong coast",
+    "km": 1.24,
+    "swim": "ask",
+    "why": "Mangrove shore: some stretches have sand at high tide. Ask the host where to swim.",
+    "approx": false,
+    "swimNear": {
+     "name": "Tubkaek beach",
+     "km": 2.27,
+     "swim": "yes",
+     "why": "Calm, views of Hong islands (general)."
+    }
+   }
   },
   "wl-13180229": {
    "id": "wl-13180229",
@@ -22301,7 +25178,14 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   },
   "wl-1778649949218040267": {
    "id": "wl-1778649949218040267",
@@ -22404,8 +25288,318 @@ window.TRIP = {
    "stayDates": [
     "2026-11-19",
     "2026-11-21"
-   ]
+   ],
+   "beach": {
+    "name": "Ao Nang beach",
+    "km": 0.3,
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them.",
+    "approx": true
+   }
   }
+ },
+ "beaches": {
+  "phuket": [
+   {
+    "name": "Kata Noi beach",
+    "lngLat": [
+     98.2955,
+     7.8105
+    ],
+    "swim": "yes",
+    "why": "Small sheltered bay, gentle entry; lifeguards next door at Kata. The calmest west-coast swim in late November."
+   },
+   {
+    "name": "Kata beach",
+    "lngLat": [
+     98.2995,
+     7.8195
+    ],
+    "swim": "yes",
+    "why": "Lifeguards; swim between the flags, rips on swell days."
+   },
+   {
+    "name": "Karon beach",
+    "lngLat": [
+     98.293,
+     7.844
+    ],
+    "swim": "care",
+    "why": "Worst rip currents on the island (Phuket101). Lifeguards; only between the flags on calm days."
+   },
+   {
+    "name": "Patong beach",
+    "lngLat": [
+     98.295,
+     7.896
+    ],
+    "swim": "yes",
+    "why": "Lifeguards, calm in high season; busy, jet skis."
+   },
+   {
+    "name": "Tri Trang beach",
+    "lngLat": [
+     98.279,
+     7.8805
+    ],
+    "swim": "yes",
+    "why": "Small calm cove south of Patong (general)."
+   },
+   {
+    "name": "Freedom beach",
+    "lngLat": [
+     98.278,
+     7.879
+    ],
+    "swim": "yes",
+    "why": "Clear water, boat or steep hike only."
+   },
+   {
+    "name": "Kalim beach",
+    "lngLat": [
+     98.288,
+     7.912
+    ],
+    "swim": "no",
+    "why": "Rocky reef; a surf spot, not a swim."
+   },
+   {
+    "name": "Kamala beach",
+    "lngLat": [
+     98.28,
+     7.952
+    ],
+    "swim": "yes",
+    "why": "Long calm beach with lifeguards."
+   },
+   {
+    "name": "Surin beach",
+    "lngLat": [
+     98.2765,
+     7.975
+    ],
+    "swim": "care",
+    "why": "Rips (Phuket101); lifeguards, swim between the flags."
+   },
+   {
+    "name": "Bang Tao beach",
+    "lngLat": [
+     98.293,
+     7.995
+    ],
+    "swim": "yes",
+    "why": "Wide, light surf, lifeguards; a red-flag drowning in Nov 2025, so respect the flags."
+   },
+   {
+    "name": "Layan beach",
+    "lngLat": [
+     98.295,
+     8.023
+    ],
+    "swim": "care",
+    "why": "Currents at the river mouth; quiet, few lifeguards (general)."
+   },
+   {
+    "name": "Nai Yang beach",
+    "lngLat": [
+     98.299,
+     8.088
+    ],
+    "swim": "yes",
+    "why": "Calm and shady in high season, by the airport (general)."
+   },
+   {
+    "name": "Nai Harn beach",
+    "lngLat": [
+     98.304,
+     7.7765
+    ],
+    "swim": "yes",
+    "why": "Enclosed bay, clean water, small swell in November; no permanent lifeguard."
+   },
+   {
+    "name": "Ya Nui beach",
+    "lngLat": [
+     98.302,
+     7.765
+    ],
+    "swim": "yes",
+    "why": "Small calm cove with rocks; snorkel round the islet. Water shoes."
+   },
+   {
+    "name": "Laem Ka beach",
+    "lngLat": [
+     98.3325,
+     7.7705
+    ],
+    "swim": "tide",
+    "why": "Sheltered east-facing cove, shallow and rocky; swim at high tide (general)."
+   },
+   {
+    "name": "Rawai beach",
+    "lngLat": [
+     98.329,
+     7.774
+    ],
+    "swim": "no",
+    "why": "Longtail harbour, mud flats at low tide. Go for the seafood market, not a swim."
+   },
+   {
+    "name": "Chalong bay",
+    "lngLat": [
+     98.36,
+     7.82
+    ],
+    "swim": "no",
+    "why": "The boat pier; muddy, not a swim."
+   },
+   {
+    "name": "Ao Yon beach",
+    "lngLat": [
+     98.41,
+     7.804
+    ],
+    "swim": "yes",
+    "why": "Calm, shallow east-coast bay; the nearest swim from Town (about 25 min by car)."
+   },
+   {
+    "name": "Saphan Hin (Town shore)",
+    "lngLat": [
+     98.399,
+     7.856
+    ],
+    "swim": "no",
+    "why": "Phuket Town's waterfront park; mud flats, no swimming."
+   }
+  ],
+  "aonang": [
+   {
+    "name": "Ao Nang beach",
+    "lngLat": [
+     98.821,
+     8.03
+    ],
+    "swim": "yes",
+    "why": "Calm in high season; swim inside the buoy lines, longtails outside them."
+   },
+   {
+    "name": "Pai Plong beach",
+    "lngLat": [
+     98.8135,
+     8.0235
+    ],
+    "swim": "yes",
+    "why": "Small calm cove over the headland from Ao Nang (general)."
+   },
+   {
+    "name": "Nopparat Thara beach",
+    "lngLat": [
+     98.8,
+     8.045
+    ],
+    "swim": "tide",
+    "why": "Very flat; at low tide the sea goes out hundreds of metres. Swim around high tide."
+   },
+   {
+    "name": "Railay West",
+    "lngLat": [
+     98.837,
+     8.011
+    ],
+    "swim": "yes",
+    "why": "Clear, calm, longtail access only."
+   },
+   {
+    "name": "Phra Nang beach",
+    "lngLat": [
+     98.8395,
+     8.006
+    ],
+    "swim": "yes",
+    "why": "The best swim in Krabi: calm, white sand, under the cliffs."
+   },
+   {
+    "name": "Railay East",
+    "lngLat": [
+     98.841,
+     8.014
+    ],
+    "swim": "no",
+    "why": "Mangrove mud; the boat landing, not a swim."
+   },
+   {
+    "name": "Klong Muang beach",
+    "lngLat": [
+     98.75,
+     8.06
+    ],
+    "swim": "yes",
+    "why": "Quiet, calm resort beach (general)."
+   },
+   {
+    "name": "Tubkaek beach",
+    "lngLat": [
+     98.74,
+     8.11
+    ],
+    "swim": "yes",
+    "why": "Calm, views of Hong islands (general)."
+   },
+   {
+    "name": "Khao Thong coast",
+    "lngLat": [
+     98.765,
+     8.105
+    ],
+    "swim": "ask",
+    "why": "Mangrove shore: some stretches have sand at high tide. Ask the host where to swim."
+   }
+  ],
+  "phiphi": [
+   {
+    "name": "Tonsai beach",
+    "lngLat": [
+     98.7765,
+     7.7375
+    ],
+    "swim": "tide",
+    "why": "Busy with boats and shallow at low tide; swim at the east end around high tide."
+   },
+   {
+    "name": "Loh Dalum beach",
+    "lngLat": [
+     98.7765,
+     7.745
+    ],
+    "swim": "tide",
+    "why": "Very shallow and muddy at low tide; a good swim at high tide. The party beach at night."
+   },
+   {
+    "name": "Laem Hin (east Tonsai)",
+    "lngLat": [
+     98.7845,
+     7.7385
+    ],
+    "swim": "tide",
+    "why": "Small sandy stretch east of the pier; high tide only (general)."
+   },
+   {
+    "name": "Long Beach",
+    "lngLat": [
+     98.785,
+     7.729
+    ],
+    "swim": "yes",
+    "why": "The island's best swim, with snorkelling off Shark Point; 100-200 THB longtail."
+   }
+  ]
+ },
+ "swimWord": {
+  "yes": "Swimmable",
+  "care": "Swimmable between the flags",
+  "tide": "Swimmable at high tide only",
+  "no": "Not for swimming",
+  "ask": "Swimming unclear"
  },
  "flights": {
   "out": {

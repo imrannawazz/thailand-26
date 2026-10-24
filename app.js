@@ -109,7 +109,7 @@
   const mapReady = () => map && map.getSource && map.getSource("items");
 
   // ---- stay filters and sort ----
-  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, avail: "all", tier: "all", tierBy: "me", allZones: false, open: innerWidth > 720 };
+  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, avail: "all", swim: false, tier: "all", tierBy: "me", allZones: false, open: innerWidth > 720 };
   const chosenByUs = id => !!S.pickOf(id) || Object.values(S.locks()).some(l => { for (const d of T.decisions) for (const o of d.options) if (o.id === l.optionId && (o.item === id || (o.items || []).includes(id))) return true; return false; });
   const fromDoc = it => it.tags.includes("docpick") || it.tags.includes("selfpick") || it.tags.includes("wishlist");
   const dist = (a, b) => Math.hypot((a[0] - b[0]) * Math.cos(8 * Math.PI / 180), a[1] - b[1]);
@@ -125,6 +125,7 @@
     let out = list.filter(it => it.type === "stay");
     if (SF.kind !== "all") out = out.filter(it => it.facts && it.facts.kind === SF.kind);
     if (SF.pool) out = out.filter(it => it.facts && (it.facts.pool === "private" || it.facts.pool === "shared"));
+    if (SF.swim) out = out.filter(swimFoot);
     if (SF.walk) out = out.filter(it => it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null && it.facts.beachMin <= 15);
     if (SF.budget) out = out.filter(it => it.facts && (it.facts.insideCap || (!it.facts.perHeadNight && userPrice(it) && userPrice(it).perHead <= it.facts.capHead)));
     if (SF.zone !== "all") out = out.filter(it => it.zone === SF.zone);
@@ -147,11 +148,11 @@
     const g = T.guides[place === "krabi" ? "aonang" : place];
     const pool = poolOf("stay", place); const zoneChips = g ? g.zones.filter(z => pool.some(it => it.zone === z.id)).map(z => chip("zone", z.id, `${z.name.split(" and ")[0].split(",")[0]} · ${pool.filter(it => it.zone === z.id).length}`)).join("") : "";
     const target = searchTarget(place);
-    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.budget, SF.ours, SF.doc, SF.avail !== "all", SF.tier !== "all", SF.sort !== "score"].filter(Boolean).length;
+    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.swim, SF.budget, SF.ours, SF.doc, SF.avail !== "all", SF.tier !== "all", SF.sort !== "score"].filter(Boolean).length;
     return `<div class="fsearchrow"><input class="fsearch" id="fsearch" type="search" value="${h(SF.q)}" placeholder="Search a name or area: Rassada, Old Town, pool villa" autocomplete="off"><button class="ftoggle ${SF.open ? "on" : ""}" data-ftoggle aria-expanded="${!!SF.open}">Filters${active ? ` · ${active}` : ""}</button></div>${SF.q ? `<p class="small pending" style="margin:.3em 0 0">${target ? `Matched ${h(target.name)}; sort by "Nearest to" below.` : "Text match on names and areas."}</p>` : ""}<div class="fbar ${SF.open ? "" : "collapsed"}">
       <span class="lbl">Area</span>${chip("zone", "all", "All")}${zoneChips}
       <span class="lbl">Show</span>${chip("kind", "all", "All")}${chip("kind", "villa", "Villas")}${chip("kind", "hotel", "Hotels")}${chip("kind", "hostel", "Hostels")}
-      <span class="lbl">Only</span>${chip("pool", true, "Pool")}${chip("walk", true, "Walk to beach")}${chip("budget", true, "Inside budget")}${chip("ours", true, "Chosen by us")}${chip("doc", true, "From the doc or wishlist")}
+      <span class="lbl">Only</span>${chip("pool", true, "Pool")}${chip("walk", true, "Walk to beach")}${chip("swim", true, "Swim beach on foot")}${chip("budget", true, "Inside budget")}${chip("ours", true, "Chosen by us")}${chip("doc", true, "From the doc or wishlist")}
       <span class="lbl">On our dates</span>${chip("avail", "all", "Any")}${chip("avail", "yes", `Available · ${pool.filter(it => availOf(it) === "yes").length}`)}${chip("avail", "no", `Not available · ${pool.filter(it => availOf(it) === "no").length}`)}${chip("avail", "unchecked", `Not checked · ${pool.filter(it => availOf(it) === "unchecked").length}`)}
       <span class="lbl">Tier</span>${chip("tier", "all", "Any")}${chip("tier", "A", "A")}${chip("tier", "B", "B")}${chip("tier", "Z", "Z")}${chip("tier", "none", "Not rated")}
       <span class="lbl">Rated by</span>${chip("tierBy", "me", who() ? `Me (${h(who())})` : "Me")}${chip("tierBy", "any", "Anyone")}${NAMES.filter(n => n !== who()).map(n => chip("tierBy", n, h(n))).join("")}
@@ -183,11 +184,7 @@
   }
 
   // ---- distances: nearest beach + key spots per place ----
-  const BEACHES = {
-    phuket: [["Kata Noi beach", [98.2955, 7.8105]], ["Kata beach", [98.2995, 7.8195]], ["Karon beach", [98.2930, 7.8440]], ["Patong beach", [98.2950, 7.8960]], ["Kalim beach", [98.2880, 7.9120]], ["Kamala beach", [98.2800, 7.9520]], ["Surin beach", [98.2765, 7.9750]], ["Bang Tao beach", [98.2930, 7.9950]], ["Nai Harn beach", [98.3040, 7.7765]], ["Ya Nui beach", [98.3020, 7.7650]], ["Ao Yon beach", [98.4100, 7.8040]], ["Freedom beach", [98.2780, 7.8790]]],
-    aonang: [["Ao Nang beach", [98.8210, 8.0300]], ["Nopparat Thara beach", [98.8000, 8.0450]], ["Railay West", [98.8370, 8.0110]], ["Phra Nang beach", [98.8395, 8.0060]]],
-    phiphi: [["Tonsai beach", [98.7765, 7.7375]], ["Loh Dalum beach", [98.7765, 7.7450]], ["Long Beach", [98.7850, 7.7290]]],
-  };
+  const BEACHES = Object.fromEntries(Object.entries(T.beaches || {}).map(([k, v]) => [k, v.map(b => [b.name, b.lngLat])]));
   const ANCHORS = {
     phuket: [["Old Town", [98.3870, 7.8850]], ["Rassada pier", [98.4046, 7.8676]], ["Airport", [98.3169, 8.1132]], ["Bangla Road", [98.2985, 7.8930]]],
     aonang: [["Ao Nang strip", [98.8235, 8.0330]], ["Nopparat Thara pier", [98.8050, 8.0400]], ["Krabi Town", [98.9063, 8.0863]]],
@@ -195,6 +192,17 @@
   };
   const km = (a, b) => { const R = 6371, r = x => x * Math.PI / 180, dLat = r(b[1] - a[1]), dLon = r(b[0] - a[0]); const q = Math.sin(dLat / 2) ** 2 + Math.cos(r(a[1])) * Math.cos(r(b[1])) * Math.sin(dLon / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(q)); };
   const timeLabel = d => { const road = d * 1.35; return road <= 2 ? `${road < 1 ? Math.round(road * 1000 / 10) * 10 + " m" : road.toFixed(1) + " km"} · ${Math.max(1, Math.round(road / 4.8 * 60))} min walk` : `${road.toFixed(road < 10 ? 1 : 0)} km · ${Math.round(road / 30 * 60 + 4)} min by car`; };
+  // nearest beach and whether you can swim there (verdicts in build_data.py BEACHES, late November)
+  const SWIM_CLASS = { yes: "yes", care: "care", tide: "care", no: "no", ask: "care" };
+  const swimFoot = it => { const b = it.beach; if (!b) return false; const ok = x => x && (x.swim === "yes" || x.swim === "care") && x.km * 1.35 <= 1.25; return ok(b) || ok(b.swimNear); };
+  function beachLine(it, long) {
+    const b = it.beach; if (!b) return "";
+    const word = (T.swimWord || {})[b.swim] || b.swim;
+    const altWord = b.swim === "care" ? "Calmer swim" : "Nearest swim";
+    const near = b.swimNear ? ` · ${altWord}: ${h(b.swimNear.name)}, ${timeLabel(b.swimNear.km)}` : "";
+    if (!long) return `<span class="beachline s-${SWIM_CLASS[b.swim]}">${h(b.name)}, ${timeLabel(b.km)} · ${word}${near}</span>`;
+    return `<h3>Nearest beach</h3><p class="beachbox s-${SWIM_CLASS[b.swim]}"><b>${h(b.name)}</b>, ${timeLabel(b.km)}${b.approx ? " (map pin is approximate)" : ""}. <b>${word}.</b> ${h(b.why)}${b.swimNear ? `<br>${b.swim === "care" ? "Calmer swim nearby" : "Nearest swimmable"}: <b>${h(b.swimNear.name)}</b>, ${timeLabel(b.swimNear.km)}. ${h(b.swimNear.why)}` : ""}</p>`;
+  }
   let measureFocus = null;
   function measureFor(it) {
     if (!it || !it.lngLat) return null;
@@ -227,7 +235,7 @@
     const meta = [it.area, it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}` : null, it.when].filter(Boolean).join(" · ");
     const facts = it.type === "stay" ? factsLine(it) : "";
     const thumb = it.images && it.images.length ? `<img class="thumb" src="${it.images[0]}" alt="" loading="lazy">` : "";
-    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""} ${thumb ? "has-thumb" : ""}" role="button" tabindex="0" data-item="${it.id}">${thumb}<div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : it.tags.includes("wishlist") ? `<span class="act" style="color:var(--accent)">From your Airbnb wishlist</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${it.type === "stay" ? availLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
+    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""} ${thumb ? "has-thumb" : ""}" role="button" tabindex="0" data-item="${it.id}">${thumb}<div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : it.tags.includes("wishlist") ? `<span class="act" style="color:var(--accent)">From your Airbnb wishlist</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${it.type === "stay" ? availLine(it, false) + beachLine(it, false) : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
   }
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
@@ -259,7 +267,7 @@
       const lockedOpt = pickDec ? C.lockedOption(pickDec) : null;
       const pickOpt = pickDec ? (lockedOpt || pickDec.options[0]) : null;
       const pickIds = pickOpt ? (pickOpt.items || (pickOpt.item ? [pickOpt.item] : [])).filter(id => T.items[id]) : [];
-      const showPick = pickIds.length && !SF.q && SF.zone === "all" && !SF.ours && !SF.doc && SF.kind === "all" && !SF.pool && !SF.walk && !SF.budget && SF.avail === "all" && SF.tier === "all";  // any filter on: show only what matches
+      const showPick = pickIds.length && !SF.q && SF.zone === "all" && !SF.ours && !SF.doc && SF.kind === "all" && !SF.pool && !SF.walk && !SF.swim && !SF.budget && SF.avail === "all" && SF.tier === "all";  // any filter on: show only what matches
       const list = stayList(scoped).filter(it => !showPick || !pickIds.includes(it.id));
       const hiddenStays = poolOf("stay", place).length - scoped.length;
       return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length, place)}<p class="small pending" style="margin:0 0 .6em">The score (0 to 100) weighs reviews 35, budget 30, beach 20 and pool 15. Budget cap per person a night: about 3,000 INR on the first two nights (Phuket Town, Phi Phi), up to 5,000 from Ao Nang on; full marks up to the cap, zero at twice the cap. Unknown facts count as neutral. Open a card for the breakdown.</p>${showPick ? `<p class="eyebrow" style="margin:.4em 0 .3em">${lockedOpt ? "Locked by the group" : "The research pick"}: ${h(pickOpt.label || T.items[pickIds[0]].name)}</p>${pickIds.map(id => itemRow(id, { day })).join("")}<p class="eyebrow" style="margin:1.4em 0 .3em">Everything else</p>` : ""}${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}${hiddenStays > 0 ? `<p class="small" style="margin:1em 0 0">Showing the areas for this day. <button class="linkish" data-f="allZones" data-v="1">Show all ${poolOf("stay", place).length} in ${h(PLACE(place).name)}</button></p>` : (d && d.zones && SF.allZones ? `<p class="small" style="margin:1em 0 0"><button class="linkish" data-f="allZones" data-v="0">Back to this day's areas</button></p>` : "")}</div>`;
@@ -369,7 +377,7 @@
     return `${inner ? "" : `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>`}
       <p class="lead">Everything researched for ${h(p.name)} in one list. Tap a day number to put an item on that day; tap another number to move it. Each item only offers the days it fits: Old Town on day 1 and Sunday, the beaches on days 5 to 7. What you choose shows up in each day's Itinerary tab and in the budget.</p>
       <div class="sec"><h2>Chosen so far</h2>${picked.length ? picked.map(it => `<div class="row locked" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span></div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : "free"}</div></div>`).join("") + `<p class="small" style="margin-top:.8em">Adds <b class="ink">${fmt(sub)} INR</b> to the budget, ${fmt(sub / T.travellers)} each.</p>` : `<p class="pending">Nothing chosen yet.</p>`}</div>
-      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length, place) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.type === "stay" ? availLine(it, false) : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : userPriceFig(it) || "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
+      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length, place) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.type === "stay" ? availLine(it, false) + beachLine(it, false) : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : userPriceFig(it) || "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
   }
   function budgetPage() {
     const b = budget(), F = T.flights;
@@ -439,7 +447,7 @@
       ${it.distances ? `<h3>Distances</h3><p>${Object.entries(it.distances).filter(([k, v]) => v).map(([k, v]) => `${h(k)}: ${h(v)}`).join(" · ")}</p>` : ""}
       ${it.when ? `<h3>When</h3><p>${h(it.when)}</p>` : ""}
       ${it.book ? `<h3>How to book</h3><p>${h(it.book)}</p>` : ""}
-      ${availLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
+      ${availLine(it, true)}${beachLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.praise.length ? `<h3>Guests praise</h3><ul>${it.praise.map(x => `<li class="quote">${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.complaints.length ? `<h3>Watch out</h3><ul>${it.complaints.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}

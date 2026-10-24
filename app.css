@@ -158,6 +158,11 @@ table.plan th{width:6ch}
 .avail.yes{color:var(--ok)}
 .avail.no{color:var(--no)}
 .avail.unk{color:var(--dim)}
+.beachline{display:block;font-size:.88em;margin-top:.15em;color:var(--note)}
+.beachline::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.45em;vertical-align:.05em;background:var(--dim)}
+.beachline.s-yes::before,.beachbox.s-yes{--sw:var(--ok)}.beachline.s-care::before,.beachbox.s-care{--sw:#b07a12}.beachline.s-no::before,.beachbox.s-no{--sw:var(--no)}
+.beachline.s-yes::before,.beachline.s-care::before,.beachline.s-no::before{background:var(--sw)}
+.beachbox{margin:.2em 0 .9em;padding:.55em .7em;border-left:3px solid var(--sw,var(--line));font-size:.92em;line-height:1.5}
 p.avail{margin:.2em 0 .9em;padding:.55em .7em;border-left:3px solid currentColor;background:color-mix(in srgb,currentColor 7%,transparent);font-size:.92em;line-height:1.45}
 p.avail b{font-weight:600}
 p.avail a{color:inherit}
