@@ -525,7 +525,7 @@ window.TRIP = {
      "mode": "Pre-booked minivan",
      "duration": "Kata and Karon about 1 h; Old Town 35 to 45 min; allow 90 min in the afternoon rush",
      "costGroupTHB": 1400,
-     "note": "Same price band as the arrival. Old Town is the easy run; Kata Noi is over an hour.",
+     "note": "For the 17:00 flight: leave Kata by 13:00, be at the airport by 14:30 (international check-in closes about an hour before). Same price band as the arrival.",
      "link": "https://www.phuket101.net/phuket-airport-transfer/",
      "source": "research/phuket.md §6"
     },
@@ -611,10 +611,10 @@ window.TRIP = {
     "Evening: night market, beach, some pub."
    ],
    "highlights": [
-    "Land, pre-booked van to Phuket Town",
-    "Check in near Rassada pier",
-    "Chillva Market from 17:00",
-    "A drink at So Xorry in Old Town",
+    "Land 11:40 (IX 932 from Bengaluru, 06:15)",
+    "Out by about 12:45, van to Phuket Town by 13:30",
+    "Bags at the hotel, Old Town walk and a late lunch; check-in 3PM",
+    "Chillva Market from 17:00, So Xorry after",
     "Early night: 08:30 ferry tomorrow"
    ],
    "decisions": [
@@ -639,8 +639,9 @@ window.TRIP = {
     ]
    },
    "tips": [
-    "Lard Yai and Naka are closed on a Tuesday; Chillva is the move. Old Town has no beach, so the doc's 'beach' means a 30-minute Grab.",
-    "A Town hotel is right for the morning ferry: Rassada is 2.8 km from Horange."
+    "Landing 11:40 means the afternoon is yours: Old Town streets, Kopitiam by Wilai or Chuan Chim for a late lunch, then Chillva at 17:00. Lard Yai and Naka are closed on a Tuesday.",
+    "A Town hotel is right for the morning ferry: Rassada is 2.8 km from Horange.",
+    "File the arrival card 14 to 16 Nov; carry 20,000 THB cash per person for immigration; 20 kg check-in bags each."
    ]
   },
   {
@@ -896,9 +897,10 @@ window.TRIP = {
     "Fly back."
    ],
    "highlights": [
-    "Checkout, van to the airport",
-    "Loy Krathong is tonight if the flight is late",
-    "Krua Praya is closed on Tuesdays"
+    "Morning swim, checkout by 11:00 or 12:00, lunch",
+    "Leave Kata by 13:00 for the airport (an hour, more after 16:00)",
+    "At HKT by 14:30 for the 17:00 Akasa flight (QP 624)",
+    "Land Bengaluru 19:20"
    ],
    "decisions": [],
    "legs": [
@@ -913,7 +915,7 @@ window.TRIP = {
     "drink": []
    },
    "tips": [
-    "File the Thailand Digital Arrival Card 14 to 16 Nov, one per person, official portal only."
+    "Flight is 17:00, so Loy Krathong (that evening) is missed; the morning is free for one last swim. Krua Praya is closed on Tuesdays. Pre-book the van the day before."
    ]
   }
  ],
@@ -1271,7 +1273,8 @@ window.TRIP = {
     "official": "https://horangetown.phukethotel.info/en/"
    },
    "tags": [
-    "night1"
+    "night1",
+    "docpick"
    ],
    "sources": [
     "research/phuket.md §1d, §2",
@@ -1356,7 +1359,8 @@ window.TRIP = {
     "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d308785-Reviews-Pearl_Hotel-Phuket_Town_Phuket.html"
    },
    "tags": [
-    "night1"
+    "night1",
+    "docpick"
    ],
    "sources": [
     "research/phuket.md §2",
@@ -1439,7 +1443,8 @@ window.TRIP = {
     "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g1215781-d478783-Reviews-Phuket_Merlin_Hotel-Phuket_Town_Phuket.html"
    },
    "tags": [
-    "night1"
+    "night1",
+    "docpick"
    ],
    "sources": [
     "research/phuket.md §2",
@@ -2256,7 +2261,7 @@ window.TRIP = {
    "priceTHB": null,
    "priceINR": 38000,
    "priceNote": "38,000 INR for 2 nights, 3 rooms: about 6,330 INR per room-night, above the 5K cap (about 3,800 per person). Airbnb shows no price without dates",
-   "when": "Wed 18 to Fri 20 Nov",
+   "when": "Thu 19 to Sat 21 Nov in the confirmed order",
    "book": "Airbnb",
    "rating": 4.92,
    "scale": "5",
@@ -2281,7 +2286,8 @@ window.TRIP = {
     "airbnb": "https://www.airbnb.co.in/rooms/4114674"
    },
    "tags": [
-    "aonang"
+    "aonang",
+    "selfpick"
    ],
    "sources": [
     "research/krabi-ao-nang.md §1",
@@ -11247,6 +11253,34 @@ window.TRIP = {
    ],
    "geo": "approx"
   }
+ },
+ "flights": {
+  "out": {
+   "date": "Tue 17 Nov 2026",
+   "flight": "IX 932, Air India Express",
+   "from": "Bengaluru (BLR) Terminal 2",
+   "dep": "06:15",
+   "to": "Phuket (HKT)",
+   "arr": "11:40",
+   "duration": "3 h 55 min",
+   "bags": "7 kg cabin, 20 kg check-in",
+   "pnr": "L79ZXZ"
+  },
+  "back": {
+   "date": "Tue 24 Nov 2026",
+   "flight": "QP 624, Akasa Air",
+   "from": "Phuket (HKT)",
+   "dep": "17:00",
+   "to": "Bengaluru (BLR) Terminal 2",
+   "arr": "19:20",
+   "duration": "3 h 50 min",
+   "bags": "7 kg cabin, 20 kg check-in",
+   "pnr": "FDU87E"
+  },
+  "perHeadINR": 37394,
+  "note": "Round trip per person as paid on Imran's ticket: basic fare 24,184, taxes 15,524, K3 714, insurance 472, discount 3,500. The other four tickets are assumed to be the same fare; correct it if not.",
+  "cancel": "Cancellation fees: outbound 8,550 INR before 24 h; return 10,374 before 72 h, 11,688 within 72 to 24 h, 13,148 within 24 to 4 h; plus 500 per sector EaseMyTrip fee.",
+  "source": "EaseMyTrip Flight E-Ticket for flights.pdf, booking EMT171703042"
  },
  "guides": {
   "phuket": {

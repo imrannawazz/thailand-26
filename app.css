@@ -41,6 +41,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .menu button{color:var(--note);letter-spacing:.04em;padding:.2em 0;white-space:nowrap;border-bottom:1px solid transparent;transition:color .4s cubic-bezier(.32,.72,0,1)}
 .menu button:hover,.menu button:focus-visible{color:var(--ink);border-bottom-color:var(--ink);outline:none}
 .budget{text-align:right;font-style:normal}
+.budget button{text-align:right;cursor:pointer}
+.budget button:hover .fig{text-decoration:underline;text-underline-offset:.15em}
 .budget .fig{font-size:clamp(22px,2.2vw,34px);line-height:1}
 .budget span{display:block;font-size:.8em;color:var(--dim);font-style:var(--textstyle)}
 
