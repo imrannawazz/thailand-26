@@ -1094,8 +1094,8 @@ window.TRIP = {
      "id": "rimlay-hangover",
      "label": "Rimlay double for two plus three Hangover bunks",
      "costINR": 9273,
-     "unit": "about 2,700 to 4,600 THB for all five",
-     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier. Hangover Chill and Hill: 9.6 from 406, on the hill behind the east village nearest the viewpoint stairs.",
+     "unit": "about 2,700 to 4,600 THB for all five, about 1,900 INR a head",
+     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier, 'very quiet during the night'. Hangover Chill and Hill: 9.6 from 406, on the hill nearest the viewpoint stairs. A Rimlay room alone is about 5,000 INR, over the night-two cap, which is why the score on its card is low; one room plus three bunks keeps the night inside it.",
      "items": [
       "pp-rimlay",
       "pp-hangover"
@@ -6624,100 +6624,6 @@ window.TRIP = {
    ],
    "imageSource": "https://www.trip.com/hotels/phuket-hotel-detail-702040/casa-blanca-boutique-hotel/"
   },
-  "phi-phi-villa-resort": {
-   "id": "phi-phi-villa-resort",
-   "name": "Phi Phi Villa Resort",
-   "type": "stay",
-   "place": "phiphi",
-   "area": "East end of Tonsai Bay, beachfront",
-   "thai": null,
-   "tagline": "Over budget and the weakest TripAdvisor read; drop.",
-   "priceTHB": null,
-   "priceINR": 23940,
-   "priceNote": "Per night, all rooms: TripAdvisor range $95-435/room x3 at low end: over the 1,780 THB cap",
-   "when": null,
-   "book": null,
-   "rating": 8.1,
-   "scale": "10",
-   "reviews": 4201,
-   "reviewSource": "Booking.com snippet 2026-10-24 (Agoda 8.1/2,269; TripAdvisor 3.2/902)",
-   "highlights": [
-    "Pool and beachfront",
-    "Family rooms",
-    "Grounds praised"
-   ],
-   "praise": [
-    "Sitting on the beach edge was stunning",
-    "Pool is lovely, clean and well looked after",
-    "Just 5m to the pool and 10m to the beach"
-   ],
-   "complaints": [
-    "Construction site two meters from window (Mar 2026)",
-    "Loud aircon kept us awake",
-    "Surprise deposit; hostile front desk reports"
-   ],
-   "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Villa+Resort+Tonsai",
-    "booking": "https://www.booking.com/hotel/th/phi-phi-villa-resort.html",
-    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d636091-Reviews-Phi_Phi_Villa_Resort-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
-   },
-   "tags": [
-    "phiphi"
-   ],
-   "sources": [
-    "research/stays.md"
-   ],
-   "verdict": "Over budget and the weakest TripAdvisor read; drop.",
-   "rooms": "Beach-view rooms, bungalows, villas, family rooms; 2+2+1",
-   "distances": {
-    "beach": "on Tonsai beach (boat traffic)",
-    "pier": "~1 km / 15 min walk",
-    "airport": "n/a (ferry)"
-   },
-   "fitsBudget": false,
-   "lngLat": [
-    98.77744,
-    7.73624
-   ],
-   "geo": "exact",
-   "facts": {
-    "kind": "villa",
-    "pool": "shared",
-    "beachMin": 2,
-    "beachMode": "walk",
-    "perHeadNight": 4788,
-    "town": false,
-    "capRoom": 3000,
-    "insideCap": false
-   },
-   "score": {
-    "total": 59,
-    "parts": {
-     "reviews": 81,
-     "budget": 0,
-     "beach": 100,
-     "pool": 70
-    },
-    "weights": {
-     "reviews": 35,
-     "budget": 30,
-     "beach": 20,
-     "pool": 15
-    },
-    "unknown": []
-   },
-   "zone": "pier",
-   "zoneName": "Tonsai pier and village",
-   "images": [
-    "https://ak-d.tripcdn.com/images/1mc5112000lrc8uyw006C_R_800_525_R5_D.jpg",
-    "https://ak-d.tripcdn.com/images/1mc4u12000lrcn8l5B4C4_R_800_525_R5_D.jpg",
-    "https://ak-d.tripcdn.com/images/1mc2812000lp9emd89344_R_800_525_R5_D.jpg",
-    "https://ak-d.tripcdn.com/images/0201k120008lw9edaDD68_R_800_525_R5_D.jpg",
-    "https://ak-d.tripcdn.com/images/1mc5212000lsrmv6o6144_R_800_525_R5_D.jpg",
-    "https://ak-d.tripcdn.com/images/0200g120008lw8yka2FE0_R_800_525_R5_D.jpg"
-   ],
-   "imageSource": "https://www.trip.com/hotels/phi-phi-islands-hotel-detail-3384994/phi-phi-villa-resort/"
-  },
   "ton-sai-tropical": {
    "id": "ton-sai-tropical",
    "name": "Ton Sai Tropical Phi Phi Island (Phi Phi Tonsai Place)",
@@ -6913,8 +6819,8 @@ window.TRIP = {
     },
     "unknown": []
    },
-   "zone": "lohdalum",
-   "zoneName": "Loh Dalum",
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
    "images": [
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/2/299924/p5ilbqhjipwygljkj6a6.jpg",
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/2/299924/db4284og8umerjj9xgnx.jpg",
@@ -9475,8 +9381,8 @@ window.TRIP = {
      "beach"
     ]
    },
-   "zone": "pier",
-   "zoneName": "Tonsai pier and village",
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
    "images": [
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/2/284471/jrp1a42xlsjb3j0ffqdj.jpg",
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/2/284471/raatc6wmhu1ouhnuhs6p.jpg",
@@ -11886,8 +11792,8 @@ window.TRIP = {
      "beach"
     ]
    },
-   "zone": "pier",
-   "zoneName": "Tonsai pier and village",
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
    "images": [
     "https://ak-d.tripcdn.com/images/1mc5112000lrc8uyw006C_R_800_525_R5_D.jpg",
     "https://ak-d.tripcdn.com/images/1mc4u12000lrcn8l5B4C4_R_800_525_R5_D.jpg",
@@ -11979,8 +11885,8 @@ window.TRIP = {
      "beach"
     ]
    },
-   "zone": "lohdalum",
-   "zoneName": "Loh Dalum",
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
    "images": [
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/3/330020/molo3xxbfps0h2or0wtm.jpg",
     "https://a.hwstatic.com/image/upload/f_auto,q_auto,t_40/propertyimages/3/330020/ymjramc2uv3ycpqe1gxe.jpg",
