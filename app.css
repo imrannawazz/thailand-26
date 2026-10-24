@@ -156,6 +156,16 @@ table.plan th{width:6ch}
 .whobar{font-style:normal;align-self:center}
 .act.rej{color:#b23a14}
 
+/* search, thumbs, gallery */
+.fsearch{font:inherit;font-size:.9em;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:.35em 0;outline:none;flex:1 1 100%;min-width:0}
+.fsearch:focus{border-bottom-color:var(--ink)}
+.row.has-thumb{grid-template-columns:72px minmax(0,1fr) auto}
+.row .thumb{width:72px;height:54px;object-fit:cover;border-radius:3px;align-self:start;background:var(--line)}
+.gallery{display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin;margin:.2em 0 .4em;scroll-snap-type:x mandatory}
+.gallery a{flex:0 0 auto;scroll-snap-align:start}
+.gallery img{height:180px;width:auto;max-width:70vw;border-radius:4px;display:block;background:var(--line)}
+@media (max-width:720px){.row.has-thumb{grid-template-columns:56px minmax(0,1fr)}.row .thumb{width:56px;height:44px}.gallery img{height:140px}}
+
 /* item rows (cards) */
 .row{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4vw;align-items:baseline;padding:.6em 0;border-top:1px solid var(--line);cursor:pointer;transition:opacity .4s cubic-bezier(.32,.72,0,1)}
 .row:first-of-type{border-top:0}

@@ -91,19 +91,47 @@
   const mapReady = () => map && map.getSource && map.getSource("items");
 
   // ---- stay filters and sort ----
-  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score" };
+  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, allZones: false };
+  const chosenByUs = id => !!S.pickOf(id) || Object.values(S.locks()).some(l => { for (const d of T.decisions) for (const o of d.options) if (o.id === l.optionId && (o.item === id || (o.items || []).includes(id))) return true; return false; });
+  const fromDoc = it => it.tags.includes("docpick") || it.tags.includes("selfpick");
+  const dist = (a, b) => Math.hypot((a[0] - b[0]) * Math.cos(8 * Math.PI / 180), a[1] - b[1]);
+  function searchTarget(place) {
+    // "closest to": a zone or an item whose name matches the search text gives a point to sort by
+    const q = SF.q.trim().toLowerCase(); if (!q) return null;
+    const g = T.guides[place === "krabi" ? "aonang" : place]; const z = g && g.zones.find(z => z.name.toLowerCase().includes(q) || z.id === q);
+    if (z) return { name: z.name, lngLat: z.lngLat };
+    const it = ITEMS.find(i => samePlace(i, place) && i.lngLat && i.name.toLowerCase().includes(q)); return it ? { name: it.name, lngLat: it.lngLat } : null;
+  }
+  const matchesQ = it => { const q = SF.q.trim().toLowerCase(); if (!q) return true; return [it.name, it.area, it.tagline, it.zoneName].filter(Boolean).some(x => x.toLowerCase().includes(q)); };
   function stayList(list) {
     let out = list.filter(it => it.type === "stay");
     if (SF.kind !== "all") out = out.filter(it => it.facts && it.facts.kind === SF.kind);
     if (SF.pool) out = out.filter(it => it.facts && (it.facts.pool === "private" || it.facts.pool === "shared"));
     if (SF.walk) out = out.filter(it => it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null && it.facts.beachMin <= 15);
     if (SF.budget) out = out.filter(it => it.facts && it.facts.insideCap);
-    const key = { score: it => -(it.score && it.score.total || 0), price: it => (it.facts && it.facts.perHeadNight) || 1e9, rating: it => -((it.score && it.score.parts.reviews) || 0), beach: it => (it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null) ? it.facts.beachMin : 999 }[SF.sort];
+    if (SF.zone !== "all") out = out.filter(it => it.zone === SF.zone);
+    if (SF.ours) out = out.filter(it => chosenByUs(it.id));
+    if (SF.doc) out = out.filter(fromDoc);
+    const target = SF.sort === "near" ? searchTarget(out[0] ? out[0].place : "phuket") : null;
+    if (!target) out = out.filter(matchesQ);
+    const near = it => target && it.lngLat ? dist(it.lngLat, target.lngLat) : 1e9;
+    const key = {
+      near, score: it => -(it.score && it.score.total || 0), price: it => (it.facts && it.facts.perHeadNight) || 1e9, rating: it => -((it.score && it.score.parts.reviews) || 0), beach: it => (it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null) ? it.facts.beachMin : 999 }[SF.sort];
     return out.sort((a, b) => key(a) - key(b) || ((b.score && b.score.total) || 0) - ((a.score && a.score.total) || 0));
   }
-  function filterBar(count) {
-    const chip = (k, v, label) => `<button class="${(k === "kind" ? SF.kind === v : SF[k]) ? "on" : ""}" data-f="${k}" data-v="${v}">${label}</button>`;
-    return `<div class="fbar"><span class="lbl">Show</span>${chip("kind", "all", "All")}${chip("kind", "villa", "Villas")}${chip("kind", "hotel", "Hotels")}${chip("kind", "hostel", "Hostels")}<span class="lbl">Only</span>${chip("pool", true, "Pool")}${chip("walk", true, "Walk to beach")}${chip("budget", true, "Inside budget")}<span class="lbl">Sort</span>${["score", "price", "rating", "beach"].map(v => `<button class="${SF.sort === v ? "on" : ""}" data-f="sort" data-v="${v}">${{ score: "Best score", price: "Cheapest", rating: "Reviews", beach: "Nearest beach" }[v]}</button>`).join("")}<span class="lbl">${count} shown</span></div>`;
+  function filterBar(count, place) {
+    const chip = (k, v, label) => `<button class="${(k === "kind" || k === "zone" ? SF[k] === v : SF[k]) ? "on" : ""}" data-f="${k}" data-v="${v}">${label}</button>`;
+    const g = T.guides[place === "krabi" ? "aonang" : place];
+    const pool = poolOf("stay", place); const zoneChips = g ? g.zones.filter(z => pool.some(it => it.zone === z.id)).map(z => chip("zone", z.id, `${z.name.split(" and ")[0].split(",")[0]} · ${pool.filter(it => it.zone === z.id).length}`)).join("") : "";
+    const target = searchTarget(place);
+    return `<div class="fbar">
+      <input class="fsearch" id="fsearch" type="search" value="${h(SF.q)}" placeholder="Search a name or area, e.g. Rassada, Old Town, pool villa" autocomplete="off">
+      ${SF.q ? `<span class="lbl">${target ? `matched ${h(target.name)}` : "text match"}</span>` : ""}
+      <span class="lbl">Area</span>${chip("zone", "all", "All")}${zoneChips}
+      <span class="lbl">Show</span>${chip("kind", "all", "All")}${chip("kind", "villa", "Villas")}${chip("kind", "hotel", "Hotels")}${chip("kind", "hostel", "Hostels")}
+      <span class="lbl">Only</span>${chip("pool", true, "Pool")}${chip("walk", true, "Walk to beach")}${chip("budget", true, "Inside budget")}${chip("ours", true, "Chosen by us")}${chip("doc", true, "From the doc")}
+      <span class="lbl">Sort</span>${["score", "price", "rating", "beach"].map(v => `<button class="${SF.sort === v ? "on" : ""}" data-f="sort" data-v="${v}">${{ score: "Best score", price: "Cheapest", rating: "Reviews", beach: "Nearest beach" }[v]}</button>`).join("")}${target ? `<button class="${SF.sort === "near" ? "on" : ""}" data-f="sort" data-v="near">Nearest to ${h(target.name)}</button>` : ""}
+      <span class="lbl">${count} shown</span></div>`;
   }
   function scoreBadge(it) { return it.score && it.score.total !== null && it.score.total !== undefined ? `<span class="score" title="Score out of 100: reviews, budget, beach, pool">${it.score.total}</span>` : ""; }
   function factsLine(it) {
@@ -123,7 +151,8 @@
     const price = it.priceINR ? `${fmt(it.priceINR)}<small>INR</small>` : it.priceTHB ? `฿${fmt(it.priceTHB)}<small>a head</small>` : (it.priceTHB === 0 ? `free` : `—`);
     const meta = [it.area, it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}` : null, it.when].filter(Boolean).join(" · ");
     const facts = it.type === "stay" ? factsLine(it) : "";
-    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
+    const thumb = it.images && it.images.length ? `<img class="thumb" src="${it.images[0]}" alt="" loading="lazy">` : "";
+    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""} ${thumb ? "has-thumb" : ""}" role="button" tabindex="0" data-item="${it.id}">${thumb}<div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
   }
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
@@ -149,13 +178,20 @@
   }
   function poolBlock(title, type, place, firstIds, day) {
     if (type === "stay") {
-      const list = stayList(poolOf("stay", place));
-      return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length)}<p class="small pending" style="margin:0 0 .6em">The score (0 to 100) weighs reviews 35, budget 30, beach 20 and pool 15. Budget cap: about 3K a room on the first two nights (Phuket Town, Phi Phi), 3K to 5K a room from Ao Nang on; full marks up to the cap, zero at twice the cap. Unknown facts count as neutral. Open a card for the breakdown.</p>${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}</div>`;
+      const d = day ? T.days.find(x => x.n === Number(day)) : null;
+      const scoped = d && d.zones && !SF.allZones && SF.zone === "all" && !SF.q ? poolOf("stay", place).filter(it => d.zones.includes(it.zone)) : poolOf("stay", place);
+      const list = stayList(scoped);
+      const hiddenStays = poolOf("stay", place).length - scoped.length;
+      return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length, place)}<p class="small pending" style="margin:0 0 .6em">The score (0 to 100) weighs reviews 35, budget 30, beach 20 and pool 15. Budget cap: about 3K a room on the first two nights (Phuket Town, Phi Phi), 3K to 5K a room from Ao Nang on; full marks up to the cap, zero at twice the cap. Unknown facts count as neutral. Open a card for the breakdown.</p>${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}${hiddenStays > 0 ? `<p class="small" style="margin:1em 0 0">Showing the areas for this day. <button class="linkish" data-f="allZones" data-v="1">Show all ${poolOf("stay", place).length} in ${h(PLACE(place).name)}</button></p>` : (d && d.zones && SF.allZones ? `<p class="small" style="margin:1em 0 0"><button class="linkish" data-f="allZones" data-v="0">Back to this day's areas</button></p>` : "")}</div>`;
     }
     const first = firstIds.filter(id => T.items[id] && T.items[id].type === type);
-    const rest = poolOf(type, place).filter(it => !first.includes(it.id)).map(it => it.id);
-    if (!first.length && !rest.length) return `<p class="pending">Nothing researched here yet.</p>`;
-    return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${first.length ? `<p class="eyebrow" style="margin:0 0 .4em">Picked for this day</p>` : ""}${first.map(id => itemRow(id, { day })).join("")}${rest.length ? `${first.length ? `<p class="eyebrow" style="margin:1.4em 0 .4em">Everything else</p>` : ""}${rest.map(id => itemRow(id, { day })).join("")}` : ""}</div>`;
+    const d = day ? T.days.find(x => x.n === Number(day)) : null; const zones = d && d.zones && !SF.allZones ? d.zones : null;
+    const g = T.guides[place === "krabi" ? "aonang" : place]; const zoneNames = zones && g ? g.zones.filter(z => zones.includes(z.id)).map(z => z.name.split(" and ")[0].split(",")[0]).join(", ") : "";
+    const all = poolOf(type, place).filter(it => !first.includes(it.id));
+    const rest = (zones ? all.filter(it => zones.includes(it.zone)) : all).map(it => it.id);
+    const hidden = zones ? all.length - rest.length : 0;
+    if (!first.length && !rest.length && !hidden) return `<p class="pending">Nothing researched here yet.</p>`;
+    return `<div class="sec"><h2>${title} <b>${h(zoneNames || PLACE(place).name)}</b></h2>${first.length ? `<p class="eyebrow" style="margin:0 0 .4em">Picked for this day</p>` : ""}${first.map(id => itemRow(id, { day })).join("")}${rest.length ? `${first.length ? `<p class="eyebrow" style="margin:1.4em 0 .4em">Everything else ${zones ? "around " + h(zoneNames) : ""}</p>` : ""}${rest.map(id => itemRow(id, { day })).join("")}` : ""}${hidden ? `<p class="small" style="margin:1em 0 0"><button class="linkish" data-f="allZones" data-v="1">Show ${hidden} more across all of ${h(PLACE(place).name)}</button></p>` : (zones === null && d && d.zones ? `<p class="small" style="margin:1em 0 0"><button class="linkish" data-f="allZones" data-v="0">Back to ${h(PLACE(place).name)} near this day</button></p>` : "")}</div>`;
   }
   function redditBlock(key) {
     const r = T.reddit[key]; if (!r) return `<p class="pending">Nothing for this stop.</p>`;
@@ -253,7 +289,7 @@
     return `${inner ? "" : `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Plan a place</p><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>`}
       <p class="lead">Everything researched for ${h(p.name)} in one list. Tap a day number to put an item on that day (days ${days.join(", ")}); tap another number to move it. What you choose shows up in each day's Itinerary tab and in the budget.</p>
       <div class="sec"><h2>Chosen so far</h2>${picked.length ? picked.map(it => `<div class="row locked" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span></div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : "free"}</div></div>`).join("") + `<p class="small" style="margin-top:.8em">Adds <b class="ink">${fmt(sub)} INR</b> to the budget, ${fmt(sub / T.travellers)} each.</p>` : `<p class="pending">Nothing chosen yet.</p>`}</div>
-      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
+      ${groups.map(([type, label]) => { const list = type === "stay" ? stayList(poolOf("stay", place)) : poolOf(type, place); return list.length || type === "stay" ? `<div class="sec"><h2>${label}</h2>${type === "stay" ? filterBar(list.length, place) : ""}${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.type === "stay" && factsLine(it) ? `<span class="meta">${h(factsLine(it))}</span>` : ""}${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
   }
   function budgetPage() {
     const b = budget(), F = T.flights;
@@ -292,6 +328,7 @@
     return `<div class="inner"><button class="back" data-close="item">← Back</button>
       <p class="eyebrow">${typeName} · ${h(PLACE(it.place).name)}${it.area ? " · " + h(it.area) : ""}${it.geo === "approx" ? " · map pin approximate" : ""}${it.tags.includes("selfpick") ? " · self-pick from your Google Doc" : it.tags.includes("docpick") ? " · from your Google Doc" : ""}</p>
       <h1 class="disp">${h(it.name)}</h1>
+      ${it.images && it.images.length ? `<div class="gallery">${it.images.map(u => `<a href="${u}" target="_blank" rel="noopener"><img src="${u}" alt="" loading="lazy"></a>`).join("")}</div><p class="small pending" style="margin:.3em 0 0">Photos from the listing page${it.imageSource ? ` (${h(new URL(it.imageSource).hostname)})` : ""}; tap one to open it.</p>` : ""}
       <p class="tagline">${h(it.tagline)}</p>
       ${it.rating ? `<div class="rating"><span class="fig">${it.rating}<small style="font-size:.45em;color:var(--dim)">/${it.scale}</small></span><span>${it.reviews ? fmt(it.reviews) + " reviews · " : ""}${h(it.reviewSource || "")}</span></div>` : ""}
       ${price ? `<div class="price">${price}</div>` : ""}
@@ -374,7 +411,8 @@
     const close = e.target.closest("[data-close]"); if (close) { closeTop(); return; }
     const tabBtn = e.target.closest("[data-tab]"); if (tabBtn) { go(route().page + "/t-" + tabBtn.dataset.tab); return; }
     const as = e.target.closest("[data-assign]"); if (as) { e.stopPropagation(); assign(as.dataset.assign, as.dataset.day ? Number(as.dataset.day) : null); return; }
-    const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort") SF[k] = v; else SF[k] = !SF[k]; render(); return; }
+    const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort" || k === "zone") SF[k] = v; else if (k === "allZones") SF.allZones = v === "1"; else SF[k] = !SF[k]; if (k === "sort" && v !== "near" && SF.sort === "near") SF.sort = v; render(); return; }
+    if (e.target.id === "card" || e.target.classList.contains("sheet-backdrop")) { closeTop(); return; }
     const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 900 }); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }
     const lc = e.target.closest("[data-lockcard]"); if (lc) { lockWith(lc.dataset.lockcard, lc.dataset.opt); return; }
@@ -399,7 +437,7 @@
     if (e.target.closest("[data-gate]")) { gate(); return; }
   });
   document.addEventListener("submit", e => { const f = e.target.closest("form[data-comment]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; addComment(f.dataset.comment, v); });
-  document.addEventListener("change", e => { if (e.target.id === "who") C.setWho(e.target.value); });
+  document.addEventListener("input", e => { if (e.target.id === "fsearch") { const el = e.target, pos = el.selectionStart; SF.q = el.value; if (!SF.q && SF.sort === "near") SF.sort = "score"; render(); const n = $("#fsearch"); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } } });
   C.onChange(() => { const act = document.activeElement, actDay = act && act.closest && act.closest("form[data-day]")?.dataset.day; const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; }); render(); document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d]) t.value = drafts[d]; }); if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); } });
 
   // ---- boot ----

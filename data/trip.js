@@ -617,6 +617,10 @@ window.TRIP = {
     "Chillva Market from 17:00, So Xorry after",
     "Early night: 08:30 ferry tomorrow"
    ],
+   "zones": [
+    "oldtown",
+    "rassada"
+   ],
    "decisions": [
     "day1-hotel"
    ],
@@ -784,6 +788,14 @@ window.TRIP = {
     "Swim, chill",
     "Naka Weekend Market from 16:00, or Ska Bar sunset"
    ],
+   "zones": [
+    "katanoi",
+    "karon",
+    "naiharn",
+    "kamala",
+    "patong",
+    "chalong"
+   ],
    "decisions": [
     "phuket-area"
    ],
@@ -817,6 +829,15 @@ window.TRIP = {
    "spend": "Spend.",
    "plan": [
     "Phuket."
+   ],
+   "zones": [
+    "katanoi",
+    "karon",
+    "naiharn",
+    "kamala",
+    "patong",
+    "chalong",
+    "oldtown"
    ],
    "highlights": [
     "Racha Yai try-dive with SSS Phuket (last safe dive day), or Big Buddha hike",
@@ -855,6 +876,14 @@ window.TRIP = {
    "spend": "Spend.",
    "plan": [
     "Phuket."
+   ],
+   "zones": [
+    "katanoi",
+    "karon",
+    "naiharn",
+    "kamala",
+    "patong",
+    "chalong"
    ],
    "highlights": [
     "Hanuman World, 08:00 or 10:00 session (pick a package), or a Muay Thai class",
@@ -1413,7 +1442,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "pearl-hotel-phuket": {
    "id": "pearl-hotel-phuket",
@@ -1499,7 +1531,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "phuket-merlin-hotel": {
    "id": "phuket-merlin-hotel",
@@ -1585,7 +1620,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "homa-phuket-town": {
    "id": "homa-phuket-town",
@@ -1669,7 +1707,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "travelodge-phuket-town": {
    "id": "travelodge-phuket-town",
@@ -1736,7 +1777,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "dara-hotel-phuket": {
    "id": "dara-hotel-phuket",
@@ -1803,7 +1847,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "the-memory-at-on-on": {
    "id": "the-memory-at-on-on",
@@ -1888,7 +1935,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "chanalai-flora-resort": {
    "id": "chanalai-flora-resort",
@@ -1958,7 +2008,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "chanalai-garden-resort": {
    "id": "chanalai-garden-resort",
@@ -2028,7 +2081,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "centara-kata-resort": {
    "id": "centara-kata-resort",
@@ -2098,7 +2154,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "kata-sea-breeze-resort": {
    "id": "kata-sea-breeze-resort",
@@ -2169,7 +2228,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "baan-karonburi-resort": {
    "id": "baan-karonburi-resort",
@@ -2239,7 +2301,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "sugar-marina-resort-art": {
    "id": "sugar-marina-resort-art",
@@ -2309,7 +2374,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "patong-mansion-hotel": {
    "id": "patong-mansion-hotel",
@@ -2378,7 +2446,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "ban-preeya-private-pool-villa": {
    "id": "ban-preeya-private-pool-villa",
@@ -2469,7 +2540,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "nathai",
+   "zoneName": "Na Thai, inland",
+   "images": []
   },
   "smooth-as-silk-pool-villa": {
    "id": "smooth-as-silk-pool-villa",
@@ -2553,7 +2627,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "aonang-nine-poolvilla": {
    "id": "aonang-nine-poolvilla",
@@ -2638,7 +2715,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "anawin-bungalows": {
    "id": "anawin-bungalows",
@@ -2725,7 +2805,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "doo-dee-boutique-resort": {
    "id": "doo-dee-boutique-resort",
@@ -2810,7 +2893,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "nopparat",
+   "zoneName": "Nopparat Thara",
+   "images": []
   },
   "white-house-phi-phi-island": {
    "id": "white-house-phi-phi-island",
@@ -2866,8 +2952,8 @@ window.TRIP = {
    },
    "fitsBudget": false,
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
    "geo": "approx",
    "facts": {
@@ -2898,7 +2984,10 @@ window.TRIP = {
      "budget",
      "pool"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "p2-wood-loft": {
    "id": "p2-wood-loft",
@@ -2988,7 +3077,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "paradise-pearl-bungalows": {
    "id": "paradise-pearl-bungalows",
@@ -3076,7 +3168,10 @@ window.TRIP = {
      "budget",
      "pool"
     ]
-   }
+   },
+   "zone": "longbeach",
+   "zoneName": "Long Beach",
+   "images": []
   },
   "big-buddha-hike-from-karon": {
    "id": "big-buddha-hike-from-karon",
@@ -3116,7 +3211,10 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "racha-and-coral-islands-speedboat-snorkel": {
    "id": "racha-and-coral-islands-speedboat-snorkel",
@@ -3158,7 +3256,10 @@ window.TRIP = {
     98.34,
     7.83
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "flying-hanuman-zipline": {
    "id": "flying-hanuman-zipline",
@@ -3194,7 +3295,10 @@ window.TRIP = {
     98.333,
     7.91
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "hanuman-world-zipline": {
    "id": "hanuman-world-zipline",
@@ -3245,7 +3349,10 @@ window.TRIP = {
     98.3514,
     7.87718
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "muay-thai-drop-in-class": {
    "id": "muay-thai-drop-in-class",
@@ -3282,7 +3389,10 @@ window.TRIP = {
     98.327,
     7.773
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "bangla-boxing-stadium-fight-night": {
    "id": "bangla-boxing-stadium-fight-night",
@@ -3319,7 +3429,10 @@ window.TRIP = {
     98.2965,
     7.8961
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "freedom-beach-hike": {
    "id": "freedom-beach-hike",
@@ -3355,10 +3468,13 @@ window.TRIP = {
     "research/phuket.md §3"
    ],
    "lngLat": [
-    98.2965,
-    7.8961
+    98.294,
+    7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "nai-harn-beach": {
    "id": "nai-harn-beach",
@@ -3396,7 +3512,10 @@ window.TRIP = {
     98.31007,
     7.77638
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "kata-noi-beach": {
    "id": "kata-noi-beach",
@@ -3434,7 +3553,10 @@ window.TRIP = {
     98.31501,
     7.795
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "karon-viewpoint": {
    "id": "karon-viewpoint",
@@ -3472,7 +3594,10 @@ window.TRIP = {
     98.30218,
     7.79725
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "promthep-cape-sunset": {
    "id": "promthep-cape-sunset",
@@ -3512,7 +3637,10 @@ window.TRIP = {
     98.306,
     7.76
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "wat-chalong": {
    "id": "wat-chalong",
@@ -3549,7 +3677,10 @@ window.TRIP = {
     98.33747,
     7.84626
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "old-town-walk": {
    "id": "old-town-walk",
@@ -3586,7 +3717,10 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "lard-yai-sunday-walking-street": {
    "id": "lard-yai-sunday-walking-street",
@@ -3624,7 +3758,10 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "chillva-market": {
    "id": "chillva-market",
@@ -3661,7 +3798,10 @@ window.TRIP = {
     98.37348,
     7.90734
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "naka-weekend-market": {
    "id": "naka-weekend-market",
@@ -3695,10 +3835,13 @@ window.TRIP = {
     "research/phuket.md §3"
    ],
    "lngLat": [
-    98.39,
+    98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "karon-temple-market": {
    "id": "karon-temple-market",
@@ -3735,7 +3878,10 @@ window.TRIP = {
     98.29781,
     7.84802
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "kata-night-market": {
    "id": "kata-night-market",
@@ -3773,7 +3919,10 @@ window.TRIP = {
     98.29822,
     7.82464
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "rawai-seafood-market": {
    "id": "rawai-seafood-market",
@@ -3811,7 +3960,10 @@ window.TRIP = {
     98.3288,
     7.77572
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "thai-hua-museum": {
    "id": "thai-hua-museum",
@@ -3847,7 +3999,10 @@ window.TRIP = {
     98.38687,
     7.88561
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "mee-ton-poe": {
    "id": "mee-ton-poe",
@@ -3881,7 +4036,10 @@ window.TRIP = {
     98.3344,
     7.91094
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "kopitiam-by-wilai": {
    "id": "kopitiam-by-wilai",
@@ -3915,7 +4073,10 @@ window.TRIP = {
     98.38808,
     7.88478
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "go-benz": {
    "id": "go-benz",
@@ -3951,7 +4112,10 @@ window.TRIP = {
     98.38248,
     7.88471
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "khao-tom-dibuk": {
    "id": "khao-tom-dibuk",
@@ -3987,7 +4151,10 @@ window.TRIP = {
     98.3923,
     7.8804
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "chuan-chim": {
    "id": "chuan-chim",
@@ -4023,7 +4190,10 @@ window.TRIP = {
     98.3923,
     7.8804
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "a-pong-mae-sunee": {
    "id": "a-pong-mae-sunee",
@@ -4059,7 +4229,10 @@ window.TRIP = {
     98.38738,
     7.88581
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hong-khao-tom-pla": {
    "id": "hong-khao-tom-pla",
@@ -4095,7 +4268,10 @@ window.TRIP = {
     98.39322,
     7.87667
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "roti-thaew-nam": {
    "id": "roti-thaew-nam",
@@ -4129,7 +4305,10 @@ window.TRIP = {
     98.3923,
     7.8804
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "one-chun": {
    "id": "one-chun",
@@ -4165,7 +4344,10 @@ window.TRIP = {
     98.39069,
     7.88578
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "raya": {
    "id": "raya",
@@ -4199,7 +4381,10 @@ window.TRIP = {
     98.3909,
     7.88593
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "tu-kab-khao": {
    "id": "tu-kab-khao",
@@ -4235,7 +4420,10 @@ window.TRIP = {
     98.3882,
     7.88369
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "krua-praya": {
    "id": "krua-praya",
@@ -4268,10 +4456,13 @@ window.TRIP = {
     "research/phuket.md §4"
    ],
    "lngLat": [
-    98.41,
-    8.03
+    98.3169,
+    8.1132
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "mor-mu-dong": {
    "id": "mor-mu-dong",
@@ -4307,7 +4498,10 @@ window.TRIP = {
     98.37199,
     7.84314
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "laem-hin-seafood": {
    "id": "laem-hin-seafood",
@@ -4341,7 +4535,10 @@ window.TRIP = {
     98.40737,
     7.93572
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "kan-eang-2": {
    "id": "kan-eang-2",
@@ -4375,7 +4572,10 @@ window.TRIP = {
     98.34,
     7.83
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "salaloy": {
    "id": "salaloy",
@@ -4409,7 +4609,10 @@ window.TRIP = {
     98.32576,
     7.77451
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "so-xorry": {
    "id": "so-xorry",
@@ -4446,7 +4649,10 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "dibuk-house": {
    "id": "dibuk-house",
@@ -4482,7 +4688,10 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "bebop-live-music-bar": {
    "id": "bebop-live-music-bar",
@@ -4519,7 +4728,10 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "quip-sky-bar": {
    "id": "quip-sky-bar",
@@ -4556,7 +4768,10 @@ window.TRIP = {
     98.39,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ska-bar": {
    "id": "ska-bar",
@@ -4593,7 +4808,10 @@ window.TRIP = {
     98.29828,
     7.81383
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "after-beach-bar": {
    "id": "after-beach-bar",
@@ -4630,7 +4848,10 @@ window.TRIP = {
     98.30217,
     7.80895
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "heaven-lounge": {
    "id": "heaven-lounge",
@@ -4667,7 +4888,10 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "bangla-road": {
    "id": "bangla-road",
@@ -4703,7 +4927,10 @@ window.TRIP = {
     98.29656,
     7.8936
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "cafe-del-mar": {
    "id": "cafe-del-mar",
@@ -4740,7 +4967,10 @@ window.TRIP = {
     98.28388,
     7.96105
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ao-thalane-mangrove-kayak": {
    "id": "ao-thalane-mangrove-kayak",
@@ -4782,7 +5012,10 @@ window.TRIP = {
     98.77,
     8.18
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "thalane",
+   "zoneName": "Ao Thalane",
+   "images": []
   },
   "railay-rock-climbing-half-day": {
    "id": "railay-rock-climbing-half-day",
@@ -4818,7 +5051,10 @@ window.TRIP = {
     98.838,
     8.012
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "tiger-cave-temple": {
    "id": "tiger-cave-temple",
@@ -4856,7 +5092,10 @@ window.TRIP = {
     98.92591,
     8.12515
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "tigercave",
+   "zoneName": "Tiger Cave Temple",
+   "images": []
   },
   "hong-islands-day-tour": {
    "id": "hong-islands-day-tour",
@@ -4893,7 +5132,10 @@ window.TRIP = {
     98.68,
     8.12
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "thalane",
+   "zoneName": "Ao Thalane",
+   "images": []
   },
   "4-island-longtail-tour": {
    "id": "4-island-longtail-tour",
@@ -4927,10 +5169,13 @@ window.TRIP = {
     "research/krabi-ao-nang.md §2"
    ],
    "lngLat": [
-    98.8229,
-    8.0319
+    98.838,
+    8.008
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "railay-west-and-phra-nang-beach": {
    "id": "railay-west-and-phra-nang-beach",
@@ -4968,7 +5213,10 @@ window.TRIP = {
     98.838,
     8.012
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "emerald-pool-and-hot-springs": {
    "id": "emerald-pool-and-hot-springs",
@@ -5004,7 +5252,10 @@ window.TRIP = {
     99.05,
     7.95
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "krabitown",
+   "zoneName": "Krabi Town",
+   "images": []
   },
   "klong-haeng-market": {
    "id": "klong-haeng-market",
@@ -5043,7 +5294,10 @@ window.TRIP = {
     98.81231,
     8.0429
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "nopparat",
+   "zoneName": "Nopparat Thara",
+   "images": []
   },
   "chao-fah-pier-night-market": {
    "id": "chao-fah-pier-night-market",
@@ -5082,7 +5336,10 @@ window.TRIP = {
     98.9063,
     8.0863
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "krabitown",
+   "zoneName": "Krabi Town",
+   "images": []
   },
   "ao-nang-landmark-night-market": {
    "id": "ao-nang-landmark-night-market",
@@ -5118,7 +5375,10 @@ window.TRIP = {
     98.81231,
     8.0429
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "nopparat",
+   "zoneName": "Nopparat Thara",
+   "images": []
   },
   "maharaj-morning-market": {
    "id": "maharaj-morning-market",
@@ -5152,7 +5412,10 @@ window.TRIP = {
     98.9063,
     8.0863
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "krabitown",
+   "zoneName": "Krabi Town",
+   "images": []
   },
   "abdulloh-muslim-restaurant": {
    "id": "abdulloh-muslim-restaurant",
@@ -5186,7 +5449,10 @@ window.TRIP = {
     98.9063,
     8.0863
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "krabitown",
+   "zoneName": "Krabi Town",
+   "images": []
   },
   "ruen-mai": {
    "id": "ruen-mai",
@@ -5220,7 +5486,10 @@ window.TRIP = {
     98.87,
     8.07
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "nathai",
+   "zoneName": "Na Thai, inland",
+   "images": []
   },
   "krua-thara": {
    "id": "krua-thara",
@@ -5254,7 +5523,10 @@ window.TRIP = {
     98.8002,
     8.04709
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "nopparat",
+   "zoneName": "Nopparat Thara",
+   "images": []
   },
   "kotung": {
    "id": "kotung",
@@ -5288,7 +5560,10 @@ window.TRIP = {
     98.9063,
     8.0863
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "krabitown",
+   "zoneName": "Krabi Town",
+   "images": []
   },
   "ali-baba": {
    "id": "ali-baba",
@@ -5322,7 +5597,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "govinda-s": {
    "id": "govinda-s",
@@ -5356,7 +5634,10 @@ window.TRIP = {
     98.83834,
     8.01142
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "jame-food-centre": {
    "id": "jame-food-centre",
@@ -5390,7 +5671,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "the-last-fisherman-bar": {
    "id": "the-last-fisherman-bar",
@@ -5427,7 +5711,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "the-beach-bar-ao-nang": {
    "id": "the-beach-bar-ao-nang",
@@ -5464,7 +5751,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "boogie-bar": {
    "id": "boogie-bar",
@@ -5501,7 +5791,10 @@ window.TRIP = {
     98.82216,
     8.03157
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "centre-point": {
    "id": "centre-point",
@@ -5537,7 +5830,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "reggae-town": {
    "id": "reggae-town",
@@ -5574,7 +5870,10 @@ window.TRIP = {
     98.8272,
     8.03306
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "the-last-bar-railay": {
    "id": "the-last-bar-railay",
@@ -5610,7 +5909,10 @@ window.TRIP = {
     98.84432,
     8.0129
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "phi-phi-speedboat-day-tour-from-ao-nang": {
    "id": "phi-phi-speedboat-day-tour-from-ao-nang",
@@ -5650,10 +5952,13 @@ window.TRIP = {
     "research/phi-phi.md §1"
    ],
    "lngLat": [
-    98.7784,
-    7.7407
+    98.765,
+    7.678
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "early-bird-phi-phi-and-4-islands-tour": {
    "id": "early-bird-phi-phi-and-4-islands-tour",
@@ -5689,10 +5994,13 @@ window.TRIP = {
     "research/phi-phi.md §1"
    ],
    "lngLat": [
-    98.7784,
-    7.7407
+    98.765,
+    7.678
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "private-longtail-from-tonsai": {
    "id": "private-longtail-from-tonsai",
@@ -5731,10 +6039,13 @@ window.TRIP = {
     "research/phi-phi.md §2"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.765,
+    7.678
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "maya-bay": {
    "id": "maya-bay",
@@ -5772,7 +6083,10 @@ window.TRIP = {
     98.76612,
     7.67663
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "phi-phi-viewpoint-2": {
    "id": "phi-phi-viewpoint-2",
@@ -5804,10 +6118,13 @@ window.TRIP = {
     "research/phi-phi.md §3"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.782,
+    7.742
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "long-beach": {
    "id": "long-beach",
@@ -5843,7 +6160,10 @@ window.TRIP = {
     98.77668,
     7.75224
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "kayak-at-loh-dalum": {
    "id": "kayak-at-loh-dalum",
@@ -5876,9 +6196,12 @@ window.TRIP = {
    ],
    "lngLat": [
     98.776,
-    7.744
+    7.7445
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "tonsai-village-food": {
    "id": "tonsai-village-food",
@@ -5908,10 +6231,13 @@ window.TRIP = {
     "research/phi-phi.md §2"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "slinky-beach-bar": {
    "id": "slinky-beach-bar",
@@ -5945,9 +6271,12 @@ window.TRIP = {
    ],
    "lngLat": [
     98.776,
-    7.744
+    7.7445
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "carlito-s": {
    "id": "carlito-s",
@@ -5980,10 +6309,13 @@ window.TRIP = {
     "research/phi-phi.md §2"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ibiza-beach-club": {
    "id": "ibiza-beach-club",
@@ -6017,9 +6349,12 @@ window.TRIP = {
    ],
    "lngLat": [
     98.776,
-    7.744
+    7.7445
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "casa-blanca-boutique": {
    "id": "casa-blanca-boutique",
@@ -6100,7 +6435,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "phi-phi-villa-resort": {
    "id": "phi-phi-villa-resort",
@@ -6183,7 +6521,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ton-sai-tropical": {
    "id": "ton-sai-tropical",
@@ -6238,8 +6579,8 @@ window.TRIP = {
    },
    "fitsBudget": false,
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
    "geo": "approx",
    "facts": {
@@ -6269,7 +6610,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ivory-phi-phi": {
    "id": "ivory-phi-phi",
@@ -6340,7 +6684,7 @@ window.TRIP = {
    },
    "lngLat": [
     98.776,
-    7.74
+    7.7445
    ],
    "geo": "approx",
    "facts": {
@@ -6368,7 +6712,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "pineapple-guesthouse-karon": {
    "id": "pineapple-guesthouse-karon",
@@ -6453,7 +6800,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "kata-tranquil-villa": {
    "id": "kata-tranquil-villa",
@@ -6536,7 +6886,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "kk-karon-kata-boutique": {
    "id": "kk-karon-kata-boutique",
@@ -6621,7 +6974,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "prima-karon-villa": {
    "id": "prima-karon-villa",
@@ -6708,7 +7064,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "xinlor-house": {
    "id": "xinlor-house",
@@ -6794,7 +7153,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "solin-house-phuket": {
    "id": "solin-house-phuket",
@@ -6852,8 +7214,8 @@ window.TRIP = {
    },
    "fitsBudget": true,
    "lngLat": [
-    98.387,
-    7.885
+    98.37,
+    7.86
    ],
    "geo": "approx",
    "facts": {
@@ -6881,7 +7243,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "elite-suites-patong": {
    "id": "elite-suites-patong",
@@ -6965,7 +7330,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "atease-phuket-patong": {
    "id": "atease-phuket-patong",
@@ -7046,7 +7414,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "kalim-seaview-villa-penda": {
    "id": "kalim-seaview-villa-penda",
@@ -7128,7 +7499,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "sss-phuket-dsd-racha-yai": {
    "id": "sss-phuket-dsd-racha-yai",
@@ -7174,10 +7548,13 @@ window.TRIP = {
     "research/scuba-snorkel.md"
    ],
    "lngLat": [
-    98.2965,
-    7.8961
+    98.298,
+    7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "acdc-diving-phuket": {
    "id": "acdc-diving-phuket",
@@ -7220,7 +7597,10 @@ window.TRIP = {
     98.34423,
     7.82789
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "sunrise-divers-phuket": {
    "id": "sunrise-divers-phuket",
@@ -7260,7 +7640,10 @@ window.TRIP = {
     98.29818,
     7.83493
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "houbou-ya-phuket": {
    "id": "houbou-ya-phuket",
@@ -7299,7 +7682,10 @@ window.TRIP = {
     98.365,
     7.6
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "the-dive-ao-nang": {
    "id": "the-dive-ao-nang",
@@ -7346,7 +7732,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "mr-dolphin-diving-krabi": {
    "id": "mr-dolphin-diving-krabi",
@@ -7387,7 +7776,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "sawasdee-divers-krabi": {
    "id": "sawasdee-divers-krabi",
@@ -7428,7 +7820,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "local-diving-aonang": {
    "id": "local-diving-aonang",
@@ -7469,7 +7864,10 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "princess-divers-phi-phi": {
    "id": "princess-divers-phi-phi",
@@ -7514,7 +7912,10 @@ window.TRIP = {
     98.7733,
     7.74058
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "adventure-club-phi-phi": {
    "id": "adventure-club-phi-phi",
@@ -7558,7 +7959,10 @@ window.TRIP = {
     98.77246,
     7.7389
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "phuket-dive-tours-racha-snorkel": {
    "id": "phuket-dive-tours-racha-snorkel",
@@ -7599,7 +8003,10 @@ window.TRIP = {
     98.29652,
     7.8256
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "krabi-4-islands-snorkel": {
    "id": "krabi-4-islands-snorkel",
@@ -7636,10 +8043,13 @@ window.TRIP = {
     "research/scuba-snorkel.md"
    ],
    "lngLat": [
-    98.8229,
-    8.0319
+    98.838,
+    8.008
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "hong-islands-trip-thai-tour": {
    "id": "hong-islands-trip-thai-tour",
@@ -7679,7 +8089,10 @@ window.TRIP = {
     98.68,
     8.12
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "thalane",
+   "zoneName": "Ao Thalane",
+   "images": []
   },
   "phi-phi-speedboat-lovely-phuket": {
    "id": "phi-phi-speedboat-lovely-phuket",
@@ -7719,7 +8132,10 @@ window.TRIP = {
     98.3923,
     7.8804
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "racha-yai": {
    "id": "racha-yai",
@@ -7761,7 +8177,10 @@ window.TRIP = {
     98.30096,
     7.82353
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "bida-nok-phi-phi": {
    "id": "bida-nok-phi-phi",
@@ -7801,7 +8220,10 @@ window.TRIP = {
     98.768,
     7.685
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "similan-islands": {
    "id": "similan-islands",
@@ -7842,7 +8264,10 @@ window.TRIP = {
     97.64,
     8.65
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": null,
+   "zoneName": null,
+   "images": []
   },
   "hanuman-h1": {
    "id": "hanuman-h1",
@@ -7880,7 +8305,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h2": {
    "id": "hanuman-h2",
@@ -7918,7 +8346,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h3": {
    "id": "hanuman-h3",
@@ -7956,7 +8387,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h4": {
    "id": "hanuman-h4",
@@ -7993,7 +8427,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h5": {
    "id": "hanuman-h5",
@@ -8031,7 +8468,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h6": {
    "id": "hanuman-h6",
@@ -8068,7 +8508,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h7": {
    "id": "hanuman-h7",
@@ -8105,7 +8548,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h8": {
    "id": "hanuman-h8",
@@ -8142,7 +8588,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h9": {
    "id": "hanuman-h9",
@@ -8180,7 +8629,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h10": {
    "id": "hanuman-h10",
@@ -8218,7 +8670,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h11": {
    "id": "hanuman-h11",
@@ -8256,7 +8711,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h12": {
    "id": "hanuman-h12",
@@ -8293,7 +8751,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h13": {
    "id": "hanuman-h13",
@@ -8330,7 +8791,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h14": {
    "id": "hanuman-h14",
@@ -8368,7 +8832,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h15": {
    "id": "hanuman-h15",
@@ -8405,7 +8872,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "hanuman-h16": {
    "id": "hanuman-h16",
@@ -8442,7 +8912,10 @@ window.TRIP = {
     98.37,
     7.86
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "s2-voyagers": {
    "id": "s2-voyagers",
@@ -8520,7 +8993,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "s2-by-the-beach": {
    "id": "s2-by-the-beach",
@@ -8573,8 +9049,8 @@ window.TRIP = {
    },
    "fitsBudget": true,
    "lngLat": [
-    98.7784,
-    7.7407
+    98.777,
+    7.7385
    ],
    "geo": "approx",
    "facts": {
@@ -8604,7 +9080,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "s2-dormsin": {
    "id": "s2-dormsin",
@@ -8699,7 +9178,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "s2-blue-flow": {
    "id": "s2-blue-flow",
@@ -8753,7 +9235,7 @@ window.TRIP = {
    "fitsBudget": true,
    "lngLat": [
     98.776,
-    7.74
+    7.7445
    ],
    "geo": "approx",
    "facts": {
@@ -8781,7 +9263,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "s2-blanco-beach-bar": {
    "id": "s2-blanco-beach-bar",
@@ -8863,7 +9348,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "s2-phi-phi-hotel": {
    "id": "s2-phi-phi-hotel",
@@ -8944,7 +9432,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "s2-panmanee": {
    "id": "s2-panmanee",
@@ -9027,7 +9518,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "s2-kitty-guest-house": {
    "id": "s2-kitty-guest-house",
@@ -9111,7 +9605,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "s2-katamanda-e5": {
    "id": "s2-katamanda-e5",
@@ -9163,8 +9660,8 @@ window.TRIP = {
    },
    "fitsBudget": true,
    "lngLat": [
-    98.298,
-    7.82
+    98.296,
+    7.812
    ],
    "geo": "approx",
    "facts": {
@@ -9194,7 +9691,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-villa-beachside-kata-noi": {
    "id": "s2-villa-beachside-kata-noi",
@@ -9246,8 +9746,8 @@ window.TRIP = {
    },
    "fitsBudget": false,
    "lngLat": [
-    98.298,
-    7.82
+    98.296,
+    7.812
    ],
    "geo": "approx",
    "facts": {
@@ -9277,7 +9777,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-kata-3br-pool-villa": {
    "id": "s2-kata-3br-pool-villa",
@@ -9358,7 +9861,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-kata-townhouse-1": {
    "id": "s2-kata-townhouse-1",
@@ -9440,7 +9946,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-karon-apt704": {
    "id": "s2-karon-apt704",
@@ -9524,7 +10033,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "s2-karon-exclusive-8638782": {
    "id": "s2-karon-exclusive-8638782",
@@ -9605,7 +10117,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "s2-karon-334sqm": {
    "id": "s2-karon-334sqm",
@@ -9684,7 +10199,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "s2-rawai-walk-to-beach": {
    "id": "s2-rawai-walk-to-beach",
@@ -9743,8 +10261,8 @@ window.TRIP = {
    },
    "fitsBudget": false,
    "lngLat": [
-    98.327,
-    7.773
+    98.306,
+    7.774
    ],
    "geo": "approx",
    "facts": {
@@ -9772,7 +10290,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "s2-villa-vipa": {
    "id": "s2-villa-vipa",
@@ -9855,7 +10376,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "patong",
+   "zoneName": "Patong",
+   "images": []
   },
   "s2-shanti-bangtao": {
    "id": "s2-shanti-bangtao",
@@ -9933,7 +10457,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "s2-bangtao-soi4-sleeps9": {
    "id": "s2-bangtao-soi4-sleeps9",
@@ -10010,7 +10537,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "s2-bangtao-laguna-pool-villa": {
    "id": "s2-bangtao-laguna-pool-villa",
@@ -10096,7 +10626,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "s2-surin-large-villa": {
    "id": "s2-surin-large-villa",
@@ -10142,8 +10675,8 @@ window.TRIP = {
    },
    "fitsBudget": false,
    "lngLat": [
-    98.295,
-    7.99
+    98.278,
+    7.973
    ],
    "geo": "approx",
    "facts": {
@@ -10173,7 +10706,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "s2-mantra-kata-noi": {
    "id": "s2-mantra-kata-noi",
@@ -10253,7 +10789,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-kata-noi-resort": {
    "id": "s2-kata-noi-resort",
@@ -10325,7 +10864,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-kata-beachwalk": {
    "id": "s2-kata-beachwalk",
@@ -10407,7 +10949,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "s2-princess-kamala": {
    "id": "s2-princess-kamala",
@@ -10488,7 +11033,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "at-kamala-hotel": {
    "id": "at-kamala-hotel",
@@ -10568,7 +11116,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "s2-best-western-bangtao": {
    "id": "s2-best-western-bangtao",
@@ -10648,7 +11199,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "pp-rimlay": {
    "id": "pp-rimlay",
@@ -10704,8 +11258,8 @@ window.TRIP = {
     "ac": true
    },
    "lngLat": [
-    98.776,
-    7.74
+    98.783,
+    7.7395
    ],
    "geo": "approx",
    "facts": {
@@ -10736,7 +11290,10 @@ window.TRIP = {
     "unknown": [
      "pool"
     ]
-   }
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "pp-villa-resort": {
    "id": "pp-villa-resort",
@@ -10824,7 +11381,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-hangover": {
    "id": "pp-hangover",
@@ -10875,7 +11435,7 @@ window.TRIP = {
    },
    "lngLat": [
     98.776,
-    7.744
+    7.7445
    ],
    "geo": "approx",
    "facts": {
@@ -10906,7 +11466,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum",
+   "images": []
   },
   "pp-tropical-garden": {
    "id": "pp-tropical-garden",
@@ -10962,8 +11525,8 @@ window.TRIP = {
     "ac": true
    },
    "lngLat": [
-    98.7784,
-    7.7407
+    98.782,
+    7.742
    ],
    "geo": "approx",
    "facts": {
@@ -10994,7 +11557,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "pp-ingphu": {
    "id": "pp-ingphu",
@@ -11048,8 +11614,8 @@ window.TRIP = {
     "ac": true
    },
    "lngLat": [
-    98.7784,
-    7.7407
+    98.783,
+    7.7395
    ],
    "geo": "approx",
    "facts": {
@@ -11078,7 +11644,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "pp-harbour-view": {
    "id": "pp-harbour-view",
@@ -11123,8 +11692,8 @@ window.TRIP = {
     "ac": true
    },
    "lngLat": [
-    98.776,
-    7.74
+    98.783,
+    7.7395
    ],
    "geo": "approx",
    "facts": {
@@ -11156,7 +11725,10 @@ window.TRIP = {
      "beach",
      "pool"
     ]
-   }
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "pp-chaokoh-hostel": {
    "id": "pp-chaokoh-hostel",
@@ -11206,8 +11778,8 @@ window.TRIP = {
     "ac": true
    },
    "lngLat": [
-    98.776,
-    7.74
+    98.783,
+    7.7395
    ],
    "geo": "approx",
    "facts": {
@@ -11238,7 +11810,10 @@ window.TRIP = {
     "unknown": [
      "budget"
     ]
-   }
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff",
+   "images": []
   },
   "pp-op-pier-bargain": {
    "id": "pp-op-pier-bargain",
@@ -11278,10 +11853,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-op-visa-travel": {
    "id": "pp-op-visa-travel",
@@ -11323,10 +11901,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-op-blue-flow": {
    "id": "pp-op-blue-flow",
@@ -11367,10 +11948,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-op-mr-chet": {
    "id": "pp-op-mr-chet",
@@ -11409,10 +11993,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-op-phiphitours": {
    "id": "pp-op-phiphitours",
@@ -11452,10 +12039,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "pp-op-gyg-private": {
    "id": "pp-op-gyg-private",
@@ -11495,10 +12085,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.765,
+    7.678
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "leh",
+   "zoneName": "Phi Phi Leh",
+   "images": []
   },
   "pp-op-gyg-shared": {
    "id": "pp-op-gyg-shared",
@@ -11537,10 +12130,13 @@ window.TRIP = {
     "research/phi-phi-night.md"
    ],
    "lngLat": [
-    98.776,
-    7.74
+    98.777,
+    7.7385
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ab-lotus-house-phuket": {
    "id": "ab-lotus-house-phuket",
@@ -11593,7 +12189,7 @@ window.TRIP = {
    "fitsBudget": true,
    "lngLat": [
     98.39,
-    7.885
+    7.89
    ],
    "geo": "approx",
    "facts": {
@@ -11621,7 +12217,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-apo-house-old-town": {
    "id": "ab-apo-house-old-town",
@@ -11702,7 +12301,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-genesis-home-garden": {
    "id": "ab-genesis-home-garden",
@@ -11784,7 +12386,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-3br-modern-old-town": {
    "id": "ab-3br-modern-old-town",
@@ -11867,7 +12472,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-oldtown-3br-central-festival": {
    "id": "ab-oldtown-3br-central-festival",
@@ -11949,7 +12557,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-little-homestay-in-town": {
    "id": "ab-little-homestay-in-town",
@@ -12001,8 +12612,8 @@ window.TRIP = {
    "verdict": "Cheap and central if the 17th is open.",
    "fitsBudget": true,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.387,
+    7.885
    ],
    "geo": "approx",
    "facts": {
@@ -12030,7 +12641,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-brand-new-2br-apartment-wichit": {
    "id": "ab-brand-new-2br-apartment-wichit",
@@ -12111,7 +12725,10 @@ window.TRIP = {
      "pool": 10
     },
     "unknown": []
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-genesis-urban-old-town": {
    "id": "ab-genesis-urban-old-town",
@@ -12164,8 +12781,8 @@ window.TRIP = {
    "verdict": "Cheapest proven; 2BR.",
    "fitsBudget": true,
    "lngLat": [
-    98.387,
-    7.885
+    98.39,
+    7.89
    ],
    "geo": "approx",
    "facts": {
@@ -12195,7 +12812,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "oldtown",
+   "zoneName": "Old Town and Phuket Town",
+   "images": []
   },
   "ab-lilas-house": {
    "id": "ab-lilas-house",
@@ -12276,7 +12896,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-lily-house": {
    "id": "ab-lily-house",
@@ -12359,7 +12982,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-ban-proud-aonang": {
    "id": "ab-ban-proud-aonang",
@@ -12439,7 +13065,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-baan-aonang-hot-tub": {
    "id": "ab-baan-aonang-hot-tub",
@@ -12520,7 +13149,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-ao-nang-townhouse": {
    "id": "ab-ao-nang-townhouse",
@@ -12602,7 +13234,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "nopparat",
+   "zoneName": "Nopparat Thara",
+   "images": []
   },
   "ab-hello-yellow-hideaway": {
    "id": "ab-hello-yellow-hideaway",
@@ -12683,7 +13318,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-butterfly-garden-home": {
    "id": "ab-butterfly-garden-home",
@@ -12766,7 +13404,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "nathai",
+   "zoneName": "Na Thai, inland",
+   "images": []
   },
   "ab-dom-dolly-pool-vila": {
    "id": "ab-dom-dolly-pool-vila",
@@ -12844,7 +13485,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-3bdr-pool-villa-8min": {
    "id": "ab-3bdr-pool-villa-8min",
@@ -12926,7 +13570,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-aonang-sweet-blue-sea": {
    "id": "ab-aonang-sweet-blue-sea",
@@ -13008,7 +13655,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-bens-pool-villa": {
    "id": "ab-bens-pool-villa",
@@ -13092,7 +13742,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-aonang-pool-villa-rooftop": {
    "id": "ab-aonang-pool-villa-rooftop",
@@ -13176,7 +13829,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-haven-grand-g5": {
    "id": "ab-haven-grand-g5",
@@ -13256,7 +13912,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-blue-nara": {
    "id": "ab-blue-nara",
@@ -13336,7 +13995,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-blue-sand-sea": {
    "id": "ab-blue-sand-sea",
@@ -13416,7 +14078,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-quiet-pool-villa-711": {
    "id": "ab-quiet-pool-villa-711",
@@ -13496,7 +14161,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-cozy-pool-house-aonang": {
    "id": "ab-cozy-pool-house-aonang",
@@ -13578,7 +14246,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-smile-pool-villa-aonang": {
    "id": "ab-smile-pool-villa-aonang",
@@ -13658,7 +14329,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-train-villas-platform-3": {
    "id": "ab-train-villas-platform-3",
@@ -13710,8 +14384,8 @@ window.TRIP = {
    "verdict": "Novelty stay; wrong beach.",
    "fitsBudget": false,
    "lngLat": [
-    98.8229,
-    8.0319
+    98.85,
+    8.02
    ],
    "geo": "approx",
    "facts": {
@@ -13739,7 +14413,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "railay",
+   "zoneName": "Railay and Phra Nang",
+   "images": []
   },
   "ab-aonang-brandnew-2br": {
    "id": "ab-aonang-brandnew-2br",
@@ -13820,7 +14497,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "images": []
   },
   "ab-baan-tamachart-phi-phi": {
    "id": "ab-baan-tamachart-phi-phi",
@@ -13873,8 +14553,8 @@ window.TRIP = {
    "verdict": "Only whole-home Airbnb on the island; needs 2 nights, no AC.",
    "fitsBudget": false,
    "lngLat": [
-    98.7784,
-    7.7407
+    98.777,
+    7.7385
    ],
    "geo": "approx",
    "facts": {
@@ -13902,7 +14582,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ab-shared-dorm-phi-phi": {
    "id": "ab-shared-dorm-phi-phi",
@@ -13952,8 +14635,8 @@ window.TRIP = {
    "verdict": "Not a fit.",
    "fitsBudget": false,
    "lngLat": [
-    98.7784,
-    7.7407
+    98.777,
+    7.7385
    ],
    "geo": "approx",
    "facts": {
@@ -13983,7 +14666,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village",
+   "images": []
   },
   "ab-green-haven-nai-harn": {
    "id": "ab-green-haven-nai-harn",
@@ -14032,8 +14718,8 @@ window.TRIP = {
    "verdict": "Only sub-45k walk-to-swim option; unproven.",
    "fitsBudget": true,
    "lngLat": [
-    98.327,
-    7.773
+    98.306,
+    7.774
    ],
    "geo": "approx",
    "facts": {
@@ -14063,7 +14749,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-zen-pool-villa-rawai": {
    "id": "ab-zen-pool-villa-rawai",
@@ -14145,7 +14834,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-prima-3br-villa": {
    "id": "ab-prima-3br-villa",
@@ -14225,7 +14917,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-balinese-bliss-rawai": {
    "id": "ab-balinese-bliss-rawai",
@@ -14307,7 +15002,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-b7-tropical-vacation-villa": {
    "id": "ab-b7-tropical-vacation-villa",
@@ -14387,7 +15085,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-b3-tropical-vacation-villa": {
    "id": "ab-b3-tropical-vacation-villa",
@@ -14467,7 +15168,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-a9-rawai-detached-villa": {
    "id": "ab-a9-rawai-detached-villa",
@@ -14549,7 +15253,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-private-pool-villa-rawai-beach": {
    "id": "ab-private-pool-villa-rawai-beach",
@@ -14631,7 +15338,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-rawayna-200m": {
    "id": "ab-rawayna-200m",
@@ -14713,7 +15423,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-family-bali-style-nai-harn": {
    "id": "ab-family-bali-style-nai-harn",
@@ -14767,8 +15480,8 @@ window.TRIP = {
    "verdict": "Utility bill could add 4-12k.",
    "fitsBudget": false,
    "lngLat": [
-    98.327,
-    7.773
+    98.306,
+    7.774
    ],
    "geo": "approx",
    "facts": {
@@ -14796,7 +15509,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-rawai-sun-breeze": {
    "id": "ab-rawai-sun-breeze",
@@ -14878,7 +15594,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-solas-pool-villa": {
    "id": "ab-solas-pool-villa",
@@ -14962,7 +15681,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-elegant-thai-villa": {
    "id": "ab-elegant-thai-villa",
@@ -15042,7 +15764,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-new-celine-villa": {
    "id": "ab-new-celine-villa",
@@ -15123,7 +15848,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-peony-villa": {
    "id": "ab-peony-villa",
@@ -15207,7 +15935,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-villa-silk": {
    "id": "ab-villa-silk",
@@ -15288,7 +16019,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-sz-rawai-beach-100m": {
    "id": "ab-sz-rawai-beach-100m",
@@ -15369,7 +16103,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-family-sea-view-saiyuan": {
    "id": "ab-family-sea-view-saiyuan",
@@ -15451,7 +16188,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-villa-natali": {
    "id": "ab-villa-natali",
@@ -15530,7 +16270,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-naiharn-bali-style-4br": {
    "id": "ab-naiharn-bali-style-4br",
@@ -15583,8 +16326,8 @@ window.TRIP = {
    "verdict": "Over 45k; fine.",
    "fitsBudget": false,
    "lngLat": [
-    98.327,
-    7.773
+    98.306,
+    7.774
    ],
    "geo": "approx",
    "facts": {
@@ -15614,7 +16357,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-panoramic-seaview-elevate": {
    "id": "ab-panoramic-seaview-elevate",
@@ -15698,7 +16444,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "naiharn",
+   "zoneName": "Nai Harn, Rawai, Promthep",
+   "images": []
   },
   "ab-karon-beachfront-condo": {
    "id": "ab-karon-beachfront-condo",
@@ -15779,7 +16528,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "ab-baan-angelo-kata-hill": {
    "id": "ab-baan-angelo-kata-hill",
@@ -15861,7 +16613,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "ab-karon-5min-walk-condo": {
    "id": "ab-karon-5min-walk-condo",
@@ -15915,8 +16670,8 @@ window.TRIP = {
    "verdict": "Best Kata/Karon walkable for 5; 2BR + 4 beds.",
    "fitsBudget": false,
    "lngLat": [
-    98.294,
-    7.847
+    98.298,
+    7.82
    ],
    "geo": "approx",
    "facts": {
@@ -15944,7 +16699,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "ab-unit-2b-kata-beach": {
    "id": "ab-unit-2b-kata-beach",
@@ -16026,7 +16784,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "ab-b8-serviced-apartment-karon": {
    "id": "ab-b8-serviced-apartment-karon",
@@ -16108,7 +16869,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "ab-big-2br-kata": {
    "id": "ab-big-2br-kata",
@@ -16190,7 +16954,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   },
   "ab-areca-holiday-home-11": {
    "id": "ab-areca-holiday-home-11",
@@ -16271,7 +17038,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "karon",
+   "zoneName": "Karon",
+   "images": []
   },
   "ab-duplex-3br-kamala": {
    "id": "ab-duplex-3br-kamala",
@@ -16354,7 +17124,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-tw2-pool-villa-kamala": {
    "id": "ab-tw2-pool-villa-kamala",
@@ -16436,7 +17209,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-lake-view-3br-bangtao": {
    "id": "ab-lake-view-3br-bangtao",
@@ -16519,7 +17295,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-surin-park-penthouse": {
    "id": "ab-surin-park-penthouse",
@@ -16572,8 +17351,8 @@ window.TRIP = {
    "verdict": "3 baths + walk to Surin; middling value.",
    "fitsBudget": false,
    "lngLat": [
-    98.295,
-    7.99
+    98.278,
+    7.973
    ],
    "geo": "approx",
    "facts": {
@@ -16601,7 +17380,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-4-bed-bungalow-bang-tao": {
    "id": "ab-4-bed-bungalow-bang-tao",
@@ -16682,7 +17464,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-villa-close-to-beach-sleeps-9": {
    "id": "ab-villa-close-to-beach-sleeps-9",
@@ -16761,7 +17546,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-3br-villa-shared-pool-kamala": {
    "id": "ab-3br-villa-shared-pool-kamala",
@@ -16844,7 +17632,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-tropical-vibes-only-kamala": {
    "id": "ab-tropical-vibes-only-kamala",
@@ -16926,7 +17717,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-n2-pool-villa-kamala": {
    "id": "ab-n2-pool-villa-kamala",
@@ -17008,7 +17802,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-peaceful-bliss-kamala": {
    "id": "ab-peaceful-bliss-kamala",
@@ -17087,7 +17884,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-sunset-lake-villa-bangtao": {
    "id": "ab-sunset-lake-villa-bangtao",
@@ -17140,8 +17940,8 @@ window.TRIP = {
    "verdict": "Cheapest private pool in the north; far.",
    "fitsBudget": true,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.295,
+    7.99
    ],
    "geo": "approx",
    "facts": {
@@ -17169,7 +17969,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-n25-kamala-nature": {
    "id": "ab-n25-kamala-nature",
@@ -17251,7 +18054,10 @@ window.TRIP = {
     "unknown": [
      "beach"
     ]
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-tropical-chalet-3br": {
    "id": "ab-tropical-chalet-3br",
@@ -17303,8 +18109,8 @@ window.TRIP = {
    "verdict": "Avoid.",
    "fitsBudget": false,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.305,
+    7.995
    ],
    "geo": "approx",
    "facts": {
@@ -17332,7 +18138,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-laguna-parkside-townhouse": {
    "id": "ab-laguna-parkside-townhouse",
@@ -17380,8 +18189,8 @@ window.TRIP = {
    "verdict": "Unproven.",
    "fitsBudget": true,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.3,
+    8.0
    ],
    "geo": "approx",
    "facts": {
@@ -17411,7 +18220,10 @@ window.TRIP = {
     "unknown": [
      "reviews"
     ]
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-3bed-pool-villa-thalang": {
    "id": "ab-3bed-pool-villa-thalang",
@@ -17461,8 +18273,8 @@ window.TRIP = {
    "verdict": "Unproven.",
    "fitsBudget": false,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.305,
+    7.995
    ],
    "geo": "approx",
    "facts": {
@@ -17490,7 +18302,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "kamala",
+   "zoneName": "Kamala, Surin, Bang Tao",
+   "images": []
   },
   "ab-s101-chalong": {
    "id": "ab-s101-chalong",
@@ -17571,7 +18386,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
+   "images": []
   },
   "ab-ao-yon-oceanfront-4br": {
    "id": "ab-ao-yon-oceanfront-4br",
@@ -17624,8 +18442,8 @@ window.TRIP = {
    "verdict": "Only true beachfront pool house near budget; 2k over, far from Kata.",
    "fitsBudget": false,
    "lngLat": [
-    98.3923,
-    7.8804
+    98.298,
+    7.82
    ],
    "geo": "approx",
    "facts": {
@@ -17653,7 +18471,10 @@ window.TRIP = {
      "pool": 15
     },
     "unknown": []
-   }
+   },
+   "zone": "katanoi",
+   "zoneName": "Kata Noi and Kata",
+   "images": []
   }
  },
  "flights": {
