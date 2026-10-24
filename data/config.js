@@ -1,2 +1,2 @@
-// Shared backend. Leave empty for browser-only mode. Fill from Supabase → Project Settings → API (see design/supabase/SETUP.md).
-window.TRIP_CONFIG = { supabaseUrl: "", supabaseAnonKey: "" };
+// Shared backend (Supabase project thailand-26, created by Imran 2026-10-25). The anon key is public by design; rotate it in Supabase if the link leaks.
+window.TRIP_CONFIG = { supabaseUrl: "https://hykuwrxghueftlvoymgj.supabase.co", supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5a3V3cnhnaHVlZnRsdm95bWdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3NzkwNTIsImV4cCI6MjEwODM1NTA1Mn0.a9gfm2_mQRkALv6ewozRBtyj3GlDW2_tkGnwDQnEuYI" };
