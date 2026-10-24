@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-skin="l">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thailand 26 · classic</title>
+<meta name="theme-color" content="#f4f1ea">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Thailand 26">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+@font-face{font-family:"Jost";src:url(fonts/JostVF.ttf) format("truetype");font-weight:100 900}
+</style>
+<link rel="stylesheet" href="app.css?v=1792865487">
+</head>
+<body>
+<div id="map" aria-hidden="true"></div>
+<div class="shade" aria-hidden="true"></div>
+<header class="top"><div class="whobar" id="whobar"></div><nav class="menu" id="menu" aria-label="Sections"></nav><div class="budget" id="budget"></div></header>
+<div class="overview"><section class="hl" id="hl" aria-live="polite"></section><nav class="rail" id="rail" aria-label="Days"></nav></div>
+<section class="sheet" id="sheet" hidden></section>
+<section class="card" id="card" hidden></section>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="data/trip.js?v=1792865487"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="data/config.js?v=1792865487"></script>
+<script src="data/sync.js?v=1792865487"></script>
+<script src="data/core-classic.js"></script>
+<script src="app.js?v=1792865487"></script>
+</body>
+</html>

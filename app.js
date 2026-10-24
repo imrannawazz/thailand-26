@@ -483,6 +483,36 @@
           <p class="small hfoot">${stays.length} stays researched for this stop${gone ? ` · ${gone} unavailable, hidden` : ""}${out ? ` · ${out} ruled out (Z or not for me)` : ""} · ${day ? `<button class="linkish small" data-go="day-${day.n}/t-stay">see them all</button>` : ""}</p></section>`;
       }).join("")}</div>`;
   }
+  // Maps: the whole journey in one place. Every stop with its stay decision, its day decision, its picks and the leg in; open loops first.
+  const STOP_WHEN = { 1: "Tue 17 Nov · night 1", 2: "Wed 18 Nov · night 2", 3: "Thu 19 Nov · night 3", 4: "Fri 20 Nov · night 4", 5: "Sat 21 Nov · night 5", 6: "Sun 22 Nov · night 6", 7: "Mon 23 Nov · night 7", 8: "Tue 24 Nov · 17:00 flight" };
+  function decState(id) { const d = C.decision(id); if (!d) return null; const l = S.locks()[id]; const o = l && d.options.find(x => x.id === l.optionId); return { d, locked: !!o, o, who: l && l.who, at: l && l.at, open: d.options.filter(x => !x.hidden).length }; }
+  function legIn(d) { const id = (d.legs || [])[0]; const leg = id && T.legs.find(x => x.id === id); if (!leg) return null; const o = leg.options && leg.options[0]; const head = o ? (o.costGroupTHB ? inr(o.costGroupTHB) / T.travellers : o.costPerHeadTHB ? inr(o.costPerHeadTHB) : o.costHeadTHB ? inr(o.costHeadTHB) : 0) : 0; return { title: leg.title, hours: leg.hours, mode: o && o.mode, head, kind: /ferry|boat|longtail|speedboat/i.test((o && o.mode) || leg.title) ? "sea" : "road" }; }
+  function mapsPage() {
+    const blocks = T.decisions.filter(d => d.block), dayDecs = T.decisions.filter(d => !d.block);
+    const states = [...blocks, ...dayDecs].map(d => decState(d.id)).filter(Boolean), lockedN = states.filter(x => x.locked).length, open = states.filter(x => !x.locked);
+    const stayINR = blocks.reduce((a, d) => { const st = decState(d.id); return a + (st && st.locked && st.o.costINR ? st.o.costINR : 0); }, 0);
+    const dayOf = did => T.days.find(d => (d.decisions || []).includes(did));
+    const line = (k, html) => `<div class="line"><span class="k">${k}</span><span>${html}</span></div>`;
+    const stops = T.days.map(d => {
+      const blockOf = { 1: "town", 2: "phiphi", 3: "aonang", 4: "aonang", 5: "beach", 6: "beach", 7: "beach" }[d.n];
+      const stayDec = stayDecOf(d) || T.decisions.find(x => x.block === blockOf) || null, st = stayDec ? decState(stayDec.id) : null, carry = stayDec && !(d.decisions || []).includes(stayDec.id);
+      const dayDec = (d.decisions || []).map(decState).filter(x => x && !x.d.block);
+      const picks = (S.picksByDay()[d.n] || []).map(id => T.items[id]).filter(Boolean);
+      const short = st ? ITEMS.filter(it => it.type === "stay" && it.block === st.d.block && S.tiersFor(it.id).some(t => t.tier === "A" || t.tier === "B")).length : 0;
+      const leg = legIn(d), p = PLACE(d.base);
+      return `<div class="stop" data-mapsfly="${d.n}" role="button" tabindex="0"><span class="num">${d.n === 8 ? "✈" : d.n}</span><div>
+        <p class="when">${h(STOP_WHEN[d.n] || d.date)}</p><h2>${h(d.n === 8 ? "Home" : p.name)}</h2>
+        ${st ? line("Stay", st.locked ? `<b>${h(st.o.label || (st.o.item && T.items[st.o.item] && T.items[st.o.item].name) || st.o.id)}</b> <span class="st locked">locked</span><br><small>by ${h(st.who || "")}, ${h(when(st.at))}${st.o.costINR ? ` · ${fmt(st.o.costINR / T.travellers)} a head` : ""}</small>` : `<span class="st open">open</span> ${st.open} options${short ? `, ${short} shortlisted` : ""}${carry ? " (same stay as the night before)" : ""} · <button class="linkish small" data-go="day-${(dayOf(st.d.id) || d).n}/t-decide">decide</button>`) : ""}
+        ${dayDec.map(x => line("Day", x.locked ? `<b>${h(x.o.label || (x.o.item && T.items[x.o.item] && T.items[x.o.item].name) || x.o.id)}</b> <span class="st locked">locked</span><br><small>by ${h(x.who || "")}, ${h(when(x.at))}</small>` : `<span class="st open">open</span> ${h(x.d.title)}, ${x.open} options · <button class="linkish small" data-go="day-${d.n}/t-decide">decide</button>`)).join("")}
+        ${picks.length ? line("Picks", picks.map(it => `<b>${h(it.name)}</b>`).join(", ")) : d.n < 8 ? line("Picks", `<span class="st none">none yet</span> · <button class="linkish small" data-go="day-${d.n}/t-do">add</button>`) : ""}
+        ${leg ? `<div class="leg">${leg.kind === "sea" ? "⛴" : "🚐"} <b>${h(leg.title)}</b>${leg.hours ? ` · ${leg.hours} h` : ""}${leg.mode ? ` · ${h(leg.mode)}` : ""}${leg.head ? ` · ${fmt(leg.head)} a head` : ""}</div>` : d.n === 1 && T.flights ? `<div class="leg">✈ <b>${h(T.flights.out.flight)}</b> · ${h(T.flights.out.dep)} to ${h(T.flights.out.arr)} · ${fmt(T.flights.perHeadINR)} a head, booked</div>` : ""}
+      </div></div>`; }).join("");
+    return `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">Maps<small>${lockedN} of ${states.length} decisions locked${stayINR ? ` · stays ${fmt(stayINR / T.travellers)} INR a head so far` : ""}</small></h1>
+      <div class="meter">${states.map(x => `<i class="${x.locked ? "on" : ""}" title="${h(x.d.title)}"></i>`).join("")}</div>
+      ${open.length ? `<div class="sec openloops"><h2>Still to decide</h2>${open.map(x => { const dd = dayOf(x.d.id); return `<div class="opt" role="button" tabindex="0" data-go="day-${dd ? dd.n : 1}/t-decide"><div><span class="name">${h(x.d.title)}</span><span class="dur">${x.open} options${dd ? ` · day ${dd.n}` : ""}</span></div><div class="fig"><button class="linkish small">decide →</button></div></div>`; }).join("")}</div>` : `<div class="sec"><h2>Everything is decided</h2><p class="small">Every stay and day choice is locked.</p></div>`}
+      <div class="sec"><h2>The journey, stop by stop</h2><p class="small pending" style="margin:0 0 .8em">Tap a stop to fly the map there; the lit path is that day's crossing.</p><div class="stops">${stops}</div></div>
+      <p class="src">Flights ${fmt(T.flights ? T.flights.perHeadINR : 0)} INR a head, booked. Prices are the researched snapshots at 1 THB = ${T.fx.inrPerThb} INR.</p></div>`;
+  }
   function essentialsPage() {
     return `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">Essentials</h1>${T.essentials.map(e => `<div class="opt"><div><span class="name">${h(e.k)}</span><span class="small" style="display:block">${h(e.v)}</span>${e.src && e.src.startsWith("http") ? `<a href="${e.src}" target="_blank" rel="noopener">source</a>` : ""}</div><div></div></div>`).join("")}<div class="sec"><h2>Budget frame</h2><p class="lead">${h(T.budgetRule)} ${h(T.fx.note)}</p></div></div>`;
   }
@@ -556,6 +586,7 @@
     else if (r.page.startsWith("act-")) page = actPage(r.page.slice(4));
     else if (r.page === "essentials") page = essentialsPage();
     else if (r.page === "budget") page = budgetPage();
+    else if (r.page === "maps") page = mapsPage();
     else if (r.page === "stays") page = hotelsPage();
     else if (r.page.startsWith("plan-")) page = planPage(r.page.slice(5));
     else if (r.page.startsWith("place-")) { const res = placePage(r.page.slice(6), r.tab); if (res) { page = res.html; tab = res.tab; } }
@@ -589,6 +620,10 @@
       C.setZones(map, gp && T.guides[gp] && tab !== "choose" ? T.guides[gp].zones : []);
       const bounds = C.setMarkers(map, list, hot);
       const changed = key !== lastKey;
+      if (r.page === "maps" && !openItem) {
+        if (changed) { const lockedItems = T.decisions.map(d => C.lockedOption(d)).filter(o => o && o.item).map(o => o.item); const hotJ = [...lockedItems, ...Object.values(S.picksByDay()).flat()]; C.setMarkers(map, ITEMS.filter(it => it.type === "stay" || hotJ.includes(it.id)), hotJ); if (C.setLeg) C.setLeg(null); if (C.fitJourney) C.fitJourney(map, mapPadding(true)); focused = null; }
+        lastKey = key; return;
+      }
       const m = openItem ? measureFor(openItem) : null;
       const mb = C.setMeasure(map, m && m.home, m ? m.targets : []);
       const cardPad = () => { const w = innerWidth; return w > 720 ? { left: 40, right: Math.min(620, w) + 40, top: 90, bottom: 40 } : { left: 24, right: 24, top: 110, bottom: Math.round(innerHeight * .55) }; };
@@ -616,6 +651,7 @@
     const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort" || k === "zone" || k === "avail" || k === "tier" || k === "tierBy") SF[k] = v; else if (k === "allZones") SF.allZones = v === "1"; else SF[k] = !SF[k]; if (k === "sort" && v !== "near" && SF.sort === "near") SF.sort = v; render(); return; }
     if (e.target.id === "card" || e.target.classList.contains("sheet-backdrop")) { closeTop(); return; }
     const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 700 }); } return; }
+    const mf = e.target.closest("[data-mapsfly]"); if (mf && !e.target.closest("[data-go], a, .linkish")) { const d = T.days.find(x => x.n === Number(mf.dataset.mapsfly)); if (d && map) { document.querySelectorAll(".stop").forEach(x => x.classList.toggle("on", x === mf)); if (C.setLeg) C.setLeg(d.n); focusPlace(d.base, true); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }
     const lc = e.target.closest("[data-lockcard]"); if (lc) { lockWith(lc.dataset.lockcard, lc.dataset.opt); return; }
     const rail = e.target.closest(".rail button"); if (rail) { selectDay(Number(rail.dataset.i)); return; }
@@ -705,6 +741,7 @@
   $("#menu").innerHTML = `<button class="nav-link" data-go="">Days</button>
     <div class="dd"><button class="nav-link dd-btn" aria-expanded="false" aria-haspopup="true">Places</button><div class="dd-panel" role="menu"><button role="menuitem" data-go="place-phuket">Phuket</button><button role="menuitem" data-go="place-phiphi">Phi Phi</button><button role="menuitem" data-go="place-aonang">Krabi and Ao Nang</button></div></div>
     <div class="dd"><button class="nav-link dd-btn" aria-expanded="false" aria-haspopup="true">Guides</button><div class="dd-panel" role="menu">${T.activities.map(a => `<button role="menuitem" data-go="act-${a.id}">${h(a.title)}</button>`).join("")}<button role="menuitem" data-go="essentials">Essentials</button></div></div>
+    <button class="nav-link" data-go="maps">Maps</button>
     <button class="nav-link" data-go="stays">Hotels</button>
     <button class="nav-link" data-go="budget">Budget</button>`;
   render();

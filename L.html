@@ -12,26 +12,37 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="icon-192.png">
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css">
 <style>
 @font-face{font-family:"Jost";src:url(fonts/JostVF.ttf) format("truetype");font-weight:100 900}
 </style>
-<link rel="stylesheet" href="app.css?v=1792851887">
+<link rel="stylesheet" href="app.css?v=1792865487">
+<link rel="stylesheet" href="world.css">
 </head>
 <body>
+<!-- Direction contract (the map world, accepted by Imran 2026-10-24)
+THESIS: the trip is a place, so the planner is the place: a satellite 3D map of Phuket, Phi Phi and Krabi is the surface, and every page is glass laid over it. It refuses the category default of a list app with a map tab.
+OWN-WORLD: satellite imagery on Copernicus terrain under a warm sky; dark glass panels (rgba 12,20,27 at 84%, 22px blur); Jost; white ink, one amber (#ffb703) for figures, picks, the live tab and locks; sky-blue (#8fd3f4) for links; green (#8ee0a1) and coral (#ff9a7a) only as verdicts (available or not, tier A or Z), because the product's job is deciding; pins are white dots, picks glow amber; legs are 3D paths with a travelling light.
+STORY: five friends open it on a phone in the sun, see where they are and where tonight is, open a day, decide and lock, and the map flies with them.
+FIRST VIEWPORT: the island from the air, tilted 42 degrees, the day's three highlights lower left in white over a dark gradient, the date rail along the bottom; header pills at the top; Map menu holds every switch.
+FORM: the live app's three-level shell (overview, day page, card) kept whole; user-pinned world (satellite 3D, dark glass), no roll.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
 <div id="map" aria-hidden="true"></div>
 <div class="shade" aria-hidden="true"></div>
 <header class="top"><div class="whobar" id="whobar"></div><nav class="menu" id="menu" aria-label="Sections"></nav><div class="budget" id="budget"></div></header>
 <div class="overview"><section class="hl" id="hl" aria-live="polite"></section><nav class="rail" id="rail" aria-label="Days"></nav></div>
 <section class="sheet" id="sheet" hidden></section>
 <section class="card" id="card" hidden></section>
-<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-<script src="data/trip.js?v=1792851887"></script>
+<script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/deck.gl@9/dist.min.js"></script>
+<script src="data/trip.js?v=1792865487"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-<script src="data/config.js?v=1792851887"></script>
-<script src="data/sync.js?v=1792851887"></script>
-<script src="data/core.js?v=1792851887"></script>
-<script src="app.js?v=1792851887"></script>
+<script src="data/config.js?v=1792865487"></script>
+<script src="data/sync.js?v=1792865487"></script>
+<script src="data/core.js?v=1792865487"></script>
+<script src="world.js"></script>
+<script src="app.js?v=1792865487"></script>
 <script>if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));</script>
 </body>
 </html>
