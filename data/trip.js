@@ -1392,7 +1392,9 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1680,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 89,
@@ -1466,7 +1468,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "32 km"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.3922,
     7.88206
@@ -1478,13 +1480,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1920,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 86,
+    "total": 84,
     "parts": {
      "reviews": 78,
-     "budget": 97,
+     "budget": 93,
      "beach": null,
      "pool": 70
     },
@@ -1550,7 +1554,7 @@ window.TRIP = {
     "pier": "Rassada ~2.5-3 km",
     "airport": "26 km"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.3865,
     7.89044
@@ -1562,13 +1566,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1820,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
     "total": 85,
     "parts": {
      "reviews": 74,
-     "budget": 100,
+     "budget": 99,
      "beach": null,
      "pool": 70
     },
@@ -1632,7 +1638,7 @@ window.TRIP = {
     "pier": "Rassada ~2-3 km",
     "airport": "24-34 km"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.37857,
     7.90812
@@ -1644,13 +1650,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2252,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 87,
+    "total": 81,
     "parts": {
      "reviews": 89,
-     "budget": 89,
+     "budget": 75,
      "beach": null,
      "pool": 70
     },
@@ -1706,8 +1714,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1361,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 91,
     "parts": {
@@ -1770,8 +1781,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 958,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 90,
     "parts": {
@@ -1841,7 +1855,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "34 km"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.387,
     7.885
@@ -1853,13 +1867,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2470,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 84,
+    "total": 75,
     "parts": {
      "reviews": 92,
-     "budget": 84,
+     "budget": 63,
      "beach": null,
      "pool": null
     },
@@ -1919,13 +1935,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2520,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
-    "total": 74,
+    "total": 79,
     "parts": {
      "reviews": 90,
-     "budget": 83,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -1986,13 +2005,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2621,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
-    "total": 71,
+    "total": 77,
     "parts": {
      "reviews": 85,
-     "budget": 80,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -2053,13 +2075,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2419,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
-    "total": 72,
+    "total": 76,
     "parts": {
      "reviews": 82,
-     "budget": 85,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -2120,8 +2145,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1764,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 65,
     "parts": {
@@ -2188,13 +2216,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1915,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
-    "total": 75,
+    "total": 76,
     "parts": {
      "reviews": 82,
-     "budget": 97,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -2255,13 +2286,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2318,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
-    "total": 73,
+    "total": 77,
     "parts": {
      "reviews": 83,
-     "budget": 88,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -2321,8 +2355,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1109,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 78,
     "parts": {
@@ -2413,13 +2450,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3879,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 67,
+    "total": 73,
     "parts": {
      "reviews": 94,
-     "budget": 51,
+     "budget": 71,
      "beach": 20,
      "pool": 100
     },
@@ -2483,7 +2522,7 @@ window.TRIP = {
     "pier": "Nopparat Thara ~2 km",
     "airport": "Krabi 28 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -2495,13 +2534,15 @@ window.TRIP = {
     "beachMin": 25,
     "beachMode": "walk",
     "perHeadNight": 2160,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 82,
+    "total": 85,
     "parts": {
      "reviews": 94,
-     "budget": 91,
+     "budget": 100,
      "beach": 35,
      "pool": 100
     },
@@ -2578,13 +2619,15 @@ window.TRIP = {
     "beachMin": 9,
     "beachMode": "drive",
     "perHeadNight": 3175,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 72,
+    "total": 80,
     "parts": {
      "reviews": 93,
-     "budget": 67,
+     "budget": 94,
      "beach": 20,
      "pool": 100
     },
@@ -2661,7 +2704,9 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": 1260,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 85,
@@ -2746,13 +2791,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 2220,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 78,
+    "total": 81,
     "parts": {
      "reviews": 81,
-     "budget": 90,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -2829,7 +2876,9 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
     "total": 70,
@@ -2920,7 +2969,9 @@ window.TRIP = {
     "beachMin": 4,
     "beachMode": "walk",
     "perHeadNight": 6508,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
     "total": 58,
@@ -3003,7 +3054,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
     "total": 74,
@@ -6016,7 +6069,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "~33 km"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.387,
     7.885
@@ -6028,13 +6081,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2352,
-    "town": true
+    "town": true,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 87,
+    "total": 79,
     "parts": {
      "reviews": 90,
-     "budget": 87,
+     "budget": 69,
      "beach": null,
      "pool": 70
     },
@@ -6109,13 +6164,15 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 4788,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 59,
     "parts": {
      "reviews": 81,
-     "budget": 29,
+     "budget": 0,
      "beach": 100,
      "pool": 70
     },
@@ -6179,7 +6236,7 @@ window.TRIP = {
     "pier": "~2 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.776,
     7.74
@@ -6191,13 +6248,15 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 2570,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 83,
+    "total": 75,
     "parts": {
      "reviews": 88,
-     "budget": 82,
+     "budget": 57,
      "beach": 100,
      "pool": null
     },
@@ -6271,7 +6330,7 @@ window.TRIP = {
     "pier": "3-10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "position": {
     "pier": 3,
     "lohdalum": 6,
@@ -6290,13 +6349,15 @@ window.TRIP = {
     "beachMin": 3,
     "beachMode": "walk",
     "perHeadNight": 2108,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 92,
+    "total": 89,
     "parts": {
      "reviews": 97,
-     "budget": 93,
+     "budget": 83,
      "beach": 100,
      "pool": 70
     },
@@ -6371,7 +6432,9 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": 1650,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 86,
@@ -6454,7 +6517,9 @@ window.TRIP = {
     "beachMin": 20,
     "beachMode": "walk",
     "perHeadNight": 1411,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 84,
@@ -6535,7 +6600,9 @@ window.TRIP = {
     "beachMin": 7,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 72,
@@ -6620,7 +6687,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 80,
@@ -6704,13 +6773,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1920,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 90,
+    "total": 91,
     "parts": {
      "reviews": 91,
-     "budget": 97,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -6791,13 +6862,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2196,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 82,
+    "total": 86,
     "parts": {
      "reviews": 92,
-     "budget": 91,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -6873,7 +6946,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 1714,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 87,
@@ -6950,7 +7025,9 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "drive",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 58,
@@ -7030,7 +7107,9 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 79,
@@ -8422,7 +8501,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 1279,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 82,
@@ -8502,7 +8583,9 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 998,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 74,
@@ -8595,7 +8678,9 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 632,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 73,
@@ -8677,7 +8762,9 @@ window.TRIP = {
     "beachMin": 1,
     "beachMode": "walk",
     "perHeadNight": 998,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 80,
@@ -8757,7 +8844,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 660,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 80,
@@ -8824,7 +8913,7 @@ window.TRIP = {
    "distances": {
     "beach": "76 m to pier"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.77336,
     7.74137
@@ -8836,13 +8925,15 @@ window.TRIP = {
     "beachMin": 1,
     "beachMode": "walk",
     "perHeadNight": 2108,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 88,
+    "total": 85,
     "parts": {
      "reviews": 84,
-     "budget": 93,
+     "budget": 83,
      "beach": 100,
      "pool": 70
     },
@@ -8903,7 +8994,7 @@ window.TRIP = {
    "distances": {
     "beach": "132 yd to pier"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.772,
     7.73889
@@ -8915,13 +9006,15 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 1922,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 88,
+    "total": 87,
     "parts": {
      "reviews": 89,
-     "budget": 97,
+     "budget": 93,
      "beach": 100,
      "pool": null
     },
@@ -8997,7 +9090,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 1619,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 86,
@@ -9078,7 +9173,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 80,
@@ -9159,7 +9256,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 7137,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 48,
@@ -9238,7 +9337,9 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 79,
@@ -9318,7 +9419,9 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 75,
@@ -9400,7 +9503,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 79,
@@ -9479,7 +9584,9 @@ window.TRIP = {
     "beachMin": 1,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 79,
@@ -9556,7 +9663,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 79,
@@ -9644,13 +9753,15 @@ window.TRIP = {
     "beachMin": 4,
     "beachMode": "walk",
     "perHeadNight": 4246,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 79,
+    "total": 84,
     "parts": {
      "reviews": 98,
-     "budget": 42,
+     "budget": 58,
      "beach": 85,
      "pool": 100
     },
@@ -9713,7 +9824,7 @@ window.TRIP = {
    "distances": {
     "beach": "2.5 km / 5-min drive to Nai Harn; shops 5-min walk"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.28219,
     7.88475
@@ -9725,13 +9836,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3295,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 71,
+    "total": 79,
     "parts": {
      "reviews": 95,
-     "budget": 64,
+     "budget": 90,
      "beach": 20,
      "pool": 100
     },
@@ -9799,7 +9912,9 @@ window.TRIP = {
     "beachMin": 3,
     "beachMode": "drive",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 67,
@@ -9876,13 +9991,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": 2529,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 82,
+    "total": 88,
     "parts": {
      "reviews": 86,
-     "budget": 83,
+     "budget": 100,
      "beach": 85,
      "pool": 70
     },
@@ -9948,7 +10065,7 @@ window.TRIP = {
    "distances": {
     "beach": "'Minutes away' from Bang Tao / Layan; location sub-score 4.4"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.295,
     7.99
@@ -9960,13 +10077,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3812,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 74,
     "parts": {
      "reviews": 95,
-     "budget": 52,
+     "budget": 73,
      "beach": 20,
      "pool": 100
     },
@@ -10033,7 +10152,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 77,
@@ -10113,13 +10234,15 @@ window.TRIP = {
     "beachMin": 1,
     "beachMode": "walk",
     "perHeadNight": 2580,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 84,
+    "total": 90,
     "parts": {
      "reviews": 83,
-     "budget": 81,
+     "budget": 100,
      "beach": 100,
      "pool": 70
     },
@@ -10183,7 +10306,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 1560,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 89,
@@ -10261,13 +10386,15 @@ window.TRIP = {
     "beachMin": 3,
     "beachMode": "walk",
     "perHeadNight": 2023,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 86,
+    "total": 87,
     "parts": {
      "reviews": 85,
-     "budget": 95,
+     "budget": 100,
      "beach": 100,
      "pool": null
     },
@@ -10342,13 +10469,15 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 1888,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 91,
     "parts": {
      "reviews": 88,
-     "budget": 98,
+     "budget": 100,
      "beach": 100,
      "pool": 70
     },
@@ -10420,13 +10549,15 @@ window.TRIP = {
     "beachMin": 11,
     "beachMode": "walk",
     "perHeadNight": 3608,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 70,
+    "total": 77,
     "parts": {
      "reviews": 88,
-     "budget": 57,
+     "budget": 80,
      "beach": 60,
      "pool": 70
     },
@@ -10498,7 +10629,9 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 13151,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
     "total": 62,
@@ -10581,13 +10714,16 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 3035,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
+   "fitsBudget": false,
    "score": {
-    "total": 75,
+    "total": 63,
     "parts": {
      "reviews": 76,
-     "budget": 71,
+     "budget": 31,
      "beach": 100,
      "pool": null
     },
@@ -10666,13 +10802,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 4721,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
+   "fitsBudget": false,
    "score": {
-    "total": 59,
+    "total": 50,
     "parts": {
      "reviews": 85,
-     "budget": 30,
+     "budget": 0,
      "beach": null,
      "pool": 70
     },
@@ -10745,8 +10884,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1405,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 73,
     "parts": {
@@ -10830,8 +10972,11 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1517,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": true
    },
+   "fitsBudget": true,
    "score": {
     "total": 73,
     "parts": {
@@ -10913,13 +11058,16 @@ window.TRIP = {
     "beachMin": 7,
     "beachMode": "walk",
     "perHeadNight": 2192,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
+   "fitsBudget": false,
    "score": {
-    "total": 81,
+    "total": 77,
     "parts": {
      "reviews": 75,
-     "budget": 91,
+     "budget": 78,
      "beach": 85,
      "pool": 70
     },
@@ -10985,13 +11133,16 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 4552,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
+   "fitsBudget": false,
    "score": {
-    "total": 57,
+    "total": 47,
     "parts": {
      "reviews": 84,
-     "budget": 34,
+     "budget": 0,
      "beach": null,
      "pool": null
     },
@@ -11065,8 +11216,11 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": null,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
+   "fitsBudget": null,
    "score": {
     "total": 65,
     "parts": {
@@ -11448,13 +11602,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2698,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 86,
     "parts": {
      "reviews": 91,
-     "budget": 79,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -11527,13 +11683,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 2249,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 81,
     "parts": {
      "reviews": 81,
-     "budget": 89,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -11607,13 +11765,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1913,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 81,
+    "total": 82,
     "parts": {
      "reviews": 83,
-     "budget": 97,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -11686,13 +11846,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2935,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 61,
+    "total": 69,
     "parts": {
      "reviews": 82,
-     "budget": 73,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -11768,13 +11930,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 3626,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 67,
+    "total": 76,
     "parts": {
      "reviews": 91,
-     "budget": 57,
+     "budget": 79,
      "beach": null,
      "pool": 0
     },
@@ -11847,7 +12011,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 1462,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 77,
@@ -11926,7 +12092,9 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "none",
     "perHeadNight": 1771,
-    "town": true
+    "town": true,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 90,
@@ -12006,7 +12174,9 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 1179,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 73,
@@ -12087,7 +12257,9 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 1634,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 65,
@@ -12166,13 +12338,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2524,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 65,
+    "total": 70,
     "parts": {
      "reviews": 85,
-     "budget": 83,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -12246,13 +12420,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "drive",
     "perHeadNight": 2642,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 57,
+    "total": 63,
     "parts": {
      "reviews": 83,
-     "budget": 80,
+     "budget": 100,
      "beach": 20,
      "pool": 0
     },
@@ -12325,13 +12501,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3458,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 53,
+    "total": 60,
     "parts": {
      "reviews": 88,
-     "budget": 61,
+     "budget": 85,
      "beach": 20,
      "pool": 0
     },
@@ -12405,13 +12583,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 2361,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 74,
+    "total": 77,
     "parts": {
      "reviews": 87,
-     "budget": 87,
+     "budget": 100,
      "beach": 85,
      "pool": 0
     },
@@ -12484,13 +12664,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "drive",
     "perHeadNight": 2457,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 60,
+    "total": 65,
     "parts": {
      "reviews": 89,
-     "budget": 84,
+     "budget": 100,
      "beach": 20,
      "pool": 0
     },
@@ -12565,13 +12747,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3279,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 69,
+    "total": 77,
     "parts": {
      "reviews": 87,
-     "budget": 65,
+     "budget": 91,
      "beach": 20,
      "pool": 100
     },
@@ -12639,13 +12823,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3367,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 40,
+    "total": 48,
     "parts": {
      "reviews": null,
-     "budget": 63,
+     "budget": 88,
      "beach": 20,
      "pool": 0
     },
@@ -12721,13 +12907,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "drive",
     "perHeadNight": 3598,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 75,
     "parts": {
      "reviews": 91,
-     "budget": 57,
+     "budget": 80,
      "beach": 20,
      "pool": 100
     },
@@ -12801,13 +12989,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3729,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 69,
+    "total": 75,
     "parts": {
      "reviews": 96,
-     "budget": 54,
+     "budget": 76,
      "beach": 20,
      "pool": 100
     },
@@ -12869,7 +13059,7 @@ window.TRIP = {
     "beach": "5-10 min by motorbike or car"
    },
    "verdict": "Meh.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -12881,13 +13071,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2038,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 85,
+    "total": 87,
     "parts": {
      "reviews": 91,
-     "budget": 94,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -12951,7 +13143,7 @@ window.TRIP = {
     "beach": "10 minutes to Ao Nang Beach by car"
    },
    "verdict": "Good but +12k.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -12963,13 +13155,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2108,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 83,
+    "total": 85,
     "parts": {
      "reviews": 86,
-     "budget": 93,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -13031,7 +13225,7 @@ window.TRIP = {
     "beach": "Around 10 mins drive to Ao Nang Beach / Nopparat Thara pier"
    },
    "verdict": "Over.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -13043,13 +13237,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 2291,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 80,
     "parts": {
      "reviews": 88,
-     "budget": 88,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -13109,7 +13305,7 @@ window.TRIP = {
     "beach": "Short drive from Ao Nang Beach"
    },
    "verdict": "Over.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -13121,13 +13317,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 2597,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 77,
+    "total": 82,
     "parts": {
      "reviews": 95,
-     "budget": 81,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -13187,7 +13385,7 @@ window.TRIP = {
     "beach": "Drive to Ao Nang beach in less than 10 minutes"
    },
    "verdict": "Over.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -13199,13 +13397,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 2670,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 82,
     "parts": {
      "reviews": 95,
-     "budget": 79,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -13277,13 +13477,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "walk",
     "perHeadNight": 3204,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 86,
+    "total": 94,
     "parts": {
      "reviews": 96,
-     "budget": 67,
+     "budget": 93,
      "beach": 85,
      "pool": 100
     },
@@ -13357,13 +13559,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3092,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 71,
+    "total": 80,
     "parts": {
      "reviews": 90,
-     "budget": 69,
+     "budget": 97,
      "beach": 20,
      "pool": 100
     },
@@ -13435,13 +13639,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3879,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 74,
     "parts": {
      "reviews": 96,
-     "budget": 51,
+     "budget": 71,
      "beach": 20,
      "pool": 100
     },
@@ -13514,13 +13720,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "walk",
     "perHeadNight": 3935,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 62,
+    "total": 68,
     "parts": {
      "reviews": 88,
-     "budget": 49,
+     "budget": 69,
      "beach": 85,
      "pool": 0
     },
@@ -13593,13 +13801,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": 2069,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 78,
+    "total": 80,
     "parts": {
      "reviews": 95,
-     "budget": 94,
+     "budget": 100,
      "beach": 85,
      "pool": 0
     },
@@ -13673,13 +13883,15 @@ window.TRIP = {
     "beachMin": 12,
     "beachMode": "walk",
     "perHeadNight": 4441,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 56,
+    "total": 45,
     "parts": {
      "reviews": 94,
-     "budget": 37,
+     "budget": 0,
      "beach": 60,
      "pool": 0
     },
@@ -13738,7 +13950,7 @@ window.TRIP = {
     "beach": "Shared beach access listed"
    },
    "verdict": "Not a fit.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.7784,
     7.7407
@@ -13750,13 +13962,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2101,
-    "town": false
+    "town": false,
+    "capRoom": 3000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 65,
     "parts": {
      "reviews": 87,
-     "budget": 93,
+     "budget": 83,
      "beach": null,
      "pool": 0
     },
@@ -13828,13 +14042,15 @@ window.TRIP = {
     "beachMin": 7,
     "beachMode": "walk",
     "perHeadNight": 2698,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 69,
+    "total": 75,
     "parts": {
      "reviews": null,
-     "budget": 79,
+     "budget": 100,
      "beach": 85,
      "pool": 70
     },
@@ -13910,13 +14126,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 2983,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 72,
+    "total": 80,
     "parts": {
      "reviews": 90,
-     "budget": 72,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -13988,13 +14206,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 2811,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 80,
     "parts": {
      "reviews": 89,
-     "budget": 76,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14068,13 +14288,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "drive",
     "perHeadNight": 2563,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 78,
     "parts": {
      "reviews": 83,
-     "budget": 82,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14134,7 +14356,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Fine; inland.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14146,13 +14368,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "drive",
     "perHeadNight": 3190,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 69,
+    "total": 77,
     "parts": {
      "reviews": 85,
-     "budget": 67,
+     "budget": 94,
      "beach": 20,
      "pool": 100
     },
@@ -14212,7 +14436,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Same as B7, fewer reviews.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14224,13 +14448,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "drive",
     "perHeadNight": 3190,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 76,
     "parts": {
      "reviews": 83,
-     "budget": 67,
+     "budget": 94,
      "beach": 20,
      "pool": 100
     },
@@ -14292,7 +14518,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Over 45k and steep utility prepay.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14304,13 +14530,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "drive",
     "perHeadNight": 3780,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 66,
+    "total": 73,
     "parts": {
      "reviews": 90,
-     "budget": 53,
+     "budget": 74,
      "beach": 20,
      "pool": 100
     },
@@ -14372,7 +14600,7 @@ window.TRIP = {
     "beach": "15 min walk"
    },
    "verdict": "Walks to the pier beach only; over 45k.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14384,13 +14612,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 3744,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 75,
+    "total": 81,
     "parts": {
      "reviews": 91,
-     "budget": 54,
+     "budget": 75,
      "beach": 60,
      "pool": 100
     },
@@ -14464,13 +14694,15 @@ window.TRIP = {
     "beachMin": 3,
     "beachMode": "walk",
     "perHeadNight": 4122,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 79,
+    "total": 84,
     "parts": {
      "reviews": 87,
-     "budget": 45,
+     "budget": 63,
      "beach": 100,
      "pool": 100
     },
@@ -14533,7 +14765,7 @@ window.TRIP = {
     "beach": "7 min to Nai Harn (walk or drive not stated)"
    },
    "verdict": "Utility bill could add 4-12k.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14545,13 +14777,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3734,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 66,
+    "total": 73,
     "parts": {
      "reviews": 89,
-     "budget": 54,
+     "budget": 76,
      "beach": 20,
      "pool": 100
     },
@@ -14613,7 +14847,7 @@ window.TRIP = {
     "beach": "Rawai and Kata by short drive"
    },
    "verdict": "Fine, inland.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14625,13 +14859,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3474,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 67,
+    "total": 75,
     "parts": {
      "reviews": 87,
-     "budget": 60,
+     "budget": 84,
      "beach": 20,
      "pool": 100
     },
@@ -14693,7 +14929,7 @@ window.TRIP = {
     "beach": "Nai Harn 5-10 minutes (mode unstated)"
    },
    "verdict": "Skip.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14705,13 +14941,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 3635,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 73,
+    "total": 80,
     "parts": {
      "reviews": 89,
-     "budget": 56,
+     "budget": 79,
      "beach": null,
      "pool": 100
     },
@@ -14771,7 +15009,7 @@ window.TRIP = {
     "beach": "Nai Harn / Ya Nui closest, drive"
    },
    "verdict": "Unproven; skip.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14783,13 +15021,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3373,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 55,
+    "total": 63,
     "parts": {
      "reviews": null,
-     "budget": 63,
+     "budget": 88,
      "beach": 20,
      "pool": 100
     },
@@ -14852,7 +15092,7 @@ window.TRIP = {
     "beach": "8 minutes by car to Nai Harn / Rawai"
    },
    "verdict": "Skip.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -14864,13 +15104,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "drive",
     "perHeadNight": 3823,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 64,
+    "total": 70,
     "parts": {
      "reviews": 84,
-     "budget": 52,
+     "budget": 73,
      "beach": 20,
      "pool": 100
     },
@@ -14944,13 +15186,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2984,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 83,
     "parts": {
      "reviews": 81,
-     "budget": 72,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -15013,7 +15257,7 @@ window.TRIP = {
     "beach": "5 minute drive to Nai Harn and Rawai"
    },
    "verdict": "Avoid.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -15025,13 +15269,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3525,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 75,
     "parts": {
      "reviews": 88,
-     "budget": 59,
+     "budget": 83,
      "beach": 20,
      "pool": 100
     },
@@ -15104,13 +15350,15 @@ window.TRIP = {
     "beachMin": 2,
     "beachMode": "walk",
     "perHeadNight": 2136,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 80,
+    "total": 82,
     "parts": {
      "reviews": 92,
-     "budget": 92,
+     "budget": 100,
      "beach": 100,
      "pool": 0
     },
@@ -15172,7 +15420,7 @@ window.TRIP = {
     "beach": "10 minutes from Nai Harn (mode unstated)"
    },
    "verdict": "4BR inland option.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -15184,13 +15432,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3476,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 69,
+    "total": 76,
     "parts": {
      "reviews": 91,
-     "budget": 60,
+     "budget": 84,
      "beach": 20,
      "pool": 100
     },
@@ -15249,7 +15499,7 @@ window.TRIP = {
     "beach": "Rawai and Nai Harn a short drive"
    },
    "verdict": "4BR, thin reviews.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -15261,13 +15511,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3654,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 65,
+    "total": 71,
     "parts": {
      "reviews": 83,
-     "budget": 56,
+     "budget": 78,
      "beach": 20,
      "pool": 100
     },
@@ -15329,7 +15581,7 @@ window.TRIP = {
     "beach": "Near Nai Harn; no distance given"
    },
    "verdict": "Over 45k; fine.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.327,
     7.773
@@ -15341,13 +15593,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 3841,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 72,
+    "total": 79,
     "parts": {
      "reviews": 92,
-     "budget": 51,
+     "budget": 72,
      "beach": null,
      "pool": 100
     },
@@ -15423,13 +15677,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 4149,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 73,
     "parts": {
      "reviews": 85,
-     "budget": 44,
+     "budget": 62,
      "beach": null,
      "pool": 100
     },
@@ -15504,13 +15760,15 @@ window.TRIP = {
     "beachMin": 3,
     "beachMode": "walk",
     "perHeadNight": 5317,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 68,
+    "total": 70,
     "parts": {
      "reviews": 92,
-     "budget": 16,
+     "budget": 23,
      "beach": 100,
      "pool": 70
     },
@@ -15572,7 +15830,7 @@ window.TRIP = {
     "beach": "Short drive down the hill to Kata Beach"
    },
    "verdict": "Only Kata 3BR pool villa under 60k.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.298,
     7.82
@@ -15584,13 +15842,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3823,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 64,
+    "total": 70,
     "parts": {
      "reviews": 84,
-     "budget": 52,
+     "budget": 73,
      "beach": 20,
      "pool": 100
     },
@@ -15665,13 +15925,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "walk",
     "perHeadNight": 4082,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 74,
+    "total": 80,
     "parts": {
      "reviews": 94,
-     "budget": 46,
+     "budget": 64,
      "beach": 85,
      "pool": 70
     },
@@ -15745,7 +16007,9 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 1818,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 85,
@@ -15813,7 +16077,7 @@ window.TRIP = {
     "beach": "9 min walk"
    },
    "verdict": "No.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.29811,
     7.84752
@@ -15825,13 +16089,15 @@ window.TRIP = {
     "beachMin": 9,
     "beachMode": "walk",
     "perHeadNight": 3368,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 75,
+    "total": 83,
     "parts": {
      "reviews": 82,
-     "budget": 63,
+     "budget": 88,
      "beach": 85,
      "pool": 70
     },
@@ -15905,13 +16171,15 @@ window.TRIP = {
     "beachMin": 20,
     "beachMode": "walk",
     "perHeadNight": 2991,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 77,
+    "total": 85,
     "parts": {
      "reviews": 93,
-     "budget": 72,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -15982,13 +16250,15 @@ window.TRIP = {
     "beachMin": 20,
     "beachMode": "walk",
     "perHeadNight": 2250,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 56,
+    "total": 60,
     "parts": {
      "reviews": null,
-     "budget": 89,
+     "budget": 100,
      "beach": 60,
      "pool": 0
     },
@@ -16053,7 +16323,7 @@ window.TRIP = {
     "beach": "10 min walk"
    },
    "verdict": "Best walkable private-pool pick under 60k.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.283,
     7.95
@@ -16065,13 +16335,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 3913,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 79,
+    "total": 85,
     "parts": {
      "reviews": 92,
-     "budget": 50,
+     "budget": 70,
      "beach": 85,
      "pool": 100
     },
@@ -16145,13 +16417,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 4039,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 73,
+    "total": 78,
     "parts": {
      "reviews": 91,
-     "budget": 47,
+     "budget": 65,
      "beach": 60,
      "pool": 100
     },
@@ -16214,7 +16488,7 @@ window.TRIP = {
     "beach": "15 min walk"
    },
    "verdict": "Good walkable aparthotel; free cancellation.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.295,
     7.99
@@ -16226,13 +16500,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 3337,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 72,
+    "total": 79,
     "parts": {
      "reviews": 86,
-     "budget": 63,
+     "budget": 89,
      "beach": 60,
      "pool": 70
     },
@@ -16294,7 +16570,7 @@ window.TRIP = {
     "beach": "12 min walk"
    },
    "verdict": "3 baths + walk to Surin; middling value.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.295,
     7.99
@@ -16306,13 +16582,15 @@ window.TRIP = {
     "beachMin": 12,
     "beachMode": "walk",
     "perHeadNight": 3822,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 70,
+    "total": 76,
     "parts": {
      "reviews": 91,
-     "budget": 52,
+     "budget": 73,
      "beach": 60,
      "pool": 70
     },
@@ -16385,13 +16663,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "walk",
     "perHeadNight": 2249,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 70,
+    "total": 73,
     "parts": {
      "reviews": 89,
-     "budget": 89,
+     "budget": 100,
      "beach": 60,
      "pool": 0
     },
@@ -16462,13 +16742,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "walk",
     "perHeadNight": 2530,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 72,
+    "total": 77,
     "parts": {
      "reviews": 86,
-     "budget": 83,
+     "budget": 100,
      "beach": 85,
      "pool": 0
     },
@@ -16531,7 +16813,7 @@ window.TRIP = {
     "beach": "Short drive (no walk given)"
    },
    "verdict": "Great reviews; shared pool; not walkable.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.283,
     7.95
@@ -16543,13 +16825,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3373,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 67,
+    "total": 74,
     "parts": {
      "reviews": 95,
-     "budget": 63,
+     "budget": 88,
      "beach": 20,
      "pool": 70
     },
@@ -16611,7 +16895,7 @@ window.TRIP = {
     "beach": "5-min drive from Kamala Beach"
    },
    "verdict": "Prefer the Duplex at the same price.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.283,
     7.95
@@ -16623,13 +16907,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3913,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 67,
+    "total": 73,
     "parts": {
      "reviews": 93,
-     "budget": 50,
+     "budget": 70,
      "beach": 20,
      "pool": 100
     },
@@ -16691,7 +16977,7 @@ window.TRIP = {
     "beach": "Kamala Beach 2 km; Surin 5-min drive"
    },
    "verdict": "Fine, inland.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.283,
     7.95
@@ -16703,13 +16989,15 @@ window.TRIP = {
     "beachMin": 5,
     "beachMode": "drive",
     "perHeadNight": 3717,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 65,
+    "total": 71,
     "parts": {
      "reviews": 84,
-     "budget": 54,
+     "budget": 76,
      "beach": 20,
      "pool": 100
     },
@@ -16780,13 +17068,15 @@ window.TRIP = {
     "beachMin": 12,
     "beachMode": "walk",
     "perHeadNight": 4046,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 66,
+    "total": 71,
     "parts": {
      "reviews": 84,
-     "budget": 47,
+     "budget": 65,
      "beach": 60,
      "pool": 70
     },
@@ -16860,13 +17150,15 @@ window.TRIP = {
     "beachMin": 15,
     "beachMode": "drive",
     "perHeadNight": 2405,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 79,
     "parts": {
      "reviews": 86,
-     "budget": 86,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16938,13 +17230,15 @@ window.TRIP = {
     "beachMin": null,
     "beachMode": "unknown",
     "perHeadNight": 2996,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 63,
+    "total": 71,
     "parts": {
      "reviews": 89,
-     "budget": 72,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -17007,7 +17301,7 @@ window.TRIP = {
     "beach": "10-min drive from Bang Tao Beach"
    },
    "verdict": "Avoid.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.3923,
     7.8804
@@ -17019,13 +17313,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3238,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 70,
+    "total": 78,
     "parts": {
      "reviews": 89,
-     "budget": 66,
+     "budget": 92,
      "beach": 20,
      "pool": 100
     },
@@ -17094,13 +17390,15 @@ window.TRIP = {
     "beachMin": 8,
     "beachMode": "walk",
     "perHeadNight": 2288,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 61,
+    "total": 64,
     "parts": {
      "reviews": null,
-     "budget": 88,
+     "budget": 100,
      "beach": 85,
      "pool": 0
     },
@@ -17161,7 +17459,7 @@ window.TRIP = {
     "beach": "10-minute drive to Bang Tao / Laguna / Layan"
    },
    "verdict": "Unproven.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.3923,
     7.8804
@@ -17173,13 +17471,15 @@ window.TRIP = {
     "beachMin": 10,
     "beachMode": "drive",
     "perHeadNight": 3036,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 69,
+    "total": 77,
     "parts": {
      "reviews": 81,
-     "budget": 71,
+     "budget": 99,
      "beach": 20,
      "pool": 100
     },
@@ -17240,7 +17540,7 @@ window.TRIP = {
     "beach": "12 min walk"
    },
    "verdict": "Avoid.",
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.34,
     7.83
@@ -17252,13 +17552,15 @@ window.TRIP = {
     "beachMin": 12,
     "beachMode": "walk",
     "perHeadNight": 3062,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 79,
+    "total": 88,
     "parts": {
      "reviews": 89,
-     "budget": 70,
+     "budget": 98,
      "beach": 60,
      "pool": 100
     },
@@ -17332,13 +17634,15 @@ window.TRIP = {
     "beachMin": 1,
     "beachMode": "walk",
     "perHeadNight": 4146,
-    "town": false
+    "town": false,
+    "capRoom": 5000,
+    "insideCap": false
    },
    "score": {
-    "total": 79,
+    "total": 85,
     "parts": {
      "reviews": 89,
-     "budget": 44,
+     "budget": 62,
      "beach": 100,
      "pool": 100
     },

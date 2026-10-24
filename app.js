@@ -12,6 +12,25 @@
   const poolOf = (type, place) => ITEMS.filter(it => it.type === type && it.place === place);
   const samePlace = (it, place) => it.place === place || (place === "aonang" && it.place === "krabi");
 
+  // ---- who: one of five names; reactions and comments tagged with it ----
+  const NAMES = ["Mira", "Imran", "Sisir", "Sparsh", "Anushka"];
+  const who = () => NAMES.includes(C.state.who) ? C.state.who : null;
+  const store = (key, def) => { try { return JSON.parse(localStorage.getItem(key)) ?? def; } catch (e) { return def; } };
+  const save = (key, v) => { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} };
+  let rejects = store("trip.rejects.v1", {});     // itemId -> [names]
+  let comments = store("trip.comments.v1", {});   // itemId -> [{who, text, at}]
+  let lockBy = store("trip.lockby.v1", {});       // decisionId -> name
+  let pickBy = store("trip.pickby.v1", {});       // itemId -> name
+  const today = () => new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  function toggleReject(id) { const w = who(); if (!w) return gate(); const a = rejects[id] || (rejects[id] = []); const i = a.indexOf(w); if (i >= 0) a.splice(i, 1); else a.push(w); save("trip.rejects.v1", rejects); render(); }
+  function addComment(id, text) { const w = who(); if (!w) return gate(); if (!text.trim()) return; (comments[id] || (comments[id] = [])).push({ who: w, text: text.trim(), at: today() }); save("trip.comments.v1", comments); render(); }
+  function removeComment(id, i) { if (comments[id]) { comments[id].splice(i, 1); save("trip.comments.v1", comments); render(); } }
+  function gate() { $("#gate").hidden = false; }
+  function pickName(n) { C.setWho(n); $("#gate").hidden = true; document.querySelectorAll("#gate .names button").forEach(b => b.classList.toggle("on", b.dataset.name === n)); }
+  const rejectedBy = id => rejects[id] || [];
+  const commentCount = id => (comments[id] || []).length;
+  const tagsFor = id => `${rejectedBy(id).length ? `<span class="act rej" title="Not for: ${h(rejectedBy(id).join(", "))}">✕ ${h(rejectedBy(id).join(", "))}</span>` : ""}${commentCount(id) ? `<span class="act" title="Comments">${commentCount(id)} comment${commentCount(id) === 1 ? "" : "s"}</span>` : ""}`;
+
   // ---- picks (items added to a day) ----
   const LSP = "trip.picks.v1";
   let picks = {}; try { picks = JSON.parse(localStorage.getItem(LSP)) || {}; } catch (e) {}
@@ -19,13 +38,14 @@
   const isPicked = (day, id) => (picks[day] || []).includes(id);
   const DAYS_FOR = place => T.days.filter(d => d.base === place || (place === "krabi" && d.base === "aonang")).map(d => d.n);
   function dayOfPick(id) { for (const d in picks) if (picks[d].includes(id)) return Number(d); return null; }
-  function assign(id, day) { for (const d in picks) picks[d] = picks[d].filter(x => x !== id); if (day) (picks[day] || (picks[day] = [])).push(id); savePicks(); render(); }
+  function assign(id, day) { const w = who(); if (!w) return gate(); for (const d in picks) picks[d] = picks[d].filter(x => x !== id); if (day) { (picks[day] || (picks[day] = [])).push(id); pickBy[id] = w; } else delete pickBy[id]; savePicks(); save("trip.pickby.v1", pickBy); render(); }
   function chips(it) {
     const days = DAYS_FOR(it.place); if (!days.length) return "";
     const on = dayOfPick(it.id);
     return `<span class="chips"><span class="lbl">Day</span>${days.map(n => `<button data-assign="${it.id}" data-day="${n}" class="${on === n ? "on" : ""}" aria-pressed="${on === n}" title="Put on day ${n}">${n}</button>`).join("")}${on ? `<button data-assign="${it.id}" data-day="" title="Remove from the plan">×</button>` : ""}</span>`;
   }
-  function togglePick(day, id) { const a = picks[day] || (picks[day] = []); const i = a.indexOf(id); if (i >= 0) a.splice(i, 1); else a.push(id); savePicks(); render(); }
+  function togglePick(day, id) { const w = who(); if (!w) return gate(); const a = picks[day] || (picks[day] = []); const i = a.indexOf(id); if (i >= 0) { a.splice(i, 1); delete pickBy[id]; } else { a.push(id); pickBy[id] = w; } savePicks(); save("trip.pickby.v1", pickBy); render(); }
+  const lockWith = (dId, oId) => { const w = who(); if (!w) return gate(); const was = C.state.locks[dId] === oId; if (was) delete lockBy[dId]; else lockBy[dId] = w; save("trip.lockby.v1", lockBy); C.lock(dId, oId); };
   const itemCost = it => it.priceINR ? it.priceINR : it.priceTHB ? inr(it.priceTHB) * T.travellers : 0;
   const FLIGHTS_TOTAL = (T.flights && T.flights.perHeadINR || 0) * T.travellers;
   // miscellaneous budget lines: {name, inr, per: "head"|"group", who, at}
@@ -33,7 +53,7 @@
   let misc = []; try { misc = JSON.parse(localStorage.getItem(LSM)) || []; } catch (e) {}
   const saveMisc = () => { try { localStorage.setItem(LSM, JSON.stringify(misc)); } catch (e) {} };
   const miscGroup = m => m.per === "head" ? m.inr * T.travellers : m.inr;
-  function addMisc(name, inr, per) { if (!name.trim() || !(inr > 0)) return; misc.push({ name: name.trim(), inr: Math.round(inr), per, who: C.state.who || "someone", at: new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" }) }); saveMisc(); render(); }
+  function addMisc(name, inr, per) { const w = who(); if (!w) return gate(); if (!name.trim() || !(inr > 0)) return; misc.push({ name: name.trim(), inr: Math.round(inr), per, who: w, at: today() }); saveMisc(); render(); }
   function removeMisc(i) { misc.splice(i, 1); saveMisc(); render(); }
   function budget() {
     const b = C.budget(); let extra = 0;
@@ -82,7 +102,7 @@
     if (SF.kind !== "all") out = out.filter(it => it.facts && it.facts.kind === SF.kind);
     if (SF.pool) out = out.filter(it => it.facts && (it.facts.pool === "private" || it.facts.pool === "shared"));
     if (SF.walk) out = out.filter(it => it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null && it.facts.beachMin <= 15);
-    if (SF.budget) out = out.filter(it => it.facts && it.facts.perHeadNight !== null && it.facts.perHeadNight <= 3000);
+    if (SF.budget) out = out.filter(it => it.facts && it.facts.insideCap);
     const key = { score: it => -(it.score && it.score.total || 0), price: it => (it.facts && it.facts.perHeadNight) || 1e9, rating: it => -((it.score && it.score.parts.reviews) || 0), beach: it => (it.facts && it.facts.beachMode === "walk" && it.facts.beachMin !== null) ? it.facts.beachMin : 999 }[SF.sort];
     return out.sort((a, b) => key(a) - key(b) || ((b.score && b.score.total) || 0) - ((a.score && a.score.total) || 0));
   }
@@ -97,7 +117,7 @@
     bits.push({ villa: "Villa", hotel: "Hotel", hostel: "Hostel" }[f.kind] || "");
     if (f.pool === "private") bits.push("private pool"); else if (f.pool === "shared") bits.push("pool");
     if (f.beachMode === "walk" && f.beachMin !== null) bits.push(`${f.beachMin} min walk to the beach`); else if (f.beachMode === "drive") bits.push("beach by car"); else if (f.beachMode === "none" && !f.town) bits.push("no beach");
-    if (f.perHeadNight) bits.push(`about ${fmt(f.perHeadNight)} INR a head a night`);
+    if (f.perHeadNight) bits.push(`about ${fmt(f.perHeadNight)} INR a head a night${f.capRoom ? (f.insideCap ? ", inside the " + fmt(f.capRoom) + " a room cap" : ", over the " + fmt(f.capRoom) + " a room cap") : ""}`);
     return bits.filter(Boolean).join(" · ");
   }
 
@@ -108,7 +128,7 @@
     const price = it.priceINR ? `${fmt(it.priceINR)}<small>INR</small>` : it.priceTHB ? `฿${fmt(it.priceTHB)}<small>a head</small>` : (it.priceTHB === 0 ? `free` : `—`);
     const meta = [it.area, it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}` : null, it.when].filter(Boolean).join(" · ");
     const facts = it.type === "stay" ? factsLine(it) : "";
-    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan</span>` : ""}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
+    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickBy[it.id] ? ", " + h(pickBy[it.id]) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
   }
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
@@ -120,7 +140,7 @@
       const meta = it && it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""} · ${it.reviewSource || ""}` : "";
       const price = o.costINR ? `${fmt(o.costINR)}<small>INR · ${h(o.unit || "")}</small>` : `<small>${h(o.unit || "price pending")}</small>`;
       const sub = (o.items || []).length ? `<span class="meta">${o.items.length} stays inside the cap: ${o.items.slice(0, 3).map(i => h(T.items[i].name)).join(", ")}${o.items.length > 3 ? "…" : ""}</span>` : "";
-      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" : "Lock"}</span><span class="meta">${h(note)}</span>${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
+      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" + (lockBy[d.id] ? " by " + h(lockBy[d.id]) : "") : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
     }).join("");
     return `<div class="sec"><h2>Decide: <b>${h(d.title)}</b></h2>${rows}<p class="small pending" style="margin:.6em 0 0">Tap a name for the full card. Lock to count it in the budget; tap again to unlock.</p></div>`;
   }
@@ -135,7 +155,7 @@
   function poolBlock(title, type, place, firstIds, day) {
     if (type === "stay") {
       const list = stayList(poolOf("stay", place));
-      return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length)}<p class="small pending" style="margin:0 0 .6em">The score (0 to 100) weighs reviews 35, budget 30, beach 20 and pool 15. Unknown facts count as neutral, so incomplete listings sit in the middle. Open a card for the breakdown.</p>${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}</div>`;
+      return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length)}<p class="small pending" style="margin:0 0 .6em">The score (0 to 100) weighs reviews 35, budget 30, beach 20 and pool 15. Budget cap: about 3K a room on the first two nights (Phuket Town, Phi Phi), 3K to 5K a room from Ao Nang on; full marks up to the cap, zero at twice the cap. Unknown facts count as neutral. Open a card for the breakdown.</p>${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}</div>`;
     }
     const first = firstIds.filter(id => T.items[id] && T.items[id].type === type);
     const rest = poolOf(type, place).filter(it => !first.includes(it.id)).map(it => it.id);
@@ -148,7 +168,7 @@
   }
   function notesBlock(day) {
     const items = (C.state.notes[day] || []).map(n => `<p class="item"><b>${h(n.who)}</b> ${h(n.text)} <span class="small pending">${h(n.at)}</span></p>`).join("");
-    return `<div class="sec notes"><h2>Day ${day} notes</h2>${items || `<p class="pending">Nothing yet. Write the first one.</p>`}<form data-day="${day}"><textarea placeholder="Write here"></textarea><button type="submit">Add</button></form><p class="small who" style="margin-top:.8em">Writing as <input id="who" value="${h(C.state.who)}" placeholder="your name"></p></div>`;
+    return `<div class="sec notes"><h2>Day ${day} notes</h2>${items || `<p class="pending">Nothing yet. Write the first one.</p>`}<form data-day="${day}"><textarea placeholder="Write here"></textarea><button type="submit">Add</button></form><p class="small who" style="margin-top:.8em">Writing as <b class="ink">${h(who() || "nobody yet")}</b> · <button class="linkish" data-gate>switch name</button></p></div>`;
   }
   function itineraryTab(d) {
     const n = d.n;
@@ -254,7 +274,7 @@
       <div class="sec"><h2>Where it goes, per head</h2><div class="opt"><div><span class="name">Flights</span></div><div class="fig">${ph(b.flights)}<small>booked</small></div></div><div class="opt"><div><span class="name">Locked and chosen</span><span class="dur">stays, day choices, items on days</span></div><div class="fig">${ph(b.chosen)}<small>a head</small></div></div><div class="opt"><div><span class="name">Miscellaneous</span><span class="dur">${misc.length} line${misc.length === 1 ? "" : "s"}</span></div><div class="fig">${ph(b.misc)}<small>a head</small></div></div></div>
       <div class="sec notes"><h2>Miscellaneous</h2>${miscRows || `<p class="pending">Nothing yet. Visa cash float, SIMs, insurance, tips, a night out: type a name and a number.</p>`}
         <form id="miscform" class="miscform"><input id="misc-name" placeholder="What (e.g. eSIM, travel insurance)" required><input id="misc-inr" type="number" min="1" step="1" inputmode="numeric" placeholder="INR" required><select id="misc-per"><option value="head">a head</option><option value="group">for the group</option></select><button type="submit">Add</button></form>
-        <p class="small who" style="margin-top:.8em">Adding as <input id="who" value="${h(C.state.who)}" placeholder="your name"></p></div>
+        <p class="small who" style="margin-top:.8em">Adding as <b class="ink">${h(who() || "nobody yet")}</b> · <button class="linkish" data-gate>switch name</button></p></div>
       <div class="sec"><h2>Booked</h2>${flightRows}${F ? `<p class="small pending" style="margin:.6em 0 0">${h(F.cancel)} Bags: ${h(F.out.bags)}.</p>` : ""}</div>
       <div class="sec"><h2>Locked choices <b>${fmt(lockedRows.reduce((a, r) => a + (r.o.costINR || 0), 0))} INR</b></h2>${lockedRows.length ? lockedRows.map(({ d, o }) => { const it = o.item ? T.items[o.item] : null; return `<div class="opt" ${it ? `role="button" tabindex="0" data-item="${it.id}"` : ""}><div><span class="name">${h(o.label || (it && it.name) || o.id)}</span><span class="dur">${h(d.title)}${o.unit ? " · " + h(o.unit) : ""}</span></div><div class="fig">${o.costINR ? fmt(o.costINR) + "<small>INR</small>" : "—"}</div></div>`; }).join("") : `<p class="pending">Nothing locked yet. Open a day's Decide tab.</p>`}</div>
       <div class="sec"><h2>Added to days <b>${fmt(pickRows.reduce((a, r) => a + itemCost(r.it), 0))} INR</b></h2>${pickRows.length ? pickRows.map(({ day, it }) => `<div class="opt" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span><span class="dur">Day ${day} · ${h(PLACE(it.place).name)}${it.priceTHB ? " · ฿" + fmt(it.priceTHB) + " a head" : ""}</span></div><div class="fig">${itemCost(it) ? fmt(itemCost(it)) + "<small>INR</small>" : "free"}</div></div>`).join("") : `<p class="pending">Nothing added yet. Use the day chips on any place.</p>`}</div>
@@ -292,6 +312,10 @@
       ${it.complaints.length ? `<h3>Watch out</h3><ul>${it.complaints.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}
       <h3>Links</h3><div class="links">${links}</div>
+      <h3>The five of us</h3>
+      <p class="small">${rejectedBy(it.id).length ? `Not for: <b class="ink">${h(rejectedBy(it.id).join(", "))}</b>.` : "Nobody has ruled this out."}${pickBy[it.id] ? ` Added to a day by ${h(pickBy[it.id])}.` : ""}</p>
+      <div class="cta" style="margin-top:.4em"><button class="ghost" data-reject="${it.id}">${who() && rejectedBy(it.id).includes(who()) ? "Undo: not for me" : "Not for me"}</button></div>
+      <div class="notes" style="margin-top:1em">${(comments[it.id] || []).map((c, i) => `<p class="item"><b>${h(c.who)}</b> ${h(c.text)} <span class="small pending">${h(c.at)}</span>${c.who === who() ? ` <button class="linkish small" data-cdel="${it.id}" data-i="${i}">remove</button>` : ""}</p>`).join("") || `<p class="pending">No comments yet.</p>`}<form data-comment="${it.id}"><textarea placeholder="${who() ? "Comment as " + h(who()) : "Pick your name to comment"}"></textarea><button type="submit">Add</button></form></div>
       <div class="cta">${decOpt ? `<button data-lockcard="${decOpt.d.id}" data-opt="${decOpt.o.id}">${lockedHere ? "Locked as our choice · unlock" : "Lock as our choice"}</button>` : (DAYS_FOR(it.place).length ? `<span class="small" style="align-self:center">On the plan:</span>${chips(it)}` : "")}<button class="ghost" data-close="item">Close</button></div>
       ${decOpt ? `<p class="small pending">Part of the decision "${h(decOpt.d.title)}"${decOpt.o.costINR ? ": " + fmt(decOpt.o.costINR) + " INR, " + h(decOpt.o.unit || "") : ""}.</p>` : ""}
       <p class="src">Snapshot ${h(T.snapshot)}. Sources: ${it.sources.map(h).join("; ")}. Prices move; check the link before paying.</p>
@@ -303,6 +327,7 @@
   function render() {
     const r = route(), b = budget();
     $("#budget").innerHTML = `<button data-go="budget" style="text-align:inherit"><div class="fig">${fmt(b.perHead)}</div><span>INR a head so far · ${fmt(b.total)} for five</span></button>`;
+    const wb = $("#whobar"); if (wb) wb.innerHTML = who() ? `<span class="small">You are <b class="ink">${h(who())}</b></span> <button class="linkish small" data-gate>switch</button>` : `<button class="linkish small" data-gate>Pick your name</button>`;
     const sheet = $("#sheet"), card = $("#card");
     let page = "", tab = null, dayN = null;
     if (r.page.startsWith("day-")) { dayN = Number(r.page.slice(4)); const res = dayPage(dayN, r.tab); if (res) { page = res.html; tab = res.tab; } else dayN = null; }
@@ -357,22 +382,33 @@
     const fb = e.target.closest("[data-f]"); if (fb) { const k = fb.dataset.f, v = fb.dataset.v; if (k === "kind" || k === "sort") SF[k] = v; else SF[k] = !SF[k]; render(); return; }
     const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 900 }); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }
-    const lc = e.target.closest("[data-lockcard]"); if (lc) { C.lock(lc.dataset.lockcard, lc.dataset.opt); return; }
+    const lc = e.target.closest("[data-lockcard]"); if (lc) { lockWith(lc.dataset.lockcard, lc.dataset.opt); return; }
     const rail = e.target.closest(".rail button"); if (rail) { selectDay(Number(rail.dataset.i)); return; }
     const act = e.target.closest(".act"); const lockRow = e.target.closest("[data-lock]");
-    if (act && lockRow) { C.lock(lockRow.dataset.lock, lockRow.dataset.opt); return; }
+    if (act && lockRow && !e.target.closest(".rej")) { lockWith(lockRow.dataset.lock, lockRow.dataset.opt); return; }
     const row = e.target.closest("[data-item]"); if (row && !e.target.closest("a")) { go(base(route()) + "/i-" + row.dataset.item); return; }
-    const grp = e.target.closest("[data-items]"); if (grp && !e.target.closest("a")) { const first = grp.dataset.items.split(",")[0]; if (first) go(base(route()) + "/i-" + first); else C.lock(grp.dataset.lock, grp.dataset.opt); return; }
+    const grp = e.target.closest("[data-items]"); if (grp && !e.target.closest("a")) { const first = grp.dataset.items.split(",")[0]; if (first) go(base(route()) + "/i-" + first); else lockWith(grp.dataset.lock, grp.dataset.opt); return; }
   });
   document.addEventListener("keydown", e => { const row = e.target.closest && e.target.closest("[data-item],[data-lock]"); if (row && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); row.click(); } });
   document.addEventListener("submit", e => {
     const mf = e.target.closest("#miscform"); if (mf) { e.preventDefault(); addMisc($("#misc-name").value, Number($("#misc-inr").value), $("#misc-per").value); return; }
     const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
-  document.addEventListener("click", e => { const del = e.target.closest("[data-misc-del]"); if (del) removeMisc(Number(del.dataset.miscDel)); });
+  document.addEventListener("click", e => {
+    const del = e.target.closest("[data-misc-del]"); if (del) { removeMisc(Number(del.dataset.miscDel)); return; }
+    const rj = e.target.closest("[data-reject]"); if (rj) { toggleReject(rj.dataset.reject); return; }
+    const cd = e.target.closest("[data-cdel]"); if (cd) { removeComment(cd.dataset.cdel, Number(cd.dataset.i)); return; }
+    const nm = e.target.closest("[data-name]"); if (nm) { pickName(nm.dataset.name); return; }
+    if (e.target.closest("[data-gate]")) { gate(); return; }
+  });
+  document.addEventListener("submit", e => { const f = e.target.closest("form[data-comment]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; addComment(f.dataset.comment, v); });
   document.addEventListener("change", e => { if (e.target.id === "who") C.setWho(e.target.value); });
-  C.onChange(() => { const act = document.activeElement, actDay = act && act.closest && act.closest("form[data-day]")?.dataset.day, who = act && act.id === "who"; const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; }); render(); document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d]) t.value = drafts[d]; }); if (who) { const w = $("#who"); if (w) { w.focus(); w.setSelectionRange(w.value.length, w.value.length); } } else if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); } });
+  C.onChange(() => { const act = document.activeElement, actDay = act && act.closest && act.closest("form[data-day]")?.dataset.day; const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; }); render(); document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d]) t.value = drafts[d]; }); if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); } });
 
   // ---- boot ----
+  const gateEl = document.createElement("section"); gateEl.id = "gate"; gateEl.className = "gate"; gateEl.hidden = !!who();
+  gateEl.innerHTML = `<div class="gatebox"><p class="eyebrow">Who is this?</p><h1 class="disp" style="font-size:clamp(28px,4vw,48px);margin:.2em 0 .5em">Pick your name</h1><p class="small">Locks, picks, comments and budget lines get tagged with it. You can switch any time.</p><div class="names">${NAMES.map(n => `<button data-name="${n}" class="${who() === n ? "on" : ""}">${n}</button>`).join("")}</div></div>`;
+  document.body.appendChild(gateEl);
+  const wbEl = document.createElement("div"); wbEl.id = "whobar"; wbEl.className = "whobar"; document.querySelector(".top .brand").after(wbEl);
   $("#rail").innerHTML = T.days.map((d, i) => `<button data-i="${i}"><span class="fig">${h(d.date.split(" ")[0])}</span><small>${h(d.weekday.slice(0, 3))} · ${h(PLACE(d.base).name)}</small></button>`).join("");
   $("#menu").innerHTML = `<button data-go="place-phuket">Phuket</button><button data-go="place-phiphi">Phi Phi</button><button data-go="place-aonang">Krabi</button><button data-go="budget">Budget</button>` + T.activities.map(a => `<button data-go="act-${a.id}">${h(a.title)}</button>`).join("") + `<button data-go="essentials">Essentials</button>`;
   render();

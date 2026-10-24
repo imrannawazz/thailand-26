@@ -146,6 +146,16 @@ table.plan th{width:6ch}
 .miscform button{font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--accent);padding:.5em 0}
 @media (max-width:720px){.miscform{grid-template-columns:1fr 1fr}.miscform input:first-child{grid-column:1 / -1}}
 
+/* name gate + who bar */
+.gate{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:rgba(244,241,234,.92);padding:24px}
+.gatebox{max-width:460px;width:100%;text-align:center}
+.names{display:flex;flex-wrap:wrap;gap:.6em;justify-content:center;margin-top:1.2em}
+.names button{font-style:normal;font-weight:500;font-size:1em;letter-spacing:.04em;padding:.7em 1.3em;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--ground);transition:border-color .3s,background .3s,color .3s}
+.names button:hover{border-color:var(--accent)}
+.names button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.whobar{font-style:normal;align-self:center}
+.act.rej{color:#b23a14}
+
 /* item rows (cards) */
 .row{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4vw;align-items:baseline;padding:.6em 0;border-top:1px solid var(--line);cursor:pointer;transition:opacity .4s cubic-bezier(.32,.72,0,1)}
 .row:first-of-type{border-top:0}
