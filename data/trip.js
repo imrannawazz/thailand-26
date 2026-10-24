@@ -443,7 +443,7 @@ window.TRIP = {
      "mode": "Ao Nang Princess ferry 14:30, free van to the hotel",
      "duration": "About 2 h via Railay; Ao Nang about 16:30",
      "costGroupTHB": 3250,
-     "note": "650 a head including the van to Ao Nang, Klong Muang, Tubkaek or Krabi Town hotels. Check in at Tonsai 30 min before. Leaves the morning free for a sunrise longtail. The pick.",
+     "note": "650 a head including the van to Ao Nang, Klong Muang, Tubkaek or Krabi Town hotels. Aggregators show 14:30 on some sites and 15:30 on others: trust the printed ticket and be at the pier 30 min early. Leaves the morning free. The pick.",
      "link": "https://www.aonangtravel.com/",
      "source": "research/hanuman-and-ferries.md F-B2"
     },
@@ -451,9 +451,9 @@ window.TRIP = {
      "mode": "Koh Yao Sun Smile speedboat 13:00",
      "duration": "About 1 h, one stop",
      "costGroupTHB": 4250,
-     "note": "850 a head.",
+     "note": "850 a head. The 13:00 is confirmed only as far as Koh Yao Yai in the latest check; confirm it continues to Ao Nang before relying on it.",
      "link": "https://www.visitthailandtoday.com/guides/phi-phi-to-krabi",
-     "source": "research/hanuman-and-ferries.md F-B3"
+     "source": "research/hanuman-and-ferries.md F-B3; research/phi-phi-night.md"
     },
     {
      "mode": "Bundhaya speedboat 10:30",
@@ -681,9 +681,9 @@ window.TRIP = {
     ]
    },
    "tips": [
-    "Maya Bay is open on your dates: no swimming, about an hour per group, 400 THB park fee in cash.",
-    "Day boats leave Phi Phi Leh by about 14:30, so an afternoon longtail gets Pileh and Maya with far fewer people.",
-    "Good private rooms are scarce and overpriced: a well-reviewed dorm for two or three of you plus one or two private rooms is the researched answer."
+    "Snorkel verdict: Wednesday 14:00 to 18:00. Tide rises to a 2.02 m high at 17:22 so Pileh is open, the day fleets leave Phi Phi Leh after 15:00, Maya Bay faces west so the afternoon light is on the beach, and there is no ferry to catch. Thursday sunrise is the fallback.",
+    "Book at Visa Travel Team on arrival (two minutes from the pier): private longtail, five people, four hours, stops on the receipt, under 3,500 THB. Park fee 400 each in cash at the Loh Samah kiosk; reef-safe sunscreen on before boarding; fins usually not included.",
+    "Sleep east: Rimlay for two, Hangover bunks for three. Avoid Ingphu and Tropical Garden (bed-bug reports) and anything on Loh Dalum (music till 02:00)."
    ]
   },
   {
@@ -1012,22 +1012,33 @@ window.TRIP = {
    "place": "phiphi",
    "options": [
     {
-     "id": "mixA",
-     "label": "Ivory double for two plus three Voyagers pods",
-     "costINR": 7348,
-     "unit": "about 2,600 to 3,300 THB for all five",
-     "note": "The research pick: Ivory (9.9 from 171) 3 min from the pier, Voyagers (10 from 1,304) quiet and inland with AC and safety boxes. About 7,500 to 9,300 INR total.",
+     "id": "rimlay-hangover",
+     "label": "Rimlay double for two plus three Hangover bunks",
+     "costINR": 9273,
+     "unit": "about 2,700 to 4,600 THB for all five",
+     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier. Hangover Chill and Hill: 9.6 from 406, on the hill behind the east village nearest the viewpoint stairs.",
      "items": [
-      "ivory-phi-phi",
-      "s2-voyagers"
+      "pp-rimlay",
+      "pp-hangover"
+     ]
+    },
+    {
+     "id": "villa-dormsin",
+     "label": "Phi Phi Villa Resort double plus three Dormsin pods",
+     "costINR": 10397,
+     "unit": "about 3,700 THB",
+     "note": "The backup: Villa Resort has the pool and 8.5 from almost 6,000 reviews; Dormsin 9.3 from 1,144, six minutes from the pier.",
+     "items": [
+      "pp-villa-resort",
+      "s2-dormsin"
      ]
     },
     {
      "id": "rooms",
-     "label": "All private rooms: Ivory, Phi Phi Hotel, Panmanee",
+     "label": "All private rooms near the pier: Ivory, Phi Phi Hotel, Panmanee",
      "costINR": 10228,
      "unit": "about 3,650 THB for three rooms",
-     "note": "Everyone in a room near the pier; Phi Phi Hotel has a pool; Panmanee 8.9 from 4,004 reviews. About 10,200 INR.",
+     "note": "Central rather than east; Phi Phi Hotel has a pool.",
      "items": [
       "ivory-phi-phi",
       "s2-phi-phi-hotel",
@@ -1036,23 +1047,22 @@ window.TRIP = {
     },
     {
      "id": "pods",
-     "label": "Five pods in one good hostel",
-     "costINR": 6393,
-     "unit": "about 1,800 to 2,300 THB for five",
-     "note": "Cheapest. Voyagers or By the Beach (9.8, pods with in-room lockers, 18 plus, cash). Blanco is the party hostel: music till 02:00.",
+     "label": "Five bunks in one good hostel",
+     "costINR": 7025,
+     "unit": "about 1,500 to 3,500 THB for five",
+     "note": "Hangover (east, quiet-ish) or Dormsin (central). Not Chaokoh: loud. Not Blanco unless you want the party in the room.",
      "items": [
-      "s2-voyagers",
-      "s2-by-the-beach",
+      "pp-hangover",
       "s2-dormsin",
-      "s2-blanco-beach-bar"
+      "s2-voyagers"
      ]
     },
     {
      "id": "tonsai",
      "item": "ton-sai-tropical",
      "costINR": 12852,
-     "unit": "night, 3 rooms, from-price; 2 min from the pier",
-     "note": "The mid-range hotel option if nobody wants a dorm."
+     "unit": "night, 3 rooms, from-price",
+     "note": "Mid-range hotel by the pier if nobody wants a dorm."
     }
    ]
   },
@@ -1064,9 +1074,9 @@ window.TRIP = {
     {
      "id": "longtail",
      "item": "private-longtail-from-tonsai",
-     "costINR": 14893,
-     "unit": "for five: private boat plus park fees",
-     "note": "The research pick: 14:00 to 18:00 after the day boats leave."
+     "costINR": 15455,
+     "unit": "for five: private boat about 3,500 plus 400 park fee each",
+     "note": "The pick. Book on arrival at Visa Travel Team (4.9 from 1,424, two minutes from the pier) or the pier counters, stops written on the receipt. 14:00 to 18:00: Viking Cave, Loh Samah snorkel, Pileh at 15:30 on the rising tide, Maya Bay last."
     },
     {
      "id": "dsd",
@@ -1279,7 +1289,33 @@ window.TRIP = {
     98.39156,
     7.88222
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1680,
+    "town": true
+   },
+   "score": {
+    "total": 89,
+    "parts": {
+     "reviews": 87,
+     "budget": 100,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "pearl-hotel-phuket": {
    "id": "pearl-hotel-phuket",
@@ -1338,7 +1374,31 @@ window.TRIP = {
     98.3922,
     7.88206
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1920,
+    "town": true
+   },
+   "score": {
+    "total": 86,
+    "parts": {
+     "reviews": 78,
+     "budget": 97,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
   },
   "phuket-merlin-hotel": {
    "id": "phuket-merlin-hotel",
@@ -1397,7 +1457,31 @@ window.TRIP = {
     98.3865,
     7.89044
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1820,
+    "town": true
+   },
+   "score": {
+    "total": 85,
+    "parts": {
+     "reviews": 74,
+     "budget": 100,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
   },
   "homa-phuket-town": {
    "id": "homa-phuket-town",
@@ -1455,7 +1539,31 @@ window.TRIP = {
     98.37857,
     7.90812
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 2252,
+    "town": true
+   },
+   "score": {
+    "total": 87,
+    "parts": {
+     "reviews": 89,
+     "budget": 89,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
   },
   "travelodge-phuket-town": {
    "id": "travelodge-phuket-town",
@@ -1493,7 +1601,33 @@ window.TRIP = {
     98.39,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1361,
+    "town": true
+   },
+   "score": {
+    "total": 91,
+    "parts": {
+     "reviews": 91,
+     "budget": 100,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "dara-hotel-phuket": {
    "id": "dara-hotel-phuket",
@@ -1531,7 +1665,33 @@ window.TRIP = {
     98.36817,
     7.88771
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 958,
+    "town": true
+   },
+   "score": {
+    "total": 90,
+    "parts": {
+     "reviews": 89,
+     "budget": 100,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "the-memory-at-on-on": {
    "id": "the-memory-at-on-on",
@@ -1588,7 +1748,33 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 2470,
+    "town": true
+   },
+   "score": {
+    "total": 84,
+    "parts": {
+     "reviews": 92,
+     "budget": 84,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "chanalai-flora-resort": {
    "id": "chanalai-flora-resort",
@@ -1628,7 +1814,34 @@ window.TRIP = {
     98.30149,
     7.8155
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2520,
+    "town": false
+   },
+   "score": {
+    "total": 74,
+    "parts": {
+     "reviews": 90,
+     "budget": 83,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "chanalai-garden-resort": {
    "id": "chanalai-garden-resort",
@@ -1668,7 +1881,34 @@ window.TRIP = {
     98.29927,
     7.81335
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2621,
+    "town": false
+   },
+   "score": {
+    "total": 71,
+    "parts": {
+     "reviews": 85,
+     "budget": 80,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "centara-kata-resort": {
    "id": "centara-kata-resort",
@@ -1708,7 +1948,34 @@ window.TRIP = {
     98.29967,
     7.82162
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2419,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 82,
+     "budget": 85,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "kata-sea-breeze-resort": {
    "id": "kata-sea-breeze-resort",
@@ -1748,7 +2015,35 @@ window.TRIP = {
     98.3005,
     7.81996
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1764,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": null,
+     "budget": 100,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews",
+     "beach",
+     "pool"
+    ]
+   }
   },
   "baan-karonburi-resort": {
    "id": "baan-karonburi-resort",
@@ -1788,7 +2083,34 @@ window.TRIP = {
     98.29447,
     7.84357
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1915,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 82,
+     "budget": 97,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "sugar-marina-resort-art": {
    "id": "sugar-marina-resort-art",
@@ -1828,7 +2150,34 @@ window.TRIP = {
     98.29404,
     7.84894
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2318,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 83,
+     "budget": 88,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "patong-mansion-hotel": {
    "id": "patong-mansion-hotel",
@@ -1867,7 +2216,34 @@ window.TRIP = {
     98.30462,
     7.89906
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1109,
+    "town": false
+   },
+   "score": {
+    "total": 78,
+    "parts": {
+     "reviews": 86,
+     "budget": 100,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
   },
   "ban-preeya-private-pool-villa": {
    "id": "ban-preeya-private-pool-villa",
@@ -1923,7 +2299,31 @@ window.TRIP = {
     98.84,
     8.05
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3800,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 94,
+     "budget": 52,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "smooth-as-silk-pool-villa": {
    "id": "smooth-as-silk-pool-villa",
@@ -1981,7 +2381,31 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 25,
+    "beachMode": "walk",
+    "perHeadNight": 2160,
+    "town": false
+   },
+   "score": {
+    "total": 82,
+    "parts": {
+     "reviews": 94,
+     "budget": 91,
+     "beach": 35,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "aonang-nine-poolvilla": {
    "id": "aonang-nine-poolvilla",
@@ -2040,7 +2464,31 @@ window.TRIP = {
     98.8229,
     8.0319
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 9,
+    "beachMode": "drive",
+    "perHeadNight": 3175,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 93,
+     "budget": 67,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "anawin-bungalows": {
    "id": "anawin-bungalows",
@@ -2099,7 +2547,33 @@ window.TRIP = {
     98.82434,
     8.03341
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": 1260,
+    "town": false
+   },
+   "score": {
+    "total": 85,
+    "parts": {
+     "reviews": 86,
+     "budget": 100,
+     "beach": 85,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "doo-dee-boutique-resort": {
    "id": "doo-dee-boutique-resort",
@@ -2158,7 +2632,31 @@ window.TRIP = {
     98.805,
     8.04
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 2220,
+    "town": false
+   },
+   "score": {
+    "total": 78,
+    "parts": {
+     "reviews": 81,
+     "budget": 90,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "white-house-phi-phi-island": {
    "id": "white-house-phi-phi-island",
@@ -2217,7 +2715,34 @@ window.TRIP = {
     98.776,
     7.74
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": null,
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 70,
+    "parts": {
+     "reviews": 87,
+     "budget": null,
+     "beach": 85,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget",
+     "pool"
+    ]
+   }
   },
   "p2-wood-loft": {
    "id": "p2-wood-loft",
@@ -2281,7 +2806,31 @@ window.TRIP = {
     98.77317,
     7.73944
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 4,
+    "beachMode": "walk",
+    "perHeadNight": 6508,
+    "town": false
+   },
+   "score": {
+    "total": 58,
+    "parts": {
+     "reviews": 87,
+     "budget": 0,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "paradise-pearl-bungalows": {
    "id": "paradise-pearl-bungalows",
@@ -2340,7 +2889,34 @@ window.TRIP = {
     98.785,
     7.729
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 74,
+    "parts": {
+     "reviews": 89,
+     "budget": null,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget",
+     "pool"
+    ]
+   }
   },
   "big-buddha-hike-from-karon": {
    "id": "big-buddha-hike-from-karon",
@@ -5338,7 +5914,31 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 2352,
+    "town": true
+   },
+   "score": {
+    "total": 87,
+    "parts": {
+     "reviews": 90,
+     "budget": 87,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
   },
   "phi-phi-villa-resort": {
    "id": "phi-phi-villa-resort",
@@ -5395,7 +5995,31 @@ window.TRIP = {
     98.77744,
     7.73624
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 4788,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 81,
+     "budget": 29,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "ton-sai-tropical": {
    "id": "ton-sai-tropical",
@@ -5453,7 +6077,33 @@ window.TRIP = {
     98.776,
     7.74
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 2570,
+    "town": false
+   },
+   "score": {
+    "total": 83,
+    "parts": {
+     "reviews": 88,
+     "budget": 82,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "ivory-phi-phi": {
    "id": "ivory-phi-phi",
@@ -5481,27 +6131,33 @@ window.TRIP = {
    "praise": [
     "Simple and effective. Safe and clean.",
     "Very clean, friendly staff, great location.",
-    "The location is perfect, next to the pier and restaurants/nightlife"
+    "The location is perfect, next to the pier and restaurants/nightlife",
+    "cleanliness 8.6",
+    "close to everything"
    ],
    "complaints": [
     "Facilities subpar / small rooms",
     "Bed-bug tag on Kayak (11 reviews)",
-    "Thin walls and doors"
+    "Thin walls and doors",
+    "room size 3/10, bed comfort 3.5/10"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Ivory+Phi+Phi+Island+hotel",
+    "maps": "https://www.google.com/maps/search/Ivory+Phi+Phi+Island",
     "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1804327-Reviews-Ivory_Phi_Phi_Island-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html",
-    "hostelworld": "https://www.hostelworld.com/hostels/p/299924/ivory-phi-phi-island/"
+    "hostelworld": "https://www.hostelworld.com/st/hostels/asia/thailand/ko-phi-phi/"
    },
    "tags": [
     "phiphi",
-    "guesthouse"
+    "guesthouse",
+    "eastcliff",
+    "hotel"
    ],
    "sources": [
     "research/stays.md",
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/phi-phi-night.md"
    ],
-   "verdict": "The private room for the two who want a door",
+   "verdict": "All-private budget fallback",
    "rooms": "2 per double/twin room; 10 rooms total",
    "distances": {
     "beach": "3 min to pier",
@@ -5509,11 +6165,42 @@ window.TRIP = {
     "airport": "n/a (ferry)"
    },
    "fitsBudget": true,
+   "position": {
+    "pier": 3,
+    "lohdalum": 6,
+    "viewpoint": 12,
+    "noise": "moderate",
+    "ac": true
+   },
    "lngLat": [
     98.776,
     7.74
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 2108,
+    "town": false
+   },
+   "score": {
+    "total": 92,
+    "parts": {
+     "reviews": 97,
+     "budget": 93,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "pineapple-guesthouse-karon": {
    "id": "pineapple-guesthouse-karon",
@@ -5570,7 +6257,33 @@ window.TRIP = {
     98.29829,
     7.83537
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": 1650,
+    "town": false
+   },
+   "score": {
+    "total": 86,
+    "parts": {
+     "reviews": 90,
+     "budget": 100,
+     "beach": 85,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "kata-tranquil-villa": {
    "id": "kata-tranquil-villa",
@@ -5627,7 +6340,31 @@ window.TRIP = {
     98.30133,
     7.83132
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 20,
+    "beachMode": "walk",
+    "perHeadNight": 1411,
+    "town": false
+   },
+   "score": {
+    "total": 84,
+    "parts": {
+     "reviews": 91,
+     "budget": 100,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "kk-karon-kata-boutique": {
    "id": "kk-karon-kata-boutique",
@@ -5684,7 +6421,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 7,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 85,
+     "budget": null,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "prima-karon-villa": {
    "id": "prima-karon-villa",
@@ -5743,7 +6506,33 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 94,
+     "budget": null,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "xinlor-house": {
    "id": "xinlor-house",
@@ -5801,7 +6590,33 @@ window.TRIP = {
     98.38597,
     7.88656
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1920,
+    "town": true
+   },
+   "score": {
+    "total": 90,
+    "parts": {
+     "reviews": 91,
+     "budget": 97,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "solin-house-phuket": {
    "id": "solin-house-phuket",
@@ -5854,7 +6669,34 @@ window.TRIP = {
     98.387,
     7.885
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": null,
+    "town": true
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 92,
+     "budget": null,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": [
+     "budget",
+     "pool"
+    ]
+   }
   },
   "elite-suites-patong": {
    "id": "elite-suites-patong",
@@ -5912,7 +6754,31 @@ window.TRIP = {
     98.2965,
     7.8961
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 1714,
+    "town": false
+   },
+   "score": {
+    "total": 87,
+    "parts": {
+     "reviews": 85,
+     "budget": 100,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "atease-phuket-patong": {
    "id": "atease-phuket-patong",
@@ -5965,7 +6831,33 @@ window.TRIP = {
     98.2965,
     7.8961
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 8,
+    "beachMode": "drive",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 58,
+    "parts": {
+     "reviews": 81,
+     "budget": null,
+     "beach": 20,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "kalim-seaview-villa-penda": {
    "id": "kalim-seaview-villa-penda",
@@ -6019,7 +6911,33 @@ window.TRIP = {
     98.2965,
     7.8961
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 92,
+     "budget": null,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "sss-phuket-dsd-racha-yai": {
    "id": "sss-phuket-dsd-racha-yai",
@@ -7385,7 +8303,31 @@ window.TRIP = {
     98.77444,
     7.74342
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 1279,
+    "town": false
+   },
+   "score": {
+    "total": 82,
+    "parts": {
+     "reviews": 100,
+     "budget": 100,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-by-the-beach": {
    "id": "s2-by-the-beach",
@@ -7441,7 +8383,33 @@ window.TRIP = {
     98.7784,
     7.7407
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 998,
+    "town": false
+   },
+   "score": {
+    "total": 74,
+    "parts": {
+     "reviews": 98,
+     "budget": 100,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
   },
   "s2-dormsin": {
    "id": "s2-dormsin",
@@ -7469,7 +8437,8 @@ window.TRIP = {
    "praise": [
     "The beds were comfy and created in a way that felt very private.",
     "Jason is the absolute best and so kind and welcoming!",
-    "Jason is one hack of a great host."
+    "Jason is one hack of a great host.",
+    "The beds were comfy and created in a way that felt very private"
    ],
    "complaints": [
     "Showers freezing or scorching",
@@ -7477,27 +8446,63 @@ window.TRIP = {
     "Inconsistent water pressure"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Dormsin+Hostel+Koh+Phi+Phi",
+    "maps": "https://www.google.com/maps/search/Dormsin+Phi+Phi",
     "hostelworld": "https://www.hostelworld.com/hostels/p/284471/dormsin/"
    },
    "tags": [
     "dorm",
-    "hostel"
+    "hostel",
+    "phiphi",
+    "eastcliff"
    ],
    "sources": [
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/phi-phi-night.md"
    ],
-   "verdict": "Budget pods closest to the morning boat",
+   "verdict": "Backup for the dorm trio",
    "rooms": "24-pod and 16-pod rooms; couple pods on request",
    "distances": {
     "beach": "close to Tonsai pier (south bay)"
    },
    "fitsBudget": true,
+   "position": {
+    "pier": 6,
+    "lohdalum": 6,
+    "viewpoint": 9,
+    "noise": "quiet",
+    "ac": null
+   },
    "lngLat": [
     98.77306,
     7.73877
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 632,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 93,
+     "budget": 100,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
   },
   "s2-blue-flow": {
    "id": "s2-blue-flow",
@@ -7553,7 +8558,31 @@ window.TRIP = {
     98.776,
     7.74
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": 998,
+    "town": false
+   },
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 86,
+     "budget": 100,
+     "beach": 100,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-blanco-beach-bar": {
    "id": "s2-blanco-beach-bar",
@@ -7609,7 +8638,31 @@ window.TRIP = {
     98.77383,
     7.74294
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 660,
+    "town": false
+   },
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 87,
+     "budget": 100,
+     "beach": 100,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-phi-phi-hotel": {
    "id": "s2-phi-phi-hotel",
@@ -7664,7 +8717,31 @@ window.TRIP = {
     98.77336,
     7.74137
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": 2108,
+    "town": false
+   },
+   "score": {
+    "total": 88,
+    "parts": {
+     "reviews": 84,
+     "budget": 93,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-panmanee": {
    "id": "s2-panmanee",
@@ -7719,7 +8796,33 @@ window.TRIP = {
     98.772,
     7.73889
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1922,
+    "town": false
+   },
+   "score": {
+    "total": 88,
+    "parts": {
+     "reviews": 89,
+     "budget": 97,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "s2-kitty-guest-house": {
    "id": "s2-kitty-guest-house",
@@ -7775,7 +8878,33 @@ window.TRIP = {
     98.77425,
     7.74599
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1619,
+    "town": false
+   },
+   "score": {
+    "total": 86,
+    "parts": {
+     "reviews": 80,
+     "budget": 100,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "s2-katamanda-e5": {
    "id": "s2-katamanda-e5",
@@ -7830,7 +8959,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 93,
+     "budget": null,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-villa-beachside-kata-noi": {
    "id": "s2-villa-beachside-kata-noi",
@@ -7885,7 +9040,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 7137,
+    "town": false
+   },
+   "score": {
+    "total": 48,
+    "parts": {
+     "reviews": null,
+     "budget": 0,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
   },
   "s2-kata-3br-pool-villa": {
    "id": "s2-kata-3br-pool-villa",
@@ -7938,7 +9119,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 8,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 91,
+     "budget": null,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-kata-townhouse-1": {
    "id": "s2-kata-townhouse-1",
@@ -7992,7 +9199,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 8,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 93,
+     "budget": null,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-karon-apt704": {
    "id": "s2-karon-apt704",
@@ -8048,7 +9281,33 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 97,
+     "budget": null,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-karon-exclusive-8638782": {
    "id": "s2-karon-exclusive-8638782",
@@ -8101,7 +9360,33 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 97,
+     "budget": null,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-karon-334sqm": {
    "id": "s2-karon-334sqm",
@@ -8152,7 +9437,33 @@ window.TRIP = {
     98.294,
     7.847
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 84,
+     "budget": null,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-rawai-walk-to-beach": {
    "id": "s2-rawai-walk-to-beach",
@@ -8204,7 +9515,31 @@ window.TRIP = {
     98.327,
     7.773
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 4237,
+    "town": false
+   },
+   "score": {
+    "total": 82,
+    "parts": {
+     "reviews": 98,
+     "budget": 42,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-villa-vipa": {
    "id": "s2-villa-vipa",
@@ -8251,7 +9586,31 @@ window.TRIP = {
     98.28219,
     7.88475
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3293,
+    "town": false
+   },
+   "score": {
+    "total": 71,
+    "parts": {
+     "reviews": 95,
+     "budget": 64,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-shanti-bangtao": {
    "id": "s2-shanti-bangtao",
@@ -8301,7 +9660,33 @@ window.TRIP = {
     98.295,
     7.99
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 3,
+    "beachMode": "drive",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 67,
+    "parts": {
+     "reviews": 93,
+     "budget": null,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-bangtao-soi4-sleeps9": {
    "id": "s2-bangtao-soi4-sleeps9",
@@ -8352,7 +9737,31 @@ window.TRIP = {
     98.295,
     7.99
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": 2529,
+    "town": false
+   },
+   "score": {
+    "total": 82,
+    "parts": {
+     "reviews": 86,
+     "budget": 83,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-bangtao-laguna-pool-villa": {
    "id": "s2-bangtao-laguna-pool-villa",
@@ -8403,7 +9812,31 @@ window.TRIP = {
     98.295,
     7.99
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3805,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 95,
+     "budget": 52,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-surin-large-villa": {
    "id": "s2-surin-large-villa",
@@ -8452,7 +9885,33 @@ window.TRIP = {
     98.295,
     7.99
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 77,
+    "parts": {
+     "reviews": 98,
+     "budget": null,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
   },
   "s2-mantra-kata-noi": {
    "id": "s2-mantra-kata-noi",
@@ -8506,7 +9965,31 @@ window.TRIP = {
     98.30011,
     7.80636
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": 2580,
+    "town": false
+   },
+   "score": {
+    "total": 84,
+    "parts": {
+     "reviews": 83,
+     "budget": 81,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-kata-noi-resort": {
    "id": "s2-kata-noi-resort",
@@ -8552,7 +10035,31 @@ window.TRIP = {
     98.30037,
     7.80726
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1560,
+    "town": false
+   },
+   "score": {
+    "total": 89,
+    "parts": {
+     "reviews": 81,
+     "budget": 100,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-kata-beachwalk": {
    "id": "s2-kata-beachwalk",
@@ -8606,7 +10113,33 @@ window.TRIP = {
     98.298,
     7.82
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 2023,
+    "town": false
+   },
+   "score": {
+    "total": 86,
+    "parts": {
+     "reviews": 85,
+     "budget": 95,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
   },
   "s2-princess-kamala": {
    "id": "s2-princess-kamala",
@@ -8661,7 +10194,31 @@ window.TRIP = {
     98.283,
     7.95
    ],
-   "geo": "approx"
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1888,
+    "town": false
+   },
+   "score": {
+    "total": 91,
+    "parts": {
+     "reviews": 88,
+     "budget": 98,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "at-kamala-hotel": {
    "id": "at-kamala-hotel",
@@ -8715,7 +10272,31 @@ window.TRIP = {
     98.281,
     7.95002
    ],
-   "geo": "exact"
+   "geo": "exact",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 11,
+    "beachMode": "walk",
+    "perHeadNight": 3608,
+    "town": false
+   },
+   "score": {
+    "total": 70,
+    "parts": {
+     "reviews": 88,
+     "budget": 57,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   },
   "s2-best-western-bangtao": {
    "id": "s2-best-western-bangtao",
@@ -8768,6 +10349,901 @@ window.TRIP = {
    "lngLat": [
     98.295,
     7.99
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 13151,
+    "town": false
+   },
+   "score": {
+    "total": 62,
+    "parts": {
+     "reviews": 89,
+     "budget": 0,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "pp-rimlay": {
+   "id": "pp-rimlay",
+   "name": "Phi Phi Rimlay Resort (Rimlay Cottage)",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "east Tonsai Bay, beachfront",
+   "thai": null,
+   "tagline": "Primary pick for the private-room pair",
+   "priceTHB": null,
+   "priceINR": 15174,
+   "priceNote": "1,800 THB a room, three rooms about 15,174 INR. Kayak snapshot: standard $36–92, double $39–72, weeknight avg $90; Priceline $37; ≈1,200–3,000 THB",
+   "when": null,
+   "book": null,
+   "rating": 7.6,
+   "scale": 10,
+   "reviews": 1471,
+   "reviewSource": "Kayak aggregate (Booking 7.6/348; Trip.com 8.4/81)",
+   "highlights": [
+    "beachfront, longtails tie up outside",
+    "quiet at night",
+    "breakfast included but poor"
+   ],
+   "praise": [
+    "Comfy and spacious room, nice bed!",
+    "10min from the center so very quiet during the night"
+   ],
+   "complaints": [
+    "Breakfast was very bad",
+    "flies and a sewer smell in the bathroom",
+    "mosque call to prayer early"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Phi+Phi+Rimlay+Resort",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Rimlay+Resort",
+    "agoda": "https://www.agoda.com/search?city=17355&text=Phi+Phi+Rimlay",
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Rimlay+Resort"
+   },
+   "tags": [
+    "phiphi",
+    "eastcliff",
+    "guesthouse"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Primary pick for the private-room pair",
+   "position": {
+    "pier": 10,
+    "lohdalum": 10,
+    "viewpoint": 8,
+    "noise": "quiet",
+    "ac": true
+   },
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 3035,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 76,
+     "budget": 71,
+     "beach": 100,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ]
+   }
+  },
+  "pp-villa-resort": {
+   "id": "pp-villa-resort",
+   "name": "Phi Phi Villa Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "east Tonsai Bay, beachfront with pool",
+   "thai": null,
+   "tagline": "Backup for the private-room pair if Rimlay is full or you want a pool",
+   "priceTHB": null,
+   "priceINR": 23604,
+   "priceNote": "2,800 THB a room, three rooms about 23,604 INR. Kayak: deluxe from $87, weeknight avg $133 (≈2,800–4,300 THB)",
+   "when": null,
+   "book": null,
+   "rating": 8.5,
+   "scale": 10,
+   "reviews": 5986,
+   "reviewSource": "Kayak aggregate (Booking 8.5/1,505; Agoda 8.6/277; Trip.com 8.2/109)",
+   "highlights": [
+    "pool and sundecks",
+    "best-rated east-Tonsai hotel",
+    "own restaurant has live music some nights"
+   ],
+   "praise": [
+    "Excellent view with many sundecks by the beach",
+    "pretty quiet at night"
+   ],
+   "complaints": [
+    "two giant cockroaches in the room",
+    "The pool is dirty, and the water is murky",
+    "hard beds; limited breakfast"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Phi+Phi+Villa+Resort",
+    "booking": "https://www.booking.com/hotel/th/phi-phi-villa-resort.html",
+    "agoda": "https://www.agoda.com/search?text=Phi+Phi+Villa+Resort",
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Villa+Resort"
+   },
+   "tags": [
+    "phiphi",
+    "eastcliff",
+    "hotel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Backup for the private-room pair if Rimlay is full or you want a pool",
+   "position": {
+    "pier": 12,
+    "lohdalum": 12,
+    "viewpoint": 8,
+    "noise": "quiet",
+    "ac": true
+   },
+   "lngLat": [
+    98.77744,
+    7.73624
+   ],
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 4721,
+    "town": false
+   },
+   "score": {
+    "total": 59,
+    "parts": {
+     "reviews": 85,
+     "budget": 30,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "pp-hangover": {
+   "id": "pp-hangover",
+   "name": "Hangover Chill & Hill",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "hill behind east village, between Loh Dalum and Laem Hin",
+   "thai": null,
+   "tagline": "Primary pick for the dorm trio",
+   "priceTHB": 500,
+   "priceINR": null,
+   "priceNote": "500 THB a bunk. Hostelworld from €9.37 (≈350 THB); expect 450–700 in Nov",
+   "when": null,
+   "book": null,
+   "rating": 9.6,
+   "scale": 10,
+   "reviews": 406,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "top-rated non-party hostel near the viewpoint side",
+    "steep walk up"
+   ],
+   "praise": [
+    "The hostel was really social and the staff were so kind and helpful"
+   ],
+   "complaints": [
+    "Sweaty walk up the hill"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Hangover+Chill+%26+Hill+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/330020/hangover-chill-and-hill/"
+   },
+   "tags": [
+    "phiphi",
+    "eastcliff",
+    "hostel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Primary pick for the dorm trio",
+   "position": {
+    "pier": 12,
+    "lohdalum": 10,
+    "viewpoint": 6,
+    "noise": "moderate",
+    "ac": null
+   },
+   "lngLat": [
+    98.776,
+    7.744
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1405,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 95,
+     "budget": 100,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "pp-tropical-garden": {
+   "id": "pp-tropical-garden",
+   "name": "Tropical Garden Bungalow",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "inland behind village, nearest the viewpoint",
+   "thai": null,
+   "tagline": "Only if very cheap; hygiene risk",
+   "priceTHB": null,
+   "priceINR": 7587,
+   "priceNote": "900 THB a room, three rooms about 7,587 INR. Kayak $12–38 (≈400–1,250 THB); fan rooms cheapest, book AC",
+   "when": null,
+   "book": null,
+   "rating": 6.5,
+   "scale": 10,
+   "reviews": 1844,
+   "reviewSource": "Kayak aggregate (Booking 6.4/597; Agoda 6.9/86)",
+   "highlights": [
+    "pool",
+    "closest to viewpoint stairs",
+    "cleanliness complaints"
+   ],
+   "praise": [
+    "lovely swimming pool",
+    "peaceful, natural atmosphere"
+   ],
+   "complaints": [
+    "dirty floors; bed bugs and bloodstains on pillowcases",
+    "thin walls and noise issues",
+    "mosquitoes"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Tropical+Garden+Bungalow+Phi+Phi",
+    "booking": "https://www.booking.com/searchresults.html?ss=Tropical+Garden+Bungalow+Phi+Phi",
+    "agoda": "https://www.agoda.com/search?text=Tropical+Garden+Bungalow",
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Tropical+Garden+Bungalow+Phi+Phi"
+   },
+   "tags": [
+    "phiphi",
+    "avoid",
+    "bungalows"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Only if very cheap; hygiene risk",
+   "position": {
+    "pier": 8,
+    "lohdalum": 8,
+    "viewpoint": 6,
+    "noise": "moderate",
+    "ac": true
+   },
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1517,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 65,
+     "budget": 100,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "pp-ingphu": {
+   "id": "pp-ingphu",
+   "name": "Phi Phi Ingphu Viewpoint Hotel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "hillside, east village toward viewpoint",
+   "thai": null,
+   "tagline": "Avoid",
+   "priceTHB": null,
+   "priceINR": 10959,
+   "priceNote": "1,300 THB a room, three rooms about 10,959 INR. hotels.com $27–59 (≈900–1,900 THB)",
+   "when": null,
+   "book": null,
+   "rating": 5.4,
+   "scale": 10,
+   "reviews": null,
+   "reviewSource": "Trip.com (hotels.com pages show 6.0–9.0; small samples)",
+   "highlights": [
+    "pool",
+    "7 min to viewpoint",
+    "steep stairs"
+   ],
+   "praise": [
+    "staff 10/10",
+    "noise from the beach at night was unnoticeable"
+   ],
+   "complaints": [
+    "cockroach in the bed; bed bugs reported",
+    "steps up a steep hill, almost hazardous in the heat",
+    "pool looked very dirty"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Phi+Phi+Ingphu+Viewpoint+Hotel",
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Ingphu+Viewpoint"
+   },
+   "tags": [
+    "phiphi",
+    "avoid",
+    "hotel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Avoid",
+   "position": {
+    "pier": 13,
+    "lohdalum": 10,
+    "viewpoint": 7,
+    "noise": "quiet",
+    "ac": true
+   },
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 7,
+    "beachMode": "walk",
+    "perHeadNight": 2192,
+    "town": false
+   },
+   "score": {
+    "total": 81,
+    "parts": {
+     "reviews": 75,
+     "budget": 91,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "pp-harbour-view": {
+   "id": "pp-harbour-view",
+   "name": "Phi Phi Harbour View Hotel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai Bay just east of pier",
+   "thai": null,
+   "tagline": "Fine alternative to Villa; thin review detail",
+   "priceTHB": null,
+   "priceINR": 22761,
+   "priceNote": "2,700 THB a room, three rooms about 22,761 INR. Expedia ~$83/night snapshot",
+   "when": null,
+   "book": null,
+   "rating": 8.4,
+   "scale": 10,
+   "reviews": 435,
+   "reviewSource": "Expedia",
+   "highlights": [
+    "solid mid-range close to pier"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Phi+Phi+Harbour+View+Hotel",
+    "agoda": "https://www.agoda.com/phi-phi-harbour-view-hotel/hotel/koh-phi-phi-th.html"
+   },
+   "tags": [
+    "phiphi",
+    "eastcliff",
+    "hotel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Fine alternative to Villa; thin review detail",
+   "position": {
+    "pier": 8,
+    "lohdalum": 8,
+    "viewpoint": 10,
+    "noise": "moderate",
+    "ac": true
+   },
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 4552,
+    "town": false
+   },
+   "score": {
+    "total": 57,
+    "parts": {
+     "reviews": 84,
+     "budget": 34,
+     "beach": null,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach",
+     "pool"
+    ]
+   }
+  },
+  "pp-chaokoh-hostel": {
+   "id": "pp-chaokoh-hostel",
+   "name": "Chaokoh Phi Phi Hostel (Chaokoh Dorm Room)",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai Beach east of pier",
+   "thai": null,
+   "tagline": "Skip: noise",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": null,
+   "when": null,
+   "book": null,
+   "rating": 8.7,
+   "scale": 10,
+   "reviews": 72,
+   "reviewSource": "Expedia/Trip.com (range 7.5–8.7)",
+   "highlights": [
+    "adults-only, beachfront location",
+    "bar noise"
+   ],
+   "praise": [
+    "Sparkling clean"
+   ],
+   "complaints": [
+    "very very very loud music until 1 am",
+    "pests and unclean conditions in some rooms"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Chaokoh+Phi+Phi+Hostel"
+   },
+   "tags": [
+    "phiphi",
+    "avoid",
+    "hostel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "verdict": "Skip: noise",
+   "position": {
+    "pier": 10,
+    "lohdalum": 8,
+    "viewpoint": 10,
+    "noise": "loud",
+    "ac": true
+   },
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hostel",
+    "pool": "none",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": 85,
+     "budget": null,
+     "beach": 100,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ]
+   }
+  },
+  "pp-op-pier-bargain": {
+   "id": "pp-op-pier-bargain",
+   "name": "Tonsai pier / beach longtail counters",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Private longtail ~4 h, up to 6 pax.",
+   "priceTHB": 3300,
+   "priceINR": null,
+   "priceNote": "2,500–3,500 per boat (visitthailandtoday Oct 2026); 'from ~3,300' (themanduls Dec 2025); dawn +500–1,000 Per boat.",
+   "when": "07:00–18:00",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "cheapest",
+    "set stops and return time in writing"
+   ],
+   "praise": [],
+   "complaints": [
+    "quality varies by captain; fins rarely included"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Tonsai+Pier+Phi+Phi",
+    "official": "https://www.visitthailandtoday.com/guides/maya-bay-guide",
+    "reviews": "https://themanduls.com/maya-bay/"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-visa-travel": {
+   "id": "pp-op-visa-travel",
+   "name": "Visa Travel Team Phi Phi",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Shared sunrise longtail 06:00–10:00 (700 pp); private Early Bird / afternoon on request.",
+   "priceTHB": 700,
+   "priceINR": null,
+   "priceNote": "per person shared; park fee 400 extra, cash Per person.",
+   "when": "08:00–22:00",
+   "book": null,
+   "rating": 4.9,
+   "scale": 5,
+   "reviews": 1424,
+   "reviewSource": "Google (via visitthailandtoday, Sep 2026)",
+   "highlights": [
+    "2 min from pier",
+    "TAT licence 34/02699",
+    "WhatsApp +66 91 213 4005"
+   ],
+   "praise": [],
+   "complaints": [
+    "guide often on his phone; rough seas on a morning trip"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Visa+Travel+Phi+Phi",
+    "official": "https://visatravelphiphi.com/product/sunrise-trip/",
+    "booking": "https://visatravelphiphi.com/product/sunrise-trip/",
+    "reviews": "https://www.visitthailandtoday.com/activities-tours/phi-phi/visa-travel-team-phi-phi"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-blue-flow": {
+   "id": "pp-op-blue-flow",
+   "name": "Blue Flow Travel",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Private 'luxury' longtail half-day 4 h.",
+   "priceTHB": 10800,
+   "priceINR": null,
+   "priceNote": "7,500 base (2 pax) + 1,100/extra adult = 10,800 for 5; code PRIVATE −10%; fee extra Per boat.",
+   "when": "office near main pier",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "no tour rating found (hostel 8.7/179 Hostelworld)",
+   "highlights": [
+    "includes life jackets, mask+snorkel, fruit, ice box",
+    "afternoon departures may return at sunset"
+   ],
+   "praise": [],
+   "complaints": [
+    "3× the pier price"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Blue+Flow+Travel+Phi+Phi",
+    "official": "https://blueflowtravel.com/tours/luxury-private-longtail-half-day-tour-maya-bay-koh-phi-phi-leh/",
+    "booking": "https://blueflowtravel.com/tours/luxury-private-longtail-half-day-tour-maya-bay-koh-phi-phi-leh/"
+   },
+   "tags": [
+    "longtail",
+    "snorkel",
+    "avoid"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-mr-chet": {
+   "id": "pp-op-mr-chet",
+   "name": "Mr. Chet Longtail Boat Trip",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Private longtail, sunrise or custom.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "quote by WhatsApp +66 87 278 7901 Per person.",
+   "when": "07:00–22:00",
+   "book": null,
+   "rating": 4.9,
+   "scale": 5,
+   "reviews": 297,
+   "reviewSource": "Google (via visitthailandtoday, Sep 2026)",
+   "highlights": [
+    "qualified dive guide",
+    "flexible start times"
+   ],
+   "praise": [],
+   "complaints": [
+    "based at Loh Bagao; confirm Tonsai pickup"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/Mr+Chet+Longtail+Boat+Trip",
+    "reviews": "https://www.tripadvisor.com/AttractionProductReview-g303908-d26777638-Mr_Chet_Longtail_Boat_Trip-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-phiphitours": {
+   "id": "pp-op-phiphitours",
+   "name": "Five Star Thailand Tours (phiphitours.com)",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Sunrise private longtail 6 h with brunch, 06:00–12:00.",
+   "priceTHB": 9500,
+   "priceINR": null,
+   "priceNote": "6,500 base + 1,000/adult (24-h advance price); fee extra; non-refundable Per boat.",
+   "when": "06:00 departures",
+   "book": null,
+   "rating": null,
+   "scale": "5",
+   "reviews": null,
+   "reviewSource": "Trustpilot page exists, score not read",
+   "highlights": [
+    "English guide, hotel pickup"
+   ],
+   "praise": [],
+   "complaints": [
+    "12:00 return is too late for a 13:00 speedboat; fine for 14:00 check-in"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Five+Star+Thailand+Tours+(phiphitours.com)+Ko+Phi+Phi",
+    "official": "https://phiphitours.com/tours/phi-phi-don/private-tours/sunrise-private-longtail-boat-from-phi-phi-6-hours-with-brunch-private-guide-pillow-set-on-boat",
+    "booking": "https://phiphitours.com/",
+    "reviews": "https://dk.trustpilot.com/review/phiphitours.info"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-gyg-private": {
+   "id": "pp-op-gyg-private",
+   "name": "GetYourGuide — Phi Phi Private Longtail: Maya Bay, Pileh Lagoon & Snorkel",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Private longtail 3/4/6/7 h.",
+   "priceTHB": 3520,
+   "priceINR": null,
+   "priceNote": "'from $110 per group up to 2'; extra pax priced on site Per boat.",
+   "when": "morning slots",
+   "book": null,
+   "rating": 4.8,
+   "scale": 5,
+   "reviews": 1884,
+   "reviewSource": "GetYourGuide (1,884–1,904)",
+   "highlights": [
+    "free cancellation",
+    "card payment"
+   ],
+   "praise": [],
+   "complaints": [
+    "unclear starting location and optional park fees"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=GetYourGuide+—+Phi+Phi+Private+Longtail:+Maya+Bay,+Pileh+Lagoon+&+Snorkel+Ko+Phi+Phi",
+    "booking": "https://www.getyourguide.com/phi-phi-islands-l9477/phi-phi-private-longtail-boat-tour-to-maya-bay-t442354/",
+    "reviews": "https://www.getyourguide.com/phi-phi-islands-l9477/phi-phi-private-longtail-boat-tour-to-maya-bay-t442354/"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
+  },
+  "pp-op-gyg-shared": {
+   "id": "pp-op-gyg-shared",
+   "name": "GetYourGuide — shared half-day longtail from the Marlin statue",
+   "type": "do",
+   "place": "phiphi",
+   "area": "Tonsai pier",
+   "thai": null,
+   "tagline": "Shared 4 h, max 20, departures 09:00/10:00/11:00/14:00.",
+   "priceTHB": 750,
+   "priceINR": null,
+   "priceNote": "$22–24 pp; fee extra Per person.",
+   "when": "09:00–18:00",
+   "book": null,
+   "rating": 4.2,
+   "scale": 5,
+   "reviews": 188,
+   "reviewSource": "GetYourGuide (sister listing 4.0/238)",
+   "highlights": [
+    "cheapest afternoon option"
+   ],
+   "praise": [],
+   "complaints": [
+    "mediocre rating; crowded boat"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=GetYourGuide+—+shared+half-day+longtail+from+the+Marlin+statue+Ko+Phi+Phi",
+    "booking": "https://www.getyourguide.com/phi-phi-islands-l9477/from-phi-phi-maya-bay-halfday-longtail-boat-with-snorkeling-t815779/",
+    "reviews": "https://happytovisit.com/from-phi-phi-half-day-longtail-boat-tour-to-maya-bay-2/"
+   },
+   "tags": [
+    "longtail",
+    "snorkel"
+   ],
+   "sources": [
+    "research/phi-phi-night.md"
+   ],
+   "lngLat": [
+    98.776,
+    7.74
    ],
    "geo": "approx"
   }
@@ -9043,8 +11519,8 @@ window.TRIP = {
   },
   "phiphi": {
    "title": "Ko Phi Phi",
-   "tagline": "Arrive 10:30, snorkel after the day boats leave, sleep away from the bass, out on the 14:30 ferry. Twenty-eight hours, planned.",
-   "status": "refining",
+   "tagline": "Arrive 10:30, snorkel on the rising tide after the day boats leave, sleep on the quiet east side, fire shows at nine, out on the afternoon ferry. Twenty-eight hours, planned.",
+   "status": "ready",
    "zones": [
     {
      "id": "pier",
@@ -9054,12 +11530,14 @@ window.TRIP = {
       7.7385
      ],
      "for": "Where the ferries land (20 THB island fee), longtail operators, ATMs, 7-Elevens, the cheap private rooms.",
-     "take": "Drop bags at the hotel, book the 14:00 longtail at a desk or the pier, eat.",
+     "take": "Drop bags, book the 14:00 private longtail at Visa Travel Team (two minutes from the pier, 4.9 from 1,424) for about 3,500 THB with the stops written on the receipt, then lunch.",
      "items": [
+      "pp-op-visa-travel",
+      "pp-op-mr-chet",
+      "pp-op-pier-bargain",
       "ivory-phi-phi",
       "s2-panmanee",
       "s2-phi-phi-hotel",
-      "ton-sai-tropical",
       "tonsai-village-food",
       "carlito-s"
      ]
@@ -9072,10 +11550,11 @@ window.TRIP = {
       7.7445
      ],
      "for": "The party beach: Slinky's fire show about 22:00, Ibiza, buckets, bass until 02:00. Shallow and muddy at low tide.",
-     "take": "Go for the fire show, do not sleep on it.",
+     "take": "Carlito's on Tonsai Bay for the 21:00 fire show on the way in, then Stones (show about 21:00, open to 02:30) and Slinky (party from 23:30, closes 02:00). Beer 60 to 140, buckets 200 to 400, cash only. Skip the fire skipping rope. Ten to fifteen minutes back east on the lit main lane.",
      "items": [
       "slinky-beach-bar",
       "ibiza-beach-club",
+      "carlito-s",
       "kayak-at-loh-dalum",
       "s2-blanco-beach-bar",
       "s2-by-the-beach"
@@ -9089,10 +11568,13 @@ window.TRIP = {
       7.7395
      ],
      "for": "Quieter guesthouses and bungalows on the slope, ten minutes from the bars, the viewpoint stairs start here.",
-     "take": "Our sleeping zone. Named places and the recommended split are being researched right now.",
+     "take": "Our sleeping zone: Rimlay double on the quiet beachfront plus Hangover Chill and Hill bunks on the hill by the viewpoint stairs. Skip Ingphu and Tropical Garden (recent bed-bug and cockroach reports).",
      "items": [
-      "s2-voyagers",
-      "p2-wood-loft",
+      "pp-rimlay",
+      "pp-hangover",
+      "pp-villa-resort",
+      "pp-harbour-view",
+      "s2-dormsin",
       "phi-phi-viewpoint-2"
      ]
     },
@@ -9118,7 +11600,7 @@ window.TRIP = {
       7.685
      ],
      "for": "Pileh Lagoon, Maya Bay (walk-in only, no swimming), Loh Samah snorkel, Viking Cave from the water. 400 THB park fee each, cash.",
-     "take": "Private longtail 14:00 to 18:00 after the day boats leave, or 06:00 to 10:00 for the emptiest Maya Bay.",
+     "take": "Wednesday 14:00 to 18:00: Viking Cave, Loh Samah snorkel, Pileh at 15:30 as the tide rises to its 17:22 high, Maya Bay last with the afternoon sun on the beach, off it by 17:00. Day fleets are gone after 15:00. Thursday 06:00 sunrise is the weather fallback (700 a head shared with Visa Travel).",
      "items": [
       "private-longtail-from-tonsai",
       "maya-bay"
@@ -9137,89 +11619,166 @@ window.TRIP = {
     }
    ],
    "recos": [
-    "Wednesday 10:30 land, 11:00 bags at the hotel, 11:30 book the boat, lunch in the village.",
-    "14:00 to 18:00 private longtail: Pileh, Maya Bay walk, Loh Samah snorkel, sunset. 2,000 to 3,300 THB per boat plus 400 each.",
-    "Dinner in Tonsai, Carlito's fire show about 21:30 or Slinky about 22:00. Walk back east, ten minutes.",
-    "Thursday: Viewpoint 2 before 09:00, breakfast, swim at Long Beach or Loh Dalum at high tide, bags from reception, 14:00 at the pier for the 14:30 ferry.",
-    "If Wednesday's sea is rough: skip the boat, do the viewpoint and Long Beach, and take the 06:00 sunrise longtail Thursday instead."
+    "Sleep east: Rimlay double for two plus three Hangover bunks, about 2,700 to 4,600 THB for five. Backup: Phi Phi Villa Resort plus Dormsin pods.",
+    "Snorkel Wednesday 14:00 to 18:00, not Thursday morning: rising tide opens Pileh, the day boats are gone, the light is on Maya Bay, and there is no ferry to catch. Sunrise Thursday stays as the weather fallback.",
+    "Book the boat on arrival at Visa Travel Team or the pier, about 3,500 THB per boat for five plus 400 park fee each in cash at Loh Samah. Online private listings cost two to three times that.",
+    "Nightlife: Carlito's fire show at 21:00 on the way, then Stones and Slinky on Loh Dalum; cash only; walk back east by the main lane.",
+    "Thursday: Viewpoint 2 before 09:00, a swim, bags from reception, pier 30 minutes before the ferry; the ticket, not the aggregator, has the right time."
    ],
    "plan": [
     [
-     "10:30",
-     "Land at Tonsai, pay the 20 THB island fee",
-     "Pier",
-     "100",
-     ""
+     "Wed 10:30",
+     "Dock, walk east with bags",
+     "Tonsai pier → east Tonsai",
+     "20 THB",
+     "island fee if collected; 10 min walk"
     ],
     [
-     "11:00",
-     "Drop bags, check in or leave luggage",
-     "East Tonsai",
+     "Wed 10:45",
+     "Drop bags, request quiet room",
+     "Rimlay / Hangover",
      "",
-     "Rooms are often ready by 14:00"
+     "check-in from 14:00"
     ],
     [
-     "11:30",
-     "Book the private longtail for 14:00; cash",
-     "Pier or a desk",
-     "2,000 to 3,300 per boat",
-     "Agree the stops and the return time"
+     "Wed 11:00",
+     "Book private longtail 14:00–18:00, stops on receipt",
+     "Visa Travel or pier counters",
+     "3,500 THB",
+     "per boat; ask about fins"
     ],
     [
-     "12:30",
-     "Lunch",
-     "Village",
-     "150 to 250 each",
-     ""
+     "Wed 11:30",
+     "Light lunch",
+     "village",
+     "150 THB",
+     "per person"
     ],
     [
-     "14:00",
-     "Longtail: Pileh, Maya Bay walk, Loh Samah snorkel, Viking Cave, sunset",
+     "Wed 12:45",
+     "ATM: park fee + evening cash",
+     "pier",
+     "2,000 THB",
+     "5 × 400 fee"
+    ],
+    [
+     "Wed 13:00",
+     "Check in; reef-safe sunscreen on",
+     "hotel",
+     "",
+     "no application allowed at Maya Bay"
+    ],
+    [
+     "Wed 14:00",
+     "Depart; Viking Cave drive-by",
+     "Tonsai → Phi Phi Leh",
+     "",
+     "life jackets for crossing"
+    ],
+    [
+     "Wed 14:40",
+     "Snorkel Loh Samah / Pileh mouth",
      "Phi Phi Leh",
-     "400 park fee each",
-     "Reef-safe sunscreen only"
-    ],
-    [
-     "18:30",
-     "Shower, dinner",
-     "Village",
-     "200 to 400 each",
-     ""
-    ],
-    [
-     "21:30",
-     "Fire show",
-     "Carlito's, then Slinky at 22:00",
-     "250 to 350 a drink",
-     "Walk back east, ten minutes"
-    ],
-    [
-     "07:00",
-     "Viewpoint 2",
-     "East Tonsai stairs",
-     "30",
-     "Before the heat"
-    ],
-    [
-     "09:00",
-     "Breakfast, swim",
-     "Loh Dalum at high tide or Long Beach",
      "",
-     ""
+     "best reef of the stops"
     ],
     [
-     "13:30",
-     "Bags from reception, walk to the pier",
-     "Pier",
+     "Wed 15:30",
+     "Pileh Lagoon swim",
+     "Pileh",
      "",
-     "Check in 14:00"
+     "rising tide, high 17:22; fleets gone after 15:00"
     ],
     [
-     "14:30",
-     "Ao Nang Princess ferry, van to the hotel included",
-     "To Ao Nang, 16:30",
-     "650 each",
-     ""
+     "Wed 16:15",
+     "Maya Bay via Loh Samah pier, ~50 min",
+     "Maya Bay",
+     "2,000 THB",
+     "pay 400 pp cash at kiosk; no swimming; leave by 17:10"
+    ],
+    [
+     "Wed 17:50",
+     "Return; sunset 18:03",
+     "Tonsai",
+     "",
+     "shower, rest"
+    ],
+    [
+     "Wed 19:00",
+     "Dinner",
+     "east Tonsai / village",
+     "300 THB",
+     "per person"
+    ],
+    [
+     "Wed 20:30",
+     "Carlito's fire show (sign says 21:00)",
+     "Tonsai Bay near pier",
+     "300 THB",
+     "per person drinks; front seats early"
+    ],
+    [
+     "Wed 22:00",
+     "Stones → Slinky (party from 23:30)",
+     "Loh Dalum",
+     "500 THB",
+     "per person; skip the fire rope"
+    ],
+    [
+     "Thu 00:30",
+     "Walk back via main lane",
+     "→ east Tonsai",
+     "",
+     "10–15 min; torch for the hill"
+    ],
+    [
+     "Thu 06:00",
+     "Optional: Viewpoint 1 sunrise 06:17",
+     "stairs at back/east of village",
+     "50 THB",
+     "open 05:30; cash; or fallback boat 06:00–10:00"
+    ],
+    [
+     "Thu 08:30",
+     "Breakfast, repack, checkout by 11:00",
+     "hotel",
+     "150 THB",
+     "per person"
+    ],
+    [
+     "Thu 10:00",
+     "Beach / swim; or Long Beach by longtail",
+     "Tonsai east / Long Beach",
+     "150 THB",
+     "per person each way if boat"
+    ],
+    [
+     "Thu 12:45",
+     "Lunch near pier",
+     "village",
+     "150 THB",
+     "per person"
+    ],
+    [
+     "Thu 13:30",
+     "Walk to pier with bags",
+     "Tonsai pier",
+     "",
+     "10 min"
+    ],
+    [
+     "Thu 14:00",
+     "Check in Ao Nang Princess (or Airi Tour counter 12:45 for Sun Smile 13:00)",
+     "Tonsai pier",
+     "650 THB",
+     "per person; confirm 14:30 vs 15:30 on ticket"
+    ],
+    [
+     "Thu 14:30",
+     "Depart to Ao Nang (Railay stop possible)",
+     "ferry",
+     "",
+     "~2 h"
     ]
    ]
   }
