@@ -49,7 +49,9 @@
     const [l, p, n, c, r, m, k, tr, pr] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links", "tiers", "prices"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" || t === "tiers" ? "updated_at" : "created_at", { ascending: true })));
     const err = [l, p, n, c, r, m].find(x => x.error); if (err) throw err.error;
     const next = empty();
-    for (const row of l.data) next.locks[row.decision_id] = { optionId: row.option_id, who: row.who };
+    // an empty option_id is an unlock: it keeps who unlocked and when
+    next.unlocks = {};
+    for (const row of l.data) { if (row.option_id) next.locks[row.decision_id] = { optionId: row.option_id, who: row.who, at: row.updated_at }; else next.unlocks[row.decision_id] = { who: row.who, at: row.updated_at }; }
     for (const row of p.data) next.picks[row.item_id] = { day: row.day, who: row.who };
     next.notes = n.data.map(row => ({ id: row.id, day: row.day, who: row.who, body: row.body, at: row.at }));
     next.comments = c.data.map(row => ({ id: row.id, itemId: row.item_id, who: row.who, body: row.body, at: row.at }));
@@ -62,7 +64,7 @@
   }
   async function pushAll(local) {
     // one-time seed from this browser when the shared tables are empty
-    const L = Object.entries(local.locks).map(([decision_id, v]) => ({ decision_id, option_id: v.optionId, who: v.who }));
+    const L = Object.entries(local.locks).map(([decision_id, v]) => ({ decision_id, option_id: v.optionId, who: v.who, updated_at: v.at || new Date().toISOString() }));
     const P = Object.entries(local.picks).map(([item_id, v]) => ({ item_id, day: v.day, who: v.who }));
     const N = local.notes.map(x => ({ id: x.id, day: x.day, who: x.who, body: x.body, at: x.at }));
     const Cm = local.comments.map(x => ({ id: x.id, item_id: x.itemId, who: x.who, body: x.body, at: x.at }));
@@ -92,8 +94,9 @@
   // ---- writes: cache first, then remote ----
   const remote = async (fn) => { if (!sb) return; try { const { error } = await fn(); if (error) throw error; } catch (e) { fail("write", e); } };
   S.setLock = (decisionId, optionId, who) => {
-    if (optionId) state.locks[decisionId] = { optionId, who }; else delete state.locks[decisionId]; emit();
-    remote(() => optionId ? sb.from("locks").upsert({ decision_id: decisionId, option_id: optionId, who, updated_at: new Date().toISOString() }) : sb.from("locks").delete().eq("decision_id", decisionId));
+    const at = new Date().toISOString();
+    if (optionId) state.locks[decisionId] = { optionId, who, at }; else { delete state.locks[decisionId]; (state.unlocks || (state.unlocks = {}))[decisionId] = { who, at }; } emit();
+    remote(() => sb.from("locks").upsert({ decision_id: decisionId, option_id: optionId || "", who, updated_at: at }));
   };
   S.setPick = (itemId, day, who) => {
     if (day) state.picks[itemId] = { day, who }; else delete state.picks[itemId]; emit();
@@ -125,7 +128,7 @@
   S.delMisc = id => { state.misc = state.misc.filter(m => m.id !== id); emit(); remote(() => sb.from("misc").delete().eq("id", id)); };
 
   // convenience views
-  S.locks = () => state.locks; S.picksByDay = () => { const out = {}; for (const id in state.picks) (out[state.picks[id].day] || (out[state.picks[id].day] = [])).push(id); return out; };
+  S.locks = () => state.locks; S.unlocks = () => state.unlocks || {}; S.picksByDay = () => { const out = {}; for (const id in state.picks) (out[state.picks[id].day] || (out[state.picks[id].day] = [])).push(id); return out; };
   S.pickOf = id => state.picks[id] || null; S.notesFor = day => state.notes.filter(n => n.day === Number(day));
   S.commentsFor = id => state.comments.filter(c => c.itemId === id); S.rejectsFor = id => state.rejects.filter(r => r.itemId === id).map(r => r.who);
   window.STORE = S;
