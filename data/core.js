@@ -67,6 +67,11 @@
       map.addLayer({ id: "items-all", type: "circle", source: "items", paint: { "circle-radius": 3.5, "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.4, "circle-stroke-width": 0 } });
       map.addLayer({ id: "items-hot", type: "circle", source: "items", filter: ["==", ["get", "hot"], 1], paint: { "circle-radius": 6, "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.95, "circle-stroke-color": opts.palette.land, "circle-stroke-width": 1.5 } });
       map.addLayer({ id: "items-label", type: "symbol", source: "items", filter: ["==", ["get", "hot"], 1], layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-offset": [0, 1.1], "text-anchor": "top", "text-optional": true, "text-max-width": 10 }, paint: { "text-color": opts.palette.markerText || opts.palette.label, "text-halo-color": opts.palette.land, "text-halo-width": 1.2 } });
+      map.addSource("zones", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map.addLayer({ id: "zones-fill", type: "circle", source: "zones", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 10, 14, 13, 44], "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.09, "circle-stroke-color": opts.palette.marker || opts.palette.route, "circle-stroke-opacity": 0.35, "circle-stroke-width": 1 } }, "items-all");
+      map.addLayer({ id: "zones-label", type: "symbol", source: "zones", layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 12, "text-letter-spacing": 0.12, "text-transform": "uppercase", "text-offset": [0, -1.6], "text-anchor": "bottom", "text-max-width": 9 }, paint: { "text-color": opts.palette.markerText || opts.palette.label, "text-halo-color": opts.palette.land, "text-halo-width": 1.4 } });
+      map.on("click", "zones-fill", e => { const f = e.features[0]; if (opts.onZoneClick) opts.onZoneClick(f.properties.id); });
+      map.on("mouseenter", "zones-fill", () => { map.getCanvas().style.cursor = "pointer"; }); map.on("mouseleave", "zones-fill", () => { map.getCanvas().style.cursor = ""; });
       const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8 });
       for (const layer of ["items-all", "items-hot"]) {
         map.on("mouseenter", layer, e => { map.getCanvas().style.cursor = "pointer"; const f = e.features[0]; pop.setLngLat(f.geometry.coordinates).setHTML("<span style=\"font:500 12px/1.3 system-ui\">" + f.properties.name + "</span>").addTo(map); });
@@ -76,6 +81,10 @@
       if (opts.onLoad) opts.onLoad(map);
     });
     return map;
+  }
+  function setZones(map, zones) {
+    if (!map || !map.getSource || !map.getSource("zones")) return;
+    map.getSource("zones").setData({ type: "FeatureCollection", features: (zones || []).map(z => ({ type: "Feature", properties: { id: z.id, name: z.name }, geometry: { type: "Point", coordinates: z.lngLat } })) });
   }
   // Show items with coordinates; hot ids get the bigger marker + label. Returns the hot features' bounds or null.
   function setMarkers(map, items, hotIds) {
@@ -97,5 +106,5 @@
     return g;
   }
 
-  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, groupsByBase };
+  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, setZones, groupsByBase };
 })();

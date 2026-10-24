@@ -164,6 +164,7 @@
     return { tab, html: `<div class="wrap"><button class="back" data-go="">← Map</button>
       <p class="eyebrow">Day ${d.n} · ${h(d.weekday)} ${h(d.date)}${d.spend ? " · " + h(d.spend) : ""}</p>
       <h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>
+      ${T.guides[d.base] ? `<p class="small" style="margin:-.2em 0 .4em"><button class="linkish" data-go="place-${d.base}">About ${h(p.name)}: areas on the map and our take →</button></p>` : ""}
       <nav class="tabs" aria-label="Day sections">${tabs.map(([id, label]) => `<button class="${id === tab ? "on" : ""}" data-tab="${id}" aria-selected="${id === tab}">${label}</button>`).join("")}</nav>
       <div class="pane" id="pane">${pane}</div></div>` };
   }
@@ -171,15 +172,31 @@
     const a = T.activities.find(x => x.id === id); if (!a) return "";
     return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Across the trip</p><h1 class="disp">${h(a.title)}</h1><p class="lead ink" style="font-weight:500">${h(a.question)}</p><p class="lead">${h(a.intro)}</p><div class="sec"><h2>The pick</h2><p class="lead">${h(a.verdict)}</p></div>${a.table ? `<div class="sec tablewrap"><table class="cmp"><thead><tr>${a.table.head.map(x => `<th>${h(x)}</th>`).join("")}</tr></thead><tbody>${a.table.rows.map(r => `<tr>${r.map((c, i) => i ? `<td>${h(c)}</td>` : `<th scope="row">${h(c)}</th>`).join("")}</tr>`).join("")}</tbody></table></div>` : ""}${Object.entries(a.perPlace).filter(([pl, ids]) => ids.length).map(([pl, ids]) => `<div class="sec"><h2>In <b>${h(PLACE(pl).name)}</b></h2>${ids.map(i => itemRow(i, {})).join("")}</div>`).join("")}</div>`;
   }
-  function planPage(place) {
+  function guideTab(place, g) {
+    const zones = g.zones.map(z => `<div class="row zone" role="button" tabindex="0" data-zone="${z.id}"><div><span class="name">${h(z.name)}</span><span class="meta">${h(z.for)}</span><span class="meta ink" style="font-weight:500">${h(z.take)}</span>${z.items.length ? `<span class="meta">${z.items.slice(0, 4).map(i => `<button class="linkish small" data-item="${i}">${h(T.items[i].name)}</button>`).join(" · ")}${z.items.length > 4 ? ` · ${z.items.length - 4} more in Choose` : ""}</span>` : ""}</div><div class="fig" style="font-size:1em;color:var(--dim)">${z.items.length || ""}</div></div>`).join("");
+    const plan = g.plan ? `<div class="sec tablewrap"><h2>The plan, hour by hour</h2><table class="cmp plan"><thead><tr><th>Time</th><th>What</th><th>Where</th><th>Cost</th><th>Note</th></tr></thead><tbody>${g.plan.map(r => `<tr>${r.map((c, i) => i === 0 ? `<th scope="row">${h(c)}</th>` : `<td>${h(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
+    return `<p class="lead">${h(g.tagline)}</p>${g.status === "refining" ? `<p class="small pending">Research still refining this guide: east-Tonsai stays, snorkel timing and the recommended split land here when it finishes.</p>` : ""}
+      <div class="sec"><h2>The areas <b>on the map</b></h2><p class="small pending" style="margin:0 0 .6em">Tap an area to zoom the map to it.</p>${zones}</div>
+      <div class="sec"><h2>Our take</h2><ul class="hlist">${g.recos.map(x => `<li>${h(x)}</li>`).join("")}</ul></div>${plan}`;
+  }
+  function placePage(place, tab) {
+    const g = T.guides[place]; if (!g) return null;
+    tab = tab === "choose" ? "choose" : "guide";
+    const p = PLACE(place);
+    const body = tab === "guide" ? guideTab(place, g) : planPage(place, true);
+    return { tab, html: `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Place</p><h1 class="disp">${h(g.title)}<small>${h(p.thai)}</small></h1>
+      <nav class="tabs" aria-label="Place sections"><button class="${tab === "guide" ? "on" : ""}" data-tab="guide">Guide</button><button class="${tab === "choose" ? "on" : ""}" data-tab="choose">Choose</button></nav>
+      <div class="pane" id="pane">${body}</div></div>` };
+  }
+  function planPage(place, inner) {
     const p = PLACE(place), days = DAYS_FOR(place);
     const groups = [["stay", "Sleep"], ["do", "Do"], ["dive", "Scuba and snorkel"], ["eat", "Eat"], ["drink", "Drink"]];
     const picked = ITEMS.filter(it => samePlace(it, place) && dayOfPick(it.id));
     const sub = picked.reduce((a, it) => a + itemCost(it), 0);
-    return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Plan a place</p><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>
+    return `${inner ? "" : `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Plan a place</p><h1 class="disp">${h(p.name)}<small>${h(p.thai)}</small></h1>`}
       <p class="lead">Everything researched for ${h(p.name)} in one list. Tap a day number to put an item on that day (days ${days.join(", ")}); tap another number to move it. What you choose shows up in each day's Itinerary tab and in the budget.</p>
       <div class="sec"><h2>Chosen so far</h2>${picked.length ? picked.map(it => `<div class="row locked" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span></div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : "free"}</div></div>`).join("") + `<p class="small" style="margin-top:.8em">Adds <b class="ink">${fmt(sub)} INR</b> to the budget, ${fmt(sub / T.travellers)} each.</p>` : `<p class="pending">Nothing chosen yet.</p>`}</div>
-      ${groups.map(([type, label]) => { const list = poolOf(type, place); return list.length ? `<div class="sec"><h2>${label}</h2>${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}</div>`;
+      ${groups.map(([type, label]) => { const list = poolOf(type, place); return list.length ? `<div class="sec"><h2>${label}</h2>${list.map(it => `<div class="row ${dayOfPick(it.id) ? "locked" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span>${chips(it)}<span class="meta">${h(it.tagline)}</span>${it.rating ? `<span class="meta">${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}</span>` : ""}</div><div class="fig">${it.priceINR ? fmt(it.priceINR) + "<small>INR</small>" : it.priceTHB ? "฿" + fmt(it.priceTHB) + "<small>a head</small>" : (it.priceTHB === 0 ? "free" : "—")}</div></div>`).join("")}</div>` : ""; }).join("")}${inner ? "" : "</div>"}`;
   }
   function essentialsPage() {
     return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Before we go</p><h1 class="disp">Essentials</h1>${T.essentials.map(e => `<div class="opt"><div><span class="name">${h(e.k)}</span><span class="small" style="display:block">${h(e.v)}</span>${e.src && e.src.startsWith("http") ? `<a href="${e.src}" target="_blank" rel="noopener">source</a>` : ""}</div><div></div></div>`).join("")}<div class="sec"><h2>Budget frame</h2><p class="lead">${h(T.budgetRule)} ${h(T.fx.note)}</p></div></div>`;
@@ -227,6 +244,7 @@
     else if (r.page.startsWith("act-")) page = actPage(r.page.slice(4));
     else if (r.page === "essentials") page = essentialsPage();
     else if (r.page.startsWith("plan-")) page = planPage(r.page.slice(5));
+    else if (r.page.startsWith("place-")) { const res = placePage(r.page.slice(6), r.tab); if (res) { page = res.html; tab = res.tab; } }
     const key = r.page + "/" + tab;
     const y = sheet.hidden || key !== lastKey ? 0 : sheet.scrollTop;
     sheet.hidden = !page; if (page) { sheet.innerHTML = page; sheet.scrollTop = y; }
@@ -241,16 +259,19 @@
     let hot = [];
     if (d && LIST_TABS.has(tab)) hot = [...sheet.querySelectorAll("[data-item]")].map(e => e.dataset.item);
     else if (d) hot = [...new Set([...day.picks.do, ...day.picks.eat, ...day.picks.drink, ...(picks[dayN] || []), ...day.decisions.map(id => { const dec = C.decision(id); const o = dec && C.lockedOption(dec); return o && o.item; }).filter(Boolean)])];
+    else if (r.page.startsWith("place-")) hot = tab === "choose" ? [...sheet.querySelectorAll(".row.locked[data-item]")].map(e => e.dataset.item) : [];
     else if (r.page.startsWith("act-") || r.page.startsWith("plan-")) hot = [...sheet.querySelectorAll(".row.locked[data-item]")].map(e => e.dataset.item);
     else hot = [...day.picks.do, ...day.picks.eat, ...day.picks.drink];
     const openItem = r.item && T.items[r.item] && T.items[r.item].lngLat ? T.items[r.item] : null;
     if (openItem) hot = [openItem.id];
     if (mapReady()) {
-      const list = r.page.startsWith("act-") ? ITEMS : r.page.startsWith("plan-") ? ITEMS.filter(it => samePlace(it, r.page.slice(5))) : ITEMS.filter(it => samePlace(it, place));
+      const gp = r.page.startsWith("place-") ? r.page.slice(6) : r.page.startsWith("plan-") ? r.page.slice(5) : null;
+      const list = r.page.startsWith("act-") ? ITEMS : gp ? ITEMS.filter(it => samePlace(it, gp)) : ITEMS.filter(it => samePlace(it, place));
+      C.setZones(map, gp && T.guides[gp] && tab !== "choose" ? T.guides[gp].zones : []);
       const bounds = C.setMarkers(map, list, hot);
       const changed = key !== lastKey;
       if (openItem) map.easeTo({ center: openItem.lngLat, zoom: Math.max(map.getZoom(), 13.5), padding: mapPadding(!!page), duration: 900 });
-      else if (r.page.startsWith("plan-") && changed) focusPlace(r.page.slice(5), true);
+      else if (gp && changed) focusPlace(gp, true);
       else if (changed && bounds && (d && LIST_TABS.has(tab) || r.page.startsWith("act-"))) map.fitBounds(bounds, { padding: mapPadding(!!page), maxZoom: 14, duration: 1400 });
       else if (changed || place !== focused) focusPlace(place, !!page);
     }
@@ -267,6 +288,7 @@
     const close = e.target.closest("[data-close]"); if (close) { closeTop(); return; }
     const tabBtn = e.target.closest("[data-tab]"); if (tabBtn) { go(route().page + "/t-" + tabBtn.dataset.tab); return; }
     const as = e.target.closest("[data-assign]"); if (as) { e.stopPropagation(); assign(as.dataset.assign, as.dataset.day ? Number(as.dataset.day) : null); return; }
+    const zr = e.target.closest("[data-zone]"); if (zr && !e.target.closest("[data-item]")) { const gp = route().page.slice(6); const z = (T.guides[gp] || { zones: [] }).zones.find(x => x.id === zr.dataset.zone); if (z && map) { document.querySelectorAll(".zone").forEach(x => x.classList.toggle("locked", x === zr)); C.setMarkers(map, ITEMS.filter(it => samePlace(it, gp)), z.items); map.easeTo({ center: z.lngLat, zoom: 13.6, padding: mapPadding(true), duration: 900 }); } return; }
     const pick = e.target.closest("[data-pick]"); if (pick) { togglePick(pick.dataset.day, pick.dataset.pick); return; }
     const lc = e.target.closest("[data-lockcard]"); if (lc) { C.lock(lc.dataset.lockcard, lc.dataset.opt); return; }
     const rail = e.target.closest(".rail button"); if (rail) { selectDay(Number(rail.dataset.i)); return; }
@@ -282,11 +304,12 @@
 
   // ---- boot ----
   $("#rail").innerHTML = T.days.map((d, i) => `<button data-i="${i}"><span class="fig">${h(d.date.split(" ")[0])}</span><small>${h(d.weekday.slice(0, 3))} · ${h(PLACE(d.base).name)}</small></button>`).join("");
-  $("#menu").innerHTML = `<button data-go="plan-phuket">Plan Phuket</button><button data-go="plan-aonang">Plan Krabi</button><button data-go="plan-phiphi">Plan Phi Phi</button>` + T.activities.map(a => `<button data-go="act-${a.id}">${h(a.title)}</button>`).join("") + `<button data-go="essentials">Essentials</button>`;
+  $("#menu").innerHTML = `<button data-go="place-phuket">Phuket</button><button data-go="place-phiphi">Phi Phi</button><button data-go="place-aonang">Krabi</button>` + T.activities.map(a => `<button data-go="act-${a.id}">${h(a.title)}</button>`).join("") + `<button data-go="essentials">Essentials</button>`;
   render();
   const skin = document.documentElement.dataset.skin || "l";
   map = C.initMap({ container: "map", pitch: skin === "k" ? 48 : 0, attribution: "bottom-right",
     palette: skin === "k" ? { land: "#0f3140", water: "#061822", cover: "#113644", road: "#1d4a5e", label: "#8ea4ae", route: "#ece2cb", marker: "#ece2cb", markerText: "#ece2cb" } : { land: "#f4f1ea", water: "#dfe5e2", cover: "#ebe9df", road: "#d8d2c4", label: "#6f6f68", route: "#2f5f8c", marker: "#2f5f8c", markerText: "#1c1c1a" },
     onItemClick: id => { const r = route(); go((r.page ? base(r) : "day-" + T.days[current].n) + "/i-" + id); },
+    onZoneClick: id => { const el = document.querySelector(`[data-zone="${id}"]`); if (el) { el.click(); el.scrollIntoView({ behavior: "smooth", block: "center" }); } },
     onLoad: () => { focused = null; lastKey = "\u0000"; render(); } });
 })();

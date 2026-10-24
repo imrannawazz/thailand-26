@@ -6768,10 +6768,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h2": {
    "id": "hanuman-h2",
@@ -6806,10 +6806,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h3": {
    "id": "hanuman-h3",
@@ -6844,10 +6844,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h4": {
    "id": "hanuman-h4",
@@ -6881,10 +6881,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h5": {
    "id": "hanuman-h5",
@@ -6919,10 +6919,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h6": {
    "id": "hanuman-h6",
@@ -6956,10 +6956,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h7": {
    "id": "hanuman-h7",
@@ -6993,10 +6993,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h8": {
    "id": "hanuman-h8",
@@ -7030,10 +7030,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h9": {
    "id": "hanuman-h9",
@@ -7068,10 +7068,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h10": {
    "id": "hanuman-h10",
@@ -7106,10 +7106,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h11": {
    "id": "hanuman-h11",
@@ -7144,10 +7144,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h12": {
    "id": "hanuman-h12",
@@ -7181,10 +7181,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h13": {
    "id": "hanuman-h13",
@@ -7218,10 +7218,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h14": {
    "id": "hanuman-h14",
@@ -7256,10 +7256,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h15": {
    "id": "hanuman-h15",
@@ -7293,10 +7293,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "hanuman-h16": {
    "id": "hanuman-h16",
@@ -7330,10 +7330,10 @@ window.TRIP = {
     "research/hanuman-and-ferries.md"
    ],
    "lngLat": [
-    98.3514,
-    7.87718
+    98.37,
+    7.86
    ],
-   "geo": "exact"
+   "geo": "approx"
   },
   "s2-voyagers": {
    "id": "s2-voyagers",
@@ -7381,8 +7381,11 @@ window.TRIP = {
     "beach": "~10 min to pier, few min to Loh Dalum"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.77444,
+    7.74342
+   ],
+   "geo": "exact"
   },
   "s2-by-the-beach": {
    "id": "s2-by-the-beach",
@@ -7434,8 +7437,11 @@ window.TRIP = {
     "beach": "'moments from pier and beaches' (AI summary, unverified)"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx"
   },
   "s2-dormsin": {
    "id": "s2-dormsin",
@@ -7487,8 +7493,11 @@ window.TRIP = {
     "beach": "close to Tonsai pier (south bay)"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.77306,
+    7.73877
+   ],
+   "geo": "exact"
   },
   "s2-blue-flow": {
    "id": "s2-blue-flow",
@@ -7540,8 +7549,11 @@ window.TRIP = {
     "beach": "<1 min to pier, few metres to beach"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.776,
+    7.74
+   ],
+   "geo": "approx"
   },
   "s2-blanco-beach-bar": {
    "id": "s2-blanco-beach-bar",
@@ -7593,8 +7605,11 @@ window.TRIP = {
     "beach": "on the beach"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.77383,
+    7.74294
+   ],
+   "geo": "exact"
   },
   "s2-phi-phi-hotel": {
    "id": "s2-phi-phi-hotel",
@@ -7645,8 +7660,11 @@ window.TRIP = {
     "beach": "76 m to pier"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.77336,
+    7.74137
+   ],
+   "geo": "exact"
   },
   "s2-panmanee": {
    "id": "s2-panmanee",
@@ -7697,8 +7715,11 @@ window.TRIP = {
     "beach": "132 yd to pier"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.772,
+    7.73889
+   ],
+   "geo": "exact"
   },
   "s2-kitty-guest-house": {
    "id": "s2-kitty-guest-house",
@@ -7750,8 +7771,11 @@ window.TRIP = {
     "beach": "2 min to Loh Dalum, 12-15 min to pier"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.77425,
+    7.74599
+   ],
+   "geo": "exact"
   },
   "s2-katamanda-e5": {
    "id": "s2-katamanda-e5",
@@ -7802,8 +7826,11 @@ window.TRIP = {
     "beach": "Kata Noi 'a short walk'; Kata ~10 min downhill (~1 km)"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "s2-villa-beachside-kata-noi": {
    "id": "s2-villa-beachside-kata-noi",
@@ -7854,8 +7881,11 @@ window.TRIP = {
     "beach": "~2 min via private rear gate"
    },
    "fitsBudget": false,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "s2-kata-3br-pool-villa": {
    "id": "s2-kata-3br-pool-villa",
@@ -7904,8 +7934,11 @@ window.TRIP = {
     "beach": "'within walking distance' of Kata, minutes not stated"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "s2-kata-townhouse-1": {
    "id": "s2-kata-townhouse-1",
@@ -7955,8 +7988,11 @@ window.TRIP = {
     "beach": "600 m / ~10 min to Kata"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "s2-karon-apt704": {
    "id": "s2-karon-apt704",
@@ -8008,8 +8044,11 @@ window.TRIP = {
     "beach": "20 m, directly across from Karon Beach"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "s2-karon-exclusive-8638782": {
    "id": "s2-karon-exclusive-8638782",
@@ -8058,8 +8097,11 @@ window.TRIP = {
     "beach": "~50 m, Karon Beach outside the compound"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "s2-karon-334sqm": {
    "id": "s2-karon-334sqm",
@@ -8106,8 +8148,11 @@ window.TRIP = {
     "beach": "'right on Karon Beach' (no metres given)"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx"
   },
   "s2-rawai-walk-to-beach": {
    "id": "s2-rawai-walk-to-beach",
@@ -8155,8 +8200,11 @@ window.TRIP = {
     "beach": "250 m to a small cove; Nai Harn 5 min by car"
    },
    "fitsBudget": false,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx"
   },
   "s2-villa-vipa": {
    "id": "s2-villa-vipa",
@@ -8199,8 +8247,11 @@ window.TRIP = {
     "beach": "~5 min by car to Nai Harn; shops 5-min walk"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.28219,
+    7.88475
+   ],
+   "geo": "exact"
   },
   "s2-shanti-bangtao": {
    "id": "s2-shanti-bangtao",
@@ -8246,8 +8297,11 @@ window.TRIP = {
     "beach": "~15 min walk / 3 min drive to Bang Tao"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx"
   },
   "s2-bangtao-soi4-sleeps9": {
    "id": "s2-bangtao-soi4-sleeps9",
@@ -8294,8 +8348,11 @@ window.TRIP = {
     "beach": "~400 m / 10-min walk to Bang Tao"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx"
   },
   "s2-bangtao-laguna-pool-villa": {
    "id": "s2-bangtao-laguna-pool-villa",
@@ -8342,8 +8399,11 @@ window.TRIP = {
     "beach": "short drive to Bang Tao/Layan; Location 4.4"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx"
   },
   "s2-surin-large-villa": {
    "id": "s2-surin-large-villa",
@@ -8388,8 +8448,11 @@ window.TRIP = {
     "beach": "7-10 min walk to Surin"
    },
    "fitsBudget": false,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx"
   },
   "s2-mantra-kata-noi": {
    "id": "s2-mantra-kata-noi",
@@ -8439,8 +8502,11 @@ window.TRIP = {
     "beach": "125 yd to Kata Noi"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.30011,
+    7.80636
+   ],
+   "geo": "exact"
   },
   "s2-kata-noi-resort": {
    "id": "s2-kata-noi-resort",
@@ -8482,8 +8548,11 @@ window.TRIP = {
     "beach": "steps from Kata Noi"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.30037,
+    7.80726
+   ],
+   "geo": "exact"
   },
   "s2-kata-beachwalk": {
    "id": "s2-kata-beachwalk",
@@ -8533,8 +8602,11 @@ window.TRIP = {
     "beach": "245 m to Kata"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx"
   },
   "s2-princess-kamala": {
    "id": "s2-princess-kamala",
@@ -8585,8 +8657,11 @@ window.TRIP = {
     "beach": "beach across the street per reviewers; Trip.com says 0.67 km"
    },
    "fitsBudget": true,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx"
   },
   "at-kamala-hotel": {
    "id": "at-kamala-hotel",
@@ -8636,8 +8711,11 @@ window.TRIP = {
     "beach": "0.9 km to Kamala Beach"
    },
    "fitsBudget": false,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.281,
+    7.95002
+   ],
+   "geo": "exact"
   },
   "s2-best-western-bangtao": {
    "id": "s2-best-western-bangtao",
@@ -8687,8 +8765,463 @@ window.TRIP = {
     "beach": "on the beach"
    },
    "fitsBudget": false,
-   "lngLat": null,
-   "geo": null
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx"
+  }
+ },
+ "guides": {
+  "phuket": {
+   "title": "Phuket",
+   "tagline": "One island, eight very different corners. Night one is for the pier and the food; the beach nights are for calm water.",
+   "zones": [
+    {
+     "id": "oldtown",
+     "name": "Old Town and Phuket Town",
+     "lngLat": [
+      98.387,
+      7.885
+     ],
+     "for": "Sino-Portuguese streets, Michelin street food, cocktail bars, Sunday Lard Yai. Cheapest rooms. No beach.",
+     "take": "Sleep here on night one: Rassada pier is 15 minutes away for the 08:30 ferry. Come back on Sunday 22 for Lard Yai.",
+     "items": [
+      "horange-phuket",
+      "homa-phuket-town",
+      "the-memory-at-on-on",
+      "one-chun",
+      "raya",
+      "so-xorry",
+      "dibuk-house",
+      "chillva-market",
+      "lard-yai-sunday-walking-street"
+     ]
+    },
+    {
+     "id": "rassada",
+     "name": "Rassada pier",
+     "lngLat": [
+      98.4046,
+      7.8676
+     ],
+     "for": "Every ferry to Phi Phi and Krabi leaves from here.",
+     "take": "Not a place to stay. 2.8 km from Horange: a 150 to 250 THB Grab, or the Ao Nang Princess van picks you up.",
+     "items": []
+    },
+    {
+     "id": "katanoi",
+     "name": "Kata Noi and Kata",
+     "lngLat": [
+      98.296,
+      7.812
+     ],
+     "for": "The calmest west-coast swimming in late November, mild nightlife, villas and small hotels, Ska Bar on the sand.",
+     "take": "Our beach base for Saturday to Tuesday. Katamanda E5 if its price lands, otherwise Mantra or Kata Noi Resort. Bolt to Bangla is 305 THB if one night calls.",
+     "items": [
+      "s2-katamanda-e5",
+      "s2-mantra-kata-noi",
+      "s2-kata-noi-resort",
+      "s2-kata-3br-pool-villa",
+      "kata-noi-beach",
+      "ska-bar",
+      "after-beach-bar",
+      "kata-night-market",
+      "karon-viewpoint"
+     ]
+    },
+    {
+     "id": "karon",
+     "name": "Karon",
+     "lngLat": [
+      98.294,
+      7.847
+     ],
+     "for": "A long open beach with the worst rip currents on the coast, beachfront apartments, the Friday temple market, the Big Buddha trailhead.",
+     "take": "The two beachfront apartments (20 m and 50 m from the sand) are the walk-to-water fallback. Swim between the flags only.",
+     "items": [
+      "s2-karon-apt704",
+      "s2-karon-exclusive-8638782",
+      "pineapple-guesthouse-karon",
+      "karon-temple-market",
+      "big-buddha-hike-from-karon"
+     ]
+    },
+    {
+     "id": "patong",
+     "name": "Patong",
+     "lngLat": [
+      98.2965,
+      7.8961
+     ],
+     "for": "Bangla Road, the boxing stadium on Fridays and Saturdays, beach clubs, the Smart Bus to the airport.",
+     "take": "One night out, not a base. Every Reddit thread this month says the same.",
+     "items": [
+      "bangla-road",
+      "bangla-boxing-stadium-fight-night",
+      "patong-mansion-hotel"
+     ]
+    },
+    {
+     "id": "kamala",
+     "name": "Kamala, Surin, Bang Tao",
+     "lngLat": [
+      98.283,
+      7.95
+     ],
+     "for": "Calm beaches, Cafe del Mar at sunset, the shortest run to the airport (22 to 24 km).",
+     "take": "Worth it only if the easy airport morning on the 24th matters most; everything else needs a Grab. A Bang Tao drowning in Nov 2025: obey the red flags.",
+     "items": [
+      "s2-princess-kamala",
+      "s2-bangtao-soi4-sleeps9",
+      "cafe-del-mar"
+     ]
+    },
+    {
+     "id": "naiharn",
+     "name": "Nai Harn, Rawai, Promthep",
+     "lngLat": [
+      98.316,
+      7.775
+     ],
+     "for": "The quietest proper swimming beach (no permanent lifeguards), the seafood market, the sunset cape, Muay Thai gyms.",
+     "take": "A Monday afternoon: Rawai seafood market cooked across the road, then Promthep at 18:00. Villas here are a drive from the water, so not the base.",
+     "items": [
+      "s2-villa-vipa",
+      "s2-rawai-walk-to-beach",
+      "nai-harn-beach",
+      "rawai-seafood-market",
+      "promthep-cape-sunset",
+      "salaloy"
+     ]
+    },
+    {
+     "id": "chalong",
+     "name": "Chalong and Wichit",
+     "lngLat": [
+      98.345,
+      7.84
+     ],
+     "for": "Hanuman World, Wat Chalong, Muay Thai gyms, Mor Mu Dong seafood in the mangroves; the Racha boats leave from Chalong pier.",
+     "take": "Hanuman World's 08:00 or 10:00 session on Monday, then Wat Chalong or Mor Mu Dong on the way back.",
+     "items": [
+      "hanuman-world-zipline",
+      "wat-chalong",
+      "muay-thai-drop-in-class",
+      "mor-mu-dong",
+      "racha-and-coral-islands-speedboat-snorkel"
+     ]
+    }
+   ],
+   "recos": [
+    "Night one: Horange (cheap, 8.7) or HOMA (9.2) in Town, 15 minutes from the 08:30 ferry. Chillva Market and an Old Town bar, early night.",
+    "Beach base: Kata Noi. Villa first (Katamanda E5), beachfront apartments in Karon second, Mantra or Kata Noi Resort third.",
+    "Sunday 22: the Racha Yai try-dive with SSS Phuket in Kata (last safe dive day), then Lard Yai in Old Town from 16:00.",
+    "Monday 23: Hanuman World early session, Promthep sunset, Rawai seafood, Kata Night Market.",
+    "Tuesday 24: Kata to the airport is about an hour, 90 minutes after 16:00. Loy Krathong is that night if the flight is late."
+   ]
+  },
+  "aonang": {
+   "title": "Ao Nang and Krabi",
+   "tagline": "A strip, a pier, a town and a peninsula you reach by longtail. Two nights, one full day.",
+   "zones": [
+    {
+     "id": "strip",
+     "name": "Ao Nang strip",
+     "lngLat": [
+      98.8229,
+      8.0319
+     ],
+     "for": "The beach road: bars, Centre Point, the Last Fisherman at sunset, tour desks on every corner, Grab works.",
+     "take": "Stay within a walk of it. Thursday evening: sunset at the Last Fisherman at 18:00, then Centre Point or Boogie Bar.",
+     "items": [
+      "anawin-bungalows",
+      "the-last-fisherman-bar",
+      "the-beach-bar-ao-nang",
+      "boogie-bar",
+      "centre-point",
+      "ali-baba",
+      "jame-food-centre"
+     ]
+    },
+    {
+     "id": "nopparat",
+     "name": "Nopparat Thara",
+     "lngLat": [
+      98.805,
+      8.04
+     ],
+     "for": "The pier for Phi Phi and Railay boats, the Landmark night market, a wider emptier beach, Krua Thara seafood.",
+     "take": "Your Thursday ferry lands here and the Princess van drops you at the hotel. Krua Thara for one proper seafood dinner.",
+     "items": [
+      "doo-dee-boutique-resort",
+      "krua-thara",
+      "ao-nang-landmark-night-market"
+     ]
+    },
+    {
+     "id": "nathai",
+     "name": "Na Thai, inland",
+     "lngLat": [
+      98.84,
+      8.05
+     ],
+     "for": "Pool villas with three en-suites, five minutes by car from the beach.",
+     "take": "Ban Preeya is lovely and above the cap, and every outing is a Grab. Only if the pool matters more than walking home.",
+     "items": [
+      "ban-preeya-private-pool-villa",
+      "smooth-as-silk-pool-villa",
+      "aonang-nine-poolvilla"
+     ]
+    },
+    {
+     "id": "railay",
+     "name": "Railay and Phra Nang",
+     "lngLat": [
+      98.838,
+      8.012
+     ],
+     "for": "Limestone walls for climbing, Phra Nang cave beach, the best sunset beach, the Last Bar.",
+     "take": "100 THB longtail each way, 150 after 18:00, boats wait for eight people. Friday option: half-day climb, then Phra Nang for sunset.",
+     "items": [
+      "railay-rock-climbing-half-day",
+      "railay-west-and-phra-nang-beach",
+      "the-last-bar-railay"
+     ]
+    },
+    {
+     "id": "krabitown",
+     "name": "Krabi Town",
+     "lngLat": [
+      98.9063,
+      8.0863
+     ],
+     "for": "Maharaj morning market, Abdulloh's Muslim-Thai kitchen, Chao Fah pier night market daily, the Walking Street on Friday to Sunday.",
+     "take": "Friday evening is the one night your dates line up with the Walking Street. 60 THB songthaew there, taxi back after 20:00.",
+     "items": [
+      "maharaj-morning-market",
+      "abdulloh-muslim-restaurant",
+      "kotung",
+      "chao-fah-pier-night-market",
+      "ruen-mai"
+     ]
+    },
+    {
+     "id": "thalane",
+     "name": "Ao Thalane",
+     "lngLat": [
+      98.77,
+      8.18
+     ],
+     "for": "Mangrove kayaking in calm channels and canyons, 30 to 40 minutes north.",
+     "take": "The adventure half-day: 13:00 pickup, back about 18:00. Fits Friday, not Thursday.",
+     "items": [
+      "ao-thalane-mangrove-kayak"
+     ]
+    },
+    {
+     "id": "tigercave",
+     "name": "Tiger Cave Temple",
+     "lngLat": [
+      98.924,
+      8.125
+     ],
+     "for": "1,260 steps to a summit shrine.",
+     "take": "Friday at opening (06:00) if anyone wants it; Grab 200 to 300 each way.",
+     "items": [
+      "tiger-cave-temple"
+     ]
+    }
+   ],
+   "recos": [
+    "Stay walkable: Anawin Bungalows 300 m from the beach (has a 3-bedroom house) or Doo Dee by the night market. A pool villa means a Grab every time.",
+    "Thursday: land 16:30 by the Princess ferry, sunset at the Last Fisherman, Centre Point.",
+    "Friday: Ao Thalane kayak at 13:00, or a morning Railay climb and Phra Nang at sunset. Evening: Krabi Town Walking Street.",
+    "Saturday: private van at 07:00 to 09:00, 3,500 THB, beach by noon.",
+    "Skip: Emerald Pool (1.5 h each way) and the 4-island tour, which needs the full day you are using for the van."
+   ]
+  },
+  "phiphi": {
+   "title": "Ko Phi Phi",
+   "tagline": "Arrive 10:30, snorkel after the day boats leave, sleep away from the bass, out on the 14:30 ferry. Twenty-eight hours, planned.",
+   "status": "refining",
+   "zones": [
+    {
+     "id": "pier",
+     "name": "Tonsai pier and village",
+     "lngLat": [
+      98.777,
+      7.7385
+     ],
+     "for": "Where the ferries land (20 THB island fee), longtail operators, ATMs, 7-Elevens, the cheap private rooms.",
+     "take": "Drop bags at the hotel, book the 14:00 longtail at a desk or the pier, eat.",
+     "items": [
+      "ivory-phi-phi",
+      "s2-panmanee",
+      "s2-phi-phi-hotel",
+      "ton-sai-tropical",
+      "tonsai-village-food",
+      "carlito-s"
+     ]
+    },
+    {
+     "id": "lohdalum",
+     "name": "Loh Dalum",
+     "lngLat": [
+      98.776,
+      7.7445
+     ],
+     "for": "The party beach: Slinky's fire show about 22:00, Ibiza, buckets, bass until 02:00. Shallow and muddy at low tide.",
+     "take": "Go for the fire show, do not sleep on it.",
+     "items": [
+      "slinky-beach-bar",
+      "ibiza-beach-club",
+      "kayak-at-loh-dalum",
+      "s2-blanco-beach-bar",
+      "s2-by-the-beach"
+     ]
+    },
+    {
+     "id": "eastcliff",
+     "name": "East Tonsai, towards the cliff",
+     "lngLat": [
+      98.783,
+      7.7395
+     ],
+     "for": "Quieter guesthouses and bungalows on the slope, ten minutes from the bars, the viewpoint stairs start here.",
+     "take": "Our sleeping zone. Named places and the recommended split are being researched right now.",
+     "items": [
+      "s2-voyagers",
+      "p2-wood-loft",
+      "phi-phi-viewpoint-2"
+     ]
+    },
+    {
+     "id": "longbeach",
+     "name": "Long Beach",
+     "lngLat": [
+      98.785,
+      7.729
+     ],
+     "for": "The quiet beach a longtail away, good snorkelling off Shark Point at the end.",
+     "take": "Only if you give up on the nightlife: boats back stop early (100 to 200 THB per boat).",
+     "items": [
+      "long-beach",
+      "paradise-pearl-bungalows"
+     ]
+    },
+    {
+     "id": "leh",
+     "name": "Phi Phi Leh",
+     "lngLat": [
+      98.768,
+      7.685
+     ],
+     "for": "Pileh Lagoon, Maya Bay (walk-in only, no swimming), Loh Samah snorkel, Viking Cave from the water. 400 THB park fee each, cash.",
+     "take": "Private longtail 14:00 to 18:00 after the day boats leave, or 06:00 to 10:00 for the emptiest Maya Bay.",
+     "items": [
+      "private-longtail-from-tonsai",
+      "maya-bay"
+     ]
+    },
+    {
+     "id": "bamboo",
+     "name": "Bamboo Island",
+     "lngLat": [
+      98.838,
+      7.812
+     ],
+     "for": "White sand and the clearest easy snorkel, 30 minutes north.",
+     "take": "Ask the longtail to swap Viking Cave for Bamboo if the sea is flat.",
+     "items": []
+    }
+   ],
+   "recos": [
+    "Wednesday 10:30 land, 11:00 bags at the hotel, 11:30 book the boat, lunch in the village.",
+    "14:00 to 18:00 private longtail: Pileh, Maya Bay walk, Loh Samah snorkel, sunset. 2,000 to 3,300 THB per boat plus 400 each.",
+    "Dinner in Tonsai, Carlito's fire show about 21:30 or Slinky about 22:00. Walk back east, ten minutes.",
+    "Thursday: Viewpoint 2 before 09:00, breakfast, swim at Long Beach or Loh Dalum at high tide, bags from reception, 14:00 at the pier for the 14:30 ferry.",
+    "If Wednesday's sea is rough: skip the boat, do the viewpoint and Long Beach, and take the 06:00 sunrise longtail Thursday instead."
+   ],
+   "plan": [
+    [
+     "10:30",
+     "Land at Tonsai, pay the 20 THB island fee",
+     "Pier",
+     "100",
+     ""
+    ],
+    [
+     "11:00",
+     "Drop bags, check in or leave luggage",
+     "East Tonsai",
+     "",
+     "Rooms are often ready by 14:00"
+    ],
+    [
+     "11:30",
+     "Book the private longtail for 14:00; cash",
+     "Pier or a desk",
+     "2,000 to 3,300 per boat",
+     "Agree the stops and the return time"
+    ],
+    [
+     "12:30",
+     "Lunch",
+     "Village",
+     "150 to 250 each",
+     ""
+    ],
+    [
+     "14:00",
+     "Longtail: Pileh, Maya Bay walk, Loh Samah snorkel, Viking Cave, sunset",
+     "Phi Phi Leh",
+     "400 park fee each",
+     "Reef-safe sunscreen only"
+    ],
+    [
+     "18:30",
+     "Shower, dinner",
+     "Village",
+     "200 to 400 each",
+     ""
+    ],
+    [
+     "21:30",
+     "Fire show",
+     "Carlito's, then Slinky at 22:00",
+     "250 to 350 a drink",
+     "Walk back east, ten minutes"
+    ],
+    [
+     "07:00",
+     "Viewpoint 2",
+     "East Tonsai stairs",
+     "30",
+     "Before the heat"
+    ],
+    [
+     "09:00",
+     "Breakfast, swim",
+     "Loh Dalum at high tide or Long Beach",
+     "",
+     ""
+    ],
+    [
+     "13:30",
+     "Bags from reception, walk to the pier",
+     "Pier",
+     "",
+     "Check in 14:00"
+    ],
+    [
+     "14:30",
+     "Ao Nang Princess ferry, van to the hotel included",
+     "To Ao Nang, 16:30",
+     "650 each",
+     ""
+    ]
+   ]
   }
  },
  "activities": [
