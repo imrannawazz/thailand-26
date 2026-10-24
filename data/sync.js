@@ -14,11 +14,12 @@
   // ---- state: a normalised shape every page reads ----
   // locks: {decisionId: {optionId, who}}  picks: {itemId: {day, who}}  notes: [{id, day, who, body, at}]
   // comments: [{id, itemId, who, body, at}]  rejects: [{itemId, who}]  misc: [{id, name, inr, per, who, at}]
-  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [], links: [], tiers: [], prices: [] });
+  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [], links: [], tiers: [], prices: [], unavail: [] });
   let state = read(LS, null);
   if (state && !state.links) state.links = [];
   if (state && !state.tiers) state.tiers = [];
   if (state && !state.prices) state.prices = [];
+  if (state && !state.unavail) state.unavail = [];
   if (!state) {
     // migrate the earlier per-key localStorage shape once
     state = empty();
@@ -46,7 +47,7 @@
 
   async function pull() {
     if (!sb) return;
-    const [l, p, n, c, r, m, k, tr, pr] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links", "tiers", "prices"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" || t === "tiers" ? "updated_at" : "created_at", { ascending: true })));
+    const [l, p, n, c, r, m, k, tr, pr, ua] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links", "tiers", "prices", "unavail"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" || t === "tiers" ? "updated_at" : "created_at", { ascending: true })));
     const err = [l, p, n, c, r, m].find(x => x.error); if (err) throw err.error;
     const next = empty();
     // an empty option_id is an unlock: it keeps who unlocked and when
@@ -59,6 +60,7 @@
     next.misc = m.data.map(row => ({ id: row.id, name: row.name, inr: row.inr, per: row.per, who: row.who, at: row.at }));
     next.links = k.error ? [] : k.data.map(row => ({ id: row.id, url: row.url, place: row.place, kind: row.kind, note: row.note, who: row.who, at: row.at, status: row.status }));
     next.tiers = tr.error ? [] : tr.data.map(row => ({ itemId: row.item_id, who: row.who, tier: row.tier }));
+    next.unavail = ua.error ? [] : ua.data.map(row => ({ itemId: row.item_id, who: row.who, note: row.note, at: row.at }));
     next.prices = pr.error ? [] : pr.data.map(row => ({ id: row.id, itemId: row.item_id, who: row.who, inr: row.inr, per: row.per, note: row.note, at: row.at }));
     return next;
   }
@@ -72,10 +74,11 @@
     const M = local.misc.map(x => ({ id: x.id, name: x.name, inr: x.inr, per: x.per, who: x.who, at: x.at }));
     const K = (local.links || []).map(x => ({ id: x.id, url: x.url, place: x.place, kind: x.kind, note: x.note, who: x.who, at: x.at, status: x.status || "new" }));
     const Tr = (local.tiers || []).map(x => ({ item_id: x.itemId, who: x.who, tier: x.tier }));
+    const Ua = (local.unavail || []).map(x => ({ item_id: x.itemId, who: x.who, note: x.note, at: x.at }));
     const Pr = (local.prices || []).map(x => ({ id: x.id, item_id: x.itemId, who: x.who, inr: x.inr, per: x.per, note: x.note, at: x.at }));
-    for (const [t, rows] of [["prices", Pr], ["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M], ["links", K], ["tiers", Tr]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
+    for (const [t, rows] of [["prices", Pr], ["unavail", Ua], ["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M], ["links", K], ["tiers", Tr]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
   }
-  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length && !(s.links || []).length && !(s.tiers || []).length && !(s.prices || []).length;
+  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length && !(s.links || []).length && !(s.tiers || []).length && !(s.prices || []).length && !(s.unavail || []).length;
   let refreshTimer = null;
   const refresh = () => { clearTimeout(refreshTimer); refreshTimer = setTimeout(async () => { try { const next = await pull(); if (next) { state = next; S.state = state; S.status = "shared, live"; emit(); } } catch (e) { fail("refresh", e); } }, 250); };
 
@@ -125,6 +128,12 @@
   S.addPrice = (itemId, who, inr, per, note) => { const row = { id: uuid(), itemId, who, inr: Math.round(inr), per, note: note || null, at: today() }; state.prices.push(row); emit(); remote(() => sb.from("prices").insert({ id: row.id, item_id: itemId, who, inr: row.inr, per, note: row.note, at: row.at })); };
   S.delPrice = id => { state.prices = state.prices.filter(x => x.id !== id); emit(); remote(() => sb.from("prices").delete().eq("id", id)); };
   S.priceFor = itemId => { const l = (state.prices || []).filter(x => x.itemId === itemId); return l.length ? l[l.length - 1] : null; };
+  // the group marks a stay unavailable for our dates (shared); on = mark, off = clear
+  S.setUnavail = (itemId, who, on, note) => {
+    state.unavail = (state.unavail || []).filter(x => x.itemId !== itemId); if (on) state.unavail.push({ itemId, who, note: note || null, at: today() }); emit();
+    remote(() => on ? sb.from("unavail").upsert({ item_id: itemId, who, note: note || null, at: today() }) : sb.from("unavail").delete().eq("item_id", itemId));
+  };
+  S.unavailOf = itemId => (state.unavail || []).find(x => x.itemId === itemId) || null;
   S.delMisc = id => { state.misc = state.misc.filter(m => m.id !== id); emit(); remote(() => sb.from("misc").delete().eq("id", id)); };
 
   // convenience views

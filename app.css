@@ -385,4 +385,5 @@ p.avail a{color:inherit}
 .hfoot{margin:.5em 0 0;color:var(--dim)}
 #toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:60;max-width:min(92vw,440px);padding:.7em 1.1em;border-radius:12px;background:var(--ink);color:var(--ground);font-style:normal;font-size:.88em;line-height:1.35;box-shadow:0 12px 32px -12px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}
 #toast.on{opacity:1;transform:translate(-50%,0)}
+.markrow{margin:-.4em 0 .9em;font-style:normal;font-size:.9em}
 

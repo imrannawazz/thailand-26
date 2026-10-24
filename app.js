@@ -112,7 +112,7 @@
   const mapReady = () => map && map.getSource && map.getSource("items");
 
   // ---- stay filters and sort ----
-  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, avail: "all", swim: false, tier: "all", tierBy: "me", allZones: false, open: innerWidth > 720 };
+  const SF = { kind: "all", pool: false, walk: false, budget: false, sort: "score", zone: "all", q: "", ours: false, doc: false, avail: "all", showUnavail: false, swim: false, tier: "all", tierBy: "me", allZones: false, open: innerWidth > 720 };
   const chosenByUs = id => !!S.pickOf(id) || Object.values(S.locks()).some(l => { for (const d of T.decisions) for (const o of d.options) if (o.id === l.optionId && (o.item === id || (o.items || []).includes(id))) return true; return false; });
   const fromDoc = it => it.tags.includes("docpick") || it.tags.includes("selfpick") || it.tags.includes("wishlist");
   const dist = (a, b) => Math.hypot((a[0] - b[0]) * Math.cos(8 * Math.PI / 180), a[1] - b[1]);
@@ -135,6 +135,7 @@
     if (SF.ours) out = out.filter(it => chosenByUs(it.id));
     if (SF.doc) out = out.filter(fromDoc);
     if (SF.avail !== "all") out = out.filter(it => availOf(it) === SF.avail);
+    else if (!SF.showUnavail) out = out.filter(it => !unavailable(it));
     if (SF.tier !== "all") {
       const by = SF.tierBy === "me" ? who() : SF.tierBy;
       out = out.filter(it => { const ts = S.tiersFor(it.id).filter(t => SF.tierBy === "any" || t.who === by); return SF.tier === "none" ? !ts.length : ts.some(t => t.tier === SF.tier); });
@@ -154,7 +155,7 @@
     const pool = poolOf("stay", place);
     const zoneChips = g ? g.zones.filter(z => pool.some(it => it.zone === z.id)).map(z => chip("zone", z.id, z.name.split(" and ")[0].split(",")[0], pool.filter(it => it.zone === z.id).length)).join("") : "";
     const target = searchTarget(place);
-    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.swim, SF.budget, SF.ours, SF.doc, SF.avail !== "all", SF.tier !== "all"].filter(Boolean).length;
+    const active = [SF.zone !== "all", SF.kind !== "all", SF.pool, SF.walk, SF.swim, SF.budget, SF.ours, SF.doc, SF.avail !== "all", SF.showUnavail, SF.tier !== "all"].filter(Boolean).length;
     const row = (label, chips) => `<div class="frow"><span class="flbl">${label}</span><div class="fchips">${chips}</div></div>`;
     const sortOpts = [["score", "Best score"], ["price", "Cheapest"], ["rating", "Reviews"], ["beach", "Nearest beach"]].concat(target ? [["near", `Nearest to ${target.name}`]] : []);
     const byOpts = [["me", who() ? `me (${who()})` : "me"], ["any", "anyone"]].concat(NAMES.filter(n => n !== who()).map(n => [n, n]));
@@ -165,7 +166,7 @@
       ${zoneChips ? row("Area", chip("zone", "all", "All") + zoneChips) : ""}
       ${row("Type", chip("kind", "all", "All") + chip("kind", "villa", "Villas") + chip("kind", "hotel", "Hotels") + chip("kind", "hostel", "Hostels"))}
       ${row("Must have", chip("pool", true, "Pool") + chip("walk", true, "Walk to beach") + chip("swim", true, "Swimmable on foot") + chip("budget", true, "Inside budget"))}
-      ${row("Our dates", chip("avail", "all", "Any") + chip("avail", "yes", "Available", nAvail("yes")) + chip("avail", "no", "Not available", nAvail("no")) + chip("avail", "unchecked", "Not checked", nAvail("unchecked")))}
+      ${row("Our dates", chip("avail", "all", "Any") + chip("avail", "yes", "Available", nAvail("yes")) + chip("avail", "unchecked", "Not checked", nAvail("unchecked")) + (nAvail("no") ? chip("showUnavail", true, "Show unavailable", nAvail("no")) : ""))}
       ${row("Tier", chip("tier", "all", "Any") + chip("tier", "A", "A") + chip("tier", "B", "B") + chip("tier", "Z", "Z") + chip("tier", "none", "Not rated") )}
       ${SF.tier !== "all" ? row("Rated by", byOpts.map(([v, l]) => chip("tierBy", v, h(l[0].toUpperCase() + l.slice(1)))).join("")) : ""}
       ${row("From", chip("ours", true, "Chosen by us") + chip("doc", true, "Doc or wishlist"))}
@@ -173,10 +174,14 @@
       <div class="ffoot"><span class="fcount"><b>${count}</b> shown</span><label class="fsort">Sort ${sel("sort", sortOpts, "Sort")}</label>${active ? `<button class="linkish small" data-fclear>Clear filters</button>` : ""}</div>`;
   }
   // availability on our nights, read from Booking.com: yes (fits all five) / no (sold out, too few rooms, or not bookable) / unchecked
-  const availOf = it => { const a = it.avail; if (!a || !a.status || a.status === "unchecked") return "unchecked"; return a.status === "yes" ? "yes" : "no"; };
+  const marked = it => S.unavailOf(it.id);
+  const availOf = it => { if (marked(it)) return "no"; const a = it.avail; if (!a || !a.status || a.status === "unchecked") return "unchecked"; return a.status === "yes" ? "yes" : "no"; };
+  const unavailable = it => it.type === "stay" && availOf(it) === "no";
   const NIGHTS = d => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   const range = (a, b) => { const x = NIGHTS(a).split(" "), y = NIGHTS(b).split(" "); return x[1] === y[1] ? `${x[0]}–${y[0]} ${y[1]}` : `${NIGHTS(a)} – ${NIGHTS(b)}`; };
   function availLine(it, long) {
+    const m = marked(it);
+    if (m) return long ? `<p class="avail no"><b>Marked unavailable for our dates</b> by ${h(m.who)}${m.at ? ", " + h(m.at) : ""}${m.note ? ": " + h(m.note) : ""}.</p>` : `<span class="avail no">Unavailable · marked by ${h(m.who)}</span>`;
     const a = it.avail; if (!a || !a.status || a.status === "unchecked") return long && it.type === "stay" ? `<p class="avail unk">Not checked for our nights yet${it.stayDates ? ` (${range(it.stayDates[0], it.stayDates[1])})` : ""}. Open the booking link: it already carries the dates and five adults.</p>` : "";
     const when = range(a.checkin, a.checkout);
     if (a.status === "yes") return long ? `<p class="avail yes"><b>Available ${when}</b> on ${h(a.source)}: ${h(a.pick)}. ${fmt(a.totalINR)} INR for the stay, about <b>${fmt(a.perHeadNight)} INR a head a night</b>${a.memberINR && a.memberINR < a.totalINR ? `; ${fmt(a.memberINR)} with Booking's free sign-in price` : ""}. Checked ${h(a.checked)}.${a.url ? ` <a href="${a.url}" target="_blank" rel="noopener">Book these dates ↗</a>` : ""}</p>` : `<span class="avail yes">Available ${when} · ${fmt(a.perHeadNight)} a head</span>`;
@@ -208,13 +213,15 @@
   // nearest beach and whether you can swim there (verdicts in build_data.py BEACHES, late November)
   const SWIM_CLASS = { yes: "yes", care: "care", tide: "care", no: "no", ask: "care" };
   const swimFoot = it => { const b = it.beach; if (!b) return false; const ok = x => x && (x.swim === "yes" || x.swim === "care") && x.km * 1.35 <= 1.25; return ok(b) || ok(b.swimNear); };
+  const roughDist = (km, it) => { const road = km * 1.35; return road <= 1.5 ? "close, a walk" : road <= 6 ? `a short ${it && it.place === "phiphi" ? "longtail" : "drive"}` : "far"; };
+  const bd = (km, it, approx) => approx ? roughDist(km, it) : tl(km, it);
   function beachLine(it, long) {
     const b = it.beach; if (!b) return "";
     const word = (T.swimWord || {})[b.swim] || b.swim;
     const altWord = b.swim === "care" ? "Calmer swim" : "Nearest swim";
-    const near = b.swimNear ? ` · ${altWord}: ${h(b.swimNear.name)}, ${tl(b.swimNear.km, it)}` : "";
-    if (!long) return `<span class="beachline s-${SWIM_CLASS[b.swim]}">${h(b.name)}, ${tl(b.km, it)} · ${word}${near}</span>`;
-    return `<h3>Nearest beach</h3><p class="beachbox s-${SWIM_CLASS[b.swim]}"><b>${h(b.name)}</b>, ${tl(b.km, it)}${b.approx ? " (map pin is approximate)" : ""}. <b>${word}.</b> ${h(b.why)}${b.swimNear ? `<br>${b.swim === "care" ? "Calmer swim nearby" : "Nearest swimmable"}: <b>${h(b.swimNear.name)}</b>, ${tl(b.swimNear.km, it)}. ${h(b.swimNear.why)}` : ""}</p>`;
+    const near = b.swimNear ? ` · ${altWord}: ${h(b.swimNear.name)}, ${bd(b.swimNear.km, it, b.approx)}` : "";
+    if (!long) return `<span class="beachline s-${SWIM_CLASS[b.swim]}">${h(b.name)}, ${bd(b.km, it, b.approx)} · ${word}${near}</span>`;
+    return `<h3>Nearest beach</h3><p class="beachbox s-${SWIM_CLASS[b.swim]}"><b>${h(b.name)}</b>, ${bd(b.km, it, b.approx)}${b.approx ? " (the listing only gives its area, so the distance is rough)" : ""}. <b>${word}.</b> ${h(b.why)}${b.swimNear ? `<br>${b.swim === "care" ? "Calmer swim nearby" : "Nearest swimmable"}: <b>${h(b.swimNear.name)}</b>, ${bd(b.swimNear.km, it, b.approx)}. ${h(b.swimNear.why)}` : ""}</p>`;
   }
   const tl = (d, it) => { const t = timeLabel(d); return it && it.place === "phiphi" ? t.replace("by car", "by longtail") : t; };  // no cars on Phi Phi
   let measureFocus = null;
@@ -254,7 +261,7 @@
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
     const lockedId = C.state.locks[d.id];
-    const rows = d.options.filter(o => !o.hidden || lockedId === o.id).map(o => {
+    const rows = d.options.filter(o => (!o.hidden && !(o.item && T.items[o.item] && unavailable(T.items[o.item]))) || lockedId === o.id).map(o => {
       const it = o.item ? T.items[o.item] : null;
       const st = lockedId ? (lockedId === o.id ? "locked" : "other") : "";
       const label = o.label || (it && it.name) || o.id, note = o.note || (it && it.tagline) || "";
@@ -280,8 +287,8 @@
       const pickDec = d ? d.decisions.map(id => C.decision(id)).find(dec => dec && dec.options.some(o => o.items || o.item)) : null;
       const lockedOpt = pickDec ? C.lockedOption(pickDec) : null;
       const pickOpt = pickDec ? (lockedOpt || pickDec.options[0]) : null;
-      const pickIds = pickOpt ? (pickOpt.items || (pickOpt.item ? [pickOpt.item] : [])).filter(id => T.items[id]) : [];
-      const showPick = pickIds.length && !SF.q && SF.zone === "all" && !SF.ours && !SF.doc && SF.kind === "all" && !SF.pool && !SF.walk && !SF.swim && !SF.budget && SF.avail === "all" && SF.tier === "all";  // any filter on: show only what matches
+      const pickIds = pickOpt ? (pickOpt.items || (pickOpt.item ? [pickOpt.item] : [])).filter(id => T.items[id] && !(lockedOpt ? false : unavailable(T.items[id]))) : [];
+      const showPick = pickIds.length && !SF.q && SF.zone === "all" && !SF.ours && !SF.doc && SF.kind === "all" && !SF.pool && !SF.walk && !SF.swim && !SF.budget && SF.avail === "all" && !SF.showUnavail && SF.tier === "all";  // any filter on: show only what matches
       const list = stayList(scoped).filter(it => !showPick || !pickIds.includes(it.id));
       const hiddenStays = poolOf("stay", place).length - scoped.length;
       return `<div class="sec"><h2>${title} <b>${h(PLACE(place).name)}</b></h2>${filterBar(list.length, place)}<details class="scorehelp"><summary>How the score works</summary><p class="small">Out of 100: reviews 35, budget 30, beach 20, pool 15. Budget cap a person a night: about 3,000 INR on the first two nights (Phuket Town, Phi Phi), up to 5,000 from Ao Nang on; full marks up to the cap, zero at twice the cap. Unknown facts count as neutral. Open a card for the breakdown.</p></details>${showPick ? `<p class="eyebrow" style="margin:.4em 0 .3em">${lockedOpt ? "Locked by the group" : "The research pick"}: ${h(pickOpt.label || T.items[pickIds[0]].name)}</p>${pickIds.map(id => itemRow(id, { day })).join("")}<p class="eyebrow" style="margin:1.4em 0 .3em">Everything else</p>` : ""}${list.map(it => itemRow(it.id, { day })).join("") || `<p class="pending">Nothing matches these filters.</p>`}${hiddenStays > 0 ? `<p class="small" style="margin:1em 0 0">Showing the areas for this day. <button class="linkish" data-f="allZones" data-v="1">Show all ${poolOf("stay", place).length} in ${h(PLACE(place).name)}</button></p>` : (d && d.zones && SF.allZones ? `<p class="small" style="margin:1em 0 0"><button class="linkish" data-f="allZones" data-v="0">Back to this day's areas</button></p>` : "")}</div>`;
@@ -447,13 +454,13 @@
       ${blocks.map(d => {
         const lo = C.lockedOption(d), lit = lo && lo.item ? T.items[lo.item] : null, un = S.unlocks()[d.id];
         const stays = ITEMS.filter(it => it.type === "stay" && it.block === d.block);
-        const short = stays.filter(it => (pts(it) > 0 || S.pickOf(it.id)) && !(lit && lit.id === it.id)).sort((a, b) => pts(b) - pts(a) || ((b.score && b.score.total) || 0) - ((a.score && a.score.total) || 0));
-        const out = stays.filter(it => tiersByLetter(it.id).Z.length || rejectedBy(it.id).length).length;
+        const short = stays.filter(it => !unavailable(it) && (pts(it) > 0 || S.pickOf(it.id)) && !(lit && lit.id === it.id)).sort((a, b) => pts(b) - pts(a) || ((b.score && b.score.total) || 0) - ((a.score && a.score.total) || 0));
+        const out = stays.filter(it => tiersByLetter(it.id).Z.length || rejectedBy(it.id).length).length, gone = stays.filter(unavailable).length;
         const day = T.days.find(x => (x.decisions || []).includes(d.id));
         return `<section class="sec hblock"><h2>${h(d.blockLabel)} <b>${h(d.blockWhen)}</b></h2>
           <h3 class="hsub">Locked</h3>${lit ? stayRow(d, lit, true) : lo ? `<div class="row locked"><div><span class="name">${h(optLabel(lo))}</span><span class="lockline">Locked by <b>${h(lockMeta(d.id))}</b></span><span class="meta">${h(lo.note || "")}</span></div><div class="fig">${lo.costINR ? fmt(lo.costINR) + "<small>INR</small>" : "—"}</div></div>` : `<p class="pending small">Nothing locked yet.${un && un.who ? ` ${h(un.who)} unlocked it ${h(when(un.at))}.` : ""}</p>`}
           <h3 class="hsub">Shortlisted <span class="n">${short.length}</span></h3>${short.length ? short.map(it => stayRow(d, it, false)).join("") : `<p class="pending small">Nobody has shortlisted a stay here yet. Open ${day ? `<button class="linkish" data-go="day-${day.n}/t-stay">day ${day.n}'s Sleep tab</button>` : "the Sleep tab"}, open a stay and rate it A or B.</p>`}
-          <p class="small hfoot">${stays.length} stays researched for this stop${out ? ` · ${out} ruled out (Z or not for me)` : ""} · ${day ? `<button class="linkish small" data-go="day-${day.n}/t-stay">see them all</button>` : ""}</p></section>`;
+          <p class="small hfoot">${stays.length} stays researched for this stop${gone ? ` · ${gone} unavailable, hidden` : ""}${out ? ` · ${out} ruled out (Z or not for me)` : ""} · ${day ? `<button class="linkish small" data-go="day-${day.n}/t-stay">see them all</button>` : ""}</p></section>`;
       }).join("")}</div>`;
   }
   function essentialsPage() {
@@ -492,7 +499,7 @@
       ${it.distances ? `<h3>Distances</h3><p>${Object.entries(it.distances).filter(([k, v]) => v).map(([k, v]) => `${h(k)}: ${h(v)}`).join(" · ")}</p>` : ""}
       ${it.when ? `<h3>When</h3><p>${h(it.when)}</p>` : ""}
       ${it.book ? `<h3>How to book</h3><p>${h(it.book)}</p>` : ""}
-      ${availLine(it, true)}${beachLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
+      ${availLine(it, true)}${it.type === "stay" ? `<p class="markrow">${marked(it) ? `<button class="linkish small" data-unavail="${it.id}" data-on="0">Undo: it is available after all</button>` : `<button class="linkish small" data-unavail="${it.id}" data-on="1">Mark unavailable for our dates</button>${availOf(it) === "no" ? "" : " <span class=\"small pending\">· checked the link and it is full? one tap hides it for everyone</span>"}`}</p>` : ""}${beachLine(it, true)}${it.highlights.length ? `<h3>Highlights</h3><ul>${it.highlights.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.praise.length ? `<h3>Guests praise</h3><ul>${it.praise.map(x => `<li class="quote">${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.complaints.length ? `<h3>Watch out</h3><ul>${it.complaints.map(x => `<li>${h(x)}</li>`).join("")}</ul>` : ""}
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}
@@ -605,6 +612,7 @@
     const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
   document.addEventListener("click", e => {
     const del = e.target.closest("[data-misc-del]"); if (del) { removeMisc(del.dataset.miscDel); return; }
+    const ua = e.target.closest("[data-unavail]"); if (ua) { e.stopPropagation(); const w = who(); if (!w) return gate(); S.setUnavail(ua.dataset.unavail, w, ua.dataset.on === "1", null); return; }
     const tb = e.target.closest("[data-tier]"); if (tb) { e.stopPropagation(); setTier(tb.dataset.tier, tb.dataset.t); return; }
     const rj = e.target.closest("[data-reject]"); if (rj) { toggleReject(rj.dataset.reject); return; }
     const cd = e.target.closest("[data-cdel]"); if (cd) { removeComment(cd.dataset.cdel); return; }
@@ -624,7 +632,7 @@
   document.addEventListener("submit", e => { const f = e.target.closest("form.priceform"); if (!f) return; e.preventDefault(); const w = who(); if (!w) return gate(); const v = Number(f.inr.value); if (!(v > 0)) return; S.addPrice(f.dataset.price, w, v, f.per.value, f.note.value.trim()); });
   document.addEventListener("submit", e => { const f = e.target.closest("form[data-comment]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; addComment(f.dataset.comment, v); });
   document.addEventListener("change", e => { const sl = e.target.closest && e.target.closest("select[data-fsel]"); if (!sl) return; SF[sl.dataset.fsel] = sl.value; render(); });
-  document.addEventListener("click", e => { if (!e.target.closest("[data-fclear]")) return; Object.assign(SF, { kind: "all", pool: false, walk: false, swim: false, budget: false, zone: "all", ours: false, doc: false, avail: "all", tier: "all", tierBy: "me" }); render(); });
+  document.addEventListener("click", e => { if (!e.target.closest("[data-fclear]")) return; Object.assign(SF, { kind: "all", pool: false, walk: false, swim: false, budget: false, zone: "all", ours: false, doc: false, avail: "all", showUnavail: false, tier: "all", tierBy: "me" }); render(); });
   document.addEventListener("input", e => { if (e.target.id === "fsearch") { const el = e.target, pos = el.selectionStart; SF.q = el.value; if (!SF.q && SF.sort === "near") SF.sort = "score"; render(); const n = $("#fsearch"); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } } });
   // a short notice when someone else locks or unlocks while the app is open
   let lockSnap = null;
