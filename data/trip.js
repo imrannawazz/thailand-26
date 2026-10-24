@@ -7,7 +7,7 @@ window.TRIP = {
  "thaiGreeting": "ไปไหน",
  "vibe": "Adventure, chilling, slight partying. Experience it properly like a local.",
  "food": "Nice street food. A mix of good food and street food.",
- "budgetRule": "Stays 3 to 5K a night. 5K max.",
+ "budgetRule": "Stays: about 3,000 INR a head a night on the first two nights, up to 5,000 a head after.",
  "snapshot": "2026-10-24",
  "fx": {
   "inrPerThb": 2.81,
@@ -1095,7 +1095,7 @@ window.TRIP = {
      "label": "Rimlay double for two plus three Hangover bunks",
      "costINR": 9273,
      "unit": "about 2,700 to 4,600 THB for all five, about 1,900 INR a head",
-     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier, 'very quiet during the night'. Hangover Chill and Hill: 9.6 from 406, on the hill nearest the viewpoint stairs. A Rimlay room alone is about 5,000 INR, over the night-two cap, which is why the score on its card is low; one room plus three bunks keeps the night inside it.",
+     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier, 'very quiet during the night'. Hangover Chill and Hill: 9.6 from 406, on the hill nearest the viewpoint stairs. A Rimlay room is about 5,000 INR, so about 2,500 a head for two: inside the 3,000 a head cap for this night.",
      "items": [
       "pp-rimlay",
       "pp-hangover"
@@ -1422,7 +1422,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1680,
     "town": true,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -1441,7 +1441,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1508,7 +1509,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "32 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.3922,
     7.88206
@@ -1521,14 +1522,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1920,
     "town": true,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 84,
+    "total": 87,
     "parts": {
      "reviews": 78,
-     "budget": 93,
+     "budget": 100,
      "beach": null,
      "pool": 70
     },
@@ -1538,7 +1539,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1605,7 +1607,7 @@ window.TRIP = {
     "pier": "Rassada ~2.5-3 km",
     "airport": "26 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.3865,
     7.89044
@@ -1618,14 +1620,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1820,
     "town": true,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
     "total": 85,
     "parts": {
      "reviews": 74,
-     "budget": 99,
+     "budget": 100,
      "beach": null,
      "pool": 70
     },
@@ -1635,7 +1637,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1700,7 +1703,7 @@ window.TRIP = {
     "pier": "Rassada ~2-3 km",
     "airport": "24-34 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.37857,
     7.90812
@@ -1713,14 +1716,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2252,
     "town": true,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 81,
+    "total": 92,
     "parts": {
      "reviews": 89,
-     "budget": 75,
+     "budget": 100,
      "beach": null,
      "pool": 70
     },
@@ -1730,7 +1733,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1788,7 +1792,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1361,
     "town": true,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -1808,7 +1812,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1866,7 +1871,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 958,
     "town": true,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -1886,7 +1891,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -1950,7 +1956,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "34 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.387,
     7.885
@@ -1963,14 +1969,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2470,
     "town": true,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 91,
     "parts": {
      "reviews": 92,
-     "budget": 63,
+     "budget": 100,
      "beach": null,
      "pool": null
     },
@@ -1982,7 +1988,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -2042,7 +2049,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2520,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2063,7 +2070,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -2123,7 +2131,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2621,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2144,7 +2152,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -2204,7 +2213,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2419,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2225,7 +2234,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -2285,7 +2295,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1764,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2307,7 +2317,8 @@ window.TRIP = {
      "reviews",
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -2367,7 +2378,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1915,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2388,7 +2399,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -2448,7 +2460,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2318,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2469,7 +2481,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -2528,7 +2541,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1109,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -2549,7 +2562,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "patong",
    "zoneName": "Patong",
@@ -2621,7 +2635,7 @@ window.TRIP = {
     "pier": "Nopparat Thara ~5 km",
     "airport": "Krabi ~30 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.84,
     8.05
@@ -2634,14 +2648,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3879,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 82,
     "parts": {
      "reviews": 94,
-     "budget": 71,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -2651,7 +2665,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "nathai",
    "zoneName": "Na Thai, inland",
@@ -2729,7 +2744,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2160,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -2746,7 +2761,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -2812,7 +2828,7 @@ window.TRIP = {
     "pier": "Nopparat Thara ~4 km",
     "airport": "Krabi ~17 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -2825,14 +2841,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3175,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 80,
+    "total": 82,
     "parts": {
      "reviews": 93,
-     "budget": 94,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -2842,7 +2858,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -2921,7 +2938,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1260,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -2940,7 +2957,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -3019,7 +3037,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2220,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -3036,7 +3054,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "nopparat",
    "zoneName": "Nopparat Thara",
@@ -3115,7 +3134,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "score": {
@@ -3135,7 +3154,8 @@ window.TRIP = {
     "unknown": [
      "budget",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -3219,7 +3239,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 6508,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "score": {
@@ -3236,7 +3256,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -3315,7 +3336,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "score": {
@@ -3335,7 +3356,8 @@ window.TRIP = {
     "unknown": [
      "budget",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "longbeach",
    "zoneName": "Long Beach",
@@ -6580,7 +6602,7 @@ window.TRIP = {
     "pier": "Rassada ~3 km",
     "airport": "~33 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.387,
     7.885
@@ -6593,14 +6615,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2352,
     "town": true,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 79,
+    "total": 92,
     "parts": {
      "reviews": 90,
-     "budget": 69,
+     "budget": 100,
      "beach": null,
      "pool": 70
     },
@@ -6610,7 +6632,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -6675,7 +6698,7 @@ window.TRIP = {
     "pier": "~2 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.777,
     7.7385
@@ -6688,14 +6711,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2570,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 88,
     "parts": {
      "reviews": 88,
-     "budget": 57,
+     "budget": 100,
      "beach": 100,
      "pool": null
     },
@@ -6707,7 +6730,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -6780,7 +6804,7 @@ window.TRIP = {
     "pier": "3-10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "position": {
     "pier": 3,
     "lohdalum": 6,
@@ -6800,14 +6824,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2108,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 89,
+    "total": 94,
     "parts": {
      "reviews": 97,
-     "budget": 83,
+     "budget": 100,
      "beach": 100,
      "pool": 70
     },
@@ -6817,7 +6841,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -6894,7 +6919,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1650,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -6913,7 +6938,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -6990,7 +7016,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1411,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -7007,7 +7033,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -7084,7 +7111,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -7103,7 +7130,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -7182,7 +7210,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -7201,7 +7229,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -7279,7 +7308,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1920,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -7298,7 +7327,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -7379,7 +7409,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2196,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -7396,7 +7426,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -7474,7 +7505,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1714,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -7491,7 +7522,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "patong",
    "zoneName": "Patong",
@@ -7564,7 +7596,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -7583,7 +7615,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "patong",
    "zoneName": "Patong",
@@ -7657,7 +7690,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -7676,7 +7709,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "patong",
    "zoneName": "Patong",
@@ -9161,7 +9195,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1279,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9178,7 +9212,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
@@ -9254,7 +9289,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 998,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9273,7 +9308,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -9360,7 +9396,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 632,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9379,7 +9415,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -9455,7 +9492,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 998,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9472,7 +9509,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
@@ -9548,7 +9586,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 660,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9565,7 +9603,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
@@ -9627,7 +9666,7 @@ window.TRIP = {
    "distances": {
     "beach": "76 m to pier"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.77336,
     7.74137
@@ -9640,14 +9679,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2108,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 85,
+    "total": 90,
     "parts": {
      "reviews": 84,
-     "budget": 83,
+     "budget": 100,
      "beach": 100,
      "pool": 70
     },
@@ -9657,7 +9696,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
@@ -9719,7 +9759,7 @@ window.TRIP = {
    "distances": {
     "beach": "132 yd to pier"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.772,
     7.73889
@@ -9732,14 +9772,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1922,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 87,
+    "total": 89,
     "parts": {
      "reviews": 89,
-     "budget": 93,
+     "budget": 100,
      "beach": 100,
      "pool": null
     },
@@ -9751,7 +9791,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -9827,7 +9868,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1619,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "score": {
@@ -9846,7 +9887,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "lohdalum",
    "zoneName": "Loh Dalum",
@@ -9921,7 +9963,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -9940,7 +9982,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -10015,14 +10058,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 7137,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
-    "total": 48,
+    "total": 65,
     "parts": {
      "reviews": null,
-     "budget": 0,
+     "budget": 57,
      "beach": 100,
      "pool": 70
     },
@@ -10034,7 +10077,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -10107,7 +10151,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10126,7 +10170,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -10200,7 +10245,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10219,7 +10264,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -10295,7 +10341,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10314,7 +10360,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -10387,7 +10434,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10406,7 +10453,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -10477,7 +10525,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10496,7 +10544,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -10565,7 +10614,7 @@ window.TRIP = {
    "distances": {
     "beach": "4 min walk"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.306,
     7.774
@@ -10578,14 +10627,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4246,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 84,
+    "total": 96,
     "parts": {
      "reviews": 98,
-     "budget": 58,
+     "budget": 100,
      "beach": 85,
      "pool": 100
     },
@@ -10595,7 +10644,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -10659,7 +10709,7 @@ window.TRIP = {
    "distances": {
     "beach": "2.5 km / 5-min drive to Nai Harn; shops 5-min walk"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.28219,
     7.88475
@@ -10672,14 +10722,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3295,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 79,
+    "total": 82,
     "parts": {
      "reviews": 95,
-     "budget": 90,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -10689,7 +10739,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "patong",
    "zoneName": "Patong",
@@ -10759,7 +10810,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -10778,7 +10829,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -10849,7 +10901,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2529,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -10866,7 +10918,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -10933,7 +10986,7 @@ window.TRIP = {
    "distances": {
     "beach": "'Minutes away' from Bang Tao / Layan; location sub-score 4.4"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.295,
     7.99
@@ -10946,14 +10999,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3812,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 74,
+    "total": 82,
     "parts": {
      "reviews": 95,
-     "budget": 73,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -10963,7 +11016,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -11032,7 +11086,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -11051,7 +11105,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -11125,7 +11180,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2580,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -11142,7 +11197,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -11208,7 +11264,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1560,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -11225,7 +11281,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -11299,7 +11356,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2023,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -11318,7 +11375,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -11393,7 +11451,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1888,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -11410,7 +11468,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -11471,7 +11530,7 @@ window.TRIP = {
    "distances": {
     "beach": "0.9 km to Kamala Beach"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.281,
     7.95002
@@ -11484,14 +11543,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3608,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 77,
+    "total": 83,
     "parts": {
      "reviews": 88,
-     "budget": 80,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -11501,7 +11560,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -11575,7 +11635,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 13151,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
@@ -11592,7 +11652,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -11671,15 +11732,15 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3035,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "fitsBudget": false,
    "score": {
-    "total": 63,
+    "total": 84,
     "parts": {
      "reviews": 76,
-     "budget": 31,
+     "budget": 99,
      "beach": 100,
      "pool": null
     },
@@ -11691,7 +11752,8 @@ window.TRIP = {
     },
     "unknown": [
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -11770,15 +11832,15 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 4721,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "fitsBudget": false,
    "score": {
-    "total": 50,
+    "total": 63,
     "parts": {
      "reviews": 85,
-     "budget": 0,
+     "budget": 43,
      "beach": null,
      "pool": 70
     },
@@ -11790,7 +11852,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -11863,7 +11926,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1405,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "fitsBudget": true,
@@ -11883,7 +11946,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -11962,12 +12026,12 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1517,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": true
    },
    "fitsBudget": true,
    "score": {
-    "total": 73,
+    "total": 40,
     "parts": {
      "reviews": 65,
      "budget": 100,
@@ -11982,7 +12046,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": true
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -12059,15 +12124,15 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2192,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "score": {
-    "total": 77,
+    "total": 40,
     "parts": {
      "reviews": 75,
-     "budget": 78,
+     "budget": 100,
      "beach": 85,
      "pool": 70
     },
@@ -12077,7 +12142,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": true
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -12145,15 +12211,15 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 4552,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "fitsBudget": false,
    "score": {
-    "total": 47,
+    "total": 61,
     "parts": {
      "reviews": 84,
-     "budget": 0,
+     "budget": 48,
      "beach": null,
      "pool": null
     },
@@ -12166,7 +12232,8 @@ window.TRIP = {
     "unknown": [
      "beach",
      "pool"
-    ]
+    ],
+    "capped": false
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -12239,12 +12306,12 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": null,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "fitsBudget": null,
    "score": {
-    "total": 65,
+    "total": 40,
     "parts": {
      "reviews": 85,
      "budget": null,
@@ -12259,7 +12326,8 @@ window.TRIP = {
     },
     "unknown": [
      "budget"
-    ]
+    ],
+    "capped": true
    },
    "zone": "eastcliff",
    "zoneName": "East Tonsai, towards the cliff",
@@ -12657,7 +12725,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2698,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -12674,7 +12742,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -12749,7 +12818,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 2249,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -12766,7 +12835,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -12842,7 +12912,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1913,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -12859,7 +12929,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -12934,7 +13005,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2935,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -12953,7 +13024,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -13016,7 +13088,7 @@ window.TRIP = {
     "beach": "Old Town 2 km / 5 min by car"
    },
    "verdict": "Best-reviewed; 3k over cap.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.38969,
     7.88483
@@ -13029,14 +13101,14 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 3626,
     "town": true,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 86,
     "parts": {
      "reviews": 91,
-     "budget": 79,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -13046,7 +13118,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -13121,7 +13194,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1462,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13138,7 +13211,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -13213,7 +13287,7 @@ window.TRIP = {
     "beachMode": "none",
     "perHeadNight": 1771,
     "town": true,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13230,7 +13304,8 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -13306,7 +13381,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 1179,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13325,7 +13400,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "oldtown",
    "zoneName": "Old Town and Phuket Town",
@@ -13400,7 +13476,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 1634,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13417,7 +13493,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -13492,7 +13569,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2524,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13511,7 +13588,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -13585,7 +13663,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2642,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13602,7 +13680,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -13664,7 +13743,7 @@ window.TRIP = {
     "beach": "Beach about a 10-min drive"
    },
    "verdict": "3 baths + hot tub; check if the 19th is open.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -13677,14 +13756,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3458,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 60,
+    "total": 65,
     "parts": {
      "reviews": 88,
-     "budget": 85,
+     "budget": 100,
      "beach": 20,
      "pool": 0
     },
@@ -13694,7 +13773,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -13770,7 +13850,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2361,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13787,7 +13867,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "nopparat",
    "zoneName": "Nopparat Thara",
@@ -13862,7 +13943,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2457,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -13879,7 +13960,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -13943,7 +14025,7 @@ window.TRIP = {
     "beach": "12 min from the beach, 8 min from Krabi Town (drive)"
    },
    "verdict": "Closest pool villa to budget; not Ao Nang proper.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.87,
     8.07
@@ -13956,14 +14038,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3279,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 77,
+    "total": 79,
     "parts": {
      "reviews": 87,
-     "budget": 91,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -13973,7 +14055,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "nathai",
    "zoneName": "Na Thai, inland",
@@ -14030,7 +14113,7 @@ window.TRIP = {
     "beach": "10 minute drive to Ao Nang beach"
    },
    "verdict": "Zero reviews; skip.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14043,14 +14126,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3367,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 48,
+    "total": 52,
     "parts": {
      "reviews": null,
-     "budget": 88,
+     "budget": 100,
      "beach": 20,
      "pool": 0
     },
@@ -14062,7 +14145,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14125,7 +14209,7 @@ window.TRIP = {
     "beach": "8 minutes drive to Ao Nang Beach"
    },
    "verdict": "Avoid.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14138,14 +14222,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3598,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 81,
     "parts": {
      "reviews": 91,
-     "budget": 80,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14155,7 +14239,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14218,7 +14303,7 @@ window.TRIP = {
     "beach": "3-4 km / 10 min by motorbike to Ao Nang beach"
    },
    "verdict": "Most-reviewed villa; +7k over cap.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14231,14 +14316,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3729,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 83,
     "parts": {
      "reviews": 96,
-     "budget": 76,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14248,7 +14333,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14324,7 +14410,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2038,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -14343,7 +14429,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14419,7 +14506,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2108,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -14438,7 +14525,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14512,7 +14600,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2291,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -14529,7 +14617,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14603,7 +14692,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2597,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -14620,7 +14709,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14694,7 +14784,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2670,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -14711,7 +14801,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14772,7 +14863,7 @@ window.TRIP = {
     "beach": "Heart of Ao Nang, restaurants walkable; beach a 5-min tuk-tuk"
    },
    "verdict": "Closest to walkable-with-pool; 2x budget.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14785,14 +14876,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3204,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 94,
+    "total": 96,
     "parts": {
      "reviews": 96,
-     "budget": 93,
+     "budget": 100,
      "beach": 85,
      "pool": 100
     },
@@ -14802,7 +14893,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14865,7 +14957,7 @@ window.TRIP = {
     "beach": "Listing says 6 mins; its map says Ao Nang Beach 4.0 km"
    },
    "verdict": "2x budget.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14878,14 +14970,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3092,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 80,
     "parts": {
      "reviews": 90,
-     "budget": 97,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14895,7 +14987,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -14956,7 +15049,7 @@ window.TRIP = {
     "beach": "Short drive from Ao Nang beach"
    },
    "verdict": "Strong villa; 19-21 availability unknown.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.8229,
     8.0319
@@ -14969,14 +15062,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3879,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 74,
+    "total": 83,
     "parts": {
      "reviews": 96,
-     "budget": 71,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -14986,7 +15079,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -15048,7 +15142,7 @@ window.TRIP = {
     "beach": "Short walk to the beach near Ao Nam Mao pier (not the Ao Nang strip)"
    },
    "verdict": "Novelty stay; wrong beach.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.85,
     8.02
@@ -15061,14 +15155,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3935,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 68,
+    "total": 78,
     "parts": {
      "reviews": 88,
-     "budget": 69,
+     "budget": 100,
      "beach": 85,
      "pool": 0
     },
@@ -15078,7 +15172,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "railay",
    "zoneName": "Railay and Phra Nang",
@@ -15153,7 +15248,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2069,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -15170,7 +15265,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "strip",
    "zoneName": "Ao Nang strip",
@@ -15246,14 +15342,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4441,
     "town": false,
-    "capRoom": 3000,
+    "capHead": 3000,
     "insideCap": false
    },
    "score": {
-    "total": 45,
+    "total": 60,
     "parts": {
      "reviews": 94,
-     "budget": 0,
+     "budget": 52,
      "beach": 60,
      "pool": 0
     },
@@ -15263,7 +15359,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -15323,7 +15420,7 @@ window.TRIP = {
     "beach": "Shared beach access listed"
    },
    "verdict": "Not a fit.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.777,
     7.7385
@@ -15336,14 +15433,14 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2101,
     "town": false,
-    "capRoom": 3000,
-    "insideCap": false
+    "capHead": 3000,
+    "insideCap": true
    },
    "score": {
-    "total": 65,
+    "total": 70,
     "parts": {
      "reviews": 87,
-     "budget": 83,
+     "budget": 100,
      "beach": null,
      "pool": 0
     },
@@ -15355,7 +15452,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
@@ -15427,7 +15525,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2698,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -15446,7 +15544,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15522,7 +15621,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2983,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -15539,7 +15638,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15613,7 +15713,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2811,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -15630,7 +15730,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15706,7 +15807,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2563,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -15723,7 +15824,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15784,7 +15886,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Fine; inland.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -15797,14 +15899,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3190,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 77,
+    "total": 79,
     "parts": {
      "reviews": 85,
-     "budget": 94,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -15814,7 +15916,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15875,7 +15978,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Same as B7, fewer reviews.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -15888,14 +15991,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3190,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 78,
     "parts": {
      "reviews": 83,
-     "budget": 94,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -15905,7 +16008,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -15968,7 +16072,7 @@ window.TRIP = {
     "beach": "Beaches 10-15 min drive"
    },
    "verdict": "Over 45k and steep utility prepay.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -15981,14 +16085,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3780,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 80,
     "parts": {
      "reviews": 90,
-     "budget": 74,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -15998,7 +16102,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16061,7 +16166,7 @@ window.TRIP = {
     "beach": "15 min walk"
    },
    "verdict": "Walks to the pier beach only; over 45k.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16074,14 +16179,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3744,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 81,
+    "total": 89,
     "parts": {
      "reviews": 91,
-     "budget": 75,
+     "budget": 100,
      "beach": 60,
      "pool": 100
     },
@@ -16091,7 +16196,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16154,7 +16260,7 @@ window.TRIP = {
     "beach": "3 min walk"
    },
    "verdict": "Over cap; walks to the pier beach.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16167,14 +16273,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4122,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 84,
+    "total": 95,
     "parts": {
      "reviews": 87,
-     "budget": 63,
+     "budget": 100,
      "beach": 100,
      "pool": 100
     },
@@ -16184,7 +16290,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16248,7 +16355,7 @@ window.TRIP = {
     "beach": "7 min to Nai Harn (walk or drive not stated)"
    },
    "verdict": "Utility bill could add 4-12k.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.306,
     7.774
@@ -16261,14 +16368,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3734,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 80,
     "parts": {
      "reviews": 89,
-     "budget": 76,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16278,7 +16385,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16341,7 +16449,7 @@ window.TRIP = {
     "beach": "Rawai and Kata by short drive"
    },
    "verdict": "Fine, inland.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16354,14 +16462,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3474,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 79,
     "parts": {
      "reviews": 87,
-     "budget": 84,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16371,7 +16479,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16434,7 +16543,7 @@ window.TRIP = {
     "beach": "Nai Harn 5-10 minutes (mode unstated)"
    },
    "verdict": "Skip.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16447,14 +16556,14 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 3635,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 80,
+    "total": 86,
     "parts": {
      "reviews": 89,
-     "budget": 79,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -16466,7 +16575,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16525,7 +16635,7 @@ window.TRIP = {
     "beach": "Nai Harn / Ya Nui closest, drive"
    },
    "verdict": "Unproven; skip.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16538,14 +16648,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3373,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 63,
+    "total": 66,
     "parts": {
      "reviews": null,
-     "budget": 88,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16557,7 +16667,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16619,7 +16730,7 @@ window.TRIP = {
     "beach": "8 minutes by car to Nai Harn / Rawai"
    },
    "verdict": "Skip.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16632,14 +16743,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3823,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 70,
+    "total": 78,
     "parts": {
      "reviews": 84,
-     "budget": 73,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16649,7 +16760,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16725,7 +16837,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2984,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -16744,7 +16856,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16806,7 +16919,7 @@ window.TRIP = {
     "beach": "5 minute drive to Nai Harn and Rawai"
    },
    "verdict": "Avoid.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -16819,14 +16932,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3525,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 75,
+    "total": 80,
     "parts": {
      "reviews": 88,
-     "budget": 83,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -16836,7 +16949,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16911,7 +17025,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2136,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -16928,7 +17042,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -16991,7 +17106,7 @@ window.TRIP = {
     "beach": "10 minutes from Nai Harn (mode unstated)"
    },
    "verdict": "4BR inland option.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -17004,14 +17119,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3476,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 81,
     "parts": {
      "reviews": 91,
-     "budget": 84,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -17021,7 +17136,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -17081,7 +17197,7 @@ window.TRIP = {
     "beach": "Rawai and Nai Harn a short drive"
    },
    "verdict": "4BR, thin reviews.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -17094,14 +17210,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3654,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 71,
+    "total": 78,
     "parts": {
      "reviews": 83,
-     "budget": 78,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -17111,7 +17227,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -17174,7 +17291,7 @@ window.TRIP = {
     "beach": "Near Nai Harn; no distance given"
    },
    "verdict": "Over 45k; fine.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.306,
     7.774
@@ -17187,14 +17304,14 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 3841,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 79,
+    "total": 87,
     "parts": {
      "reviews": 92,
-     "budget": 72,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -17206,7 +17323,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -17269,7 +17387,7 @@ window.TRIP = {
     "beach": "Rawai and Nai Harn 'a few minutes away'"
    },
    "verdict": "Over cap.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.327,
     7.773
@@ -17282,14 +17400,14 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 4149,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 85,
     "parts": {
      "reviews": 85,
-     "budget": 62,
+     "budget": 100,
      "beach": null,
      "pool": 100
     },
@@ -17301,7 +17419,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "naiharn",
    "zoneName": "Nai Harn, Rawai, Promthep",
@@ -17376,14 +17495,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 5317,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": false
    },
    "score": {
-    "total": 70,
+    "total": 91,
     "parts": {
      "reviews": 92,
-     "budget": 23,
+     "budget": 94,
      "beach": 100,
      "pool": 70
     },
@@ -17393,7 +17512,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -17456,7 +17576,7 @@ window.TRIP = {
     "beach": "Short drive down the hill to Kata Beach"
    },
    "verdict": "Only Kata 3BR pool villa under 60k.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.298,
     7.82
@@ -17469,14 +17589,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3823,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 70,
+    "total": 78,
     "parts": {
      "reviews": 84,
-     "budget": 73,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -17486,7 +17606,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -17550,7 +17671,7 @@ window.TRIP = {
     "beach": "5 min walk"
    },
    "verdict": "Best Kata/Karon walkable for 5; 2BR + 4 beds.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.298,
     7.82
@@ -17563,14 +17684,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4082,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 80,
+    "total": 90,
     "parts": {
      "reviews": 94,
-     "budget": 64,
+     "budget": 100,
      "beach": 85,
      "pool": 70
     },
@@ -17580,7 +17701,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -17656,7 +17778,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 1818,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -17673,7 +17795,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -17736,7 +17859,7 @@ window.TRIP = {
     "beach": "9 min walk"
    },
    "verdict": "No.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.29811,
     7.84752
@@ -17749,14 +17872,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3368,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 83,
+    "total": 86,
     "parts": {
      "reviews": 82,
-     "budget": 88,
+     "budget": 100,
      "beach": 85,
      "pool": 70
     },
@@ -17766,7 +17889,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -17842,7 +17966,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2991,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -17859,7 +17983,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
@@ -17932,7 +18057,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2250,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -17951,7 +18076,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "karon",
    "zoneName": "Karon",
@@ -18015,7 +18141,7 @@ window.TRIP = {
     "beach": "10 min walk"
    },
    "verdict": "Best walkable private-pool pick under 60k.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18028,14 +18154,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3913,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 85,
+    "total": 94,
     "parts": {
      "reviews": 92,
-     "budget": 70,
+     "budget": 100,
      "beach": 85,
      "pool": 100
     },
@@ -18045,7 +18171,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18108,7 +18235,7 @@ window.TRIP = {
     "beach": "15 min walk"
    },
    "verdict": "Walkable; 578 over the cap.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18121,14 +18248,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4039,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 78,
+    "total": 89,
     "parts": {
      "reviews": 91,
-     "budget": 65,
+     "budget": 100,
      "beach": 60,
      "pool": 100
     },
@@ -18138,7 +18265,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18202,7 +18330,7 @@ window.TRIP = {
     "beach": "15 min walk"
    },
    "verdict": "Good walkable aparthotel; free cancellation.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.295,
     7.99
@@ -18215,14 +18343,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3337,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 79,
+    "total": 83,
     "parts": {
      "reviews": 86,
-     "budget": 89,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -18232,7 +18360,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18295,7 +18424,7 @@ window.TRIP = {
     "beach": "12 min walk"
    },
    "verdict": "3 baths + walk to Surin; middling value.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.278,
     7.973
@@ -18308,14 +18437,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3822,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 76,
+    "total": 84,
     "parts": {
      "reviews": 91,
-     "budget": 73,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -18325,7 +18454,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18400,7 +18530,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2249,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -18417,7 +18547,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18490,7 +18621,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2530,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -18507,7 +18638,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18571,7 +18703,7 @@ window.TRIP = {
     "beach": "Short drive (no walk given)"
    },
    "verdict": "Great reviews; shared pool; not walkable.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18584,14 +18716,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3373,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 74,
+    "total": 78,
     "parts": {
      "reviews": 95,
-     "budget": 88,
+     "budget": 100,
      "beach": 20,
      "pool": 70
     },
@@ -18601,7 +18733,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18664,7 +18797,7 @@ window.TRIP = {
     "beach": "5-min drive from Kamala Beach"
    },
    "verdict": "Prefer the Duplex at the same price.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18677,14 +18810,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3913,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 73,
+    "total": 82,
     "parts": {
      "reviews": 93,
-     "budget": 70,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -18694,7 +18827,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18757,7 +18891,7 @@ window.TRIP = {
     "beach": "Kamala Beach 2 km; Surin 5-min drive"
    },
    "verdict": "Fine, inland.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18770,14 +18904,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3717,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 71,
+    "total": 78,
     "parts": {
      "reviews": 84,
-     "budget": 76,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -18787,7 +18921,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18847,7 +18982,7 @@ window.TRIP = {
     "beach": "12 min walk"
    },
    "verdict": "Over cap, weaker than Lake View.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.283,
     7.95
@@ -18860,14 +18995,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4046,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 71,
+    "total": 82,
     "parts": {
      "reviews": 84,
-     "budget": 65,
+     "budget": 100,
      "beach": 60,
      "pool": 70
     },
@@ -18877,7 +19012,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -18953,7 +19089,7 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 2405,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -18970,7 +19106,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -19044,7 +19181,7 @@ window.TRIP = {
     "beachMode": "unknown",
     "perHeadNight": 2996,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -19063,7 +19200,8 @@ window.TRIP = {
     },
     "unknown": [
      "beach"
-    ]
+    ],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -19125,7 +19263,7 @@ window.TRIP = {
     "beach": "10-min drive from Bang Tao Beach"
    },
    "verdict": "Avoid.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.305,
     7.995
@@ -19138,14 +19276,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3238,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 78,
+    "total": 80,
     "parts": {
      "reviews": 89,
-     "budget": 92,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -19155,7 +19293,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -19226,7 +19365,7 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 2288,
     "town": false,
-    "capRoom": 5000,
+    "capHead": 5000,
     "insideCap": true
    },
    "score": {
@@ -19245,7 +19384,8 @@ window.TRIP = {
     },
     "unknown": [
      "reviews"
-    ]
+    ],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -19305,7 +19445,7 @@ window.TRIP = {
     "beach": "10-minute drive to Bang Tao / Laguna / Layan"
    },
    "verdict": "Unproven.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.305,
     7.995
@@ -19318,14 +19458,14 @@ window.TRIP = {
     "beachMode": "drive",
     "perHeadNight": 3036,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 77,
     "parts": {
      "reviews": 81,
-     "budget": 99,
+     "budget": 100,
      "beach": 20,
      "pool": 100
     },
@@ -19335,7 +19475,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "kamala",
    "zoneName": "Kamala, Surin, Bang Tao",
@@ -19397,7 +19538,7 @@ window.TRIP = {
     "beach": "12 min walk"
    },
    "verdict": "Avoid.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.34,
     7.83
@@ -19410,14 +19551,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 3062,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
     "total": 88,
     "parts": {
      "reviews": 89,
-     "budget": 98,
+     "budget": 100,
      "beach": 60,
      "pool": 100
     },
@@ -19427,7 +19568,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "chalong",
    "zoneName": "Chalong and Wichit",
@@ -19490,7 +19632,7 @@ window.TRIP = {
     "beach": "1 min walk"
    },
    "verdict": "Only true beachfront pool house near budget; 2k over, far from Kata.",
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.298,
     7.82
@@ -19503,14 +19645,14 @@ window.TRIP = {
     "beachMode": "walk",
     "perHeadNight": 4146,
     "town": false,
-    "capRoom": 5000,
-    "insideCap": false
+    "capHead": 5000,
+    "insideCap": true
    },
    "score": {
-    "total": 85,
+    "total": 96,
     "parts": {
      "reviews": 89,
-     "budget": 62,
+     "budget": 100,
      "beach": 100,
      "pool": 100
     },
@@ -19520,7 +19662,8 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": []
+    "unknown": [],
+    "capped": false
    },
    "zone": "katanoi",
    "zoneName": "Kata Noi and Kata",
