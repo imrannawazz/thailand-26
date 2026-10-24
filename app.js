@@ -28,10 +28,19 @@
   function togglePick(day, id) { const a = picks[day] || (picks[day] = []); const i = a.indexOf(id); if (i >= 0) a.splice(i, 1); else a.push(id); savePicks(); render(); }
   const itemCost = it => it.priceINR ? it.priceINR : it.priceTHB ? inr(it.priceTHB) * T.travellers : 0;
   const FLIGHTS_TOTAL = (T.flights && T.flights.perHeadINR || 0) * T.travellers;
+  // miscellaneous budget lines: {name, inr, per: "head"|"group", who, at}
+  const LSM = "trip.misc.v1";
+  let misc = []; try { misc = JSON.parse(localStorage.getItem(LSM)) || []; } catch (e) {}
+  const saveMisc = () => { try { localStorage.setItem(LSM, JSON.stringify(misc)); } catch (e) {} };
+  const miscGroup = m => m.per === "head" ? m.inr * T.travellers : m.inr;
+  function addMisc(name, inr, per) { if (!name.trim() || !(inr > 0)) return; misc.push({ name: name.trim(), inr: Math.round(inr), per, who: C.state.who || "someone", at: new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" }) }); saveMisc(); render(); }
+  function removeMisc(i) { misc.splice(i, 1); saveMisc(); render(); }
   function budget() {
     const b = C.budget(); let extra = 0;
     for (const d in picks) for (const id of picks[d]) { const it = T.items[id]; if (it) extra += itemCost(it); }
-    const chosen = b.total + extra, total = chosen + FLIGHTS_TOTAL; return { chosen, flights: FLIGHTS_TOTAL, total, perHead: total / T.travellers };
+    const miscTotal = misc.reduce((a, m) => a + miscGroup(m), 0);
+    const chosen = b.total + extra, total = chosen + FLIGHTS_TOTAL + miscTotal;
+    return { chosen, flights: FLIGHTS_TOTAL, misc: miscTotal, total, perHead: total / T.travellers };
   }
   function dayCost(n) {
     const d = T.days.find(x => x.n === n); let total = 0;
@@ -238,12 +247,18 @@
     const row = (name, meta, inr, extra) => `<div class="opt"><div><span class="name">${name}</span>${meta ? `<span class="dur">${meta}</span>` : ""}${extra || ""}</div><div class="fig">${inr ? fmt(inr) + "<small>INR</small>" : "—"}</div></div>`;
     const flightRows = F ? row(`Flights, five tickets`, `${h(F.out.flight)} ${h(F.out.dep)} to ${h(F.out.arr)} on ${h(F.out.date)} · ${h(F.back.flight)} ${h(F.back.dep)} to ${h(F.back.arr)} on ${h(F.back.date)}`, b.flights, `<span class="small" style="display:block">${fmt(F.perHeadINR)} INR a head as paid on Imran's ticket. ${h(F.note)}</span>`) : "";
     const frame = T.essentials.find(e => e.k === "Budget frame");
-    return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Budget</p><h1 class="disp">${fmt(b.total)}<small>INR for five so far · ${fmt(b.perHead)} each</small></h1>
-      <p class="lead">Booked flights plus everything you have locked or added. Lock a stay or a day choice, or put an item on a day, and it lands here. Transport and food you have not added are not counted yet.</p>
+    const ph = n => fmt(n / T.travellers);
+    const miscRows = misc.map((m, i) => `<div class="opt"><div><span class="name">${h(m.name)}</span><span class="dur">${m.per === "head" ? fmt(m.inr) + " INR a head" : fmt(m.inr) + " INR for the group"} · ${h(m.who)}, ${h(m.at)}</span></div><div class="fig">${ph(miscGroup(m))}<small>a head</small><button class="linkish small" data-misc-del="${i}" style="display:block;margin-top:.3em">remove</button></div></div>`).join("");
+    return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Budget, per person</p><h1 class="disp">${fmt(b.perHead)}<small>INR a head so far · ${fmt(b.total)} for five</small></h1>
+      <p class="lead">Everything below is per person unless it says otherwise. Flights are booked. Locking a stay or a day choice, or putting an item on a day, adds its share here. Anything else goes in Miscellaneous.</p>
+      <div class="sec"><h2>Where it goes, per head</h2><div class="opt"><div><span class="name">Flights</span></div><div class="fig">${ph(b.flights)}<small>booked</small></div></div><div class="opt"><div><span class="name">Locked and chosen</span><span class="dur">stays, day choices, items on days</span></div><div class="fig">${ph(b.chosen)}<small>a head</small></div></div><div class="opt"><div><span class="name">Miscellaneous</span><span class="dur">${misc.length} line${misc.length === 1 ? "" : "s"}</span></div><div class="fig">${ph(b.misc)}<small>a head</small></div></div></div>
+      <div class="sec notes"><h2>Miscellaneous</h2>${miscRows || `<p class="pending">Nothing yet. Visa cash float, SIMs, insurance, tips, a night out: type a name and a number.</p>`}
+        <form id="miscform" class="miscform"><input id="misc-name" placeholder="What (e.g. eSIM, travel insurance)" required><input id="misc-inr" type="number" min="1" step="1" inputmode="numeric" placeholder="INR" required><select id="misc-per"><option value="head">a head</option><option value="group">for the group</option></select><button type="submit">Add</button></form>
+        <p class="small who" style="margin-top:.8em">Adding as <input id="who" value="${h(C.state.who)}" placeholder="your name"></p></div>
       <div class="sec"><h2>Booked</h2>${flightRows}${F ? `<p class="small pending" style="margin:.6em 0 0">${h(F.cancel)} Bags: ${h(F.out.bags)}.</p>` : ""}</div>
       <div class="sec"><h2>Locked choices <b>${fmt(lockedRows.reduce((a, r) => a + (r.o.costINR || 0), 0))} INR</b></h2>${lockedRows.length ? lockedRows.map(({ d, o }) => { const it = o.item ? T.items[o.item] : null; return `<div class="opt" ${it ? `role="button" tabindex="0" data-item="${it.id}"` : ""}><div><span class="name">${h(o.label || (it && it.name) || o.id)}</span><span class="dur">${h(d.title)}${o.unit ? " · " + h(o.unit) : ""}</span></div><div class="fig">${o.costINR ? fmt(o.costINR) + "<small>INR</small>" : "—"}</div></div>`; }).join("") : `<p class="pending">Nothing locked yet. Open a day's Decide tab.</p>`}</div>
       <div class="sec"><h2>Added to days <b>${fmt(pickRows.reduce((a, r) => a + itemCost(r.it), 0))} INR</b></h2>${pickRows.length ? pickRows.map(({ day, it }) => `<div class="opt" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${h(it.name)}</span><span class="dur">Day ${day} · ${h(PLACE(it.place).name)}${it.priceTHB ? " · ฿" + fmt(it.priceTHB) + " a head" : ""}</span></div><div class="fig">${itemCost(it) ? fmt(itemCost(it)) + "<small>INR</small>" : "free"}</div></div>`).join("") : `<p class="pending">Nothing added yet. Use the day chips on any place.</p>`}</div>
-      <div class="sec"><h2>Per head</h2><p class="lead"><span class="fig" style="font-size:clamp(26px,3vw,44px)">${fmt(b.perHead)}</span> INR each, of which flights ${fmt(F ? F.perHeadINR : 0)} and chosen ${fmt(b.chosen / T.travellers)}.${frame ? " Research frame, excluding flights: " + h(frame.v.replace("Excluding flights, with stays at your 3 to 5K caps: ", "")) : ""}</p></div>
+      <div class="sec"><h2>Against the research frame</h2><p class="lead">Excluding flights you are at <span class="ink" style="font-weight:500">${fmt((b.total - b.flights) / T.travellers)} INR a head</span>.${frame ? " The research frame, excluding flights: " + h(frame.v.replace("Excluding flights, with stays at your 3 to 5K caps: ", "")) : ""}</p></div>
       <p class="src">Prices are the researched snapshots (2026-10-24) at 1 THB = ${T.fx.inrPerThb} INR. Check the link on each card before paying.</p></div>`;
   }
   function essentialsPage() {
@@ -287,7 +302,7 @@
   let lastKey = "";
   function render() {
     const r = route(), b = budget();
-    $("#budget").innerHTML = `<button data-go="budget" style="text-align:inherit"><div class="fig">${fmt(b.total)}</div><span>INR so far · ${fmt(b.perHead)} each · flights ${fmt(b.flights)} + chosen ${fmt(b.chosen)}</span></button>`;
+    $("#budget").innerHTML = `<button data-go="budget" style="text-align:inherit"><div class="fig">${fmt(b.perHead)}</div><span>INR a head so far · ${fmt(b.total)} for five</span></button>`;
     const sheet = $("#sheet"), card = $("#card");
     let page = "", tab = null, dayN = null;
     if (r.page.startsWith("day-")) { dayN = Number(r.page.slice(4)); const res = dayPage(dayN, r.tab); if (res) { page = res.html; tab = res.tab; } else dayN = null; }
@@ -350,7 +365,10 @@
     const grp = e.target.closest("[data-items]"); if (grp && !e.target.closest("a")) { const first = grp.dataset.items.split(",")[0]; if (first) go(base(route()) + "/i-" + first); else C.lock(grp.dataset.lock, grp.dataset.opt); return; }
   });
   document.addEventListener("keydown", e => { const row = e.target.closest && e.target.closest("[data-item],[data-lock]"); if (row && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); row.click(); } });
-  document.addEventListener("submit", e => { const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
+  document.addEventListener("submit", e => {
+    const mf = e.target.closest("#miscform"); if (mf) { e.preventDefault(); addMisc($("#misc-name").value, Number($("#misc-inr").value), $("#misc-per").value); return; }
+    const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
+  document.addEventListener("click", e => { const del = e.target.closest("[data-misc-del]"); if (del) removeMisc(Number(del.dataset.miscDel)); });
   document.addEventListener("change", e => { if (e.target.id === "who") C.setWho(e.target.value); });
   C.onChange(() => { const act = document.activeElement, actDay = act && act.closest && act.closest("form[data-day]")?.dataset.day, who = act && act.id === "who"; const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; }); render(); document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d]) t.value = drafts[d]; }); if (who) { const w = $("#who"); if (w) { w.focus(); w.setSelectionRange(w.value.length, w.value.length); } } else if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); } });
 

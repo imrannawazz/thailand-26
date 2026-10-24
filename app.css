@@ -138,6 +138,14 @@ table.plan th{width:6ch}
 .row.avoid .name{text-decoration:line-through;text-decoration-color:var(--dim);text-decoration-thickness:1px}
 .row.avoid .score{background:var(--dim)}
 
+/* misc form */
+.miscform{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) auto auto;gap:.6em;align-items:end;margin-top:.8em}
+.miscform input,.miscform select{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:.3em 0;outline:none;min-width:0}
+.miscform input:focus,.miscform select:focus{border-bottom-color:var(--ink)}
+.miscform select{appearance:none;-webkit-appearance:none;color:var(--note)}
+.miscform button{font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--accent);padding:.5em 0}
+@media (max-width:720px){.miscform{grid-template-columns:1fr 1fr}.miscform input:first-child{grid-column:1 / -1}}
+
 /* item rows (cards) */
 .row{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:4vw;align-items:baseline;padding:.6em 0;border-top:1px solid var(--line);cursor:pointer;transition:opacity .4s cubic-bezier(.32,.72,0,1)}
 .row:first-of-type{border-top:0}
