@@ -173,6 +173,16 @@
     return { home: { name: it.name, lngLat: it.lngLat }, targets: list, approx: it.geo !== "exact" };
   }
 
+  // ---- links the group adds; Claude researches them into full cards later ----
+  const KIND_LABEL = { stay: "a place to stay", do: "something to do", eat: "food", drink: "a bar", dive: "a dive or snorkel trip", other: "other" };
+  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
+  function linksBlock(place, kind) {
+    const list = S.linksFor(place, kind);
+    return `<div class="sec linkbox"><h2>Links the group added <b>${list.length || ""}</b></h2>
+      ${list.map(x => `<div class="opt"><div><a class="name" href="${h(x.url)}" target="_blank" rel="noopener">${h(host(x.url))} ↗</a><span class="dur">${h(KIND_LABEL[x.kind] || x.kind || "")} · added by ${h(x.who || "someone")}, ${h(x.at || "")} · ${x.status === "done" ? "researched" : "waiting to be researched"}</span>${x.note ? `<span class="small" style="display:block">${h(x.note)}</span>` : ""}</div><div>${x.who === who() ? `<button class="linkish small" data-link-del="${x.id}">remove</button>` : ""}</div></div>`).join("") || `<p class="pending">Found something on Airbnb, Booking, Instagram or a blog? Paste it here. Everyone sees it, and it gets researched into a full card with reviews, price, photos and a score.</p>`}
+      <form class="linkform" data-link-place="${place}" data-link-kind="${kind || ""}"><input name="url" type="url" inputmode="url" placeholder="Paste a link" required><select name="kind">${Object.entries(KIND_LABEL).map(([k, v]) => `<option value="${k}" ${k === (kind || "stay") ? "selected" : ""}>${v}</option>`).join("")}</select><input name="note" placeholder="Why (optional)"><button type="submit">Add link</button></form></div>`;
+  }
+
   // ---- rows ----
   function itemRow(id, ctx) {
     const it = T.items[id]; if (!it) return "";
@@ -280,11 +290,11 @@
     if (tab === "itinerary") pane = itineraryTab(d);
     else if (tab === "decide") pane = d.decisions.map(decisionBlock).join("");
     else if (tab === "travel") pane = d.legs.map(legBlock).join("");
-    else if (tab === "stay") pane = poolBlock("Sleep in", "stay", d.base, [], n);
-    else if (tab === "do") pane = poolBlock("Do in", "do", d.base, picksAll, n);
-    else if (tab === "eat") pane = poolBlock("Eat in", "eat", d.base, picksAll, n);
-    else if (tab === "drink") pane = poolBlock("Drink in", "drink", d.base, picksAll, n);
-    else if (tab === "dive") pane = poolBlock("Scuba and snorkel in", "dive", d.base, picksAll, n);
+    else if (tab === "stay") pane = poolBlock("Sleep in", "stay", d.base, [], n) + linksBlock(d.base, "stay");
+    else if (tab === "do") pane = poolBlock("Do in", "do", d.base, picksAll, n) + linksBlock(d.base, "do");
+    else if (tab === "eat") pane = poolBlock("Eat in", "eat", d.base, picksAll, n) + linksBlock(d.base, "eat");
+    else if (tab === "drink") pane = poolBlock("Drink in", "drink", d.base, picksAll, n) + linksBlock(d.base, "drink");
+    else if (tab === "dive") pane = poolBlock("Scuba and snorkel in", "dive", d.base, picksAll, n) + linksBlock(d.base, "dive");
     else if (tab === "around") pane = localBlock(d.base);
     else if (tab === "reddit") pane = redditBlock(key);
     else if (tab === "notes") pane = notesBlock(n);
@@ -310,7 +320,7 @@
     const g = T.guides[place]; if (!g) return null;
     tab = tab === "choose" ? "choose" : "guide";
     const p = PLACE(place);
-    const body = tab === "guide" ? guideTab(place, g) : planPage(place, true);
+    const body = tab === "guide" ? guideTab(place, g) : linksBlock(place, null) + planPage(place, true);
     return { tab, html: `<div class="wrap"><button class="back" data-go="">← Map</button><h1 class="disp">${h(g.title)}<small>${h(p.thai)}</small></h1>
       <nav class="tabs" aria-label="Place sections"><button class="${tab === "guide" ? "on" : ""}" data-tab="guide">Guide</button><button class="${tab === "choose" ? "on" : ""}" data-tab="choose">Choose</button></nav>
       <div class="pane" id="pane">${body}</div></div>` };
@@ -488,6 +498,13 @@
     if (e.target.closest("[data-noseed]")) { S.discardLocal(); return; }
     if (e.target.closest("[data-gate]")) { gate(); return; }
   });
+  document.addEventListener("submit", e => {
+    const lf = e.target.closest("form.linkform"); if (!lf) return; e.preventDefault();
+    const w = who(); if (!w) return gate();
+    const url = lf.url.value.trim(); if (!/^https?:\/\//i.test(url)) { lf.url.setCustomValidity("Paste a full link starting with http"); lf.url.reportValidity(); return; }
+    S.addLink(url, lf.dataset.linkPlace, lf.kind.value, lf.note.value.trim(), w); });
+  document.addEventListener("input", e => { if (e.target.name === "url" && e.target.closest("form.linkform")) e.target.setCustomValidity(""); });
+  document.addEventListener("click", e => { const ld = e.target.closest("[data-link-del]"); if (ld) S.delLink(ld.dataset.linkDel); });
   document.addEventListener("submit", e => { const f = e.target.closest("form[data-comment]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; addComment(f.dataset.comment, v); });
   document.addEventListener("input", e => { if (e.target.id === "fsearch") { const el = e.target, pos = el.selectionStart; SF.q = el.value; if (!SF.q && SF.sort === "near") SF.sort = "score"; render(); const n = $("#fsearch"); if (n) { n.focus(); try { n.setSelectionRange(pos, pos); } catch (err) {} } } });
   C.onChange(() => { const act = document.activeElement, actDay = act && act.closest && act.closest("form[data-day]")?.dataset.day; const drafts = {}; document.querySelectorAll("form[data-day] textarea").forEach(t => { if (t.value) drafts[t.closest("form").dataset.day] = t.value; }); render(); document.querySelectorAll("form[data-day] textarea").forEach(t => { const d = t.closest("form").dataset.day; if (drafts[d]) t.value = drafts[d]; }); if (actDay) { const t = document.querySelector(`form[data-day="${actDay}"] textarea`); if (t) t.focus(); } });

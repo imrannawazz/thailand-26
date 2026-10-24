@@ -287,6 +287,15 @@ table.plan th{width:6ch}
 @media (min-width:721px){.hl .one{display:none}}
 @media (prefers-reduced-motion:reduce){.sheet,.card .inner{animation:none}.row,.rail button,.open,.menu button{transition:none}}
 
+/* add-a-link */
+.linkbox{margin-top:3em;padding-top:1.2em;border-top:1px solid var(--line)}
+.linkform{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.2fr) minmax(0,1.5fr) auto;gap:.6em;align-items:end;margin-top:.8em}
+.linkform input,.linkform select{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:.35em 0;outline:none;min-width:0}
+.linkform input:focus,.linkform select:focus{border-bottom-color:var(--ink)}
+.linkform button{font-style:normal;font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.72em;color:#fff;background:var(--accent);padding:.7em 1.1em;border-radius:999px}
+.linkbox a.name{text-decoration:none;color:var(--ink)}
+@media (max-width:720px){.linkform{grid-template-columns:1fr 1fr}.linkform input[name=url]{grid-column:1 / -1}.linkform input,.linkform select{font-size:16px}}
+
 /* phone overrides: kept last so they win over the base rules */
 @media (max-width:720px){
   .hl{padding-top:8px}

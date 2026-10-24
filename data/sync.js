@@ -14,8 +14,9 @@
   // ---- state: a normalised shape every page reads ----
   // locks: {decisionId: {optionId, who}}  picks: {itemId: {day, who}}  notes: [{id, day, who, body, at}]
   // comments: [{id, itemId, who, body, at}]  rejects: [{itemId, who}]  misc: [{id, name, inr, per, who, at}]
-  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [] });
+  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [], links: [] });
   let state = read(LS, null);
+  if (state && !state.links) state.links = [];
   if (!state) {
     // migrate the earlier per-key localStorage shape once
     state = empty();
@@ -43,7 +44,7 @@
 
   async function pull() {
     if (!sb) return;
-    const [l, p, n, c, r, m] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" ? "updated_at" : "created_at", { ascending: true })));
+    const [l, p, n, c, r, m, k] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" ? "updated_at" : "created_at", { ascending: true })));
     const err = [l, p, n, c, r, m].find(x => x.error); if (err) throw err.error;
     const next = empty();
     for (const row of l.data) next.locks[row.decision_id] = { optionId: row.option_id, who: row.who };
@@ -52,6 +53,7 @@
     next.comments = c.data.map(row => ({ id: row.id, itemId: row.item_id, who: row.who, body: row.body, at: row.at }));
     next.rejects = r.data.map(row => ({ itemId: row.item_id, who: row.who }));
     next.misc = m.data.map(row => ({ id: row.id, name: row.name, inr: row.inr, per: row.per, who: row.who, at: row.at }));
+    next.links = k.error ? [] : k.data.map(row => ({ id: row.id, url: row.url, place: row.place, kind: row.kind, note: row.note, who: row.who, at: row.at, status: row.status }));
     return next;
   }
   async function pushAll(local) {
@@ -62,9 +64,10 @@
     const Cm = local.comments.map(x => ({ id: x.id, item_id: x.itemId, who: x.who, body: x.body, at: x.at }));
     const R = local.rejects.map(x => ({ item_id: x.itemId, who: x.who }));
     const M = local.misc.map(x => ({ id: x.id, name: x.name, inr: x.inr, per: x.per, who: x.who, at: x.at }));
-    for (const [t, rows] of [["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
+    const K = (local.links || []).map(x => ({ id: x.id, url: x.url, place: x.place, kind: x.kind, note: x.note, who: x.who, at: x.at, status: x.status || "new" }));
+    for (const [t, rows] of [["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M], ["links", K]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
   }
-  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length;
+  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length && !(s.links || []).length;
   let refreshTimer = null;
   const refresh = () => { clearTimeout(refreshTimer); refreshTimer = setTimeout(async () => { try { const next = await pull(); if (next) { state = next; S.state = state; S.status = "shared, live"; emit(); } } catch (e) { fail("refresh", e); } }, 250); };
 
@@ -99,6 +102,9 @@
     remote(() => on ? sb.from("rejects").upsert({ item_id: itemId, who }) : sb.from("rejects").delete().match({ item_id: itemId, who }));
   };
   S.addMisc = (name, inr, per, who) => { const row = { id: uuid(), name, inr: Math.round(inr), per, who, at: today() }; state.misc.push(row); emit(); remote(() => sb.from("misc").insert(row)); };
+  S.addLink = (url, place, kind, note, who) => { const row = { id: uuid(), url, place, kind, note: note || null, who, at: today(), status: "new" }; state.links.push(row); emit(); remote(() => sb.from("links").insert(row)); };
+  S.delLink = id => { state.links = state.links.filter(x => x.id !== id); emit(); remote(() => sb.from("links").delete().eq("id", id)); };
+  S.linksFor = (place, kind) => (state.links || []).filter(x => (!place || x.place === place) && (!kind || x.kind === kind));
   S.delMisc = id => { state.misc = state.misc.filter(m => m.id !== id); emit(); remote(() => sb.from("misc").delete().eq("id", id)); };
 
   // convenience views
