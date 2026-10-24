@@ -176,7 +176,7 @@
   function flyTo(map, placeKey, extra) {
     const p = T.places[placeKey]; if (!p) return;
     const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const w = MW(), o = Object.assign({ center: p.lngLat, zoom: p.zoom, duration: reduce ? 0 : (window.innerWidth <= 720 ? 1400 : 1800), curve: 1.3 }, extra || {});
+    const w = MW(), o = Object.assign({ center: p.lngLat, zoom: p.zoom, duration: reduce ? 0 : (window.innerWidth <= 720 ? 800 : 1100), curve: 1.3 }, extra || {});  // 800/1100 ms: the main session's "faster motion" timings, kept
     const sheetOpen = document.body.classList.contains("has-sheet");
     const phone = window.innerWidth <= 720;
     // on a phone the sheet hides the lower two thirds, so a steep tilt would show only the horizon: keep it shallow there
