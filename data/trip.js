@@ -688,7 +688,7 @@ window.TRIP = {
    "tips": [
     "Snorkel verdict: Wednesday 14:00 to 18:00. Tide rises to a 2.02 m high at 17:22 so Pileh is open, the day fleets leave Phi Phi Leh after 15:00, Maya Bay faces west so the afternoon light is on the beach, and there is no ferry to catch. Thursday sunrise is the fallback.",
     "Book at Visa Travel Team on arrival (two minutes from the pier): private longtail, five people, four hours, stops on the receipt, under 3,500 THB. Park fee 400 each in cash at the Loh Samah kiosk; reef-safe sunscreen on before boarding; fins usually not included.",
-    "Sleep east: Rimlay for two, Hangover bunks for three. Avoid Ingphu and Tropical Garden (bed-bug reports) and anything on Loh Dalum (music till 02:00)."
+    "Sleep: ChaoKoh Phi Phi Hotel and Resort is the pick (about 2,000 INR a head, pool, 3 to 5 min from the pier); Banyan Villa or Andaman Beach Resort as backups. PP Charlie is on the party beach: noise till 2 to 3 am in 2026 reviews, small old rooms. Avoid Ingphu and Tropical Garden (bed-bug reports)."
    ]
   },
   {
@@ -1091,57 +1091,55 @@ window.TRIP = {
    "place": "phiphi",
    "options": [
     {
+     "id": "chaokoh",
+     "item": "pp2-chaokoh-phi-phi-hotel-resort",
+     "costINR": 10091,
+     "unit": "3 rooms, about 2,018 INR a head",
+     "note": "The research pick. Trip.com 9.0 from 462, Kayak 7.9 from 5,197; on Tonsai beach, 3 to 5 min from the pier, pool. Two twins plus one room, or two rooms if they confirm a room for three. Ask for a room away from the Chaokoh hostel next door."
+    },
+    {
+     "id": "banyan",
+     "item": "pp2-phi-phi-banyan-villa",
+     "costINR": 10858,
+     "unit": "3 rooms, about 2,171 INR a head",
+     "note": "Second pick. Trip.com 8.6, Kayak 8.3 from 1,665. A Garden-wing room takes three adults, so one of those plus a double."
+    },
+    {
+     "id": "andaman",
+     "item": "pp2-phi-phi-andaman-beach-resort",
+     "costINR": 8708,
+     "unit": "2 to 3 rooms, about 1,742 INR a head",
+     "note": "The quiet east-Tonsai pick: pool, free luggage cart from the pier, a Deluxe Triple plus a Double. Trip.com 8.1, Kayak 7.2."
+    },
+    {
+     "id": "panmanee",
+     "item": "s2-panmanee",
+     "costINR": 10411,
+     "unit": "about 2,082 INR a head",
+     "note": "Backup if the top pick is full: best scores in this band (Kayak 8.9 from 4,005), extra beds allowed. Central, no pool, a 05:00 call to prayer next door."
+    },
+    {
      "id": "rimlay-hangover",
      "label": "Rimlay double for two plus three Hangover bunks",
      "costINR": 9273,
-     "unit": "about 2,700 to 4,600 THB for all five, about 1,900 INR a head",
-     "note": "The deep-dive pick. Rimlay: quiet east-Tonsai beachfront, 10 min from the pier, 'very quiet during the night'. Hangover Chill and Hill: 9.6 from 406, on the hill nearest the viewpoint stairs. A Rimlay room is about 5,000 INR, so about 2,500 a head for two: inside the 3,000 a head cap for this night.",
+     "unit": "about 1,900 INR a head",
+     "note": "The earlier pick, now demoted: Rimlay is quiet east-Tonsai beachfront but 'bed bugs' shows up among its Kayak review mentions. Hangover (9.6 hostel) on its own is still a good dorm.",
      "items": [
       "pp-rimlay",
       "pp-hangover"
      ]
     },
     {
-     "id": "villa-dormsin",
-     "label": "Phi Phi Villa Resort double plus three Dormsin pods",
-     "costINR": 10397,
-     "unit": "about 3,700 THB",
-     "note": "The backup: Villa Resort has the pool and 8.5 from almost 6,000 reviews; Dormsin 9.3 from 1,144, six minutes from the pier.",
-     "items": [
-      "pp-villa-resort",
-      "s2-dormsin"
-     ]
-    },
-    {
-     "id": "rooms",
-     "label": "All private rooms near the pier: Ivory, Phi Phi Hotel, Panmanee",
-     "costINR": 10228,
-     "unit": "about 3,650 THB for three rooms",
-     "note": "Central rather than east; Phi Phi Hotel has a pool.",
-     "items": [
-      "ivory-phi-phi",
-      "s2-phi-phi-hotel",
-      "s2-panmanee"
-     ]
-    },
-    {
      "id": "pods",
      "label": "Five bunks in one good hostel",
      "costINR": 7025,
-     "unit": "about 1,500 to 3,500 THB for five",
-     "note": "Hangover (east, quiet-ish) or Dormsin (central). Not Chaokoh: loud. Not Blanco unless you want the party in the room.",
+     "unit": "about 1,400 INR a head",
+     "note": "Hangover (east, quiet-ish) or Dormsin (central). Not Chaokoh hostel: loud. Not Blanco unless you want the party in the room.",
      "items": [
       "pp-hangover",
       "s2-dormsin",
       "s2-voyagers"
      ]
-    },
-    {
-     "id": "tonsai",
-     "item": "ton-sai-tropical",
-     "costINR": 12852,
-     "unit": "night, 3 rooms, from-price",
-     "note": "Mid-range hotel by the pier if nobody wants a dorm."
     }
    ]
   },
@@ -6754,37 +6752,32 @@ window.TRIP = {
    "thai": null,
    "tagline": "Right for one cheap night, not for comfort.",
    "priceTHB": null,
-   "priceINR": 10538,
-   "priceNote": "1,250 THB per room. Kayak 29-30 Oct 2026: King $21, Double $27-30, Std $31-62, Twin $64 (≈630-1,900 THB); Trip.com avg £46; 5% card fee; non-refundable inside 14 days",
+   "priceINR": 5210,
+   "priceNote": "About 1,042 INR a head for one night, all five. 3 x Trip.com undated 'From THB 618', read 2026-10-24; no dated rate readable",
    "when": null,
    "book": null,
-   "rating": 9.9,
+   "rating": 8.8,
    "scale": "10",
-   "reviews": 171,
-   "reviewSource": "Hostelworld (Kayak 8.8/1,385)",
+   "reviews": 48,
+   "reviewSource": "Trip.com · Expedia 7.8/10 from 184 (earlier round, phi-phi-night.md)",
    "highlights": [
-    "Best-reviewed cheap private near pier",
-    "AC, safe, no pool",
-    "Quiet street at night",
-    "Check-in 14:00-19:00"
+    "Cheapest decent beds",
+    "Owner books boats and ferries"
    ],
    "praise": [
-    "Simple and effective. Safe and clean.",
-    "Very clean, friendly staff, great location.",
-    "The location is perfect, next to the pier and restaurants/nightlife",
-    "cleanliness 8.6",
-    "close to everything"
+    "Owner books trips and walks you to the pier (Trip.com, Jul 2026)",
+    "Quiet enough at night for the location (Trip.com, Jul 2026)"
    ],
    "complaints": [
-    "Facilities subpar / small rooms",
-    "Bed-bug tag on Kayak (11 reviews)",
-    "Thin walls and doors",
-    "room size 3/10, bed comfort 3.5/10"
+    "Basic, small rooms; subpar facilities (Trip.com, May 2026)"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/Ivory+Phi+Phi+Island",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ivory+Phi+Phi+Island",
     "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1804327-Reviews-Ivory_Phi_Phi_Island-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html",
-    "hostelworld": "https://www.hostelworld.com/st/hostels/asia/thailand/ko-phi-phi/"
+    "hostelworld": "https://www.hostelworld.com/st/hostels/asia/thailand/ko-phi-phi/",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-712285/ivory-phi-phi-island/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Ivory+Phi+Phi+Island&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=Ivory%20Phi%20Phi%20Island"
    },
    "tags": [
     "phiphi",
@@ -6795,23 +6788,26 @@ window.TRIP = {
    "sources": [
     "research/stays.md",
     "research/stays-2.md",
-    "research/phi-phi-night.md"
+    "research/phi-phi-night.md",
+    "research/phi-phi-stays-2.md"
    ],
-   "verdict": "All-private budget fallback",
-   "rooms": "2 per double/twin room; 10 rooms total",
+   "verdict": "Cheapest clean option; tiny rooms and a small review sample.",
+   "rooms": "3 small rooms (extra beds vary by room)",
    "distances": {
-    "beach": "3 min to pier",
+    "beach": "3 min walk",
     "pier": "3-10 min walk",
     "airport": "n/a (ferry)"
    },
    "fitsBudget": true,
    "position": {
     "pier": 3,
-    "lohdalum": 6,
+    "lohdalum": 5,
     "viewpoint": 12,
     "noise": "moderate",
     "ac": true
    },
+   "phiZone": "pier",
+   "poolFlag": false,
    "lngLat": [
     98.776,
     7.7445
@@ -6819,21 +6815,21 @@ window.TRIP = {
    "geo": "approx",
    "facts": {
     "kind": "hotel",
-    "pool": "shared",
+    "pool": "none",
     "beachMin": 3,
     "beachMode": "walk",
-    "perHeadNight": 2108,
+    "perHeadNight": 1042,
     "town": false,
     "capHead": 3000,
     "insideCap": true
    },
    "score": {
-    "total": 94,
+    "total": 80,
     "parts": {
-     "reviews": 97,
+     "reviews": 86,
      "budget": 100,
      "beach": 100,
-     "pool": 70
+     "pool": 0
     },
     "weights": {
      "reviews": 35,
@@ -9720,46 +9716,55 @@ window.TRIP = {
    "thai": null,
    "tagline": "Solid third room if everyone wants privates",
    "priceTHB": null,
-   "priceINR": 9610,
-   "priceNote": "1,140 THB per room. Kayak 29-30 Oct 2026 lowest $38 (≈1,140 THB); Booking snippet $112",
+   "priceINR": 10411,
+   "priceNote": "About 2,082 INR a head for one night, all five. 3 x Kayak US 'from $38' for Sat 31 Oct-Sun 1 Nov 2026 at an assumed 32.5 THB/USD, read 2026-10-24; Trip.com undated 'From THB 1,524'",
    "when": null,
    "book": null,
-   "rating": 8.9,
+   "rating": 9.0,
    "scale": "10",
-   "reviews": 4004,
-   "reviewSource": "Kayak (TripAdvisor 3.9/5 from 310, snippet)",
+   "reviews": 164,
+   "reviewSource": "Trip.com · Kayak 8.9/10 from 4,005",
    "highlights": [
-    "Most-reviewed budget hotel",
-    "AC, daily water",
-    "Location 10/10",
-    "Bathroom score 2/10"
+    "Renovated 2023, cleanest rooms in this list",
+    "2 min from the pier",
+    "Extra beds allowed"
    ],
    "praise": [
-    "Guests appreciated receiving a water bottle every day",
-    "Comfortable beds contributed to restful stays.",
-    "staff received positive remarks for their friendliness and helpfulness"
+    "Clean, new rooms and friendly staff (Trip.com, May-Oct 2026)",
+    "Comfortable beds (Kayak AI)"
    ],
    "complaints": [
-    "Bathroom/sewage odours at night",
-    "Maintenance concerns",
-    "Mosque audible in some rooms"
+    "Call to prayer next door at 05:00 (Trip.com, Oct 2026)",
+    "No pool, no lift; bathroom odours (Trip.com, Kayak AI)"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Panmanee+Hotel+Phi+Phi"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Panmanee+Hotel+Koh+Phi+Phi",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-5296662/panmanee-hotel-newly-renovated/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Panmanee+Hotel+Phi+Phi&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=2",
+    "agoda": "https://www.agoda.com/search?textToSearch=Panmanee%20Hotel%20Phi%20Phi"
    },
    "tags": [
     "phiphi",
     "hotel"
    ],
    "sources": [
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/phi-phi-stays-2.md"
    ],
-   "verdict": "Solid third room if everyone wants privates",
-   "rooms": "2 per room, 39 rooms",
+   "verdict": "Cleanest rooms, but central, poolless and a 05:00 wake-up; the backup if the top pick is full.",
+   "rooms": "2 rooms + 1 extra bed (extra beds allowed), or 3 rooms",
    "distances": {
-    "beach": "132 yd to pier"
+    "beach": "2 min walk"
    },
    "fitsBudget": true,
+   "position": {
+    "pier": 2,
+    "lohdalum": 4,
+    "noise": "moderate",
+    "ac": null
+   },
+   "phiZone": "pier",
+   "poolFlag": false,
    "lngLat": [
     98.772,
     7.73889
@@ -9767,21 +9772,21 @@ window.TRIP = {
    "geo": "exact",
    "facts": {
     "kind": "hotel",
-    "pool": null,
+    "pool": "none",
     "beachMin": 2,
     "beachMode": "walk",
-    "perHeadNight": 1922,
+    "perHeadNight": 2082,
     "town": false,
     "capHead": 3000,
     "insideCap": true
    },
    "score": {
-    "total": 89,
+    "total": 81,
     "parts": {
      "reviews": 89,
      "budget": 100,
      "beach": 100,
-     "pool": null
+     "pool": 0
     },
     "weights": {
      "reviews": 35,
@@ -9789,9 +9794,7 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": [
-     "pool"
-    ],
+    "unknown": [],
     "capped": false
    },
    "zone": "pier",
@@ -11676,33 +11679,34 @@ window.TRIP = {
    "thai": null,
    "tagline": "Primary pick for the private-room pair",
    "priceTHB": null,
-   "priceINR": 15174,
-   "priceNote": "1,800 THB a room, three rooms about 15,174 INR. Kayak snapshot: standard $36–92, double $39–72, weeknight avg $90; Priceline $37; ≈1,200–3,000 THB",
+   "priceINR": 10299,
+   "priceNote": "About 2,060 INR a head for one night, all five. 3 x cheapest Standard Rs 3,433, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
    "when": null,
    "book": null,
-   "rating": 7.6,
-   "scale": 10,
-   "reviews": 1471,
-   "reviewSource": "Kayak aggregate (Booking 7.6/348; Trip.com 8.4/81)",
+   "rating": 8.4,
+   "scale": "10",
+   "reviews": 81,
+   "reviewSource": "Trip.com · Kayak 7.6/10 from 1,471",
    "highlights": [
-    "beachfront, longtails tie up outside",
-    "quiet at night",
-    "breakfast included but poor"
+    "Quiet at night",
+    "On the beach where longtails tie up",
+    "Large rooms"
    ],
    "praise": [
-    "Comfy and spacious room, nice bed!",
-    "10min from the center so very quiet during the night"
+    "Large room with big bathtub and glass shower (Trip.com, Mar 2026)",
+    "Very quiet at night, 10 min from centre (Trip.com, Mar 2025)"
    ],
    "complaints": [
-    "Breakfast was very bad",
-    "flies and a sewer smell in the bathroom",
-    "mosque call to prayer early"
+    "Thin breakfast (Kayak, 22 reviews)",
+    "Mosque <100 m, early call to prayer (Trip.com surroundings)",
+    "'Bed bugs' appears in Kayak's review mention list"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/Phi+Phi+Rimlay+Resort",
-    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Rimlay+Resort",
-    "agoda": "https://www.agoda.com/search?city=17355&text=Phi+Phi+Rimlay",
-    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Rimlay+Resort"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Rimlay+Resort",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Rimlay+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=Phi%20Phi%20Rimlay%20Resort",
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Rimlay+Resort",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-1509511/phi-phi-rimlay-cottage/"
    },
    "tags": [
     "phiphi",
@@ -11710,15 +11714,22 @@ window.TRIP = {
     "guesthouse"
    ],
    "sources": [
-    "research/phi-phi-night.md"
+    "research/phi-phi-night.md",
+    "research/phi-phi-stays-2.md"
    ],
-   "verdict": "Primary pick for the private-room pair",
+   "verdict": "Quiet and well placed on the east side, but no pool and a bed-bug mention; second-tier backup.",
    "position": {
     "pier": 10,
     "lohdalum": 10,
     "viewpoint": 8,
     "noise": "quiet",
     "ac": true
+   },
+   "rooms": "3 rooms (no extra beds or cots)",
+   "phiZone": "eastcliff",
+   "poolFlag": false,
+   "distances": {
+    "beach": "10 min walk"
    },
    "lngLat": [
     98.783,
@@ -11727,22 +11738,22 @@ window.TRIP = {
    "geo": "approx",
    "facts": {
     "kind": "hotel",
-    "pool": null,
-    "beachMin": 2,
+    "pool": "none",
+    "beachMin": 10,
     "beachMode": "walk",
-    "perHeadNight": 3035,
+    "perHeadNight": 2060,
     "town": false,
     "capHead": 3000,
-    "insideCap": false
+    "insideCap": true
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "score": {
-    "total": 84,
+    "total": 70,
     "parts": {
-     "reviews": 76,
-     "budget": 99,
-     "beach": 100,
-     "pool": null
+     "reviews": 83,
+     "budget": 100,
+     "beach": 85,
+     "pool": 0
     },
     "weights": {
      "reviews": 35,
@@ -11750,9 +11761,7 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": [
-     "pool"
-    ],
+    "unknown": [],
     "capped": false
    },
    "zone": "eastcliff",
@@ -11776,49 +11785,55 @@ window.TRIP = {
    "thai": null,
    "tagline": "Backup for the private-room pair if Rimlay is full or you want a pool",
    "priceTHB": null,
-   "priceINR": 23604,
-   "priceNote": "2,800 THB a room, three rooms about 23,604 INR. Kayak: deluxe from $87, weeknight avg $133 (≈2,800–4,300 THB)",
+   "priceINR": 24630,
+   "priceNote": "About 4,926 INR a head for one night, all five. 3 x cheapest Deluxe Rs 8,210, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
    "when": null,
    "book": null,
    "rating": 8.5,
-   "scale": 10,
-   "reviews": 5986,
-   "reviewSource": "Kayak aggregate (Booking 8.5/1,505; Agoda 8.6/277; Trip.com 8.2/109)",
+   "scale": "10",
+   "reviews": 5988,
+   "reviewSource": "Kayak · Trip.com 8.2/10 from 109",
    "highlights": [
-    "pool and sundecks",
-    "best-rated east-Tonsai hotel",
-    "own restaurant has live music some nights"
+    "Beach, pool and loungers",
+    "Quiet at night"
    ],
    "praise": [
-    "Excellent view with many sundecks by the beach",
-    "pretty quiet at night"
+    "Clean rooms, beautiful pool (Trip.com, Oct 2026)"
    ],
    "complaints": [
-    "two giant cockroaches in the room",
-    "The pool is dirty, and the water is murky",
-    "hard beds; limited breakfast"
+    "Two giant cockroaches in the room (Trip.com, Sep 2026)",
+    "15-20 min walk with luggage, no drop-off (Trip.com, Sep 2026)"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/Phi+Phi+Villa+Resort",
-    "booking": "https://www.booking.com/hotel/th/phi-phi-villa-resort.html",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Villa+Resort",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Villa+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
     "agoda": "https://www.agoda.com/search?text=Phi+Phi+Villa+Resort",
-    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Villa+Resort"
+    "tripadvisor": "https://www.tripadvisor.com/Search?q=Phi+Phi+Villa+Resort",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-3384994/phi-phi-villa-resort/"
    },
    "tags": [
     "phiphi",
     "eastcliff",
-    "hotel"
+    "hotel",
+    "pool"
    ],
    "sources": [
-    "research/phi-phi-night.md"
+    "research/phi-phi-night.md",
+    "research/phi-phi-stays-2.md"
    ],
-   "verdict": "Backup for the private-room pair if Rimlay is full or you want a pool",
+   "verdict": "Well rated but over budget on the snapshot rate, with a fresh cockroach report.",
    "position": {
-    "pier": 12,
+    "pier": 15,
     "lohdalum": 12,
     "viewpoint": 8,
     "noise": "quiet",
     "ac": true
+   },
+   "rooms": "3 rooms",
+   "phiZone": "eastcliff",
+   "poolFlag": true,
+   "distances": {
+    "beach": "on the beach"
    },
    "lngLat": [
     98.77744,
@@ -11828,20 +11843,20 @@ window.TRIP = {
    "facts": {
     "kind": "villa",
     "pool": "shared",
-    "beachMin": null,
-    "beachMode": "unknown",
-    "perHeadNight": 4721,
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 4926,
     "town": false,
     "capHead": 3000,
     "insideCap": false
    },
    "fitsBudget": false,
    "score": {
-    "total": 63,
+    "total": 71,
     "parts": {
      "reviews": 85,
-     "budget": 43,
-     "beach": null,
+     "budget": 36,
+     "beach": 100,
      "pool": 70
     },
     "weights": {
@@ -11850,9 +11865,7 @@ window.TRIP = {
      "beach": 20,
      "pool": 15
     },
-    "unknown": [
-     "beach"
-    ],
+    "unknown": [],
     "capped": false
    },
    "zone": "eastcliff",
@@ -12663,6 +12676,608 @@ window.TRIP = {
    "zone": "pier",
    "zoneName": "Tonsai pier and village",
    "images": []
+  },
+  "pp2-pp-charlie-beach-resort": {
+   "id": "pp2-pp-charlie-beach-resort",
+   "name": "PP Charlie Beach Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Central Loh Dalum beach, inside PP Princess compound",
+   "thai": null,
+   "tagline": "Great pool and breakfast and cheap, but it sits on the Loh Dalum party strip and sells a room named for bar noise till 2am; skip for this group.",
+   "priceTHB": null,
+   "priceINR": 7955,
+   "priceNote": "About 1,591 INR a head for one night, all five. 3 x cheapest Standard Rs 2,652, Kayak India for Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24; with 2 twin rooms ~Rs 2,590/head; Trip.com undated 'From THB 1,028'",
+   "when": null,
+   "book": null,
+   "rating": 8.3,
+   "scale": "10",
+   "reviews": 155,
+   "reviewSource": "Trip.com · Kayak 6.8/10 from 3,901 (AI cleanliness 1.5, bed comfort 1.0); TripAdvisor ~2.7/5 from 844 per search snippet, unverified (403)",
+   "highlights": [
+    "Large sea-view pool plus kids' pool",
+    "Beachfront buffet breakfast",
+    "2-3 min walk to Slinky and Freedom"
+   ],
+   "praise": [
+    "Pool and beach breakfast keep repeat guests coming back (Trip.com, Jul-Aug 2026)",
+    "Very close to nightlife (Trip.com, Sep 2026)"
+   ],
+   "complaints": [
+    "Bar noise until 2-3 am (Trip.com, Feb and May 2026)",
+    "Small, old rooms with no balcony and tiny bathroom (Trip.com, Apr 2026)",
+    "Dirty first room / cleanliness lapses (Trip.com, Aug 2026; Kayak AI)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=PP+Charlie+Beach+Resort+Koh+Phi+Phi",
+    "reviews": "https://www.trip.com/hotels/phi-phi-islands-hotel-detail-712367/pp-charlie-beach-resort/",
+    "booking": "https://www.booking.com/searchresults.html?ss=PP+Charlie+Beach+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=PP%20Charlie%20Beach%20Resort",
+    "official": "https://www.ppprincess.com/",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1166974-Reviews-PP_Charlie_Beach_Resort-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+   },
+   "tags": [
+    "phiphi",
+    "pool",
+    "avoid"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://content.r9cdn.net/rimg/himg/3c/a5/d8/expedia_group-675172-107344611-606418.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/d2/40/fe/expedia_group-675172-90018830-580416.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/ad/5a/40/expedia_group-675172-216757203-304149.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/f0/2e/09/expedia_group-675172-87405309-312100.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/cf/18/6f/expedia_group-675172-191398069-225349.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/c8/79/08/expedia_group-675172-208835697-183178.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage"
+   ],
+   "verdict": "Great pool and breakfast and cheap, but it sits on the Loh Dalum party strip and sells a room named for bar noise till 2am; skip for this group.",
+   "rooms": "3 rooms (2+2+1); no extra beds for any room type; avoid the 'Standard Room (BAR Noise 8PM - 2AM)' category",
+   "position": {
+    "pier": 5,
+    "lohdalum": 3,
+    "noise": "loud",
+    "ac": true
+   },
+   "phiZone": "lohdalum",
+   "poolFlag": true,
+   "distances": {
+    "beach": "on the beach"
+   },
+   "lngLat": [
+    98.776,
+    7.7445
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1591,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 40,
+    "parts": {
+     "reviews": 83,
+     "budget": 100,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [],
+    "capped": true
+   },
+   "zone": "lohdalum",
+   "zoneName": "Loh Dalum"
+  },
+  "pp2-phi-phi-andaman-beach-resort": {
+   "id": "pp2-phi-phi-andaman-beach-resort",
+   "name": "Phi Phi Andaman Beach Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "East Tonsai Bay beachfront",
+   "thai": null,
+   "tagline": "Best quiet east-side pick in budget; older but fine, and the pier cart solves the walk.",
+   "priceTHB": null,
+   "priceINR": 8708,
+   "priceNote": "About 1,742 INR a head for one night, all five. 3 x cheapest Deluxe Rs 2,903, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24; triple price not readable",
+   "when": null,
+   "book": null,
+   "rating": 8.1,
+   "scale": "10",
+   "reviews": 126,
+   "reviewSource": "Trip.com · Kayak 7.2/10 from 3,331",
+   "highlights": [
+    "Quiet, away from the bar zone",
+    "Free luggage cart from/to the pier",
+    "Beachfront with pool"
+   ],
+   "praise": [
+    "Far enough from the bars for a restful night (Trip.com, Oct 2026)",
+    "Breakfast facing the beach (Kayak, 42 reviews)"
+   ],
+   "complaints": [
+    "Dated rooms, maintenance lapses (Kayak, 42 reviews)",
+    "Weak or smelly shower water (Kayak, 37 reviews)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Andaman+Beach+Resort",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-712322/phi-phi-andaman-beach-resort/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Andaman+Beach+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=2",
+    "agoda": "https://www.agoda.com/search?textToSearch=Phi%20Phi%20Andaman%20Beach%20Resort"
+   },
+   "tags": [
+    "phiphi",
+    "pool",
+    "eastcliff"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://content.r9cdn.net/rimg/himg/79/53/c3/expediav2-326836-c7b7c5-347523.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/b0/0f/f0/expedia_group-326836-f2dbb8-435344.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/7d/32/0a/expedia_group-326836-a977e0-524595.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/40/2d/5d/expediav2-326836-8abce0-373565.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/64/8d/42/expedia_group-326836-da1f6e-427495.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage"
+   ],
+   "verdict": "Best quiet east-side pick in budget; older but fine, and the pier cart solves the walk.",
+   "rooms": "Deluxe Triple (1 double + 1 twin) + Deluxe Double = 2 rooms (triple per Booking listing via search); fallback 3 rooms",
+   "position": {
+    "pier": 12,
+    "lohdalum": 15,
+    "noise": "quiet",
+    "ac": true
+   },
+   "phiZone": "eastcliff",
+   "poolFlag": true,
+   "distances": {
+    "beach": "on the beach"
+   },
+   "lngLat": [
+    98.783,
+    7.7395
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 1742,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 89,
+    "parts": {
+     "reviews": 81,
+     "budget": 100,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [],
+    "capped": false
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff"
+  },
+  "pp2-phi-phi-arboreal-resort": {
+   "id": "pp2-phi-phi-arboreal-resort",
+   "name": "Phi Phi Arboreal Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Hillside on the viewpoint stairs, behind east Tonsai",
+   "thai": null,
+   "tagline": "View-and-silence pick for fit legs; cleanliness is uneven.",
+   "priceTHB": null,
+   "priceINR": 8646,
+   "priceNote": "About 1,729 INR a head for one night, all five. 3 x cheapest Standard Rs 2,882, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
+   "when": null,
+   "book": null,
+   "rating": 7.7,
+   "scale": "10",
+   "reviews": 99,
+   "reviewSource": "Trip.com · Kayak 7.4/10 from 1,881",
+   "highlights": [
+    "Halfway up to the viewpoint",
+    "Two-bay views",
+    "Bar music barely audible"
+   ],
+   "praise": [
+    "Bar music practically inaudible in the room (Trip.com, Apr 2026)",
+    "Staff carry luggage up the stairs (Trip.com AI, 19 reviews)"
+   ],
+   "complaints": [
+    "About 190 steps up (Trip.com, Apr 2026)",
+    "Mould in bathroom, ants (Trip.com, Mar-Apr 2026)",
+    "No Wi-Fi in rooms (Kayak, 11 reviews)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Arboreal+Resort",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-712328/phi-phi-arboreal-resort/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Arboreal+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=Phi%20Phi%20Arboreal%20Resort"
+   },
+   "tags": [
+    "phiphi",
+    "eastcliff"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://content.r9cdn.net/rimg/himg/a3/58/73/expediav2-338959-d5e5e3-473157.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/11/98/fb/expedia_group-338959-7c3b96-452496.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/cd/72/42/expedia_group-338959-1bbc86-460592.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/fe/d9/73/expedia_group-338959-30205135-367969.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage"
+   ],
+   "verdict": "View-and-silence pick for fit legs; cleanliness is uneven.",
+   "rooms": "3 rooms",
+   "position": {
+    "pier": 12,
+    "lohdalum": 10,
+    "noise": "quiet",
+    "ac": true
+   },
+   "phiZone": "eastcliff",
+   "distances": {
+    "beach": "12 min walk"
+   },
+   "lngLat": [
+    98.783,
+    7.7395
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": null,
+    "beachMin": 12,
+    "beachMode": "walk",
+    "perHeadNight": 1729,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 77,
+    "parts": {
+     "reviews": 78,
+     "budget": 100,
+     "beach": 60,
+     "pool": null
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "pool"
+    ],
+    "capped": false
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff"
+  },
+  "pp2-bayview-resort-phi-phi": {
+   "id": "pp2-bayview-resort-phi-phi",
+   "name": "Bayview Resort Phi Phi Island - Beach Front Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Laem Hin, east end of Tonsai Bay",
+   "thai": null,
+   "tagline": "Quietest option but too far for a fire-show night, and room quality is a lottery.",
+   "priceTHB": null,
+   "priceINR": 8281,
+   "priceNote": "About 1,656 INR a head for one night, all five. 3 x cheapest Superior Rs 2,760, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
+   "when": null,
+   "book": null,
+   "rating": 7.9,
+   "scale": "10",
+   "reviews": 543,
+   "reviewSource": "Trip.com · Kayak 6.9/10 from 3,107",
+   "highlights": [
+    "Very quiet",
+    "Sea-view rooms, cleaner water",
+    "Shuttle boat from the pier"
+   ],
+   "praise": [
+    "Very quiet at night, real holiday feel (Trip.com, Aug 2026)",
+    "Good breakfast, friendly staff (Kayak, 42 reviews)"
+   ],
+   "complaints": [
+    "Severe hygiene complaint about premier villas (Trip.com, 2026)",
+    "Hilly campus, distant pool (Kayak, 12 and 4 reviews)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bayview+Resort+Phi+Phi+Island+Laem+Hin",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-712273/bayview-resort-phi-phi-island-beach-front-resort/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Bayview+Resort+Phi+Phi+Island&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=Bayview%20Resort%20Phi%20Phi%20Island"
+   },
+   "tags": [
+    "phiphi",
+    "pool",
+    "eastcliff"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://ak-d.tripcdn.com/images/1mc1o12000p9mniub7C15_R_960_660_R5_D.jpg",
+    "https://ak-d.tripcdn.com/images/1mc5112000f79xoru9A25_R_339_206_R5_D.jpg",
+    "https://ak-d.tripcdn.com/images/1mc6712000p9o9m8k9AC7_R_339_206_R5_D.jpg",
+    "https://ak-d.tripcdn.com/images/200k0s000000hrc3k1105_R_339_206_R5_D.jpg"
+   ],
+   "verdict": "Quietest option but too far for a fire-show night, and room quality is a lottery.",
+   "rooms": "3 rooms, or 2 rooms + extra bed (extra beds allowed)",
+   "position": {
+    "pier": 15,
+    "lohdalum": 20,
+    "noise": "quiet",
+    "ac": true
+   },
+   "phiZone": "eastcliff",
+   "poolFlag": true,
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "lngLat": [
+    98.783,
+    7.7395
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 1656,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 79,
+     "budget": 100,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [],
+    "capped": false
+   },
+   "zone": "eastcliff",
+   "zoneName": "East Tonsai, towards the cliff"
+  },
+  "pp2-chaokoh-phi-phi-hotel-resort": {
+   "id": "pp2-chaokoh-phi-phi-hotel-resort",
+   "name": "ChaoKoh Phi Phi Hotel & Resort",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai Bay beachfront, just off the pier",
+   "thai": null,
+   "tagline": "Best room quality per rupee in budget, on the right side of the village.",
+   "priceTHB": null,
+   "priceINR": 10091,
+   "priceNote": "About 2,018 INR a head for one night, all five. 3 x cheapest Deluxe Rs 3,364, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
+   "when": null,
+   "book": null,
+   "rating": 9.0,
+   "scale": "10",
+   "reviews": 462,
+   "reviewSource": "Trip.com · Kayak 7.9/10 from 5,197",
+   "highlights": [
+    "Clean, spacious rooms",
+    "3-5 min from the pier",
+    "On Tonsai Bay, not the Loh Dalum strip"
+   ],
+   "praise": [
+    "Clean room, quiet at night (Trip.com, Sep 2026)",
+    "Staff carried luggage to the pier free (Trip.com, Jul 2026)"
+   ],
+   "complaints": [
+    "Small or murky pool (Trip.com, Oct 2026)",
+    "Salty shower water, uneven service (Trip.com AI)",
+    "Adjacent Chaokoh hostel reported loud till 1 am (earlier round)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=ChaoKoh+Phi+Phi+Hotel+and+Resort",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-7601864/chaokoh-phi-phi-hotel-and-resort/",
+    "booking": "https://www.booking.com/searchresults.html?ss=ChaoKoh+Phi+Phi+Hotel+and+Resort&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=3",
+    "agoda": "https://www.agoda.com/search?textToSearch=ChaoKoh%20Phi%20Phi%20Hotel%20and%20Resort"
+   },
+   "tags": [
+    "phiphi",
+    "pool"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://content.r9cdn.net/rimg/himg/9f/36/e4/expedia_group-2678038-dc3fdd-062487.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/81/83/79/expedia_group-2678038-140215083-372602.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/81/83/6b/expedia_group-2678038-255317316-416148.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/e9/0c/19/expedia_group-2678038-1cb32d-747590.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/72/39/1e/expedia_group-2678038-12866174-765122.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage"
+   ],
+   "verdict": "Best room quality per rupee in budget, on the right side of the village.",
+   "rooms": "2 rooms if a twin/deluxe that sleeps 3 is confirmed (Expedia lists them), else 3 rooms (2 twin + 1)",
+   "position": {
+    "pier": 4,
+    "lohdalum": 7,
+    "noise": "moderate",
+    "ac": true
+   },
+   "phiZone": "pier",
+   "poolFlag": true,
+   "distances": {
+    "beach": "on the beach"
+   },
+   "lngLat": [
+    98.777,
+    7.7385
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 2018,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 92,
+    "parts": {
+     "reviews": 90,
+     "budget": 100,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [],
+    "capped": false
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village"
+  },
+  "pp2-phi-phi-banyan-villa": {
+   "id": "pp2-phi-phi-banyan-villa",
+   "name": "Phi Phi Banyan Villa",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai Bay, beside ChaoKoh, 175 m from the pier",
+   "thai": null,
+   "tagline": "Consistently well reviewed, pool, minutes from everything; book the Garden wing.",
+   "priceTHB": null,
+   "priceINR": 10858,
+   "priceNote": "About 2,171 INR a head for one night, all five. 3 x cheapest Double Rs 3,619, Kayak India Sat 31 Oct-Sun 1 Nov 2026, read 2026-10-24",
+   "when": null,
+   "book": null,
+   "rating": 8.6,
+   "scale": "10",
+   "reviews": 136,
+   "reviewSource": "Trip.com · Kayak 8.3/10 from 1,665",
+   "highlights": [
+    "Staff meet the boat and walk you back",
+    "Very clean small pool",
+    "Newer Garden wing"
+   ],
+   "praise": [
+    "Central yet quiet at night (Trip.com, Mar 2026)",
+    "Clean pool, beachside breakfast, helpful staff (Trip.com, Oct 2026)"
+   ],
+   "complaints": [
+    "Wooden floors carry neighbours' noise (Trip.com, Apr 2026)",
+    "Dated fittings, occasional pests or mould (Trip.com AI, 16 reviews)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Banyan+Villa",
+    "reviews": "https://sg.trip.com/hotels/phi-phi-islands-hotel-detail-991150/phi-phi-banyan-villa/",
+    "booking": "https://www.booking.com/searchresults.html?ss=Phi+Phi+Banyan+Villa&checkin=2026-11-18&checkout=2026-11-19&group_adults=5&no_rooms=2",
+    "agoda": "https://www.agoda.com/phi-phi-banyan-villa_7/hotel/koh-phi-phi-th.html"
+   },
+   "tags": [
+    "phiphi",
+    "pool"
+   ],
+   "sources": [
+    "research/phi-phi-stays-2.md"
+   ],
+   "images": [
+    "https://content.r9cdn.net/rimg/himg/63/1c/31/expedia_group-498756-125183505-424509.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/b8/1e/43/expedia_group-498756-249997292-460384.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/1b/8a/77/expedia_group-498756-118454614-822823.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/82/3c/56/expedia_group-498756-b6dac0-366923.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage",
+    "https://content.r9cdn.net/rimg/himg/e8/a8/62/expedia_group-498756-151807908-398749.jpg?width=500&height=350&crop=true&caller=HotelDetailsPage"
+   ],
+   "verdict": "Consistently well reviewed, pool, minutes from everything; book the Garden wing.",
+   "rooms": "Garden-wing room for 3 (Agoda: up to 3 adults) + Garden double = 2 rooms; fallback 3 rooms",
+   "position": {
+    "pier": 3,
+    "lohdalum": 7,
+    "noise": "moderate",
+    "ac": true
+   },
+   "phiZone": "pier",
+   "poolFlag": true,
+   "distances": {
+    "beach": "3 min walk"
+   },
+   "lngLat": [
+    98.77289,
+    7.73833
+   ],
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 2172,
+    "town": false,
+    "capHead": 3000,
+    "insideCap": true
+   },
+   "fitsBudget": true,
+   "score": {
+    "total": 90,
+    "parts": {
+     "reviews": 85,
+     "budget": 100,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [],
+    "capped": false
+   },
+   "zone": "pier",
+   "zoneName": "Tonsai pier and village"
   },
   "ab-lotus-house-phuket": {
    "id": "ab-lotus-house-phuket",
@@ -20026,13 +20641,15 @@ window.TRIP = {
       7.7395
      ],
      "for": "Quieter guesthouses and bungalows on the slope, ten minutes from the bars, the viewpoint stairs start here.",
-     "take": "Our sleeping zone: Rimlay double on the quiet beachfront plus Hangover Chill and Hill bunks on the hill by the viewpoint stairs. Skip Ingphu and Tropical Garden (recent bed-bug and cockroach reports).",
+     "take": "Quietest at night. Phi Phi Andaman Beach Resort is the pick here (pool, triple room, luggage cart from the pier); Hangover is the good dorm. Skip Ingphu and Tropical Garden (bed-bug and cockroach reports); Rimlay now has bed-bug mentions too.",
      "items": [
-      "pp-rimlay",
+      "pp2-phi-phi-andaman-beach-resort",
       "pp-hangover",
+      "pp2-phi-phi-arboreal-resort",
+      "pp2-bayview-resort-phi-phi",
+      "pp-rimlay",
       "pp-villa-resort",
       "pp-harbour-view",
-      "s2-dormsin",
       "phi-phi-viewpoint-2"
      ]
     },
@@ -20077,7 +20694,7 @@ window.TRIP = {
     }
    ],
    "recos": [
-    "Sleep east: Rimlay double for two plus three Hangover bunks, about 2,700 to 4,600 THB for five. Backup: Phi Phi Villa Resort plus Dormsin pods.",
+    "Sleep at ChaoKoh Phi Phi Hotel and Resort (9.0 on Trip.com, pool, on Tonsai beach, about 2,000 INR a head for three rooms); Phi Phi Banyan Villa or the quieter Phi Phi Andaman Beach Resort if it is full. Not PP Charlie: it sits on the Loh Dalum party beach and its cheapest room is literally named for bar noise till 2 am.",
     "Snorkel Wednesday 14:00 to 18:00, not Thursday morning: rising tide opens Pileh, the day boats are gone, the light is on Maya Bay, and there is no ferry to catch. Sunrise Thursday stays as the weather fallback.",
     "Book the boat on arrival at Visa Travel Team or the pier, about 3,500 THB per boat for five plus 400 park fee each in cash at Loh Samah. Online private listings cost two to three times that.",
     "Nightlife: Carlito's fire show at 21:00 on the way, then Stones and Slinky on Loh Dalum; cash only; walk back east by the main lane.",
