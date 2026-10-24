@@ -14,9 +14,11 @@
   // ---- state: a normalised shape every page reads ----
   // locks: {decisionId: {optionId, who}}  picks: {itemId: {day, who}}  notes: [{id, day, who, body, at}]
   // comments: [{id, itemId, who, body, at}]  rejects: [{itemId, who}]  misc: [{id, name, inr, per, who, at}]
-  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [], links: [] });
+  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [], links: [], tiers: [], prices: [] });
   let state = read(LS, null);
   if (state && !state.links) state.links = [];
+  if (state && !state.tiers) state.tiers = [];
+  if (state && !state.prices) state.prices = [];
   if (!state) {
     // migrate the earlier per-key localStorage shape once
     state = empty();
@@ -44,7 +46,7 @@
 
   async function pull() {
     if (!sb) return;
-    const [l, p, n, c, r, m, k] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" ? "updated_at" : "created_at", { ascending: true })));
+    const [l, p, n, c, r, m, k, tr, pr] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc", "links", "tiers", "prices"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" || t === "tiers" ? "updated_at" : "created_at", { ascending: true })));
     const err = [l, p, n, c, r, m].find(x => x.error); if (err) throw err.error;
     const next = empty();
     for (const row of l.data) next.locks[row.decision_id] = { optionId: row.option_id, who: row.who };
@@ -54,6 +56,8 @@
     next.rejects = r.data.map(row => ({ itemId: row.item_id, who: row.who }));
     next.misc = m.data.map(row => ({ id: row.id, name: row.name, inr: row.inr, per: row.per, who: row.who, at: row.at }));
     next.links = k.error ? [] : k.data.map(row => ({ id: row.id, url: row.url, place: row.place, kind: row.kind, note: row.note, who: row.who, at: row.at, status: row.status }));
+    next.tiers = tr.error ? [] : tr.data.map(row => ({ itemId: row.item_id, who: row.who, tier: row.tier }));
+    next.prices = pr.error ? [] : pr.data.map(row => ({ id: row.id, itemId: row.item_id, who: row.who, inr: row.inr, per: row.per, note: row.note, at: row.at }));
     return next;
   }
   async function pushAll(local) {
@@ -65,9 +69,11 @@
     const R = local.rejects.map(x => ({ item_id: x.itemId, who: x.who }));
     const M = local.misc.map(x => ({ id: x.id, name: x.name, inr: x.inr, per: x.per, who: x.who, at: x.at }));
     const K = (local.links || []).map(x => ({ id: x.id, url: x.url, place: x.place, kind: x.kind, note: x.note, who: x.who, at: x.at, status: x.status || "new" }));
-    for (const [t, rows] of [["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M], ["links", K]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
+    const Tr = (local.tiers || []).map(x => ({ item_id: x.itemId, who: x.who, tier: x.tier }));
+    const Pr = (local.prices || []).map(x => ({ id: x.id, item_id: x.itemId, who: x.who, inr: x.inr, per: x.per, note: x.note, at: x.at }));
+    for (const [t, rows] of [["prices", Pr], ["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M], ["links", K], ["tiers", Tr]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
   }
-  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length && !(s.links || []).length;
+  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length && !(s.links || []).length && !(s.tiers || []).length && !(s.prices || []).length;
   let refreshTimer = null;
   const refresh = () => { clearTimeout(refreshTimer); refreshTimer = setTimeout(async () => { try { const next = await pull(); if (next) { state = next; S.state = state; S.status = "shared, live"; emit(); } } catch (e) { fail("refresh", e); } }, 250); };
 
@@ -105,6 +111,17 @@
   S.addLink = (url, place, kind, note, who) => { const row = { id: uuid(), url, place, kind, note: note || null, who, at: today(), status: "new" }; state.links.push(row); emit(); remote(() => sb.from("links").insert(row)); };
   S.delLink = id => { state.links = state.links.filter(x => x.id !== id); emit(); remote(() => sb.from("links").delete().eq("id", id)); };
   S.linksFor = (place, kind) => (state.links || []).filter(x => (!place || x.place === place) && (!kind || x.kind === kind));
+  // per-person A / B / Z tier on an item; tier null clears it
+  S.setTier = (itemId, who, tier) => {
+    state.tiers = (state.tiers || []).filter(t => !(t.itemId === itemId && t.who === who)); if (tier) state.tiers.push({ itemId, who, tier }); emit();
+    remote(() => tier ? sb.from("tiers").upsert({ item_id: itemId, who, tier, updated_at: new Date().toISOString() }) : sb.from("tiers").delete().match({ item_id: itemId, who }));
+  };
+  S.tiersFor = itemId => (state.tiers || []).filter(t => t.itemId === itemId);
+  S.tierOf = (itemId, who) => ((state.tiers || []).find(t => t.itemId === itemId && t.who === who) || {}).tier || null;
+  // prices the group types in where research found none; the latest per item wins
+  S.addPrice = (itemId, who, inr, per, note) => { const row = { id: uuid(), itemId, who, inr: Math.round(inr), per, note: note || null, at: today() }; state.prices.push(row); emit(); remote(() => sb.from("prices").insert({ id: row.id, item_id: itemId, who, inr: row.inr, per, note: row.note, at: row.at })); };
+  S.delPrice = id => { state.prices = state.prices.filter(x => x.id !== id); emit(); remote(() => sb.from("prices").delete().eq("id", id)); };
+  S.priceFor = itemId => { const l = (state.prices || []).filter(x => x.itemId === itemId); return l.length ? l[l.length - 1] : null; };
   S.delMisc = id => { state.misc = state.misc.filter(m => m.id !== id); emit(); remote(() => sb.from("misc").delete().eq("id", id)); };
 
   // convenience views

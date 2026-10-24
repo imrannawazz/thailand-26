@@ -146,6 +146,15 @@ table.plan th{width:6ch}
 .linkish.small{font-size:.9em}
 .linkish.inline{font-weight:500;text-decoration-thickness:1px}
 .avail{display:block;font-size:.88em;margin-top:.15em}
+.tierset{display:flex;gap:6px;flex-wrap:wrap;margin:.2em 0 .5em}
+.tierset button{flex:1 1 0;min-width:92px;min-height:40px;padding:.45em .6em;border:1px solid var(--line);border-radius:999px;font-size:.9em;color:var(--ink);background:transparent;transition:background .15s,border-color .15s,color .15s}
+.tierset button.tA.on{background:var(--ok);border-color:var(--ok);color:var(--ground)}
+.tierset button.tB.on{background:var(--accent);border-color:var(--accent);color:var(--ground)}
+.tierset button.tZ.on{background:var(--no);border-color:var(--no);color:var(--ground)}
+.act.tier{font-weight:600}
+.row.row .act.tier.tA,.act.tier.tA{color:var(--ok)}
+.row.row .act.tier.tB,.act.tier.tB{color:var(--accent)}
+.row.row .act.tier.tZ,.act.tier.tZ{color:var(--no)}
 .avail.yes{color:var(--ok)}
 .avail.no{color:var(--no)}
 .avail.unk{color:var(--dim)}
@@ -170,6 +179,13 @@ p.avail a{color:inherit}
 .miscform input:focus,.miscform select:focus{border-bottom-color:var(--ink)}
 .miscform select{appearance:none;-webkit-appearance:none;color:var(--note)}
 .miscform button{font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--accent);padding:.5em 0}
+.priceform{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:.6em .8em;align-items:end;margin:.4em 0 1em}
+.priceform input,.priceform select{font:inherit;font-size:16px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:.35em 0;outline:none;min-width:0;border-radius:0}
+.priceform input:focus,.priceform select:focus{border-bottom-color:var(--ink)}
+.priceform input[name=note]{grid-column:1 / -1}
+.priceform button{grid-column:1 / -1;justify-self:start;font-style:normal;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:.72em;color:var(--accent);padding:.6em 0;min-height:40px}
+.pricemore{margin:.2em 0 .8em}.pricemore summary{cursor:pointer;color:var(--accent);list-style:none}.pricemore summary::-webkit-details-marker{display:none}
+.userprice{margin:.2em 0 .6em}
 .gatebox{max-width:460px;width:100%;text-align:center}
 .names{display:flex;flex-wrap:wrap;gap:.6em;justify-content:center;margin-top:1.2em}
 .names button{font-style:normal;font-weight:500;font-size:1em;letter-spacing:.04em;padding:.7em 1.3em;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:var(--ground);transition:border-color .3s,background .3s,color .3s}
@@ -335,3 +351,4 @@ p.avail a{color:inherit}
 .measure .mname{color:var(--ink)}
 .measure .mdist{color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
 .row.hl-hover{background:rgba(47,95,140,.05)}
+.card .inner.still{animation:none!important}

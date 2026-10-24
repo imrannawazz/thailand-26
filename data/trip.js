@@ -686,7 +686,7 @@ window.TRIP = {
     ]
    },
    "tips": [
-    "Snorkel verdict: Wednesday 14:00 to 18:00. Tide rises to a 2.02 m high at 17:22 so Pileh is open, the day fleets leave Phi Phi Leh after 15:00, [[Maya Bay|maya-bay]] faces west so the afternoon light is on the beach, and there is no ferry to catch. Thursday sunrise is the fallback.",
+    "Snorkel on Wednesday afternoon, 2 pm to 6 pm, the day we arrive. That is when the tour-boat crowds have left, the tide is high enough to swim into Pileh Lagoon, and the sun is on [[Maya Bay|maya-bay]]. Bad weather that afternoon? Go at sunrise on Thursday instead.",
     "Book at [[Visa Travel Team|pp-op-visa-travel]] on arrival (two minutes from the pier): private longtail, five people, four hours, stops on the receipt, under 3,500 THB. Park fee 400 each in cash at the Loh Samah kiosk; reef-safe sunscreen on before boarding; fins usually not included.",
     "Sleep: [[JJ Bungalow|pp2-jj-bungalow]] is the pick (open on the 18th, about 3,000 INR a head, pool, free cancellation until 15 Nov); [[Phi Phi Chang Grand|pp2-chang-grand]] is the cheaper open backup. [[ChaoKoh|pp2-chaokoh-phi-phi-hotel-resort]], [[Banyan Villa|pp2-phi-phi-banyan-villa]] and [[Rimlay|pp-rimlay]] have nothing for our night. [[PP Charlie|pp2-pp-charlie-beach-resort]] is on the party beach: noise till 2 to 3 am. Avoid [[Ingphu|pp-ingphu]] and [[Tropical Garden|pp-tropical-garden]] (bed-bug reports)."
    ]
@@ -21987,6 +21987,424 @@ window.TRIP = {
     "2026-11-18",
     "2026-11-19"
    ]
+  },
+  "wl-17213212": {
+   "id": "wl-17213212",
+   "name": "(Krabi) The nature home (4 BR)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Khao Thong, Krabi coast (about 20 min north of Ao Nang by car)",
+   "thai": null,
+   "tagline": "Beachfront house among mangroves with a private pier and a sea-view pool; 4 bedrooms, sleeps 10.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price for our nights: booked on 19-21 Nov when checked (24 Oct).",
+   "when": null,
+   "book": null,
+   "rating": 4.91,
+   "scale": "5",
+   "reviews": 194,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "Private pool looking over the sea, BBQ area, outdoor showers",
+    "Own pier out over the water",
+    "4 bedrooms, 6 beds, 4.5 baths"
+   ],
+   "praise": [],
+   "complaints": [
+    "Out of town: every dinner or bar in Ao Nang is a car ride"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=(Krabi)+The+nature+home+(4+BR)+Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/17213212?check_in=2026-11-19&check_out=2026-11-21&adults=5",
+    "wishlist": "https://www.airbnb.co.uk/wishlists/2224629683"
+   },
+   "tags": [
+    "aonang",
+    "airbnb",
+    "villa",
+    "wishlist"
+   ],
+   "sources": [
+    "Airbnb wishlist 'Krabi, Thailand 2026', listings read 2026-10-24"
+   ],
+   "images": [
+    "https://a0.muscache.com/im/pictures/b1c070b0-f769-48c8-9862-ac60ad6ea295.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/d1c12bec-2c45-44df-9ccc-3070a87ed29f.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/34c163ad-2ed8-4846-913c-ed152ff6c80b.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/06fb7966-cf7c-4040-8fbb-4fe4ce624c59.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/1dab7030-c83e-4efb-a2eb-79bbd0a1991a.jpg?im_w=960"
+   ],
+   "poolFlag": null,
+   "distances": {
+    "beach": "on the beach (mangrove shore)"
+   },
+   "lngLat": [
+    98.765,
+    8.105
+   ],
+   "geo": "exact",
+   "avail": {
+    "status": "no",
+    "source": "Airbnb",
+    "checkin": "2026-11-19",
+    "checkout": "2026-11-21",
+    "checked": "24 Oct",
+    "pick": "",
+    "note": "Airbnb: Those dates are not available (also 20-22 Nov)",
+    "totalINR": null,
+    "memberINR": null,
+    "perHeadNight": null,
+    "url": "https://www.airbnb.co.in/rooms/17213212?check_in=2026-11-19&check_out=2026-11-21&adults=5"
+   },
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false,
+    "capHead": 5000,
+    "insideCap": false
+   },
+   "fitsBudget": null,
+   "score": {
+    "total": 45,
+    "parts": {
+     "reviews": 96,
+     "budget": null,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ],
+    "capped": true
+   },
+   "zone": "thalane",
+   "zoneName": "Ao Thalane",
+   "stayDates": [
+    "2026-11-19",
+    "2026-11-21"
+   ]
+  },
+  "wl-27994008": {
+   "id": "wl-27994008",
+   "name": "Lovely Villa (seafront villa in Krabi)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Khao Thong, Krabi coast (about 20 min north of Ao Nang by car)",
+   "thai": null,
+   "tagline": "Seafront villa with a 14 by 7 m saltwater infinity pool and beach access; 4 bedrooms, sleeps 8.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price for our nights: booked on 19-21 Nov when checked (24 Oct).",
+   "when": null,
+   "book": null,
+   "rating": 4.87,
+   "scale": "5",
+   "reviews": 165,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "Private pool: saltwater infinity, 14 by 7 m, plus a kids' pool and big sun deck",
+    "Beach access and sea view",
+    "Private BBQ dinner on request"
+   ],
+   "praise": [],
+   "complaints": [
+    "Out of town: Ao Nang is a car ride"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Lovely+Villa+(seafront+villa+in+Krabi)+Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/27994008?check_in=2026-11-19&check_out=2026-11-21&adults=5",
+    "wishlist": "https://www.airbnb.co.uk/wishlists/2224629683"
+   },
+   "tags": [
+    "aonang",
+    "airbnb",
+    "villa",
+    "wishlist"
+   ],
+   "sources": [
+    "Airbnb wishlist 'Krabi, Thailand 2026', listings read 2026-10-24"
+   ],
+   "images": [
+    "https://a0.muscache.com/im/pictures/738a8b23-8f69-46a6-8dc9-78c29a4e220f.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/57a5fb75-24f8-4bf3-94eb-a1afeebc271e.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/5a476483-1a2e-40d7-b0d0-6fcacc7e9faa.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6Mjc5OTQwMDg%3D/original/4668197c-a94f-4197-9828-2e52472fc2cf.jpeg?im_w=960"
+   ],
+   "poolFlag": null,
+   "distances": {
+    "beach": "beach access from the villa"
+   },
+   "lngLat": [
+    98.76,
+    8.115
+   ],
+   "geo": "exact",
+   "avail": {
+    "status": "no",
+    "source": "Airbnb",
+    "checkin": "2026-11-19",
+    "checkout": "2026-11-21",
+    "checked": "24 Oct",
+    "pick": "",
+    "note": "Airbnb: Those dates are not available (also 20-22 Nov)",
+    "totalINR": null,
+    "memberINR": null,
+    "perHeadNight": null,
+    "url": "https://www.airbnb.co.in/rooms/27994008?check_in=2026-11-19&check_out=2026-11-21&adults=5"
+   },
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": null,
+    "town": false,
+    "capHead": 5000,
+    "insideCap": false
+   },
+   "fitsBudget": null,
+   "score": {
+    "total": 45,
+    "parts": {
+     "reviews": 96,
+     "budget": null,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget"
+    ],
+    "capped": true
+   },
+   "zone": "thalane",
+   "zoneName": "Ao Thalane",
+   "stayDates": [
+    "2026-11-19",
+    "2026-11-21"
+   ]
+  },
+  "wl-13180229": {
+   "id": "wl-13180229",
+   "name": "Private LUX Family Villas with pool (House 2 of 15)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Two-bedroom house in a 15-house compound with a shared pool; sleeps 4, so five of us need two houses.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price for our nights: booked on 19-21 Nov when checked (24 Oct).",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 319,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "Shared pool open all year, kids' zone and playground",
+    "319 reviews at 4.83",
+    "Free cancellation up to 14 Nov on the listing"
+   ],
+   "praise": [],
+   "complaints": [
+    "Sleeps only 4 per house"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Private+LUX+Family+Villas+with+pool+(House+2+of+15)+Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/13180229?check_in=2026-11-19&check_out=2026-11-21&adults=5",
+    "wishlist": "https://www.airbnb.co.uk/wishlists/2224629683"
+   },
+   "tags": [
+    "aonang",
+    "airbnb",
+    "villa",
+    "wishlist"
+   ],
+   "sources": [
+    "Airbnb wishlist 'Krabi, Thailand 2026', listings read 2026-10-24"
+   ],
+   "images": [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-13180229/original/a08eb2fc-d1cc-400b-9241-e68dbfa57266.jpeg?im_w=960",
+    "https://a0.muscache.com/im/pictures/27377dab-a135-4b04-9afe-2982b13ec5d2.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/c42996a5-5bbb-494a-a54a-04bbbf3ae2e6.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/cb870e9d-dfd6-400c-9184-4f5fcae3d91b.jpg?im_w=960",
+    "https://a0.muscache.com/im/pictures/142c57aa-26cb-49a0-9ad9-e65832261dc2.jpg?im_w=960"
+   ],
+   "poolFlag": null,
+   "avail": {
+    "status": "no",
+    "source": "Airbnb",
+    "checkin": "2026-11-19",
+    "checkout": "2026-11-21",
+    "checked": "24 Oct",
+    "pick": "",
+    "note": "Airbnb: Those dates are not available, even for 4 guests",
+    "totalINR": null,
+    "memberINR": null,
+    "perHeadNight": null,
+    "url": "https://www.airbnb.co.in/rooms/13180229?check_in=2026-11-19&check_out=2026-11-21&adults=5"
+   },
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": null,
+    "town": false,
+    "capHead": 5000,
+    "insideCap": false
+   },
+   "fitsBudget": null,
+   "score": {
+    "total": 45,
+    "parts": {
+     "reviews": 96,
+     "budget": null,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget",
+     "beach"
+    ],
+    "capped": true
+   },
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "stayDates": [
+    "2026-11-19",
+    "2026-11-21"
+   ]
+  },
+  "wl-1778649949218040267": {
+   "id": "wl-1778649949218040267",
+   "name": "Azure Tropical Pool Villas",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "New 3-bedroom pool villa with a hot tub and mountain views; sleeps 6. Only 3 reviews.",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "No price for our nights: booked on 19-21 Nov when checked (24 Oct).",
+   "when": null,
+   "book": null,
+   "rating": 4.67,
+   "scale": "5",
+   "reviews": 3,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "Private pool and hot tub in a fenced garden",
+    "Full kitchen, sun terrace, mountain views"
+   ],
+   "praise": [],
+   "complaints": [
+    "Only 3 reviews so far",
+    "Open from 20 Nov, but 60,712 INR for 20-22 Nov (about 6,071 a head a night, over the 5,000 cap)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Azure+Tropical+Pool+Villas+Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1778649949218040267?check_in=2026-11-19&check_out=2026-11-21&adults=5",
+    "wishlist": "https://www.airbnb.co.uk/wishlists/2224629683"
+   },
+   "tags": [
+    "aonang",
+    "airbnb",
+    "villa",
+    "wishlist"
+   ],
+   "sources": [
+    "Airbnb wishlist 'Krabi, Thailand 2026', listings read 2026-10-24"
+   ],
+   "images": [
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1778649949218040267/original/7faffa07-fb65-480a-9331-b581dc45846d.png?im_w=960",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1778649949218040267/original/36f07ec0-8dd7-4b31-b2bf-03f920da5781.png?im_w=960",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1778649949218040267/original/37a425e2-4507-4bb0-a07f-2116e72f62a2.png?im_w=960",
+    "https://a0.muscache.com/im/pictures/hosting/Hosting-1778649949218040267/original/de0d89eb-afa7-4587-af8c-b6be3ba37e93.png?im_w=960"
+   ],
+   "poolFlag": null,
+   "avail": {
+    "status": "no",
+    "source": "Airbnb",
+    "checkin": "2026-11-19",
+    "checkout": "2026-11-21",
+    "checked": "24 Oct",
+    "pick": "",
+    "note": "Airbnb: Booked on 19 Nov; open 20-22 Nov at 60,712 INR",
+    "totalINR": null,
+    "memberINR": null,
+    "perHeadNight": null,
+    "url": "https://www.airbnb.co.in/rooms/1778649949218040267?check_in=2026-11-19&check_out=2026-11-21&adults=5"
+   },
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": null,
+    "town": false,
+    "capHead": 5000,
+    "insideCap": false
+   },
+   "fitsBudget": null,
+   "score": {
+    "total": 45,
+    "parts": {
+     "reviews": 82,
+     "budget": null,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "budget",
+     "beach"
+    ],
+    "capped": true
+   },
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "zone": "strip",
+   "zoneName": "Ao Nang strip",
+   "stayDates": [
+    "2026-11-19",
+    "2026-11-21"
+   ]
   }
  },
  "flights": {
@@ -22373,7 +22791,7 @@ window.TRIP = {
       7.685
      ],
      "for": "Pileh Lagoon, Maya Bay (walk-in only, no swimming), Loh Samah snorkel, Viking Cave from the water. 400 THB park fee each, cash.",
-     "take": "Wednesday 14:00 to 18:00: Viking Cave, Loh Samah snorkel, Pileh at 15:30 as the tide rises to its 17:22 high, [[Maya Bay|maya-bay]] last with the afternoon sun on the beach, off it by 17:00. Day fleets are gone after 15:00. Thursday 06:00 sunrise is the weather fallback (700 a head shared with [[Visa Travel|pp-op-visa-travel]]).",
+     "take": "Wednesday 2 pm to 6 pm, in this order: Viking Cave from the boat, snorkel at Loh Samah, swim in Pileh Lagoon around 3:30 pm, then [[Maya Bay|maya-bay]] last for the best light (you can walk on the beach but not swim; leave by 5 pm). The tour crowds are gone by 3 pm. Backup if it rains: Thursday 6 am, about 700 THB each on a shared boat with [[Visa Travel|pp-op-visa-travel]].",
      "items": [
       "private-longtail-from-tonsai",
       "maya-bay"
@@ -22393,7 +22811,7 @@ window.TRIP = {
    ],
    "recos": [
     "Sleep at [[JJ Bungalow|pp2-jj-bungalow]]: open on our night, 8.9 from 83, pool, quiet but five minutes from the bars, about 3,000 INR a head for three rooms with free cancellation until 15 Nov. [[Phi Phi Chang Grand|pp2-chang-grand]] is the cheaper open backup (about 2,000 a head). [[ChaoKoh|pp2-chaokoh-phi-phi-hotel-resort]], [[Banyan Villa|pp2-phi-phi-banyan-villa]] and [[Rimlay|pp-rimlay]] are not bookable for 18 Nov; [[Andaman Beach|pp2-phi-phi-andaman-beach-resort]] is open but about 9,800 a head. Not [[PP Charlie|pp2-pp-charlie-beach-resort]]: party beach, bar noise till 2 am.",
-    "Snorkel Wednesday 14:00 to 18:00, not Thursday morning: rising tide opens Pileh, the day boats are gone, the light is on [[Maya Bay|maya-bay]], and there is no ferry to catch. Sunrise Thursday stays as the weather fallback.",
+    "Snorkel on Wednesday afternoon, 2 pm to 6 pm: the crowds have gone, the tide lets you swim into Pileh Lagoon, the sun is on [[Maya Bay|maya-bay]], and there is no ferry to rush for. Thursday sunrise is the backup if the weather is bad.",
     "Book the boat on arrival at [[Visa Travel Team|pp-op-visa-travel]] or the pier, about 3,500 THB per boat for five plus 400 park fee each in cash at Loh Samah. Online private listings cost two to three times that.",
     "Nightlife: [[Carlito's|carlito-s]] fire show at 21:00 on the way, then Stones and [[Slinky|slinky-beach-bar]] on Loh Dalum; cash only; walk back east by the main lane.",
     "Thursday: [[Viewpoint 2|phi-phi-viewpoint-2]] before 09:00, a swim, bags from reception, pier 30 minutes before the ferry; the ticket, not the aggregator, has the right time."
