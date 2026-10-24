@@ -62,6 +62,7 @@
       map.addSource("zones", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
       map.addLayer({ id: "zones-fill", type: "circle", source: "zones", paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 10, 14, 13, 44], "circle-color": opts.palette.marker || opts.palette.route, "circle-opacity": 0.09, "circle-stroke-color": opts.palette.marker || opts.palette.route, "circle-stroke-opacity": 0.35, "circle-stroke-width": 1 } }, "items-all");
       map.addLayer({ id: "zones-label", type: "symbol", source: "zones", layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 12, "text-letter-spacing": 0.12, "text-transform": "uppercase", "text-offset": [0, -1.6], "text-anchor": "bottom", "text-max-width": 9 }, paint: { "text-color": opts.palette.markerText || opts.palette.label, "text-halo-color": opts.palette.land, "text-halo-width": 1.4 } });
+      map.on("click", e => { const hit = map.queryRenderedFeatures(e.point, { layers: ["items-all", "items-hot", "zones-fill", "measure-pt"].filter(l => map.getLayer(l)) }); if (!hit.length && opts.onEmptyClick) opts.onEmptyClick(); });
       map.on("click", "zones-fill", e => { const f = e.features[0]; if (opts.onZoneClick) opts.onZoneClick(f.properties.id); });
       map.on("mouseenter", "zones-fill", () => { map.getCanvas().style.cursor = "pointer"; }); map.on("mouseleave", "zones-fill", () => { map.getCanvas().style.cursor = ""; });
       const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false, offset: 8 });
@@ -70,9 +71,25 @@
         map.on("mouseleave", layer, () => { map.getCanvas().style.cursor = ""; pop.remove(); });
         map.on("click", layer, e => { const f = e.features[0]; if (opts.onItemClick) opts.onItemClick(f.properties.id); });
       }
+      map.addSource("measure", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map.addLayer({ id: "measure-line", type: "line", source: "measure", filter: ["==", ["geometry-type"], "LineString"], layout: { "line-cap": "round" }, paint: { "line-color": ["case", ["==", ["get", "primary"], 1], opts.palette.route, opts.palette.label], "line-width": ["case", ["==", ["get", "primary"], 1], 2.6, 1.4], "line-dasharray": [2, 1.6], "line-opacity": 0.9 } });
+      map.addLayer({ id: "measure-pt", type: "circle", source: "measure", filter: ["==", ["geometry-type"], "Point"], paint: { "circle-radius": ["case", ["==", ["get", "kind"], "home"], 8, 5], "circle-color": ["case", ["==", ["get", "kind"], "home"], "#c2410c", ["==", ["get", "kind"], "beach"], "#0e7490", opts.palette.route], "circle-stroke-color": opts.palette.land, "circle-stroke-width": 2 } });
+      map.addLayer({ id: "measure-label", type: "symbol", source: "measure", filter: ["==", ["geometry-type"], "Point"], layout: { "text-field": ["get", "label"], "text-font": ["Noto Sans Regular"], "text-size": 12, "text-offset": [0, 1.3], "text-anchor": "top", "text-max-width": 14 }, paint: { "text-color": opts.palette.markerText || "#1c1c1a", "text-halo-color": opts.palette.land, "text-halo-width": 1.6 } });
       if (opts.onLoad) opts.onLoad(map);
     });
     return map;
+  }
+  // Lines from one place to several targets, labelled with distance and time. targets: [{name, lngLat, kind, label, primary}]
+  function setMeasure(map, home, targets) {
+    if (!map || !map.getSource || !map.getSource("measure")) return null;
+    if (!home) { map.getSource("measure").setData({ type: "FeatureCollection", features: [] }); return null; }
+    const f = [{ type: "Feature", properties: { kind: "home", label: home.name }, geometry: { type: "Point", coordinates: home.lngLat } }];
+    for (const t of targets) {
+      f.push({ type: "Feature", properties: { primary: t.primary ? 1 : 0 }, geometry: { type: "LineString", coordinates: [home.lngLat, t.lngLat] } });
+      f.push({ type: "Feature", properties: { kind: t.kind, label: t.name + "\n" + t.label }, geometry: { type: "Point", coordinates: t.lngLat } });
+    }
+    map.getSource("measure").setData({ type: "FeatureCollection", features: f });
+    const b = new maplibregl.LngLatBounds(); f.forEach(x => x.geometry.type === "Point" ? b.extend(x.geometry.coordinates) : null); return b;
   }
   function setZones(map, zones) {
     if (!map || !map.getSource || !map.getSource("zones")) return;
@@ -98,5 +115,5 @@
     return g;
   }
 
-  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, setZones, groupsByBase };
+  window.CORE = { T, state, fmtINR, fmtK, thbToInr, decision, lockedOption, lock, budget, addNote, setWho, onChange, initMap, flyTo, setMarkers, setZones, setMeasure, groupsByBase };
 })();

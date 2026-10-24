@@ -3296,8 +3296,8 @@ window.TRIP = {
     7.91
    ],
    "geo": "approx",
-   "zone": "patong",
-   "zoneName": "Patong",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-world-zipline": {
@@ -3350,8 +3350,8 @@ window.TRIP = {
     7.87718
    ],
    "geo": "exact",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "muay-thai-drop-in-class": {
@@ -3390,8 +3390,8 @@ window.TRIP = {
     7.773
    ],
    "geo": "approx",
-   "zone": "naiharn",
-   "zoneName": "Nai Harn, Rawai, Promthep",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "bangla-boxing-stadium-fight-night": {
@@ -8306,8 +8306,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h2": {
@@ -8347,8 +8347,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h3": {
@@ -8388,8 +8388,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h4": {
@@ -8428,8 +8428,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h5": {
@@ -8469,8 +8469,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h6": {
@@ -8509,8 +8509,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h7": {
@@ -8549,8 +8549,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h8": {
@@ -8589,8 +8589,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h9": {
@@ -8630,8 +8630,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h10": {
@@ -8671,8 +8671,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h11": {
@@ -8712,8 +8712,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h12": {
@@ -8752,8 +8752,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h13": {
@@ -8792,8 +8792,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h14": {
@@ -8833,8 +8833,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h15": {
@@ -8873,8 +8873,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "hanuman-h16": {
@@ -8913,8 +8913,8 @@ window.TRIP = {
     7.86
    ],
    "geo": "approx",
-   "zone": "oldtown",
-   "zoneName": "Old Town and Phuket Town",
+   "zone": "chalong",
+   "zoneName": "Chalong and Wichit",
    "images": []
   },
   "s2-voyagers": {
