@@ -926,6 +926,24 @@ window.TRIP = {
    "place": "phuket",
    "options": [
     {
+     "id": "ab-town",
+     "label": "An Airbnb house in Town (3 bedrooms, no pool)",
+     "costINR": 13492,
+     "unit": "night, whole place; Lotus House 13,492 or Apo+House 11,243",
+     "note": "Airbnb has nine within the cap for the 17th, none with a pool. Lotus House (4.75 from 56) sleeps exactly five in Talat Nuea; Apo+House has four en-suites in Old Town but only three reviews.",
+     "items": [
+      "ab-lotus-house-phuket",
+      "ab-apo-house-old-town",
+      "ab-genesis-home-garden",
+      "ab-3br-modern-old-town",
+      "ab-oldtown-3br-central-festival",
+      "ab-little-homestay-in-town",
+      "ab-brand-new-2br-apartment-wichit",
+      "ab-genesis-urban-old-town",
+      "solin-house-phuket"
+     ]
+    },
+    {
      "id": "horange",
      "item": "horange-phuket",
      "costINR": 10300,
@@ -1005,6 +1023,36 @@ window.TRIP = {
      "item": "doo-dee-boutique-resort",
      "costINR": 22200,
      "unit": "2 nights, from-price; by the night market"
+    },
+    {
+     "id": "ab-aonang",
+     "label": "Other Ao Nang Airbnbs (dated prices for 19 to 21 Nov)",
+     "costINR": 0,
+     "unit": "see the list",
+     "note": "No 3-bedroom pool villa walks to the beach, and none is under 30,000 for the two nights. Pool villas start at Butterfly Garden 32,785 (5.0 from 11, Sai Thai); the only pool villa that walks to the strip is 64,085. Pool-less houses inside budget: Lila's House 16,336 (6 km out), Lily House 25,241.",
+     "items": [
+      "ab-lilas-house",
+      "ab-lily-house",
+      "ab-ban-proud-aonang",
+      "ab-baan-aonang-hot-tub",
+      "ab-ao-nang-townhouse",
+      "ab-hello-yellow-hideaway",
+      "ab-butterfly-garden-home",
+      "ab-dom-dolly-pool-vila",
+      "ab-3bdr-pool-villa-8min",
+      "ab-aonang-sweet-blue-sea",
+      "ban-preeya-private-pool-villa",
+      "ab-bens-pool-villa",
+      "ab-aonang-pool-villa-rooftop",
+      "ab-haven-grand-g5",
+      "ab-blue-nara",
+      "ab-blue-sand-sea",
+      "ab-quiet-pool-villa-711",
+      "ab-cozy-pool-house-aonang",
+      "ab-smile-pool-villa-aonang",
+      "ab-train-villas-platform-3",
+      "ab-aonang-brandnew-2br"
+     ]
     }
    ]
   },
@@ -1163,7 +1211,14 @@ window.TRIP = {
       "centara-kata-resort",
       "kata-sea-breeze-resort",
       "baan-karonburi-resort",
-      "sugar-marina-resort-art"
+      "sugar-marina-resort-art",
+      "ab-karon-beachfront-condo",
+      "ab-baan-angelo-kata-hill",
+      "ab-karon-5min-walk-condo",
+      "ab-unit-2b-kata-beach",
+      "ab-b8-serviced-apartment-karon",
+      "ab-big-2br-kata",
+      "ab-areca-holiday-home-11"
      ]
     },
     {
@@ -1174,7 +1229,32 @@ window.TRIP = {
      "note": "Nai Harn is the calmest proper swimming beach but has no permanent lifeguards; every 3-bedroom villa found is a 5 to 10 minute drive from it. Rawai seafood market; Promthep sunset; furthest from the airport.",
      "items": [
       "s2-villa-vipa",
-      "s2-rawai-walk-to-beach"
+      "s2-rawai-walk-to-beach",
+      "ab-green-haven-nai-harn",
+      "s2-villa-vipa",
+      "ab-zen-pool-villa-rawai",
+      "ab-prima-3br-villa",
+      "ab-balinese-bliss-rawai",
+      "ab-b7-tropical-vacation-villa",
+      "ab-b3-tropical-vacation-villa",
+      "ab-a9-rawai-detached-villa",
+      "ab-private-pool-villa-rawai-beach",
+      "s2-rawai-walk-to-beach",
+      "ab-rawayna-200m",
+      "ab-family-bali-style-nai-harn",
+      "ab-rawai-sun-breeze",
+      "ab-solas-pool-villa",
+      "ab-elegant-thai-villa",
+      "ab-new-celine-villa",
+      "ab-peony-villa",
+      "ab-villa-silk",
+      "ab-sz-rawai-beach-100m",
+      "ab-family-sea-view-saiyuan",
+      "ab-villa-natali",
+      "ab-naiharn-bali-style-4br",
+      "ab-panoramic-seaview-elevate",
+      "ab-s101-chalong",
+      "ab-ao-yon-oceanfront-4br"
      ]
     },
     {
@@ -1189,7 +1269,20 @@ window.TRIP = {
       "s2-shanti-bangtao",
       "s2-bangtao-laguna-pool-villa",
       "s2-surin-large-villa",
-      "at-kamala-hotel"
+      "at-kamala-hotel",
+      "ab-duplex-3br-kamala",
+      "ab-tw2-pool-villa-kamala",
+      "ab-lake-view-3br-bangtao",
+      "ab-surin-park-penthouse",
+      "ab-4-bed-bungalow-bang-tao",
+      "ab-villa-close-to-beach-sleeps-9",
+      "ab-3br-villa-shared-pool-kamala",
+      "ab-tropical-vibes-only-kamala",
+      "ab-n2-pool-villa-kamala",
+      "ab-peaceful-bliss-kamala",
+      "s2-bangtao-laguna-pool-villa",
+      "ab-n25-kamala-nature",
+      "ab-laguna-parkside-townhouse"
      ]
     },
     {
@@ -2259,8 +2352,8 @@ window.TRIP = {
    "thai": null,
    "tagline": "The doc's Airbnb: 3 king en-suites and a private pool, inland in Na Thai.",
    "priceTHB": null,
-   "priceINR": 38000,
-   "priceNote": "38,000 INR for 2 nights, 3 rooms: about 6,330 INR per room-night, above the 5K cap (about 3,800 per person). Airbnb shows no price without dates",
+   "priceINR": 19394,
+   "priceNote": "19,394 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 38,788). Dated search-card price. ",
    "when": "Thu 19 to Sat 21 Nov in the confirmed order",
    "book": "Airbnb",
    "rating": 4.92,
@@ -2268,6 +2361,10 @@ window.TRIP = {
    "reviews": 64,
    "reviewSource": "Airbnb 2026-10-24",
    "highlights": [
+    "3 bedrooms, 3 beds, 3.5 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost",
     "Guest Favourite, 92% five-star",
     "Private pool, mountain view, BBQ",
     "3.5 bathrooms"
@@ -2282,21 +2379,25 @@ window.TRIP = {
     "No written negatives readable"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Na+Thai+Ao+Nang+Krabi",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
     "airbnb": "https://www.airbnb.co.in/rooms/4114674"
    },
    "tags": [
     "aonang",
-    "selfpick"
+    "selfpick",
+    "airbnb",
+    "villa",
+    "pool"
    ],
    "sources": [
     "research/krabi-ao-nang.md §1",
-    "research/stays.md"
+    "research/stays.md",
+    "research/airbnb.md"
    ],
-   "verdict": "Best-reviewed villa with 3 full baths; take it if you accept taxis and the 2-night total is under 30,000 INR.",
-   "rooms": "3 bedrooms x 1 king, 3.5 baths, max 7; 5th adult has a king alone",
+   "verdict": "Best all-round villa if budget stretches to ~19.4k/night.",
+   "rooms": "3 bedrooms, 3 beds, 3.5 baths, up to 7 guests",
    "distances": {
-    "beach": "~3-4 km / 5-min drive, not walkable",
+    "beach": "5 minute drive to the beaches, bars and restaurants",
     "pier": "Nopparat Thara ~5 km",
     "airport": "Krabi ~30 km"
    },
@@ -2311,14 +2412,14 @@ window.TRIP = {
     "pool": "private",
     "beachMin": 5,
     "beachMode": "drive",
-    "perHeadNight": 3800,
+    "perHeadNight": 3879,
     "town": false
    },
    "score": {
-    "total": 68,
+    "total": 67,
     "parts": {
      "reviews": 94,
-     "budget": 52,
+     "budget": 51,
      "beach": 20,
      "pool": 100
     },
@@ -6633,8 +6734,8 @@ window.TRIP = {
    "thai": null,
    "tagline": "Only interesting if the group rents a car; no 3BR exists inside walkable Old Town.",
    "priceTHB": null,
-   "priceINR": null,
-   "priceNote": "Not readable",
+   "priceINR": 10981,
+   "priceNote": "10,981 INR a night for the whole place on Airbnb for 2-night card, dates not stated; 1-night 17-18 not rendered (2 nights, total 21,962). Dated search-card price. ",
    "when": null,
    "book": null,
    "rating": 4.91,
@@ -6642,6 +6743,10 @@ window.TRIP = {
    "reviews": 35,
    "reviewSource": "Airbnb snippet 2026-10-24",
    "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 8 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost",
     "Nearest 3BR lead to Old Town",
     "3 bathrooms, Superhost"
    ],
@@ -6654,23 +6759,27 @@ window.TRIP = {
     "Location tag mismatch"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Soi+Prakaipruk+Wichit+Phuket",
-    "airbnb": "https://www.airbnb.com/rooms/1487224870405549190"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Talat+Yai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1487224870405549190"
    },
    "tags": [
-    "phuket4"
+    "phuket4",
+    "airbnb",
+    "villa",
+    "phuket-town"
    ],
    "sources": [
-    "research/stays.md"
+    "research/stays.md",
+    "research/airbnb.md"
    ],
-   "verdict": "Only interesting if the group rents a car; no 3BR exists inside walkable Old Town.",
-   "rooms": "3 bedrooms, 4 beds, 3 baths, 6 guests; 2+2+1",
+   "verdict": "Would fit if a 1-night slot exists.",
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 8 guests",
    "distances": {
-    "beach": "Cape Panwa ~10 min drive",
+    "beach": "Old Town 10 min; Ao Yon/Panwa beaches 8 km",
     "pier": "Rassada ~6 km",
     "airport": "~35 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.387,
     7.885
@@ -6678,19 +6787,19 @@ window.TRIP = {
    "geo": "approx",
    "facts": {
     "kind": "villa",
-    "pool": null,
+    "pool": "none",
     "beachMin": null,
     "beachMode": "none",
-    "perHeadNight": null,
+    "perHeadNight": 2196,
     "town": true
    },
    "score": {
-    "total": 69,
+    "total": 82,
     "parts": {
      "reviews": 92,
-     "budget": null,
+     "budget": 91,
      "beach": null,
-     "pool": null
+     "pool": 0
     },
     "weights": {
      "reviews": 45,
@@ -6698,10 +6807,7 @@ window.TRIP = {
      "beach": 0,
      "pool": 10
     },
-    "unknown": [
-     "budget",
-     "pool"
-    ]
+    "unknown": []
    }
   },
   "elite-suites-patong": {
@@ -9480,8 +9586,8 @@ window.TRIP = {
    "thai": null,
    "tagline": "Best-reviewed villa, just over ₹20k, needs a car",
    "priceTHB": null,
-   "priceINR": 21187,
-   "priceNote": "7,540 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹63,586 for 3 nights (struck ₹79,222) ≈ ₹21,195/night",
+   "priceINR": 21230,
+   "priceNote": "21,230 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 63,690). Dated search-card price. ",
    "when": null,
    "book": null,
    "rating": 4.94,
@@ -9489,32 +9595,42 @@ window.TRIP = {
    "reviews": 312,
    "reviewSource": "Airbnb",
    "highlights": [
+    "3 bedrooms, 3 beds, 4.5 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost",
     "312 reviews at 4.94",
     "32 m2 private pool",
-    "Superhost 11 yrs",
-    "Not a swim beach on foot"
+    "Superhost 11 yrs"
    ],
    "praise": [
     "Amazing outdoor space",
     "Exceptional check-in experience",
     "pool, garden and outdoor area as highlights"
    ],
-   "complaints": [],
+   "complaints": [
+    "Electricity ~250-300 THB/day",
+    "Location 4.6"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Rawai",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
     "airbnb": "https://www.airbnb.co.in/rooms/9503285"
    },
    "tags": [
     "beach",
-    "villa"
+    "villa",
+    "airbnb",
+    "phuket-beach",
+    "pool"
    ],
    "sources": [
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/airbnb.md"
    ],
-   "verdict": "Best-reviewed villa, just over ₹20k, needs a car",
-   "rooms": "3 BR king en-suite / 4.5 baths / max 6",
+   "verdict": "Proven walk-to-water villa; 3.7k over hard cap.",
+   "rooms": "3 bedrooms, 3 beds, 4.5 baths, up to 6 guests",
    "distances": {
-    "beach": "250 m to a small cove; Nai Harn 5 min by car"
+    "beach": "4 min walk"
    },
    "fitsBudget": false,
    "lngLat": [
@@ -9525,17 +9641,17 @@ window.TRIP = {
    "facts": {
     "kind": "villa",
     "pool": "private",
-    "beachMin": 3,
+    "beachMin": 4,
     "beachMode": "walk",
-    "perHeadNight": 4237,
+    "perHeadNight": 4246,
     "town": false
    },
    "score": {
-    "total": 82,
+    "total": 79,
     "parts": {
      "reviews": 98,
      "budget": 42,
-     "beach": 100,
+     "beach": 85,
      "pool": 100
     },
     "weights": {
@@ -9556,8 +9672,8 @@ window.TRIP = {
    "thai": null,
    "tagline": "In budget, but drive to the beach",
    "priceTHB": null,
-   "priceINR": 16467,
-   "priceNote": "5,860 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹49,398 for 3 nights (struck ₹62,342) ≈ ₹16,466/night",
+   "priceINR": 16477,
+   "priceNote": "16,477 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 49,432). Dated search-card price. ",
    "when": null,
    "book": null,
    "rating": 4.91,
@@ -9565,27 +9681,37 @@ window.TRIP = {
    "reviews": 85,
    "reviewSource": "Airbnb (search card)",
    "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
     "Private pool",
+    "Kitchen",
+    "Superhost",
     "Inside ₹20k",
     "Not walkable to sand"
    ],
    "praise": [],
-   "complaints": [],
+   "complaints": [
+    "Electricity 6 THB/kWh",
+    "10,000 THB cash deposit"
+   ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Rawai",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Phuket",
     "airbnb": "https://www.airbnb.co.in/rooms/53191230"
    },
    "tags": [
     "beach",
-    "villa"
+    "villa",
+    "airbnb",
+    "phuket-beach",
+    "pool"
    ],
    "sources": [
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/airbnb.md"
    ],
-   "verdict": "In budget, but drive to the beach",
-   "rooms": "3 BR / 3 baths / 4 beds",
+   "verdict": "Best-proven 3BR pool villa under 50k.",
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
    "distances": {
-    "beach": "~5 min by car to Nai Harn; shops 5-min walk"
+    "beach": "2.5 km / 5-min drive to Nai Harn; shops 5-min walk"
    },
    "fitsBudget": true,
    "lngLat": [
@@ -9598,7 +9724,7 @@ window.TRIP = {
     "pool": "private",
     "beachMin": 5,
     "beachMode": "drive",
-    "perHeadNight": 3293,
+    "perHeadNight": 3295,
     "town": false
    },
    "score": {
@@ -9778,8 +9904,8 @@ window.TRIP = {
    "thai": null,
    "tagline": "Nice villa, wrong brief (drive to beach)",
    "priceTHB": null,
-   "priceINR": 19024,
-   "priceNote": "6,770 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹57,086 for 3 nights ≈ ₹19,029/night",
+   "priceINR": 19060,
+   "priceNote": "19,060 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 57,179). Dated search-card price. ",
    "when": null,
    "book": null,
    "rating": 4.85,
@@ -9787,6 +9913,10 @@ window.TRIP = {
    "reviews": 143,
    "reviewSource": "Airbnb",
    "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost",
     "Private saltwater pool",
     "Superhost 9 yrs",
     "Not walkable"
@@ -9795,7 +9925,8 @@ window.TRIP = {
     "guests highlight the pool, the outdoor bathrooms, and the host's responsiveness"
    ],
    "complaints": [
-    "Location 4.4"
+    "Location 4.4",
+    "2% 3-star"
    ],
    "links": {
     "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
@@ -9803,15 +9934,19 @@ window.TRIP = {
    },
    "tags": [
     "beach",
-    "villa"
+    "villa",
+    "airbnb",
+    "phuket-beach",
+    "pool"
    ],
    "sources": [
-    "research/stays-2.md"
+    "research/stays-2.md",
+    "research/airbnb.md"
    ],
-   "verdict": "Nice villa, wrong brief (drive to beach)",
-   "rooms": "3 BR en-suite / 4 beds / 7",
+   "verdict": "Well-reviewed; a drive.",
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 7 guests",
    "distances": {
-    "beach": "short drive to Bang Tao/Layan; Location 4.4"
+    "beach": "'Minutes away' from Bang Tao / Layan; location sub-score 4.4"
    },
    "fitsBudget": true,
    "lngLat": [
@@ -9824,7 +9959,7 @@ window.TRIP = {
     "pool": "private",
     "beachMin": 5,
     "beachMode": "drive",
-    "perHeadNight": 3805,
+    "perHeadNight": 3812,
     "town": false
    },
    "score": {
@@ -11252,6 +11387,5969 @@ window.TRIP = {
     7.74
    ],
    "geo": "approx"
+  },
+  "ab-lotus-house-phuket": {
+   "id": "ab-lotus-house-phuket",
+   "name": "Lotus House@phuket",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Talat Nuea, Phuket Town",
+   "thai": null,
+   "tagline": "In-town 3BR for exactly 5; first pick for location.",
+   "priceTHB": null,
+   "priceINR": 13492,
+   "priceNote": "13,492 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 13,492). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.75,
+   "scale": "5",
+   "reviews": 56,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Location",
+    "Cleanliness",
+    "Hospitality"
+   ],
+   "complaints": [
+    "2% 1-star, 4% 3-star",
+    "AC not in amenity list"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Lotus+House+Talat+Nuea+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/874560650835670562"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "In town; 500 m walk to centre; Rassada pier ~10-15 min drive (est.)"
+   },
+   "verdict": "In-town 3BR for exactly 5; first pick for location.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.39,
+    7.885
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 2698,
+    "town": true
+   },
+   "score": {
+    "total": 76,
+    "parts": {
+     "reviews": 91,
+     "budget": 79,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
+  },
+  "ab-apo-house-old-town": {
+   "id": "ab-apo-house-old-town",
+   "name": "Apo+House Minimalist townhome near Phuket Old Town",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Talat Yai, Old Town",
+   "thai": null,
+   "tagline": "Best location per rupee; thin track record.",
+   "priceTHB": null,
+   "priceINR": 11243,
+   "priceNote": "11,243 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 11,243). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.33,
+   "scale": "5",
+   "reviews": 3,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 7 beds, 4.5 baths, up to 10 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Location 5.0 sub-score",
+    "4 en-suite rooms"
+   ],
+   "complaints": [
+    "Only 3 reviews",
+    "Cleanliness sub-score 4.3"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Talat+Yai+Phuket+Old+Town",
+    "airbnb": "https://www.airbnb.co.in/rooms/1737423915372666930"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 7 beds, 4.5 baths, up to 10 guests",
+   "distances": {
+    "beach": "Heart of Old Town; pier ~10 min drive (est.)"
+   },
+   "verdict": "Best location per rupee; thin track record.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 2249,
+    "town": true
+   },
+   "score": {
+    "total": 76,
+    "parts": {
+     "reviews": 81,
+     "budget": 89,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
+  },
+  "ab-genesis-home-garden": {
+   "id": "ab-genesis-home-garden",
+   "name": "Genesis Home Garden 3BR Private House Garden",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Wichit (near Chalong)",
+   "thai": null,
+   "tagline": "Cheapest 3BR; location is the trade-off.",
+   "priceTHB": null,
+   "priceINR": 9565,
+   "priceNote": "9,565 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 9,565). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.8,
+   "scale": "5",
+   "reviews": 5,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "A clean home with a generous host",
+    "Tropical garden",
+    "Peaceful neighbourhood"
+   ],
+   "complaints": [
+    "5 reviews",
+    "Not in town"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Wichit+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1658553069801335366"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "South of town; pier ~20 min drive (est.)"
+   },
+   "verdict": "Cheapest 3BR; location is the trade-off.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.34,
+    7.83
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1913,
+    "town": true
+   },
+   "score": {
+    "total": 81,
+    "parts": {
+     "reviews": 83,
+     "budget": 97,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
+  },
+  "ab-3br-modern-old-town": {
+   "id": "ab-3br-modern-old-town",
+   "name": "3BR Modern home minutes away from Phuket Old town",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Talat Yai",
+   "thai": null,
+   "tagline": "3 en-suites at the top of the cap.",
+   "priceTHB": null,
+   "priceINR": 14675,
+   "priceNote": "14,675 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 14,675). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.67,
+   "scale": "5",
+   "reviews": 3,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 5 guests",
+    "No pool",
+    "Superhost"
+   ],
+   "praise": [
+    "Location 5.0",
+    "Cleanliness 5.0",
+    "AC confirmed"
+   ],
+   "complaints": [
+    "3 reviews",
+    "Check-in 4.3"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Talat+Yai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1562799012717500142"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 5 guests",
+   "distances": {
+    "beach": "Minutes from Old Town (no distance given)"
+   },
+   "verdict": "3 en-suites at the top of the cap.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2935,
+    "town": false
+   },
+   "score": {
+    "total": 61,
+    "parts": {
+     "reviews": 82,
+     "budget": 73,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-oldtown-3br-central-festival": {
+   "id": "ab-oldtown-3br-central-festival",
+   "name": "OldTown (3BR) Central Phuket Festival – 5 min walk",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Wichit, by Central Festival",
+   "thai": null,
+   "tagline": "Best-reviewed; 3k over cap.",
+   "priceTHB": null,
+   "priceINR": 18130,
+   "priceNote": "18,130 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 18,130). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.88,
+   "scale": "5",
+   "reviews": 34,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 9 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Extra guest 500 THB",
+    "3% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Central+Phuket+Festival",
+    "airbnb": "https://www.airbnb.co.in/rooms/1398452672287062083"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 9 guests",
+   "distances": {
+    "beach": "Old Town 2 km / 5 min by car"
+   },
+   "verdict": "Best-reviewed; 3k over cap.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.38969,
+    7.88483
+   ],
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 3626,
+    "town": true
+   },
+   "score": {
+    "total": 67,
+    "parts": {
+     "reviews": 91,
+     "budget": 57,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
+  },
+  "ab-little-homestay-in-town": {
+   "id": "ab-little-homestay-in-town",
+   "name": "Little Homestay in Town",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Talat Yai",
+   "thai": null,
+   "tagline": "Cheap and central if the 17th is open.",
+   "priceTHB": null,
+   "priceINR": 7308,
+   "priceNote": "7,308 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-19 (17-18 not rendered) (1 night, total 7,308). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 8,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Walkability"
+   ],
+   "complaints": [
+    "Only 3 beds listed for 4 bedrooms"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Talat+Yai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1329657056403761237"
+   },
+   "tags": [
+    "airbnb",
+    "hotel",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "10-min walk to Old Town"
+   },
+   "verdict": "Cheap and central if the 17th is open.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 1462,
+    "town": false
+   },
+   "score": {
+    "total": 77,
+    "parts": {
+     "reviews": 86,
+     "budget": 100,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-brand-new-2br-apartment-wichit": {
+   "id": "ab-brand-new-2br-apartment-wichit",
+   "name": "Brand-new 2-bedroom, 2-bathroom apartment in the heart of Phuket",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Wichit",
+   "thai": null,
+   "tagline": "Budget fallback with a pool; fails 3-room ask.",
+   "priceTHB": null,
+   "priceINR": 8854,
+   "priceNote": "8,854 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-18 (1 night, total 8,854). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 6,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 2 beds, 2 baths, up to 5 guests",
+    "Shared pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Only 2 bedrooms / 2 beds"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Wichit+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1644631178967562265"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 2 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "5-min walk to Central / Makro"
+   },
+   "verdict": "Budget fallback with a pool; fails 3-room ask.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.37,
+    7.86
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": null,
+    "beachMode": "none",
+    "perHeadNight": 1771,
+    "town": true
+   },
+   "score": {
+    "total": 90,
+    "parts": {
+     "reviews": 85,
+     "budget": 100,
+     "beach": null,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 45,
+     "budget": 45,
+     "beach": 0,
+     "pool": 10
+    },
+    "unknown": []
+   }
+  },
+  "ab-genesis-urban-old-town": {
+   "id": "ab-genesis-urban-old-town",
+   "name": "Entire home in The old town, Genesis Urban Phuket",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Talat Nuea",
+   "thai": null,
+   "tagline": "Cheapest proven; 2BR.",
+   "priceTHB": null,
+   "priceINR": 5895,
+   "priceNote": "5,895 INR a night for the whole place on Airbnb for 2026-11-16 to 2026-11-17 (17-18 not rendered) (1 night, total 5,895). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.79,
+   "scale": "5",
+   "reviews": 167,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Road noise",
+    "Rainy-season insects"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Talat+Nuea+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/996629036567210841"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-town"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "In the city near the road"
+   },
+   "verdict": "Cheapest proven; 2BR.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.387,
+    7.885
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 1179,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 94,
+     "budget": 100,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-lilas-house": {
+   "id": "ab-lilas-house",
+   "name": "Lila's House: Cozy Home & Garden",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang (residential, inland)",
+   "thai": null,
+   "tagline": "Cheapest 3BR; no pool; drive everywhere.",
+   "priceTHB": null,
+   "priceINR": 8168,
+   "priceNote": "8,168 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 16,336). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.66,
+   "scale": "5",
+   "reviews": 35,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Getting around",
+    "Family"
+   ],
+   "complaints": [
+    "Location sub-score 4.4",
+    "3% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1316508013237530749"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "6 km / 10-min drive to Ao Nang Beach"
+   },
+   "verdict": "Cheapest 3BR; no pool; drive everywhere.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 1634,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": 88,
+     "budget": 100,
+     "beach": 20,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-lily-house": {
+   "id": "ab-lily-house",
+   "name": "Lily House",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Fits; bathroom count is the catch.",
+   "priceTHB": null,
+   "priceINR": 12621,
+   "priceNote": "12,621 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 25,241). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 6,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 1.5 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Comfort",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "1.5 bathrooms"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1535183164233092842"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 1.5 baths, up to 6 guests",
+   "distances": {
+    "beach": "Scooter recommended for beaches"
+   },
+   "verdict": "Fits; bathroom count is the catch.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2524,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": 85,
+     "budget": 83,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-ban-proud-aonang": {
+   "id": "ab-ban-proud-aonang",
+   "name": "Ban Proud Aonang",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Fits; unproven.",
+   "priceTHB": null,
+   "priceINR": 13211,
+   "priceNote": "13,211 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 26,421). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 4,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Cleanliness",
+    "Location",
+    "Hospitality"
+   ],
+   "complaints": [
+    "4 reviews"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1604150949699306299"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "Beach / night market 4-8 min by car"
+   },
+   "verdict": "Fits; unproven.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 8,
+    "beachMode": "drive",
+    "perHeadNight": 2642,
+    "town": false
+   },
+   "score": {
+    "total": 57,
+    "parts": {
+     "reviews": 83,
+     "budget": 80,
+     "beach": 20,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-baan-aonang-hot-tub": {
+   "id": "ab-baan-aonang-hot-tub",
+   "name": "Baan AoNang Krabi with Hot Tub",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "3 baths + hot tub; check if the 19th is open.",
+   "priceTHB": null,
+   "priceINR": 17289,
+   "priceNote": "17,289 INR a night for the whole place on Airbnb for 2026-11-20 to 2026-11-21 (19-21 not rendered) (1 night, total 17,289). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.75,
+   "scale": "5",
+   "reviews": 24,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 5 beds, 3 baths, up to 8 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Beach",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "4% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1547434181913026199"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 5 beds, 3 baths, up to 8 guests",
+   "distances": {
+    "beach": "Beach about a 10-min drive"
+   },
+   "verdict": "3 baths + hot tub; check if the 19th is open.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3458,
+    "town": false
+   },
+   "score": {
+    "total": 53,
+    "parts": {
+     "reviews": 88,
+     "budget": 61,
+     "beach": 20,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-ao-nang-townhouse": {
+   "id": "ab-ao-nang-townhouse",
+   "name": "Ao Nang Townhouse",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang / Nopparat Thara",
+   "thai": null,
+   "tagline": "Only walk-to-beach Airbnb found; 2BR, fallback.",
+   "priceTHB": null,
+   "priceINR": 11805,
+   "priceNote": "11,805 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 23,610). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.59,
+   "scale": "5",
+   "reviews": 29,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Location",
+    "Nearby",
+    "Walkability"
+   ],
+   "complaints": [
+    "Cleanliness 4.4",
+    "14% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nopparat+Thara+Beach+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1063499444468775185"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "10 min walk"
+   },
+   "verdict": "Only walk-to-beach Airbnb found; 2BR, fallback.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.805,
+    8.04
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 2361,
+    "town": false
+   },
+   "score": {
+    "total": 74,
+    "parts": {
+     "reviews": 87,
+     "budget": 87,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-hello-yellow-hideaway": {
+   "id": "ab-hello-yellow-hideaway",
+   "name": "Hello Yellow Hideaway",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Nice 2BR; fails 3-room ask.",
+   "priceTHB": null,
+   "priceINR": 12283,
+   "priceNote": "12,283 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 24,566). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.94,
+   "scale": "5",
+   "reviews": 17,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Stray dogs / geckos warned"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1350700521496702867"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "8-minute drive from Ao Nang Beach"
+   },
+   "verdict": "Nice 2BR; fails 3-room ask.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 8,
+    "beachMode": "drive",
+    "perHeadNight": 2457,
+    "town": false
+   },
+   "score": {
+    "total": 60,
+    "parts": {
+     "reviews": 89,
+     "budget": 84,
+     "beach": 20,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-butterfly-garden-home": {
+   "id": "ab-butterfly-garden-home",
+   "name": "Butterfly Garden Home with Pool and Mountain View",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Sai Thai, Krabi",
+   "thai": null,
+   "tagline": "Closest pool villa to budget; not Ao Nang proper.",
+   "priceTHB": null,
+   "priceINR": 16393,
+   "priceNote": "16,393 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 32,785). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 11,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Location"
+   ],
+   "complaints": [
+    "Rural noise (roosters, dogs)",
+    "Shops a decent walk"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sai+Thai+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1667889569898928764"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "12 min from the beach, 8 min from Krabi Town (drive)"
+   },
+   "verdict": "Closest pool villa to budget; not Ao Nang proper.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.87,
+    8.07
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3279,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 87,
+     "budget": 65,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-dom-dolly-pool-vila": {
+   "id": "ab-dom-dolly-pool-vila",
+   "name": "Dom & Dolly Pool Vila",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Zero reviews; skip.",
+   "priceTHB": null,
+   "priceINR": 16837,
+   "priceNote": "16,837 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 33,673). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [],
+   "complaints": [
+    "No reviews"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1794095587295522144"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "10 minute drive to Ao Nang beach"
+   },
+   "verdict": "Zero reviews; skip.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3367,
+    "town": false
+   },
+   "score": {
+    "total": 40,
+    "parts": {
+     "reviews": null,
+     "budget": 63,
+     "beach": 20,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
+  },
+  "ab-3bdr-pool-villa-8min": {
+   "id": "ab-3bdr-pool-villa-8min",
+   "name": "3 BDR Private Pool Villa • 8 min to Ao Nang Beach",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Avoid.",
+   "priceTHB": null,
+   "priceINR": 17989,
+   "priceNote": "17,989 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-20 (2 nights, total 35,977). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.65,
+   "scale": "5",
+   "reviews": 101,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Pool",
+    "Location"
+   ],
+   "complaints": [
+    "Page says bottom 10% of listings",
+    "2% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/42284089"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "8 minutes drive to Ao Nang Beach"
+   },
+   "verdict": "Avoid.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 8,
+    "beachMode": "drive",
+    "perHeadNight": 3598,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 91,
+     "budget": 57,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-aonang-sweet-blue-sea": {
+   "id": "ab-aonang-sweet-blue-sea",
+   "name": "Aonang Sweet blue sea (private pool)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang (quiet, inland)",
+   "thai": null,
+   "tagline": "Most-reviewed villa; +7k over cap.",
+   "priceTHB": null,
+   "priceINR": 18643,
+   "priceNote": "18,643 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 37,285). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.85,
+   "scale": "5",
+   "reviews": 242,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 2 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Getting around",
+    "Pool"
+   ],
+   "complaints": [
+    "Location sub-score 4.4"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/11804213"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 2 baths, up to 7 guests",
+   "distances": {
+    "beach": "3-4 km / 10 min by motorbike to Ao Nang beach"
+   },
+   "verdict": "Most-reviewed villa; +7k over cap.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3729,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 96,
+     "budget": 54,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-bens-pool-villa": {
+   "id": "ab-bens-pool-villa",
+   "name": "Ben's Pool Villa (Baan Phurich)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Meh.",
+   "priceTHB": null,
+   "priceINR": 20378,
+   "priceNote": "20,378 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 40,756). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.68,
+   "scale": "5",
+   "reviews": 85,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 4 beds, 3 baths, up to 10 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Beach"
+   ],
+   "complaints": [
+    "Location 4.4",
+    "2% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/21467808"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 4 beds, 3 baths, up to 10 guests",
+   "distances": {
+    "beach": "5-10 min by motorbike or car"
+   },
+   "verdict": "Meh.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2038,
+    "town": false
+   },
+   "score": {
+    "total": 85,
+    "parts": {
+     "reviews": 91,
+     "budget": 94,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-aonang-pool-villa-rooftop": {
+   "id": "ab-aonang-pool-villa-rooftop",
+   "name": "AonangPoolVilla (RooftopTerrace & OutdoorJacuzzi)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Good but +12k.",
+   "priceTHB": null,
+   "priceINR": 21081,
+   "priceNote": "21,081 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 42,161). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 9,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 8 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "9 reviews"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/847647513423516082"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 8 guests",
+   "distances": {
+    "beach": "10 minutes to Ao Nang Beach by car"
+   },
+   "verdict": "Good but +12k.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2108,
+    "town": false
+   },
+   "score": {
+    "total": 83,
+    "parts": {
+     "reviews": 86,
+     "budget": 93,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-haven-grand-g5": {
+   "id": "ab-haven-grand-g5",
+   "name": "The Haven Grand Krabi - Pool Villa (G5)",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Over.",
+   "priceTHB": null,
+   "priceINR": 22908,
+   "priceNote": "22,908 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 45,815). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.89,
+   "scale": "5",
+   "reviews": 18,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Beach",
+    "Pool",
+    "Hospitality"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/959808290049248030"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 7 guests",
+   "distances": {
+    "beach": "Around 10 mins drive to Ao Nang Beach / Nopparat Thara pier"
+   },
+   "verdict": "Over.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 2291,
+    "town": false
+   },
+   "score": {
+    "total": 76,
+    "parts": {
+     "reviews": 88,
+     "budget": 88,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-blue-nara": {
+   "id": "ab-blue-nara",
+   "name": "Blue Nara | Private Pool Villa • 3BR • Ao Nang",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Over.",
+   "priceTHB": null,
+   "priceINR": 25971,
+   "priceNote": "25,971 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 51,942). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.93,
+   "scale": "5",
+   "reviews": 84,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Beach"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/45474919"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "Short drive from Ao Nang Beach"
+   },
+   "verdict": "Over.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 2597,
+    "town": false
+   },
+   "score": {
+    "total": 77,
+    "parts": {
+     "reviews": 95,
+     "budget": 81,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-blue-sand-sea": {
+   "id": "ab-blue-sand-sea",
+   "name": "Blue Sand Sea Pool Villa",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "Over.",
+   "priceTHB": null,
+   "priceINR": 26702,
+   "priceNote": "26,702 INR a night for the whole place on Airbnb for 2026-11-17 to 2026-11-19 (2 nights, total 53,404). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 58,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 8 beds, 3 baths, up to 10 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Family"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1044036003567771847"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 8 beds, 3 baths, up to 10 guests",
+   "distances": {
+    "beach": "Drive to Ao Nang beach in less than 10 minutes"
+   },
+   "verdict": "Over.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 2670,
+    "town": false
+   },
+   "score": {
+    "total": 76,
+    "parts": {
+     "reviews": 95,
+     "budget": 79,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-quiet-pool-villa-711": {
+   "id": "ab-quiet-pool-villa-711",
+   "name": "Quiet Pool Villa near 7/11 and Restaurants",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang centre",
+   "thai": null,
+   "tagline": "Closest to walkable-with-pool; 2x budget.",
+   "priceTHB": null,
+   "priceINR": 32043,
+   "priceNote": "32,043 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-21 (2 nights, total 64,085). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.97,
+   "scale": "5",
+   "reviews": 109,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 6 beds, 2 baths, up to 9 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Pool"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1314118652756986873"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 6 beds, 2 baths, up to 9 guests",
+   "distances": {
+    "beach": "Heart of Ao Nang, restaurants walkable; beach a 5-min tuk-tuk"
+   },
+   "verdict": "Closest to walkable-with-pool; 2x budget.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 8,
+    "beachMode": "walk",
+    "perHeadNight": 3204,
+    "town": false
+   },
+   "score": {
+    "total": 86,
+    "parts": {
+     "reviews": 96,
+     "budget": 67,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-cozy-pool-house-aonang": {
+   "id": "ab-cozy-pool-house-aonang",
+   "name": "Cozy Pool House Aonang - near Ao Nang Beach",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "2x budget.",
+   "priceTHB": null,
+   "priceINR": 30918,
+   "priceNote": "30,918 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-20 (2 nights, total 61,836). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.96,
+   "scale": "5",
+   "reviews": 23,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Getting around"
+   ],
+   "complaints": [
+    "Distance claim conflicts with map"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1586779348712879475"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Listing says 6 mins; its map says Ao Nang Beach 4.0 km"
+   },
+   "verdict": "2x budget.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3092,
+    "town": false
+   },
+   "score": {
+    "total": 71,
+    "parts": {
+     "reviews": 90,
+     "budget": 69,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-smile-pool-villa-aonang": {
+   "id": "ab-smile-pool-villa-aonang",
+   "name": "Smile Pool Villa Aonang",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang (quiet)",
+   "thai": null,
+   "tagline": "Strong villa; 19-21 availability unknown.",
+   "priceTHB": null,
+   "priceINR": 19394,
+   "priceNote": "19,394 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-19 (19-21 not rendered) (1 night, total 19,394). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.91,
+   "scale": "5",
+   "reviews": 117,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 9 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Breakfast",
+    "Cleanliness"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1169952664425573190"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 9 guests",
+   "distances": {
+    "beach": "Short drive from Ao Nang beach"
+   },
+   "verdict": "Strong villa; 19-21 availability unknown.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3879,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 96,
+     "budget": 51,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-train-villas-platform-3": {
+   "id": "ab-train-villas-platform-3",
+   "name": "The Train Villas Krabi : Platform 3",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang / Ao Nam Mao",
+   "thai": null,
+   "tagline": "Novelty stay; wrong beach.",
+   "priceTHB": null,
+   "priceINR": 19675,
+   "priceNote": "19,675 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-20 (2 nights, total 39,350). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.82,
+   "scale": "5",
+   "reviews": 17,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 2 baths, up to 7 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "6% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nam+Mao+Pier+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1604865744164051385"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 2 baths, up to 7 guests",
+   "distances": {
+    "beach": "Short walk to the beach near Ao Nam Mao pier (not the Ao Nang strip)"
+   },
+   "verdict": "Novelty stay; wrong beach.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 8,
+    "beachMode": "walk",
+    "perHeadNight": 3935,
+    "town": false
+   },
+   "score": {
+    "total": 62,
+    "parts": {
+     "reviews": 88,
+     "budget": 49,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-aonang-brandnew-2br": {
+   "id": "ab-aonang-brandnew-2br",
+   "name": "Aonang Brandnew 2Bedrooms with balcony",
+   "type": "stay",
+   "place": "aonang",
+   "area": "Ao Nang",
+   "thai": null,
+   "tagline": "2BR value fallback.",
+   "priceTHB": null,
+   "priceINR": 10344,
+   "priceNote": "10,344 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-19 (19-21 not rendered) (1 night, total 10,344). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.91,
+   "scale": "5",
+   "reviews": 111,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Cleanliness",
+    "Hospitality",
+    "Top rated by guests from India"
+   ],
+   "complaints": [
+    "No elevator"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Nang+Krabi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1017702757504488882"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "aonang"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Approx. 3 km from Ao Nang beach; shops within 400 m"
+   },
+   "verdict": "2BR value fallback.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.8229,
+    8.0319
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": 2069,
+    "town": false
+   },
+   "score": {
+    "total": 78,
+    "parts": {
+     "reviews": 95,
+     "budget": 94,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-baan-tamachart-phi-phi": {
+   "id": "ab-baan-tamachart-phi-phi",
+   "name": "Baan Tamachart Traditional House in Koh Phi Phi",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi Don, jungle hillside",
+   "thai": null,
+   "tagline": "Only whole-home Airbnb on the island; needs 2 nights, no AC.",
+   "priceTHB": null,
+   "priceINR": 22204,
+   "priceNote": "22,204 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-20 (1 night 18-19 not offered) (2 nights, total 44,408). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.81,
+   "scale": "5",
+   "reviews": 121,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 1 baths, up to 6 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Getting around"
+   ],
+   "complaints": [
+    "No AC (fans only)",
+    "Stairs, insects; not for young children"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ko+Phi+Phi+Don",
+    "airbnb": "https://www.airbnb.co.in/rooms/636580626091193262"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phiphi"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 1 baths, up to 6 guests",
+   "distances": {
+    "beach": "1 km from the beach; free taxi transfers per listing"
+   },
+   "verdict": "Only whole-home Airbnb on the island; needs 2 nights, no AC.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 12,
+    "beachMode": "walk",
+    "perHeadNight": 4441,
+    "town": false
+   },
+   "score": {
+    "total": 56,
+    "parts": {
+     "reviews": 94,
+     "budget": 37,
+     "beach": 60,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-shared-dorm-phi-phi": {
+   "id": "ab-shared-dorm-phi-phi",
+   "name": "Shared Dorm Bunks on Phi Phi",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Unverified (type line says Ao Nang)",
+   "thai": null,
+   "tagline": "Not a fit.",
+   "priceTHB": null,
+   "priceINR": 10507,
+   "priceNote": "10,507 INR a night for the whole place on Airbnb for 2026-11-18 to 2026-11-19 (1 night, total 10,507). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.61,
+   "scale": "5",
+   "reviews": 23,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "1 bedrooms, 12 beds, ? baths, up to ? guests",
+    "No pool"
+   ],
+   "praise": [
+    "Cleanliness",
+    "Hospitality"
+   ],
+   "complaints": [
+    "Dorm, shared bathroom",
+    "Page says bottom 10%"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ko+Phi+Phi+Don",
+    "airbnb": "https://www.airbnb.co.in/rooms/1043229032855592407"
+   },
+   "tags": [
+    "airbnb",
+    "hotel",
+    "phiphi"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "1 bedrooms, 12 beds, ? baths, up to ? guests",
+   "distances": {
+    "beach": "Shared beach access listed"
+   },
+   "verdict": "Not a fit.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.7784,
+    7.7407
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2101,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 87,
+     "budget": 93,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-green-haven-nai-harn": {
+   "id": "ab-green-haven-nai-harn",
+   "name": "3BR Green Haven Near Nai Harn Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Nai Harn / Rawai",
+   "thai": null,
+   "tagline": "Only sub-45k walk-to-swim option; unproven.",
+   "priceTHB": null,
+   "priceINR": 13492,
+   "priceNote": "13,492 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 40,475). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen"
+   ],
+   "praise": [],
+   "complaints": [
+    "No reviews; host average 4.36",
+    "Electricity 300 THB/day extra"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1796079365988178546"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "7 min walk"
+   },
+   "verdict": "Only sub-45k walk-to-swim option; unproven.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 7,
+    "beachMode": "walk",
+    "perHeadNight": 2698,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": null,
+     "budget": 79,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
+  },
+  "ab-zen-pool-villa-rawai": {
+   "id": "ab-zen-pool-villa-rawai",
+   "name": "Zen Pool Villa · 3BR Private Pool · Rawai",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Fits; solid.",
+   "priceTHB": null,
+   "priceINR": 14916,
+   "priceNote": "14,916 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 44,747). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.88,
+   "scale": "5",
+   "reviews": 26,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Pool"
+   ],
+   "complaints": [
+    "Value 4.6",
+    "7,000 THB deposit + electricity"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/983029617928792307"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Nai Harn 5-10 min by car or scooter"
+   },
+   "verdict": "Fits; solid.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 2983,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 90,
+     "budget": 72,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-prima-3br-villa": {
+   "id": "ab-prima-3br-villa",
+   "name": "Prima 3-Bedroom Private Pool Villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Fits; free cancellation.",
+   "priceTHB": null,
+   "priceINR": 14054,
+   "priceNote": "14,054 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 42,161). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.81,
+   "scale": "5",
+   "reviews": 27,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Beach",
+    "Nearby"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/881453426578652216"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "5 min drive to Rawai and Nai Harn"
+   },
+   "verdict": "Fits; free cancellation.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.32013,
+    7.7915
+   ],
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 2811,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 89,
+     "budget": 76,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-balinese-bliss-rawai": {
+   "id": "ab-balinese-bliss-rawai",
+   "name": "Balinese Bliss: Pool Villa Rawai",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Cheapest private pool; furthest and thinnest reviews.",
+   "priceTHB": null,
+   "priceINR": 12817,
+   "priceNote": "12,817 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 38,451). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 4,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2.5 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Amenities"
+   ],
+   "complaints": [
+    "4 reviews",
+    "Electricity 8 THB/kWh"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1238978044299680324"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2.5 baths, up to 6 guests",
+   "distances": {
+    "beach": "10-15 min drive from Nai Harn"
+   },
+   "verdict": "Cheapest private pool; furthest and thinnest reviews.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "drive",
+    "perHeadNight": 2563,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 83,
+     "budget": 82,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-b7-tropical-vacation-villa": {
+   "id": "ab-b7-tropical-vacation-villa",
+   "name": "#B7 Tropical Vacation Villa | Private Pool | Three Bedrooms",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai (gated estate)",
+   "thai": null,
+   "tagline": "Fine; inland.",
+   "priceTHB": null,
+   "priceINR": 15951,
+   "priceNote": "15,951 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 47,853). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 6,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Clean, peaceful, well looked after"
+   ],
+   "complaints": [
+    "Electricity 500 THB/day prepaid",
+    "Quiet hours 21:00-09:00"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1747836203409257411"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Beaches 10-15 min drive"
+   },
+   "verdict": "Fine; inland.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "drive",
+    "perHeadNight": 3190,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 85,
+     "budget": 67,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-b3-tropical-vacation-villa": {
+   "id": "ab-b3-tropical-vacation-villa",
+   "name": "#B3 Tropical Vacation Villa | Private Pool | Three Bedrooms",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai (gated estate)",
+   "thai": null,
+   "tagline": "Same as B7, fewer reviews.",
+   "priceTHB": null,
+   "priceINR": 15951,
+   "priceNote": "15,951 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 47,853). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 4,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Cleanliness",
+    "Accuracy"
+   ],
+   "complaints": [
+    "Electricity 500 THB/day prepaid"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1747812355063430597"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Beaches 10-15 min drive"
+   },
+   "verdict": "Same as B7, fewer reviews.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "drive",
+    "perHeadNight": 3190,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 83,
+     "budget": 67,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-a9-rawai-detached-villa": {
+   "id": "ab-a9-rawai-detached-villa",
+   "name": "#A9 | Rawai | Three-Bedroom Detached Villa with Private Pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Over 45k and steep utility prepay.",
+   "priceTHB": null,
+   "priceINR": 18902,
+   "priceNote": "18,902 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 56,706). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 22,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3.5 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Pool"
+   ],
+   "complaints": [
+    "Electricity 1,000 THB/day prepaid",
+    "Location 4.6"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1519609848067900025"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3.5 baths, up to 6 guests",
+   "distances": {
+    "beach": "Beaches 10-15 min drive"
+   },
+   "verdict": "Over 45k and steep utility prepay.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "drive",
+    "perHeadNight": 3780,
+    "town": false
+   },
+   "score": {
+    "total": 66,
+    "parts": {
+     "reviews": 90,
+     "budget": 53,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-private-pool-villa-rawai-beach": {
+   "id": "ab-private-pool-villa-rawai-beach",
+   "name": "Private Pool Villa Rawai beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Walks to the pier beach only; over 45k.",
+   "priceTHB": null,
+   "priceINR": 18719,
+   "priceNote": "18,719 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 56,158). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.9,
+   "scale": "5",
+   "reviews": 31,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Location"
+   ],
+   "complaints": [
+    "3% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/932390353664671363"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "verdict": "Walks to the pier beach only; over 45k.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 3744,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 91,
+     "budget": 54,
+     "beach": 60,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-rawayna-200m": {
+   "id": "ab-rawayna-200m",
+   "name": "Rawayna 3 Bedroom pool villa 200M to Rawai Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Over cap; walks to the pier beach.",
+   "priceTHB": null,
+   "priceINR": 20612,
+   "priceNote": "20,612 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 61,836). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.86,
+   "scale": "5",
+   "reviews": 14,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Location",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "14% 4-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1552832184382674531"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "3 min walk"
+   },
+   "verdict": "Over cap; walks to the pier beach.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 4122,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 87,
+     "budget": 45,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-family-bali-style-nai-harn": {
+   "id": "ab-family-bali-style-nai-harn",
+   "name": "Family Bali Style 3BR Pool Villa | Nai Harn Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai / Nai Harn",
+   "thai": null,
+   "tagline": "Utility bill could add 4-12k.",
+   "priceTHB": null,
+   "priceINR": 18669,
+   "priceNote": "18,669 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 56,008). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.94,
+   "scale": "5",
+   "reviews": 17,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Location"
+   ],
+   "complaints": [
+    "Electricity 500-1,500 THB/day",
+    "Water fees"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1526688742409916597"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "7 min to Nai Harn (walk or drive not stated)"
+   },
+   "verdict": "Utility bill could add 4-12k.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3734,
+    "town": false
+   },
+   "score": {
+    "total": 66,
+    "parts": {
+     "reviews": 89,
+     "budget": 54,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-rawai-sun-breeze": {
+   "id": "ab-rawai-sun-breeze",
+   "name": "Rawai Sun Breeze Pool Villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai / Chalong roundabout",
+   "thai": null,
+   "tagline": "Fine, inland.",
+   "priceTHB": null,
+   "priceINR": 17370,
+   "priceNote": "17,370 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 52,111). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 10,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Nearby",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Electricity 8 THB/kWh"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1712150035242012559"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "Rawai and Kata by short drive"
+   },
+   "verdict": "Fine, inland.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3474,
+    "town": false
+   },
+   "score": {
+    "total": 67,
+    "parts": {
+     "reviews": 87,
+     "budget": 60,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-solas-pool-villa": {
+   "id": "ab-solas-pool-villa",
+   "name": "Solas Pool Villa · 3BR · Gated Community",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Skip.",
+   "priceTHB": null,
+   "priceINR": 18176,
+   "priceNote": "18,176 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 54,528). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.7,
+   "scale": "5",
+   "reviews": 33,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 4 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Condition"
+   ],
+   "complaints": [
+    "3% 1-star",
+    "Community water/power cuts warned"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/823572854575953580"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 4 baths, up to 6 guests",
+   "distances": {
+    "beach": "Nai Harn 5-10 minutes (mode unstated)"
+   },
+   "verdict": "Skip.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 3635,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 89,
+     "budget": 56,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-elegant-thai-villa": {
+   "id": "ab-elegant-thai-villa",
+   "name": "Elegant Thai Villa | Private Pool & Courtyard",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Unproven; skip.",
+   "priceTHB": null,
+   "priceINR": 16864,
+   "priceNote": "16,864 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 50,593). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [],
+   "complaints": [
+    "1 review; host avg 4.43",
+    "Electricity 8 THB/kWh"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1759877454724268404"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Nai Harn / Ya Nui closest, drive"
+   },
+   "verdict": "Unproven; skip.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3373,
+    "town": false
+   },
+   "score": {
+    "total": 55,
+    "parts": {
+     "reviews": null,
+     "budget": 63,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
+  },
+  "ab-new-celine-villa": {
+   "id": "ab-new-celine-villa",
+   "name": "New Celine Villa Private Pool Near Beaches",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Skip.",
+   "priceTHB": null,
+   "priceINR": 19113,
+   "priceNote": "19,113 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 57,339). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 5,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Comfort"
+   ],
+   "complaints": [
+    "Construction site 50-100 m away"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1618656142945061755"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "8 minutes by car to Nai Harn / Rawai"
+   },
+   "verdict": "Skip.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 8,
+    "beachMode": "drive",
+    "perHeadNight": 3823,
+    "town": false
+   },
+   "score": {
+    "total": 64,
+    "parts": {
+     "reviews": 84,
+     "budget": 52,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-peony-villa": {
+   "id": "ab-peony-villa",
+   "name": "Peony Villa Cozy 3-bedroom with a private pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai (Naya)",
+   "thai": null,
+   "tagline": "Avoid.",
+   "priceTHB": null,
+   "priceINR": 14918,
+   "priceNote": "14,918 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 44,755). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.14,
+   "scale": "5",
+   "reviews": 7,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Cleanliness",
+    "Hospitality"
+   ],
+   "complaints": [
+    "14% 1-star",
+    "10,000 THB deposit"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1451806225364452366"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "10 minutes from Nai Harn"
+   },
+   "verdict": "Avoid.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2984,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 81,
+     "budget": 72,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-villa-silk": {
+   "id": "ab-villa-silk",
+   "name": "3 Bedroom Villa Silk with Private Pool, Sleeping 6",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Avoid.",
+   "priceTHB": null,
+   "priceINR": 17623,
+   "priceNote": "17,623 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 52,870). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.53,
+   "scale": "5",
+   "reviews": 53,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location"
+   ],
+   "complaints": [
+    "6% 3-star, 2% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/5475409"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "5 minute drive to Nai Harn and Rawai"
+   },
+   "verdict": "Avoid.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3525,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 88,
+     "budget": 59,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-sz-rawai-beach-100m": {
+   "id": "ab-sz-rawai-beach-100m",
+   "name": "S.Z. Rawai Beach Beautiful single-family ocean view house, 100 meters to the beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai seafront",
+   "thai": null,
+   "tagline": "2BR seafront fallback.",
+   "priceTHB": null,
+   "priceINR": 10681,
+   "priceNote": "10,681 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 32,043). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.94,
+   "scale": "5",
+   "reviews": 36,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 2 beds, 2 baths, up to 5 guests",
+    "No pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Nearby",
+    "Location"
+   ],
+   "complaints": [
+    "2BR, no pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1196412283115367508"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 2 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "2 min walk"
+   },
+   "verdict": "2BR seafront fallback.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 2,
+    "beachMode": "walk",
+    "perHeadNight": 2136,
+    "town": false
+   },
+   "score": {
+    "total": 80,
+    "parts": {
+     "reviews": 92,
+     "budget": 92,
+     "beach": 100,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-family-sea-view-saiyuan": {
+   "id": "ab-family-sea-view-saiyuan",
+   "name": "Family Sea View Holiday Pool Villa, Saiyuan Phuket",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai (Sai Yuan)",
+   "thai": null,
+   "tagline": "4BR inland option.",
+   "priceTHB": null,
+   "priceINR": 17380,
+   "priceNote": "17,380 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 52,139). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.89,
+   "scale": "5",
+   "reviews": 35,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 5 beds, 3 baths, up to 11 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Location"
+   ],
+   "complaints": [
+    "Cleanliness 4.7",
+    "3% 2-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Sai+Yuan+Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1257197236264505648"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 5 beds, 3 baths, up to 11 guests",
+   "distances": {
+    "beach": "10 minutes from Nai Harn (mode unstated)"
+   },
+   "verdict": "4BR inland option.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3476,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 91,
+     "budget": 60,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-villa-natali": {
+   "id": "ab-villa-natali",
+   "name": "Villa Natali",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "4BR, thin reviews.",
+   "priceTHB": null,
+   "priceINR": 18270,
+   "priceNote": "18,270 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 54,809). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 3,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 5 beds, 3 baths, up to 11 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Thoughtful details (robes, beach gear)"
+   ],
+   "complaints": [
+    "3 reviews"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1622600064530112258"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 5 beds, 3 baths, up to 11 guests",
+   "distances": {
+    "beach": "Rawai and Nai Harn a short drive"
+   },
+   "verdict": "4BR, thin reviews.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3654,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": 83,
+     "budget": 56,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-naiharn-bali-style-4br": {
+   "id": "ab-naiharn-bali-style-4br",
+   "name": "Naiharn Bali Style Single Pool Villa, Perfect for Small Gatherings!",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai / Nai Harn",
+   "thai": null,
+   "tagline": "Over 45k; fine.",
+   "priceTHB": null,
+   "priceINR": 19207,
+   "priceNote": "19,207 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 57,620). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.82,
+   "scale": "5",
+   "reviews": 51,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 4 beds, 5 baths, up to 8 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Pool"
+   ],
+   "complaints": [
+    "Cleanliness sub-score 4.6",
+    "2% 2-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/849846706911028409"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 4 beds, 5 baths, up to 8 guests",
+   "distances": {
+    "beach": "Near Nai Harn; no distance given"
+   },
+   "verdict": "Over 45k; fine.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 3841,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 92,
+     "budget": 51,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-panoramic-seaview-elevate": {
+   "id": "ab-panoramic-seaview-elevate",
+   "name": "Panoramic Seaview Elevate Villa, Infinity Pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai",
+   "thai": null,
+   "tagline": "Over cap.",
+   "priceTHB": null,
+   "priceINR": 20743,
+   "priceNote": "20,743 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 62,229). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 7,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Walkability",
+    "Value"
+   ],
+   "complaints": [
+    "7 reviews",
+    "Communication 4.7"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Rawai+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1731690818222819149"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Rawai and Nai Harn 'a few minutes away'"
+   },
+   "verdict": "Over cap.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.327,
+    7.773
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 4149,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 85,
+     "budget": 44,
+     "beach": null,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-karon-beachfront-condo": {
+   "id": "ab-karon-beachfront-condo",
+   "name": "Karon Beachfront Condo: Sea Views & Pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon Beach",
+   "thai": null,
+   "tagline": "Only 3BR aparthotel on a swim beach; 20k over.",
+   "priceTHB": null,
+   "priceINR": 26586,
+   "priceNote": "26,586 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 79,757). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.92,
+   "scale": "5",
+   "reviews": 37,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 5 beds, 2 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Location",
+    "Hospitality",
+    "Beach"
+   ],
+   "complaints": [
+    "Airport transfer 1,200 THB"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/39279526"
+   },
+   "tags": [
+    "airbnb",
+    "hotel",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 5 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "3 min walk"
+   },
+   "verdict": "Only 3BR aparthotel on a swim beach; 20k over.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "hotel",
+    "pool": "shared",
+    "beachMin": 3,
+    "beachMode": "walk",
+    "perHeadNight": 5317,
+    "town": false
+   },
+   "score": {
+    "total": 68,
+    "parts": {
+     "reviews": 92,
+     "budget": 16,
+     "beach": 100,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-baan-angelo-kata-hill": {
+   "id": "ab-baan-angelo-kata-hill",
+   "name": "50% Off, Baan Angelo 3 Bed Pool Villa, Kata Hill",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata Hill, Karon",
+   "thai": null,
+   "tagline": "Only Kata 3BR pool villa under 60k.",
+   "priceTHB": null,
+   "priceINR": 19113,
+   "priceNote": "19,113 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 57,339). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 6,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Condition",
+    "Location",
+    "Hospitality"
+   ],
+   "complaints": [
+    "Communication 4.3",
+    "6 reviews"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1516510467250236547"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Short drive down the hill to Kata Beach"
+   },
+   "verdict": "Only Kata 3BR pool villa under 60k.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3823,
+    "town": false
+   },
+   "score": {
+    "total": 64,
+    "parts": {
+     "reviews": 84,
+     "budget": 52,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-karon-5min-walk-condo": {
+   "id": "ab-karon-5min-walk-condo",
+   "name": "5 min walk to beach - Fabulous 150sqm, 2 bed Condo",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon",
+   "thai": null,
+   "tagline": "Best Kata/Karon walkable for 5; 2BR + 4 beds.",
+   "priceTHB": null,
+   "priceINR": 20408,
+   "priceNote": "20,408 INR a night for the whole place on Airbnb for 2-night card (dates not stated); 21-24 total not rendered (2 nights, total 40,815). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.76,
+   "scale": "5",
+   "reviews": 343,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 4 beds, 2 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Beach",
+    "Location",
+    "Pool"
+   ],
+   "complaints": [
+    "1% 2-star",
+    "Cleaning fees for mid-stay"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/966478"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 4 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "5 min walk"
+   },
+   "verdict": "Best Kata/Karon walkable for 5; 2BR + 4 beds.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 5,
+    "beachMode": "walk",
+    "perHeadNight": 4082,
+    "town": false
+   },
+   "score": {
+    "total": 74,
+    "parts": {
+     "reviews": 94,
+     "budget": 46,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-unit-2b-kata-beach": {
+   "id": "ab-unit-2b-kata-beach",
+   "name": "2 bedroom, 2 bath, unit 2B, 115M2 Kata Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata / Karon",
+   "thai": null,
+   "tagline": "2BR/2 beds; sofa bed for the 5th.",
+   "priceTHB": null,
+   "priceINR": 9091,
+   "priceNote": "9,091 INR a night for the whole place on Airbnb for 2026-11-19 to 2026-11-23 (card) (4 nights, total 36,365). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.86,
+   "scale": "5",
+   "reviews": 95,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 2 beds, 2 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Location",
+    "Walkability"
+   ],
+   "complaints": [
+    "Music carries through floors"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/16277555"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 2 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "verdict": "2BR/2 beds; sofa bed for the 5th.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 1818,
+    "town": false
+   },
+   "score": {
+    "total": 85,
+    "parts": {
+     "reviews": 94,
+     "budget": 100,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-b8-serviced-apartment-karon": {
+   "id": "ab-b8-serviced-apartment-karon",
+   "name": "B8 - 2 Bedrooms Serviced Apartment with pool view",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon",
+   "thai": null,
+   "tagline": "No.",
+   "priceTHB": null,
+   "priceINR": 16838,
+   "priceNote": "16,838 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 50,513). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.75,
+   "scale": "5",
+   "reviews": 4,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 2 beds, 1 baths, up to 5 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality"
+   ],
+   "complaints": [
+    "Cleanliness 4.2",
+    "1 bathroom"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1568403689768357332"
+   },
+   "tags": [
+    "airbnb",
+    "hotel",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 2 beds, 1 baths, up to 5 guests",
+   "distances": {
+    "beach": "9 min walk"
+   },
+   "verdict": "No.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.29811,
+    7.84752
+   ],
+   "geo": "exact",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 9,
+    "beachMode": "walk",
+    "perHeadNight": 3368,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 82,
+     "budget": 63,
+     "beach": 85,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-big-2br-kata": {
+   "id": "ab-big-2br-kata",
+   "name": "Big 2BR Apartment-Pool & Mountain view in Kata *3",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata / Karon",
+   "thai": null,
+   "tagline": "No.",
+   "priceTHB": null,
+   "priceINR": 14953,
+   "priceNote": "14,953 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 44,859). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.76,
+   "scale": "5",
+   "reviews": 128,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "2 bedrooms, 2 beds, 1 baths, up to 5 guests",
+    "Shared pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Pool"
+   ],
+   "complaints": [
+    "1 bathroom",
+    "No elevator"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/30725172"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 2 beds, 1 baths, up to 5 guests",
+   "distances": {
+    "beach": "20 min walk"
+   },
+   "verdict": "No.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.298,
+    7.82
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 20,
+    "beachMode": "walk",
+    "perHeadNight": 2991,
+    "town": false
+   },
+   "score": {
+    "total": 77,
+    "parts": {
+     "reviews": 93,
+     "budget": 72,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-areca-holiday-home-11": {
+   "id": "ab-areca-holiday-home-11",
+   "name": "Areca Holiday Home 11, Karon Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon",
+   "thai": null,
+   "tagline": "No pool, unproven.",
+   "priceTHB": null,
+   "priceINR": 11252,
+   "priceNote": "11,252 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 33,757). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "2 bedrooms, 3 beds, 2.5 baths, up to 6 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Large balcony"
+   ],
+   "complaints": [
+    "2 reviews",
+    "No pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1414156166011658839"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "2 bedrooms, 3 beds, 2.5 baths, up to 6 guests",
+   "distances": {
+    "beach": "20 min walk"
+   },
+   "verdict": "No pool, unproven.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.294,
+    7.847
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 20,
+    "beachMode": "walk",
+    "perHeadNight": 2250,
+    "town": false
+   },
+   "score": {
+    "total": 56,
+    "parts": {
+     "reviews": null,
+     "budget": 89,
+     "beach": 60,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
+  },
+  "ab-duplex-3br-kamala": {
+   "id": "ab-duplex-3br-kamala",
+   "name": "Duplex 3BR w/ Private Pool in Gated Villa Resort",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Best walkable private-pool pick under 60k.",
+   "priceTHB": null,
+   "priceINR": 19563,
+   "priceNote": "19,563 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 58,688). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 33,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Location"
+   ],
+   "complaints": [
+    "Electricity 7 THB/kWh + 5,000 THB deposit",
+    "No mid-stay clean under 7 nights"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1307990672646803459"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+   "distances": {
+    "beach": "10 min walk"
+   },
+   "verdict": "Best walkable private-pool pick under 60k.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 3913,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 92,
+     "budget": 50,
+     "beach": 85,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-tw2-pool-villa-kamala": {
+   "id": "ab-tw2-pool-villa-kamala",
+   "name": "TW2 Pool Villa 3bd Kamala Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Walkable; 578 over the cap.",
+   "priceTHB": null,
+   "priceINR": 20193,
+   "priceNote": "20,193 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 60,578). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 35,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Pool",
+    "Beach",
+    "Walkability"
+   ],
+   "complaints": [
+    "3% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/24585722"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "verdict": "Walkable; 578 over the cap.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 4039,
+    "town": false
+   },
+   "score": {
+    "total": 73,
+    "parts": {
+     "reviews": 91,
+     "budget": 47,
+     "beach": 60,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-lake-view-3br-bangtao": {
+   "id": "ab-lake-view-3br-bangtao",
+   "name": "Lake View 3 Bedroom Aqua pool & gym shuttle bus",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao / Boat Avenue, Choeng Thale",
+   "thai": null,
+   "tagline": "Good walkable aparthotel; free cancellation.",
+   "priceTHB": null,
+   "priceINR": 16687,
+   "priceNote": "16,687 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 50,062). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 9,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Location",
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Weekday renovation noise warned",
+    "2 baths for 5"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Boat+Avenue+Bang+Tao+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1595598754069361091"
+   },
+   "tags": [
+    "airbnb",
+    "hotel",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "verdict": "Good walkable aparthotel; free cancellation.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 3337,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 86,
+     "budget": 63,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-surin-park-penthouse": {
+   "id": "ab-surin-park-penthouse",
+   "name": "Surin Park 3 Bed Penthouse Jacuzzi by Destada",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Surin / Bang Tao, Choeng Thale",
+   "thai": null,
+   "tagline": "3 baths + walk to Surin; middling value.",
+   "priceTHB": null,
+   "priceINR": 19110,
+   "priceNote": "19,110 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 57,330). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.73,
+   "scale": "5",
+   "reviews": 66,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Nearby",
+    "View",
+    "Walkability"
+   ],
+   "complaints": [
+    "Construction noise warned",
+    "Value 4.6"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Surin+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/675001"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "12 min walk"
+   },
+   "verdict": "3 baths + walk to Surin; middling value.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 12,
+    "beachMode": "walk",
+    "perHeadNight": 3822,
+    "town": false
+   },
+   "score": {
+    "total": 70,
+    "parts": {
+     "reviews": 91,
+     "budget": 52,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-4-bed-bungalow-bang-tao": {
+   "id": "ab-4-bed-bungalow-bang-tao",
+   "name": "Beautiful 4 Bed Bungalow Close to Beach & Hotspots",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao, Choeng Thale",
+   "thai": null,
+   "tagline": "Cheapest walk-to-beach 4BR; no pool.",
+   "priceTHB": null,
+   "priceINR": 11243,
+   "priceNote": "11,243 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 33,729). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 23,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 7 beds, 3 baths, up to 10 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Beach",
+    "Hospitality",
+    "Walkability"
+   ],
+   "complaints": [
+    "No pool",
+    "1,500 THB deposit"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1538308666792730069"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 7 beds, 3 baths, up to 10 guests",
+   "distances": {
+    "beach": "15 min walk"
+   },
+   "verdict": "Cheapest walk-to-beach 4BR; no pool.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 15,
+    "beachMode": "walk",
+    "perHeadNight": 2249,
+    "town": false
+   },
+   "score": {
+    "total": 70,
+    "parts": {
+     "reviews": 89,
+     "budget": 89,
+     "beach": 60,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-villa-close-to-beach-sleeps-9": {
+   "id": "ab-villa-close-to-beach-sleeps-9",
+   "name": "Beautiful Villa Close to Beach, Sleeps 9",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao, Choeng Thale",
+   "thai": null,
+   "tagline": "3 baths, walkable, no pool.",
+   "priceTHB": null,
+   "priceINR": 12648,
+   "priceNote": "12,648 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 37,945). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 12,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 6 beds, 3 baths, up to 9 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Location"
+   ],
+   "complaints": [
+    "No pool",
+    "8% 3-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1463304615923681425"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 6 beds, 3 baths, up to 9 guests",
+   "distances": {
+    "beach": "10 min walk"
+   },
+   "verdict": "3 baths, walkable, no pool.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.295,
+    7.99
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 10,
+    "beachMode": "walk",
+    "perHeadNight": 2530,
+    "town": false
+   },
+   "score": {
+    "total": 72,
+    "parts": {
+     "reviews": 86,
+     "budget": 83,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-3br-villa-shared-pool-kamala": {
+   "id": "ab-3br-villa-shared-pool-kamala",
+   "name": "3BR Villa with Shared Pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Great reviews; shared pool; not walkable.",
+   "priceTHB": null,
+   "priceINR": 16864,
+   "priceNote": "16,864 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 50,593). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.96,
+   "scale": "5",
+   "reviews": 68,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Location"
+   ],
+   "complaints": [
+    "Electricity 7 THB/kWh",
+    "No clean under 7 nights"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1379348822415603797"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+   "distances": {
+    "beach": "Short drive (no walk given)"
+   },
+   "verdict": "Great reviews; shared pool; not walkable.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3373,
+    "town": false
+   },
+   "score": {
+    "total": 67,
+    "parts": {
+     "reviews": 95,
+     "budget": 63,
+     "beach": 20,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-tropical-vibes-only-kamala": {
+   "id": "ab-tropical-vibes-only-kamala",
+   "name": "Tropical Vibes Only: Brand-New 3BR Pool Villa!",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Prefer the Duplex at the same price.",
+   "priceTHB": null,
+   "priceINR": 19563,
+   "priceNote": "19,563 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 58,688). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 40,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+    "Private pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness",
+    "Accuracy"
+   ],
+   "complaints": [
+    "Electricity 7 THB/kWh + deposit"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1339880007137509064"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 7 guests",
+   "distances": {
+    "beach": "5-min drive from Kamala Beach"
+   },
+   "verdict": "Prefer the Duplex at the same price.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3913,
+    "town": false
+   },
+   "score": {
+    "total": 67,
+    "parts": {
+     "reviews": 93,
+     "budget": 50,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-n2-pool-villa-kamala": {
+   "id": "ab-n2-pool-villa-kamala",
+   "name": "N2 Pool Villa 3bd with private Patio BBQ. Kamala",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Fine, inland.",
+   "priceTHB": null,
+   "priceINR": 18583,
+   "priceNote": "18,583 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 55,750). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.86,
+   "scale": "5",
+   "reviews": 7,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Shared pool for 4 villas",
+    "6,000 THB deposit"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1022412034793335016"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Kamala Beach 2 km; Surin 5-min drive"
+   },
+   "verdict": "Fine, inland.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 5,
+    "beachMode": "drive",
+    "perHeadNight": 3717,
+    "town": false
+   },
+   "score": {
+    "total": 65,
+    "parts": {
+     "reviews": 84,
+     "budget": 54,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-peaceful-bliss-kamala": {
+   "id": "ab-peaceful-bliss-kamala",
+   "name": "Peaceful Bliss With 120 Sqm Kamala Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Over cap, weaker than Lake View.",
+   "priceTHB": null,
+   "priceINR": 20230,
+   "priceNote": "20,230 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 60,691). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.75,
+   "scale": "5",
+   "reviews": 8,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+    "Shared pool",
+    "Kitchen",
+    "Superhost"
+   ],
+   "praise": [],
+   "complaints": [
+    "13% 3-star",
+    "Electricity capped at 40 units/day"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1412470475694187774"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 5 guests",
+   "distances": {
+    "beach": "12 min walk"
+   },
+   "verdict": "Over cap, weaker than Lake View.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "shared",
+    "beachMin": 12,
+    "beachMode": "walk",
+    "perHeadNight": 4046,
+    "town": false
+   },
+   "score": {
+    "total": 66,
+    "parts": {
+     "reviews": 84,
+     "budget": 47,
+     "beach": 60,
+     "pool": 70
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-sunset-lake-villa-bangtao": {
+   "id": "ab-sunset-lake-villa-bangtao",
+   "name": "Sunset Lake Villa Bangtao 3BR Waterfront",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Thep Krasattri (inland lake)",
+   "thai": null,
+   "tagline": "Cheapest private pool in the north; far.",
+   "priceTHB": null,
+   "priceINR": 12025,
+   "priceNote": "12,025 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 36,076). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 9,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "View"
+   ],
+   "complaints": [
+    "Electricity 8 THB/kWh + metered water",
+    "Car mandatory"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Thep+Krasattri+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1430230783253303951"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "Bang Tao / Layan approx. 15 minutes by car"
+   },
+   "verdict": "Cheapest private pool in the north; far.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 15,
+    "beachMode": "drive",
+    "perHeadNight": 2405,
+    "town": false
+   },
+   "score": {
+    "total": 75,
+    "parts": {
+     "reviews": 86,
+     "budget": 86,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-n25-kamala-nature": {
+   "id": "ab-n25-kamala-nature",
+   "name": "3 B/R for perfect happiness N.25 BY Kamala Nature",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala (listed as Kathu)",
+   "thai": null,
+   "tagline": "Too vague; skip.",
+   "priceTHB": null,
+   "priceINR": 14981,
+   "priceNote": "14,981 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 44,944). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.74,
+   "scale": "5",
+   "reviews": 35,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, ? baths, up to ? guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Location",
+    "Hospitality",
+    "Quiet"
+   ],
+   "complaints": [
+    "Vague listing; location 4.5"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kamala+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/42023242"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, ? baths, up to ? guests",
+   "distances": {
+    "beach": "No distance given"
+   },
+   "verdict": "Too vague; skip.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.283,
+    7.95
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": null,
+    "beachMode": "unknown",
+    "perHeadNight": 2996,
+    "town": false
+   },
+   "score": {
+    "total": 63,
+    "parts": {
+     "reviews": 89,
+     "budget": 72,
+     "beach": null,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "beach"
+    ]
+   }
+  },
+  "ab-tropical-chalet-3br": {
+   "id": "ab-tropical-chalet-3br",
+   "name": "Tropical Chalet Style 3BR Villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Choeng Thale",
+   "thai": null,
+   "tagline": "Avoid.",
+   "priceTHB": null,
+   "priceINR": 16190,
+   "priceNote": "16,190 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 48,569). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.62,
+   "scale": "5",
+   "reviews": 63,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Cleanliness"
+   ],
+   "complaints": [
+    "Page says bottom 10%",
+    "2% 1-star"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Choeng+Thale+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1159768558869108793"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 2 baths, up to 6 guests",
+   "distances": {
+    "beach": "10-min drive from Bang Tao Beach"
+   },
+   "verdict": "Avoid.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3238,
+    "town": false
+   },
+   "score": {
+    "total": 70,
+    "parts": {
+     "reviews": 89,
+     "budget": 66,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-laguna-parkside-townhouse": {
+   "id": "ab-laguna-parkside-townhouse",
+   "name": "Laguna Parkside, Three-Bedroom Townhouse",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Laguna, Choeng Thale",
+   "thai": null,
+   "tagline": "Unproven.",
+   "priceTHB": null,
+   "priceINR": 11439,
+   "priceNote": "11,439 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 34,317). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+    "No pool",
+    "Kitchen"
+   ],
+   "praise": [],
+   "complaints": [
+    "No reviews",
+    "Pool private/shared unclear"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Laguna+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1791070013884165964"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 3 baths, up to 6 guests",
+   "distances": {
+    "beach": "Bang Tao Beach by shuttle; Boat Avenue walkable"
+   },
+   "verdict": "Unproven.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "none",
+    "beachMin": 8,
+    "beachMode": "walk",
+    "perHeadNight": 2288,
+    "town": false
+   },
+   "score": {
+    "total": 61,
+    "parts": {
+     "reviews": null,
+     "budget": 88,
+     "beach": 85,
+     "pool": 0
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": [
+     "reviews"
+    ]
+   }
+  },
+  "ab-3bed-pool-villa-thalang": {
+   "id": "ab-3bed-pool-villa-thalang",
+   "name": "3bed Pool villa near Thalang Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Choeng Thale",
+   "thai": null,
+   "tagline": "Unproven.",
+   "priceTHB": null,
+   "priceINR": 15178,
+   "priceNote": "15,178 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 45,534). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 1,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 3 beds, 4 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Space and style"
+   ],
+   "complaints": [
+    "1 review"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Choeng+Thale+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1615979135603450378"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 3 beds, 4 baths, up to 6 guests",
+   "distances": {
+    "beach": "10-minute drive to Bang Tao / Laguna / Layan"
+   },
+   "verdict": "Unproven.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 10,
+    "beachMode": "drive",
+    "perHeadNight": 3036,
+    "town": false
+   },
+   "score": {
+    "total": 69,
+    "parts": {
+     "reviews": 81,
+     "budget": 71,
+     "beach": 20,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-s101-chalong": {
+   "id": "ab-s101-chalong",
+   "name": "S101 Three-Bedroom Vacation Villa | Exclusive Private Pool",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Chalong",
+   "thai": null,
+   "tagline": "Avoid.",
+   "priceTHB": null,
+   "priceINR": 15309,
+   "priceNote": "15,309 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 45,927). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 4.65,
+   "scale": "5",
+   "reviews": 48,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "3 bedrooms, 4 beds, 4 baths, up to 6 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Hospitality",
+    "Pool"
+   ],
+   "complaints": [
+    "Page says bottom 10%",
+    "Electricity 500 THB/day prepaid"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Chalong+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1373984742768386775"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "3 bedrooms, 4 beds, 4 baths, up to 6 guests",
+   "distances": {
+    "beach": "12 min walk"
+   },
+   "verdict": "Avoid.",
+   "fitsBudget": true,
+   "lngLat": [
+    98.34,
+    7.83
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 12,
+    "beachMode": "walk",
+    "perHeadNight": 3062,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 89,
+     "budget": 70,
+     "beach": 60,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
+  },
+  "ab-ao-yon-oceanfront-4br": {
+   "id": "ab-ao-yon-oceanfront-4br",
+   "name": "4BR Oceanfront Detached House on Ao Yon Beach | 50 meters to the beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Ao Yon, Cape Panwa (east coast)",
+   "thai": null,
+   "tagline": "Only true beachfront pool house near budget; 2k over, far from Kata.",
+   "priceTHB": null,
+   "priceINR": 20729,
+   "priceNote": "20,729 INR a night for the whole place on Airbnb for 2026-11-21 to 2026-11-24 (3 nights, total 62,187). Dated search-card price. ",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 15,
+   "reviewSource": "Airbnb, read 2026-10-24",
+   "highlights": [
+    "4 bedrooms, 4 beds, 4 baths, up to 8 guests",
+    "Private pool",
+    "Kitchen"
+   ],
+   "praise": [
+    "Pool",
+    "Hospitality",
+    "Walkability"
+   ],
+   "complaints": [
+    "Renovation noise nearby",
+    "Electricity ~300-600 THB/day"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ao+Yon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1544228742097456057"
+   },
+   "tags": [
+    "airbnb",
+    "villa",
+    "phuket-beach",
+    "pool"
+   ],
+   "sources": [
+    "research/airbnb.md"
+   ],
+   "rooms": "4 bedrooms, 4 beds, 4 baths, up to 8 guests",
+   "distances": {
+    "beach": "1 min walk"
+   },
+   "verdict": "Only true beachfront pool house near budget; 2k over, far from Kata.",
+   "fitsBudget": false,
+   "lngLat": [
+    98.3923,
+    7.8804
+   ],
+   "geo": "approx",
+   "facts": {
+    "kind": "villa",
+    "pool": "private",
+    "beachMin": 1,
+    "beachMode": "walk",
+    "perHeadNight": 4146,
+    "town": false
+   },
+   "score": {
+    "total": 79,
+    "parts": {
+     "reviews": 89,
+     "budget": 44,
+     "beach": 100,
+     "pool": 100
+    },
+    "weights": {
+     "reviews": 35,
+     "budget": 30,
+     "beach": 20,
+     "pool": 15
+    },
+    "unknown": []
+   }
   }
  },
  "flights": {
