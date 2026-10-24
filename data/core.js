@@ -5,36 +5,28 @@
   const read = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
   const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
-  const state = {
-    locks: read(LS.locks, {}),        // decisionId -> optionId
-    notes: read(LS.notes, {}),        // dayN -> [{who, text, at}]
-    who: read(LS.who, "")
-  };
+  const S = window.STORE;
+  const state = { who: read(LS.who, "") };
+  Object.defineProperty(state, "locks", { get: () => { const out = {}; const l = S.locks(); for (const k in l) out[k] = l[k].optionId; return out; } });
+  Object.defineProperty(state, "notes", { get: () => { const out = {}; for (const n of S.state.notes) (out[n.day] || (out[n.day] = [])).push({ id: n.id, who: n.who, text: n.body, at: n.at }); return out; } });
 
   const fmtINR = n => n ? new Intl.NumberFormat("en-IN").format(Math.round(n)) : "—";
   const fmtK = n => n ? (n >= 1000 ? (Math.round(n / 100) / 10).toString().replace(/\.0$/, "") + "k" : String(n)) : "—";
   const thbToInr = thb => Math.round(thb * T.fx.inrPerThb);
 
   function decision(id) { return T.decisions.find(d => d.id === id); }
-  function lockedOption(d) { return d.options.find(o => o.id === state.locks[d.id]) || null; }
-  function lock(decisionId, optionId) {
-    if (state.locks[decisionId] === optionId) delete state.locks[decisionId]; else state.locks[decisionId] = optionId;
-    write(LS.locks, state.locks); emit();
-  }
+  function lockedOption(d) { const l = S.locks()[d.id]; return d.options.find(o => o.id === (l && l.optionId)) || null; }
+  function lock(decisionId, optionId, who) { const l = S.locks()[decisionId]; S.setLock(decisionId, l && l.optionId === optionId ? null : optionId, who || state.who || null); }
   function budget() {
     let total = 0; const lines = [];
     for (const d of T.decisions) { const o = lockedOption(d); if (o && o.costINR) { total += o.costINR; lines.push({ d, o }); } }
     return { total, perHead: total / T.travellers, lines };
   }
-  function addNote(dayN, text) {
-    if (!text.trim()) return;
-    const arr = state.notes[dayN] || (state.notes[dayN] = []);
-    arr.push({ who: state.who || "someone", text: text.trim(), at: new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" }) });
-    write(LS.notes, state.notes); emit();
-  }
+  function addNote(dayN, text) { if (!text.trim()) return; S.addNote(dayN, state.who || "someone", text.trim()); }
   function setWho(name) { state.who = name.trim(); write(LS.who, state.who); emit(); }
 
   const listeners = []; function onChange(fn) { listeners.push(fn); } function emit() { listeners.forEach(fn => fn()); }
+  S.onChange(emit);
 
   // ---- Map ----
   function style(p) {

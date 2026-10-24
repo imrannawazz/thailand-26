@@ -1,0 +1,109 @@
+// Shared state layer. In-memory cache + localStorage always; Supabase when window.TRIP_CONFIG has a URL and key.
+// Public API (window.STORE): state, ready (Promise), mode ("shared"|"local"), status (string),
+//   setLock(decisionId, optionId|null, who) · setPick(itemId, day|null, who) · addNote(day, who, body) · delNote(id)
+//   addComment(itemId, who, body) · delComment(id) · setReject(itemId, who, on) · addMisc(name, inr, per, who) · delMisc(id)
+//   onChange(fn)  — fires after any local or remote change
+(function () {
+  const LS = "trip.shared.v1";
+  const KEYS_OLD = { locks: "trip.locks.v1", lockBy: "trip.lockby.v1", picks: "trip.picks.v1", pickBy: "trip.pickby.v1", notes: "trip.notes.v1", comments: "trip.comments.v1", rejects: "trip.rejects.v1", misc: "trip.misc.v1" };
+  const uuid = () => (crypto.randomUUID ? crypto.randomUUID() : "x" + Math.random().toString(36).slice(2) + Date.now().toString(36));
+  const today = () => new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  const read = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } };
+  const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+
+  // ---- state: a normalised shape every page reads ----
+  // locks: {decisionId: {optionId, who}}  picks: {itemId: {day, who}}  notes: [{id, day, who, body, at}]
+  // comments: [{id, itemId, who, body, at}]  rejects: [{itemId, who}]  misc: [{id, name, inr, per, who, at}]
+  const empty = () => ({ locks: {}, picks: {}, notes: [], comments: [], rejects: [], misc: [] });
+  let state = read(LS, null);
+  if (!state) {
+    // migrate the earlier per-key localStorage shape once
+    state = empty();
+    const locks = read(KEYS_OLD.locks, {}), lockBy = read(KEYS_OLD.lockBy, {});
+    for (const d in locks) state.locks[d] = { optionId: locks[d], who: lockBy[d] || null };
+    const picks = read(KEYS_OLD.picks, {}), pickBy = read(KEYS_OLD.pickBy, {});
+    for (const day in picks) for (const id of picks[day]) state.picks[id] = { day: Number(day), who: pickBy[id] || null };
+    const notes = read(KEYS_OLD.notes, {});
+    for (const day in notes) for (const n of notes[day]) state.notes.push({ id: uuid(), day: Number(day), who: n.who, body: n.text, at: n.at });
+    const comments = read(KEYS_OLD.comments, {});
+    for (const itemId in comments) for (const c of comments[itemId]) state.comments.push({ id: uuid(), itemId, who: c.who, body: c.text, at: c.at });
+    const rejects = read(KEYS_OLD.rejects, {});
+    for (const itemId in rejects) for (const who of rejects[itemId]) state.rejects.push({ itemId, who });
+    for (const m of read(KEYS_OLD.misc, [])) state.misc.push({ id: uuid(), ...m });
+    write(LS, state);
+  }
+  const listeners = []; const emit = () => { write(LS, state); listeners.forEach(fn => { try { fn(); } catch (e) { console.error(e); } }); };
+
+  // ---- remote ----
+  const cfg = window.TRIP_CONFIG || {};
+  const canShare = !!(cfg.supabaseUrl && cfg.supabaseAnonKey && window.supabase && window.supabase.createClient);
+  const sb = canShare ? window.supabase.createClient(cfg.supabaseUrl, cfg.supabaseAnonKey, { realtime: { params: { eventsPerSecond: 5 } } }) : null;
+  const S = { state, mode: sb ? "shared" : "local", status: sb ? "connecting" : "this browser only", onChange: fn => listeners.push(fn) };
+  const fail = (what, err) => { console.error(what, err); S.status = "offline, saved here; retrying"; emit(); };
+
+  async function pull() {
+    if (!sb) return;
+    const [l, p, n, c, r, m] = await Promise.all(["locks", "picks", "notes", "comments", "rejects", "misc"].map(t => sb.from(t).select("*").order(t === "locks" || t === "picks" ? "updated_at" : "created_at", { ascending: true })));
+    const err = [l, p, n, c, r, m].find(x => x.error); if (err) throw err.error;
+    const next = empty();
+    for (const row of l.data) next.locks[row.decision_id] = { optionId: row.option_id, who: row.who };
+    for (const row of p.data) next.picks[row.item_id] = { day: row.day, who: row.who };
+    next.notes = n.data.map(row => ({ id: row.id, day: row.day, who: row.who, body: row.body, at: row.at }));
+    next.comments = c.data.map(row => ({ id: row.id, itemId: row.item_id, who: row.who, body: row.body, at: row.at }));
+    next.rejects = r.data.map(row => ({ itemId: row.item_id, who: row.who }));
+    next.misc = m.data.map(row => ({ id: row.id, name: row.name, inr: row.inr, per: row.per, who: row.who, at: row.at }));
+    return next;
+  }
+  async function pushAll(local) {
+    // one-time seed from this browser when the shared tables are empty
+    const L = Object.entries(local.locks).map(([decision_id, v]) => ({ decision_id, option_id: v.optionId, who: v.who }));
+    const P = Object.entries(local.picks).map(([item_id, v]) => ({ item_id, day: v.day, who: v.who }));
+    const N = local.notes.map(x => ({ id: x.id, day: x.day, who: x.who, body: x.body, at: x.at }));
+    const Cm = local.comments.map(x => ({ id: x.id, item_id: x.itemId, who: x.who, body: x.body, at: x.at }));
+    const R = local.rejects.map(x => ({ item_id: x.itemId, who: x.who }));
+    const M = local.misc.map(x => ({ id: x.id, name: x.name, inr: x.inr, per: x.per, who: x.who, at: x.at }));
+    for (const [t, rows] of [["locks", L], ["picks", P], ["notes", N], ["comments", Cm], ["rejects", R], ["misc", M]]) if (rows.length) { const { error } = await sb.from(t).upsert(rows); if (error) throw error; }
+  }
+  const isEmpty = s => !Object.keys(s.locks).length && !Object.keys(s.picks).length && !s.notes.length && !s.comments.length && !s.rejects.length && !s.misc.length;
+  let refreshTimer = null;
+  const refresh = () => { clearTimeout(refreshTimer); refreshTimer = setTimeout(async () => { try { const next = await pull(); if (next) { state = next; S.state = state; S.status = "shared, live"; emit(); } } catch (e) { fail("refresh", e); } }, 250); };
+
+  S.ready = (async () => {
+    if (!sb) { emit(); return; }
+    try {
+      const remote = await pull();
+      if (isEmpty(remote) && !isEmpty(state)) { S.status = "shared tables are empty"; S.pendingSeed = true; emit(); }
+      else { state = remote; S.state = state; S.status = "shared, live"; emit(); }
+      sb.channel("trip").on("postgres_changes", { event: "*", schema: "public" }, refresh).subscribe(st => { if (st === "SUBSCRIBED") { S.status = "shared, live"; emit(); } });
+    } catch (e) { fail("connect", e); }
+  })();
+  S.seedFromThisBrowser = async () => { try { await pushAll(state); S.pendingSeed = false; refresh(); } catch (e) { fail("seed", e); } };
+  S.discardLocal = async () => { S.pendingSeed = false; refresh(); };
+
+  // ---- writes: cache first, then remote ----
+  const remote = async (fn) => { if (!sb) return; try { const { error } = await fn(); if (error) throw error; } catch (e) { fail("write", e); } };
+  S.setLock = (decisionId, optionId, who) => {
+    if (optionId) state.locks[decisionId] = { optionId, who }; else delete state.locks[decisionId]; emit();
+    remote(() => optionId ? sb.from("locks").upsert({ decision_id: decisionId, option_id: optionId, who, updated_at: new Date().toISOString() }) : sb.from("locks").delete().eq("decision_id", decisionId));
+  };
+  S.setPick = (itemId, day, who) => {
+    if (day) state.picks[itemId] = { day, who }; else delete state.picks[itemId]; emit();
+    remote(() => day ? sb.from("picks").upsert({ item_id: itemId, day, who, updated_at: new Date().toISOString() }) : sb.from("picks").delete().eq("item_id", itemId));
+  };
+  S.addNote = (day, who, body) => { const row = { id: uuid(), day: Number(day), who, body, at: today() }; state.notes.push(row); emit(); remote(() => sb.from("notes").insert(row)); };
+  S.delNote = id => { state.notes = state.notes.filter(n => n.id !== id); emit(); remote(() => sb.from("notes").delete().eq("id", id)); };
+  S.addComment = (itemId, who, body) => { const row = { id: uuid(), itemId, who, body, at: today() }; state.comments.push(row); emit(); remote(() => sb.from("comments").insert({ id: row.id, item_id: itemId, who, body, at: row.at })); };
+  S.delComment = id => { state.comments = state.comments.filter(c => c.id !== id); emit(); remote(() => sb.from("comments").delete().eq("id", id)); };
+  S.setReject = (itemId, who, on) => {
+    state.rejects = state.rejects.filter(r => !(r.itemId === itemId && r.who === who)); if (on) state.rejects.push({ itemId, who }); emit();
+    remote(() => on ? sb.from("rejects").upsert({ item_id: itemId, who }) : sb.from("rejects").delete().match({ item_id: itemId, who }));
+  };
+  S.addMisc = (name, inr, per, who) => { const row = { id: uuid(), name, inr: Math.round(inr), per, who, at: today() }; state.misc.push(row); emit(); remote(() => sb.from("misc").insert(row)); };
+  S.delMisc = id => { state.misc = state.misc.filter(m => m.id !== id); emit(); remote(() => sb.from("misc").delete().eq("id", id)); };
+
+  // convenience views
+  S.locks = () => state.locks; S.picksByDay = () => { const out = {}; for (const id in state.picks) (out[state.picks[id].day] || (out[state.picks[id].day] = [])).push(id); return out; };
+  S.pickOf = id => state.picks[id] || null; S.notesFor = day => state.notes.filter(n => n.day === Number(day));
+  S.commentsFor = id => state.comments.filter(c => c.itemId === id); S.rejectsFor = id => state.rejects.filter(r => r.itemId === id).map(r => r.who);
+  window.STORE = S;
+})();

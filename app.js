@@ -12,60 +12,53 @@
   const poolOf = (type, place) => ITEMS.filter(it => it.type === type && it.place === place);
   const samePlace = (it, place) => it.place === place || (place === "aonang" && it.place === "krabi");
 
-  // ---- who: one of five names; reactions and comments tagged with it ----
+  // ---- who: one of five names; everything else lives in STORE (shared when configured) ----
+  const S = window.STORE;
   const NAMES = ["Mira", "Imran", "Sisir", "Sparsh", "Anushka"];
   const who = () => NAMES.includes(C.state.who) ? C.state.who : null;
-  const store = (key, def) => { try { return JSON.parse(localStorage.getItem(key)) ?? def; } catch (e) { return def; } };
-  const save = (key, v) => { try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) {} };
-  let rejects = store("trip.rejects.v1", {});     // itemId -> [names]
-  let comments = store("trip.comments.v1", {});   // itemId -> [{who, text, at}]
-  let lockBy = store("trip.lockby.v1", {});       // decisionId -> name
-  let pickBy = store("trip.pickby.v1", {});       // itemId -> name
   const today = () => new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" });
-  function toggleReject(id) { const w = who(); if (!w) return gate(); const a = rejects[id] || (rejects[id] = []); const i = a.indexOf(w); if (i >= 0) a.splice(i, 1); else a.push(w); save("trip.rejects.v1", rejects); render(); }
-  function addComment(id, text) { const w = who(); if (!w) return gate(); if (!text.trim()) return; (comments[id] || (comments[id] = [])).push({ who: w, text: text.trim(), at: today() }); save("trip.comments.v1", comments); render(); }
-  function removeComment(id, i) { if (comments[id]) { comments[id].splice(i, 1); save("trip.comments.v1", comments); render(); } }
+  function toggleReject(id) { const w = who(); if (!w) return gate(); S.setReject(id, w, !S.rejectsFor(id).includes(w)); }
+  function addComment(id, text) { const w = who(); if (!w) return gate(); if (!text.trim()) return; S.addComment(id, w, text.trim()); }
+  function removeComment(id) { S.delComment(id); }
   function gate() { $("#gate").hidden = false; }
   function pickName(n) { C.setWho(n); $("#gate").hidden = true; document.querySelectorAll("#gate .names button").forEach(b => b.classList.toggle("on", b.dataset.name === n)); }
-  const rejectedBy = id => rejects[id] || [];
-  const commentCount = id => (comments[id] || []).length;
+  const rejectedBy = id => S.rejectsFor(id);
+  const commentCount = id => S.commentsFor(id).length;
+  const lockWho = dId => (S.locks()[dId] || {}).who || null;
+  const pickWho = id => (S.pickOf(id) || {}).who || null;
   const tagsFor = id => `${rejectedBy(id).length ? `<span class="act rej" title="Not for: ${h(rejectedBy(id).join(", "))}">✕ ${h(rejectedBy(id).join(", "))}</span>` : ""}${commentCount(id) ? `<span class="act" title="Comments">${commentCount(id)} comment${commentCount(id) === 1 ? "" : "s"}</span>` : ""}`;
 
   // ---- picks (items added to a day) ----
-  const LSP = "trip.picks.v1";
-  let picks = {}; try { picks = JSON.parse(localStorage.getItem(LSP)) || {}; } catch (e) {}
-  const savePicks = () => { try { localStorage.setItem(LSP, JSON.stringify(picks)); } catch (e) {} };
-  const isPicked = (day, id) => (picks[day] || []).includes(id);
+  const picks = new Proxy({}, { get: (_, day) => S.picksByDay()[day] || [], ownKeys: () => Object.keys(S.picksByDay()), getOwnPropertyDescriptor: () => ({ enumerable: true, configurable: true }) });
+  const isPicked = (day, id) => (S.pickOf(id) || {}).day === Number(day);
   const DAYS_FOR = place => T.days.filter(d => d.base === place || (place === "krabi" && d.base === "aonang")).map(d => d.n);
-  function dayOfPick(id) { for (const d in picks) if (picks[d].includes(id)) return Number(d); return null; }
-  function assign(id, day) { const w = who(); if (!w) return gate(); for (const d in picks) picks[d] = picks[d].filter(x => x !== id); if (day) { (picks[day] || (picks[day] = [])).push(id); pickBy[id] = w; } else delete pickBy[id]; savePicks(); save("trip.pickby.v1", pickBy); render(); }
+  const dayOfPick = id => (S.pickOf(id) || {}).day || null;
+  function assign(id, day) { const w = who(); if (!w) return gate(); S.setPick(id, day ? Number(day) : null, w); }
   function chips(it) {
     const days = DAYS_FOR(it.place); if (!days.length) return "";
     const on = dayOfPick(it.id);
     return `<span class="chips"><span class="lbl">Day</span>${days.map(n => `<button data-assign="${it.id}" data-day="${n}" class="${on === n ? "on" : ""}" aria-pressed="${on === n}" title="Put on day ${n}">${n}</button>`).join("")}${on ? `<button data-assign="${it.id}" data-day="" title="Remove from the plan">×</button>` : ""}</span>`;
   }
-  function togglePick(day, id) { const w = who(); if (!w) return gate(); const a = picks[day] || (picks[day] = []); const i = a.indexOf(id); if (i >= 0) { a.splice(i, 1); delete pickBy[id]; } else { a.push(id); pickBy[id] = w; } savePicks(); save("trip.pickby.v1", pickBy); render(); }
-  const lockWith = (dId, oId) => { const w = who(); if (!w) return gate(); const was = C.state.locks[dId] === oId; if (was) delete lockBy[dId]; else lockBy[dId] = w; save("trip.lockby.v1", lockBy); C.lock(dId, oId); };
+  function togglePick(day, id) { const w = who(); if (!w) return gate(); S.setPick(id, isPicked(day, id) ? null : Number(day), w); }
+  const lockWith = (dId, oId) => { const w = who(); if (!w) return gate(); C.lock(dId, oId, w); };
   const itemCost = it => it.priceINR ? it.priceINR : it.priceTHB ? inr(it.priceTHB) * T.travellers : 0;
   const FLIGHTS_TOTAL = (T.flights && T.flights.perHeadINR || 0) * T.travellers;
-  // miscellaneous budget lines: {name, inr, per: "head"|"group", who, at}
-  const LSM = "trip.misc.v1";
-  let misc = []; try { misc = JSON.parse(localStorage.getItem(LSM)) || []; } catch (e) {}
-  const saveMisc = () => { try { localStorage.setItem(LSM, JSON.stringify(misc)); } catch (e) {} };
+  // miscellaneous budget lines live in STORE
+  const misc = new Proxy([], { get: (_, k) => { const arr = S.state.misc; const v = arr[k]; return typeof v === "function" ? v.bind(arr) : v; } });
   const miscGroup = m => m.per === "head" ? m.inr * T.travellers : m.inr;
-  function addMisc(name, inr, per) { const w = who(); if (!w) return gate(); if (!name.trim() || !(inr > 0)) return; misc.push({ name: name.trim(), inr: Math.round(inr), per, who: w, at: today() }); saveMisc(); render(); }
-  function removeMisc(i) { misc.splice(i, 1); saveMisc(); render(); }
+  function addMisc(name, inr, per) { const w = who(); if (!w) return gate(); if (!name.trim() || !(inr > 0)) return; S.addMisc(name.trim(), inr, per, w); }
+  function removeMisc(id) { S.delMisc(id); }
   function budget() {
     const b = C.budget(); let extra = 0;
-    for (const d in picks) for (const id of picks[d]) { const it = T.items[id]; if (it) extra += itemCost(it); }
-    const miscTotal = misc.reduce((a, m) => a + miscGroup(m), 0);
+    for (const id in S.state.picks) { const it = T.items[id]; if (it) extra += itemCost(it); }
+    const miscTotal = S.state.misc.reduce((a, m) => a + miscGroup(m), 0);
     const chosen = b.total + extra, total = chosen + FLIGHTS_TOTAL + miscTotal;
     return { chosen, flights: FLIGHTS_TOTAL, misc: miscTotal, total, perHead: total / T.travellers };
   }
   function dayCost(n) {
     const d = T.days.find(x => x.n === n); let total = 0;
     for (const id of d.decisions) { const dec = C.decision(id); const o = dec && C.lockedOption(dec); if (o && o.costINR) total += o.costINR; }
-    for (const id of (picks[n] || [])) { const it = T.items[id]; if (it) total += itemCost(it); }
+    for (const id of (S.picksByDay()[n] || [])) { const it = T.items[id]; if (it) total += itemCost(it); }
     return total;
   }
 
@@ -128,7 +121,7 @@
     const price = it.priceINR ? `${fmt(it.priceINR)}<small>INR</small>` : it.priceTHB ? `฿${fmt(it.priceTHB)}<small>a head</small>` : (it.priceTHB === 0 ? `free` : `—`);
     const meta = [it.area, it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""}` : null, it.when].filter(Boolean).join(" · ");
     const facts = it.type === "stay" ? factsLine(it) : "";
-    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickBy[it.id] ? ", " + h(pickBy[it.id]) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
+    return `<div class="row ${picked ? "locked" : ""} ${it.tags.includes("avoid") ? "avoid" : ""}" role="button" tabindex="0" data-item="${it.id}"><div><span class="name">${scoreBadge(it)}${h(it.name)}</span>${picked ? `<span class="act">In the plan${pickWho(it.id) ? ", " + h(pickWho(it.id)) : ""}</span>` : ""}${tagsFor(it.id)}${it.tags.includes("selfpick") ? `<span class="act" style="color:var(--accent)">Self-pick, from your doc</span>` : it.tags.includes("docpick") ? `<span class="act">From your doc</span>` : ""}${it.tags.includes("avoid") ? `<span class="act">Avoid</span>` : ""}<span class="meta">${h(it.tagline)}</span>${facts ? `<span class="meta">${h(facts)}</span>` : ""}${meta ? `<span class="meta">${h(meta)}</span>` : ""}</div><div class="fig">${price}</div></div>`;
   }
   function decisionBlock(id) {
     const d = C.decision(id); if (!d) return "";
@@ -140,7 +133,7 @@
       const meta = it && it.rating ? `${it.rating}/${it.scale}${it.reviews ? " · " + fmt(it.reviews) + " reviews" : ""} · ${it.reviewSource || ""}` : "";
       const price = o.costINR ? `${fmt(o.costINR)}<small>INR · ${h(o.unit || "")}</small>` : `<small>${h(o.unit || "price pending")}</small>`;
       const sub = (o.items || []).length ? `<span class="meta">${o.items.length} stays inside the cap: ${o.items.slice(0, 3).map(i => h(T.items[i].name)).join(", ")}${o.items.length > 3 ? "…" : ""}</span>` : "";
-      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" + (lockBy[d.id] ? " by " + h(lockBy[d.id]) : "") : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
+      return `<div class="row ${st}" role="button" tabindex="0" data-lock="${d.id}" data-opt="${o.id}" ${it ? `data-item="${it.id}"` : ""} ${o.items ? `data-items="${o.items.join(",")}"` : ""}><div><span class="name">${h(label)}</span><span class="act">${st === "locked" ? "Locked" + (lockWho(d.id) ? " by " + h(lockWho(d.id)) : "") : "Lock"}</span>${it ? tagsFor(it.id) : ""}<span class="meta">${h(note)}</span>${meta ? `<span class="meta">${h(meta)}</span>` : ""}${sub}</div><div class="fig">${price}</div></div>`;
     }).join("");
     return `<div class="sec"><h2>Decide: <b>${h(d.title)}</b></h2>${rows}<p class="small pending" style="margin:.6em 0 0">Tap a name for the full card. Lock to count it in the budget; tap again to unlock.</p></div>`;
   }
@@ -167,7 +160,7 @@
     return `<div class="sec reddit"><h2>${h(r.label)}</h2><ul>${r.summary.map(s => `<li>${h(s)}</li>`).join("")}</ul><p class="small">${r.sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${h(s.title)}</a>`).join(" · ")}</p>${r.queries && r.queries.length ? `<p class="small pending">Reddit itself is blocked for Claude's tools. To add the real threads, search these and paste the links back: ${r.queries.map(h).join(" · ")}</p>` : ""}</div>`;
   }
   function notesBlock(day) {
-    const items = (C.state.notes[day] || []).map(n => `<p class="item"><b>${h(n.who)}</b> ${h(n.text)} <span class="small pending">${h(n.at)}</span></p>`).join("");
+    const items = (C.state.notes[day] || []).map(n => `<p class="item"><b>${h(n.who)}</b> ${h(n.text)} <span class="small pending">${h(n.at)}</span>${n.who === who() ? ` <button class="linkish small" data-ndel="${n.id}">remove</button>` : ""}</p>`).join("");
     return `<div class="sec notes"><h2>Day ${day} notes</h2>${items || `<p class="pending">Nothing yet. Write the first one.</p>`}<form data-day="${day}"><textarea placeholder="Write here"></textarea><button type="submit">Add</button></form><p class="small who" style="margin-top:.8em">Writing as <b class="ink">${h(who() || "nobody yet")}</b> · <button class="linkish" data-gate>switch name</button></p></div>`;
   }
   function itineraryTab(d) {
@@ -263,12 +256,12 @@
   function budgetPage() {
     const b = budget(), F = T.flights;
     const lockedRows = T.decisions.map(d => { const o = C.lockedOption(d); return o ? { d, o } : null; }).filter(Boolean);
-    const pickRows = Object.entries(picks).flatMap(([day, ids]) => ids.filter(id => T.items[id]).map(id => ({ day: Number(day), it: T.items[id] }))).sort((a, b) => a.day - b.day);
+    const pickRows = Object.entries(S.picksByDay()).flatMap(([day, ids]) => ids.filter(id => T.items[id]).map(id => ({ day: Number(day), it: T.items[id] }))).sort((a, b) => a.day - b.day);
     const row = (name, meta, inr, extra) => `<div class="opt"><div><span class="name">${name}</span>${meta ? `<span class="dur">${meta}</span>` : ""}${extra || ""}</div><div class="fig">${inr ? fmt(inr) + "<small>INR</small>" : "—"}</div></div>`;
     const flightRows = F ? row(`Flights, five tickets`, `${h(F.out.flight)} ${h(F.out.dep)} to ${h(F.out.arr)} on ${h(F.out.date)} · ${h(F.back.flight)} ${h(F.back.dep)} to ${h(F.back.arr)} on ${h(F.back.date)}`, b.flights, `<span class="small" style="display:block">${fmt(F.perHeadINR)} INR a head as paid on Imran's ticket. ${h(F.note)}</span>`) : "";
     const frame = T.essentials.find(e => e.k === "Budget frame");
     const ph = n => fmt(n / T.travellers);
-    const miscRows = misc.map((m, i) => `<div class="opt"><div><span class="name">${h(m.name)}</span><span class="dur">${m.per === "head" ? fmt(m.inr) + " INR a head" : fmt(m.inr) + " INR for the group"} · ${h(m.who)}, ${h(m.at)}</span></div><div class="fig">${ph(miscGroup(m))}<small>a head</small><button class="linkish small" data-misc-del="${i}" style="display:block;margin-top:.3em">remove</button></div></div>`).join("");
+    const miscRows = misc.map((m, i) => `<div class="opt"><div><span class="name">${h(m.name)}</span><span class="dur">${m.per === "head" ? fmt(m.inr) + " INR a head" : fmt(m.inr) + " INR for the group"} · ${h(m.who)}, ${h(m.at)}</span></div><div class="fig">${ph(miscGroup(m))}<small>a head</small><button class="linkish small" data-misc-del="${m.id}" style="display:block;margin-top:.3em">remove</button></div></div>`).join("");
     return `<div class="wrap"><button class="back" data-go="">← Map</button><p class="eyebrow">Budget, per person</p><h1 class="disp">${fmt(b.perHead)}<small>INR a head so far · ${fmt(b.total)} for five</small></h1>
       <p class="lead">Everything below is per person unless it says otherwise. Flights are booked. Locking a stay or a day choice, or putting an item on a day, adds its share here. Anything else goes in Miscellaneous.</p>
       <div class="sec"><h2>Where it goes, per head</h2><div class="opt"><div><span class="name">Flights</span></div><div class="fig">${ph(b.flights)}<small>booked</small></div></div><div class="opt"><div><span class="name">Locked and chosen</span><span class="dur">stays, day choices, items on days</span></div><div class="fig">${ph(b.chosen)}<small>a head</small></div></div><div class="opt"><div><span class="name">Miscellaneous</span><span class="dur">${misc.length} line${misc.length === 1 ? "" : "s"}</span></div><div class="fig">${ph(b.misc)}<small>a head</small></div></div></div>
@@ -313,9 +306,9 @@
       ${it.tags.length ? `<h3>Tags</h3><p>${it.tags.map(t => `<span class="pill">${h(t)}</span>`).join("")}</p>` : ""}
       <h3>Links</h3><div class="links">${links}</div>
       <h3>The five of us</h3>
-      <p class="small">${rejectedBy(it.id).length ? `Not for: <b class="ink">${h(rejectedBy(it.id).join(", "))}</b>.` : "Nobody has ruled this out."}${pickBy[it.id] ? ` Added to a day by ${h(pickBy[it.id])}.` : ""}</p>
+      <p class="small">${rejectedBy(it.id).length ? `Not for: <b class="ink">${h(rejectedBy(it.id).join(", "))}</b>.` : "Nobody has ruled this out."}${pickWho(it.id) ? ` Added to a day by ${h(pickWho(it.id))}.` : ""}</p>
       <div class="cta" style="margin-top:.4em"><button class="ghost" data-reject="${it.id}">${who() && rejectedBy(it.id).includes(who()) ? "Undo: not for me" : "Not for me"}</button></div>
-      <div class="notes" style="margin-top:1em">${(comments[it.id] || []).map((c, i) => `<p class="item"><b>${h(c.who)}</b> ${h(c.text)} <span class="small pending">${h(c.at)}</span>${c.who === who() ? ` <button class="linkish small" data-cdel="${it.id}" data-i="${i}">remove</button>` : ""}</p>`).join("") || `<p class="pending">No comments yet.</p>`}<form data-comment="${it.id}"><textarea placeholder="${who() ? "Comment as " + h(who()) : "Pick your name to comment"}"></textarea><button type="submit">Add</button></form></div>
+      <div class="notes" style="margin-top:1em">${S.commentsFor(it.id).map(c => `<p class="item"><b>${h(c.who)}</b> ${h(c.body)} <span class="small pending">${h(c.at)}</span>${c.who === who() ? ` <button class="linkish small" data-cdel="${c.id}">remove</button>` : ""}</p>`).join("") || `<p class="pending">No comments yet.</p>`}<form data-comment="${it.id}"><textarea placeholder="${who() ? "Comment as " + h(who()) : "Pick your name to comment"}"></textarea><button type="submit">Add</button></form></div>
       <div class="cta">${decOpt ? `<button data-lockcard="${decOpt.d.id}" data-opt="${decOpt.o.id}">${lockedHere ? "Locked as our choice · unlock" : "Lock as our choice"}</button>` : (DAYS_FOR(it.place).length ? `<span class="small" style="align-self:center">On the plan:</span>${chips(it)}` : "")}<button class="ghost" data-close="item">Close</button></div>
       ${decOpt ? `<p class="small pending">Part of the decision "${h(decOpt.d.title)}"${decOpt.o.costINR ? ": " + fmt(decOpt.o.costINR) + " INR, " + h(decOpt.o.unit || "") : ""}.</p>` : ""}
       <p class="src">Snapshot ${h(T.snapshot)}. Sources: ${it.sources.map(h).join("; ")}. Prices move; check the link before paying.</p>
@@ -327,7 +320,7 @@
   function render() {
     const r = route(), b = budget();
     $("#budget").innerHTML = `<button data-go="budget" style="text-align:inherit"><div class="fig">${fmt(b.perHead)}</div><span>INR a head so far · ${fmt(b.total)} for five</span></button>`;
-    const wb = $("#whobar"); if (wb) wb.innerHTML = who() ? `<span class="small">You are <b class="ink">${h(who())}</b></span> <button class="linkish small" data-gate>switch</button>` : `<button class="linkish small" data-gate>Pick your name</button>`;
+    const wb = $("#whobar"); if (wb) wb.innerHTML = (who() ? `<span class="small">You are <b class="ink">${h(who())}</b></span> <button class="linkish small" data-gate>switch</button>` : `<button class="linkish small" data-gate>Pick your name</button>`) + `<span class="small pending" style="display:block">${S.mode === "shared" ? "Shared with the five · " : ""}${h(S.status)}</span>` + (S.pendingSeed ? `<span class="small" style="display:block">The shared tables are empty and this browser has data. <button class="linkish small" data-seed>Push this browser's data up</button> · <button class="linkish small" data-noseed>start from empty</button></span>` : "");
     const sheet = $("#sheet"), card = $("#card");
     let page = "", tab = null, dayN = null;
     if (r.page.startsWith("day-")) { dayN = Number(r.page.slice(4)); const res = dayPage(dayN, r.tab); if (res) { page = res.html; tab = res.tab; } else dayN = null; }
@@ -394,10 +387,13 @@
     const mf = e.target.closest("#miscform"); if (mf) { e.preventDefault(); addMisc($("#misc-name").value, Number($("#misc-inr").value), $("#misc-per").value); return; }
     const f = e.target.closest("form[data-day]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; C.addNote(f.dataset.day, v); });
   document.addEventListener("click", e => {
-    const del = e.target.closest("[data-misc-del]"); if (del) { removeMisc(Number(del.dataset.miscDel)); return; }
+    const del = e.target.closest("[data-misc-del]"); if (del) { removeMisc(del.dataset.miscDel); return; }
     const rj = e.target.closest("[data-reject]"); if (rj) { toggleReject(rj.dataset.reject); return; }
-    const cd = e.target.closest("[data-cdel]"); if (cd) { removeComment(cd.dataset.cdel, Number(cd.dataset.i)); return; }
+    const cd = e.target.closest("[data-cdel]"); if (cd) { removeComment(cd.dataset.cdel); return; }
     const nm = e.target.closest("[data-name]"); if (nm) { pickName(nm.dataset.name); return; }
+    const nd = e.target.closest("[data-ndel]"); if (nd) { S.delNote(nd.dataset.ndel); return; }
+    if (e.target.closest("[data-seed]")) { S.seedFromThisBrowser(); return; }
+    if (e.target.closest("[data-noseed]")) { S.discardLocal(); return; }
     if (e.target.closest("[data-gate]")) { gate(); return; }
   });
   document.addEventListener("submit", e => { const f = e.target.closest("form[data-comment]"); if (!f) return; e.preventDefault(); const t = f.querySelector("textarea"); const v = t.value; t.value = ""; addComment(f.dataset.comment, v); });
