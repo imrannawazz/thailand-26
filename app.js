@@ -14,7 +14,9 @@
 
   // ---- who: one of five names; everything else lives in STORE (shared when configured) ----
   const S = window.STORE;
-  const NAMES = ["Mira", "Imran", "Sisir", "Sparsh", "Anushka"];
+  const NAMES = ["Meera", "Imran", "Sisir", "Sparsh", "Anoushka"];
+  const NAME_FIX = { Mira: "Meera", Anushka: "Anoushka" };
+  if (NAME_FIX[C.state.who]) C.setWho(NAME_FIX[C.state.who]);
   const who = () => NAMES.includes(C.state.who) ? C.state.who : null;
   const today = () => new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short" });
   function toggleReject(id) { const w = who(); if (!w) return gate(); S.setReject(id, w, !S.rejectsFor(id).includes(w)); }
