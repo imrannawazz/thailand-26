@@ -804,7 +804,9 @@ window.TRIP = {
      "after-beach-bar"
     ]
    },
-   "tips": []
+   "tips": [
+    "Beach pick from the stay research: Kata Noi. Top villa lead is Katamanda E5 (4.93 from 45, private pool, short walk down) if its price lands under about 20,000 INR a night; the two Karon beachfront apartments (20 m and 50 m from the sand, 4.93 and 4.95) are the walk-to-water fallbacks. All dated prices are late-October snapshots; the 21 to 24 Nov weekend is high season, so expect 20 to 60 percent more."
+   ]
   },
   {
    "n": 6,
@@ -1006,38 +1008,51 @@ window.TRIP = {
   },
   {
    "id": "phiphi-stay",
-   "title": "Phi Phi room, if we sleep on the island",
+   "title": "Phi Phi night: how we sleep",
    "place": "phiphi",
    "options": [
+    {
+     "id": "mixA",
+     "label": "Ivory double for two plus three Voyagers pods",
+     "costINR": 7348,
+     "unit": "about 2,600 to 3,300 THB for all five",
+     "note": "The research pick: Ivory (9.9 from 171) 3 min from the pier, Voyagers (10 from 1,304) quiet and inland with AC and safety boxes. About 7,500 to 9,300 INR total.",
+     "items": [
+      "ivory-phi-phi",
+      "s2-voyagers"
+     ]
+    },
+    {
+     "id": "rooms",
+     "label": "All private rooms: Ivory, Phi Phi Hotel, Panmanee",
+     "costINR": 10228,
+     "unit": "about 3,650 THB for three rooms",
+     "note": "Everyone in a room near the pier; Phi Phi Hotel has a pool; Panmanee 8.9 from 4,004 reviews. About 10,200 INR.",
+     "items": [
+      "ivory-phi-phi",
+      "s2-phi-phi-hotel",
+      "s2-panmanee"
+     ]
+    },
+    {
+     "id": "pods",
+     "label": "Five pods in one good hostel",
+     "costINR": 6393,
+     "unit": "about 1,800 to 2,300 THB for five",
+     "note": "Cheapest. Voyagers or By the Beach (9.8, pods with in-room lockers, 18 plus, cash). Blanco is the party hostel: music till 02:00.",
+     "items": [
+      "s2-voyagers",
+      "s2-by-the-beach",
+      "s2-dormsin",
+      "s2-blanco-beach-bar"
+     ]
+    },
     {
      "id": "tonsai",
      "item": "ton-sai-tropical",
      "costINR": 12852,
-     "unit": "night, 3 rooms, from-price; 2 min from the pier"
-    },
-    {
-     "id": "ivory",
-     "item": "ivory-phi-phi",
-     "costINR": 8430,
-     "unit": "night, 3 rooms, from-price"
-    },
-    {
-     "id": "p2",
-     "item": "p2-wood-loft",
-     "costINR": 7560,
-     "unit": "night, 3 rooms, from-price"
-    },
-    {
-     "id": "whitehouse",
-     "item": "white-house-phi-phi-island",
-     "costINR": 0,
-     "unit": "price not readable"
-    },
-    {
-     "id": "pearlpp",
-     "item": "paradise-pearl-bungalows",
-     "costINR": 0,
-     "unit": "Long Beach; price not readable"
+     "unit": "night, 3 rooms, from-price; 2 min from the pier",
+     "note": "The mid-range hotel option if nobody wants a dorm."
     }
    ]
   },
@@ -1116,8 +1131,17 @@ window.TRIP = {
      "label": "Kata / Karon",
      "costINR": 0,
      "unit": "resorts inside the cap",
-     "note": "Swimmable by mid-November, mild nightlife, Reddit's all-rounder this month; Bolt to Bangla 305 THB; an hour to the airport on the 24th. Beach villas being researched.",
+     "note": "The research pick for swim-in-the-morning-and-chill: Kata Noi is the calmest west-coast water in late November (Karon has the worst rips). Villas listed first, then hotels. Bolt to Bangla 305 THB; an hour to the airport on the 24th.",
      "items": [
+      "s2-katamanda-e5",
+      "s2-karon-apt704",
+      "s2-karon-exclusive-8638782",
+      "s2-kata-3br-pool-villa",
+      "s2-kata-townhouse-1",
+      "s2-mantra-kata-noi",
+      "s2-kata-noi-resort",
+      "s2-kata-beachwalk",
+      "s2-villa-beachside-kata-noi",
       "pineapple-guesthouse-karon",
       "kata-tranquil-villa",
       "kk-karon-kata-boutique",
@@ -1135,16 +1159,26 @@ window.TRIP = {
      "label": "Nai Harn / Rawai",
      "costINR": 0,
      "unit": "quiet south",
-     "note": "Nai Harn is the quietest proper swimming beach; Rawai seafood market; Promthep sunset; furthest from the airport. Villas being researched.",
-     "items": []
+     "note": "Nai Harn is the calmest proper swimming beach but has no permanent lifeguards; every 3-bedroom villa found is a 5 to 10 minute drive from it. Rawai seafood market; Promthep sunset; furthest from the airport.",
+     "items": [
+      "s2-villa-vipa",
+      "s2-rawai-walk-to-beach"
+     ]
     },
     {
      "id": "kamala",
-     "label": "Kamala / Surin",
+     "label": "Kamala / Surin / Bang Tao",
      "costINR": 0,
      "unit": "calm, near the airport",
-     "note": "Calm beaches, Cafe del Mar sunset, 22 to 24 km from the airport for the 24th; need Grab for everything else.",
-     "items": []
+     "note": "Calm beaches, Cafe del Mar sunset, 22 to 24 km from the airport for the 24th; a Bang Tao red-flag drowning in Nov 2025 says obey the flags. Need Grab for everything else.",
+     "items": [
+      "s2-princess-kamala",
+      "s2-bangtao-soi4-sleeps9",
+      "s2-shanti-bangtao",
+      "s2-bangtao-laguna-pool-villa",
+      "s2-surin-large-villa",
+      "at-kamala-hotel"
+     ]
     },
     {
      "id": "oldtown",
@@ -2190,32 +2224,33 @@ window.TRIP = {
    "name": "P2 Wood Loft",
    "type": "stay",
    "place": "phiphi",
-   "area": "Centre of Tonsai village",
+   "area": "Phi Phi, 4-min walk from Tonsai pier",
    "thai": null,
    "tagline": "Modern rooms in the centre of Tonsai village.",
    "priceTHB": 1500,
-   "priceINR": 7560,
-   "priceNote": "Mid tier, no THB on the guide page. Per night, all rooms: TripAdvisor range $30-138/room; x3 at low end; MakeMyTrip USD 226 likely multi-night",
+   "priceINR": 32540,
+   "priceNote": "3,860 THB per room. Trip.com 'average from £97' (25-31 Oct 2026); THB 1,000 deposit; extra bed THB 900",
    "when": null,
    "book": null,
-   "rating": 8.3,
+   "rating": 8.8,
    "scale": "10",
-   "reviews": 3062,
-   "reviewSource": "Booking.com snippet 2026-10-24 (Agoda 8.7/1,807; TripAdvisor 3.5/43)",
+   "reviews": 128,
+   "reviewSource": "Trip.com (Hotels.com 8.2 snippet)",
    "highlights": [
-    "Location 9.4",
-    "Modern loft design",
-    "Large review base"
+    "Nicest rooms of the set",
+    "Rooftop hammocks",
+    "No pool, no breakfast",
+    "Check-in 14:00-21:30"
    ],
    "praise": [
-    "It was clean, comfortable and affordable. Great staff",
-    "Located in the middle of Phi Phi",
-    "Recommended by 87% on Agoda"
+    "The staff were incredibly hospitable, friendly, and always willing to help",
+    "It's an ideal place for a relaxing stay with family.",
+    "It is really close to where the ships arrive."
    ],
    "complaints": [
-    "Stench in bathroom, stained linens (Dec 2024)",
-    "Looks beautiful in photos, far from pleasant in reality (May 2026)",
-    "Bathroom 4% positive on Agoda topics"
+    "Extra bed refused without fee, refund refused",
+    "Sand on floors, bathroom smell",
+    "Reception phone unanswered"
    ],
    "links": {
     "maps": "https://www.google.com/maps/search/?api=1&query=P2+Wood+Loft+Phi+Phi",
@@ -2226,20 +2261,22 @@ window.TRIP = {
     "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d20235214-Reviews-P2_Wood_Loft-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
    },
    "tags": [
-    "phiphi"
+    "phiphi",
+    "hotel"
    ],
    "sources": [
     "research/phi-phi.md §2",
-    "research/stays.md"
+    "research/stays.md",
+    "research/stays-2.md"
    ],
-   "verdict": "Central and cheap enough, but bathroom/cleanliness complaints are the pattern; second tier.",
-   "rooms": "Doubles; quad room (2 doubles) sells out; 2+2+1",
+   "verdict": "Over 2,000 THB; only if a family room suits",
+   "rooms": "Family room (2 singles + queen) sleeps 3; doubles",
    "distances": {
-    "beach": "Loh Dalum ~300 m",
+    "beach": "4 min to pier",
     "pier": "5-10 min walk",
     "airport": "n/a (ferry)"
    },
-   "fitsBudget": true,
+   "fitsBudget": false,
    "lngLat": [
     98.77317,
     7.73944
@@ -5423,47 +5460,51 @@ window.TRIP = {
    "name": "Ivory Phi Phi Island",
    "type": "stay",
    "place": "phiphi",
-   "area": "Middle of Tonsai village, opposite the market",
+   "area": "Phi Phi, 3 min from Tonsai pier, 120 m from Loh Dalum",
    "thai": null,
    "tagline": "Right for one cheap night, not for comfort.",
    "priceTHB": null,
-   "priceINR": 8430,
-   "priceNote": "Per night, all rooms: Travelfish 1,000-1,700 THB/double (snippet); x3 at low end",
+   "priceINR": 10538,
+   "priceNote": "1,250 THB per room. Kayak 29-30 Oct 2026: King $21, Double $27-30, Std $31-62, Twin $64 (≈630-1,900 THB); Trip.com avg £46; 5% card fee; non-refundable inside 14 days",
    "when": null,
    "book": null,
    "rating": 9.9,
    "scale": "10",
    "reviews": 171,
-   "reviewSource": "Hostelworld 2026-10-24 (Trip.com 8.8; TripAdvisor 3.7/282)",
+   "reviewSource": "Hostelworld (Kayak 8.8/1,385)",
    "highlights": [
-    "Cheapest well-loved private rooms",
-    "Family-run, remembers names",
-    "Staff and location 10.0 on Hostelworld"
+    "Best-reviewed cheap private near pier",
+    "AC, safe, no pool",
+    "Quiet street at night",
+    "Check-in 14:00-19:00"
    ],
    "praise": [
-    "The best place to stay on the Phi Phi islands",
-    "Very clean, friendly staff, great location",
-    "Knew our names before we even arrived"
+    "Simple and effective. Safe and clean.",
+    "Very clean, friendly staff, great location.",
+    "The location is perfect, next to the pier and restaurants/nightlife"
    ],
    "complaints": [
-    "Salty shower water",
-    "Windowless rooms; night noise, earplugs advised",
-    "Backpacker-grade comfort"
+    "Facilities subpar / small rooms",
+    "Bed-bug tag on Kayak (11 reviews)",
+    "Thin walls and doors"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Ivory+Phi+Phi+Island+guesthouse",
-    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1804327-Reviews-Ivory_Phi_Phi_Island-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Ivory+Phi+Phi+Island+hotel",
+    "tripadvisor": "https://www.tripadvisor.com/Hotel_Review-g303908-d1804327-Reviews-Ivory_Phi_Phi_Island-Ko_Phi_Phi_Don_Ao_Nang_Krabi_Province.html",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/299924/ivory-phi-phi-island/"
    },
    "tags": [
-    "phiphi"
+    "phiphi",
+    "guesthouse"
    ],
    "sources": [
-    "research/stays.md"
+    "research/stays.md",
+    "research/stays-2.md"
    ],
-   "verdict": "Right for one cheap night, not for comfort.",
-   "rooms": "10 private doubles/twins (some windowless); 2+2+1",
+   "verdict": "The private room for the two who want a door",
+   "rooms": "2 per double/twin room; 10 rooms total",
    "distances": {
-    "beach": "Loh Dalum 120-400 m",
+    "beach": "3 min to pier",
     "pier": "3-10 min walk",
     "airport": "n/a (ferry)"
    },
@@ -5650,48 +5691,54 @@ window.TRIP = {
    "name": "Prima Karon Beach Villa (Sun Paradise Villas Karon)",
    "type": "stay",
    "place": "phuket",
-   "area": "Karon, ~8-min walk to beach",
+   "area": "Karon",
    "thai": null,
    "tagline": "Needs a live Airbnb price and bathroom count before it counts.",
    "priceTHB": null,
    "priceINR": null,
-   "priceNote": "Not readable; Airbnb 45800213 alternative is gone (HTTP 410)",
+   "priceNote": "Airbnb price did not render; electricity 6 THB/unit extra",
    "when": null,
    "book": null,
    "rating": 4.88,
    "scale": "5",
-   "reviews": 68,
-   "reviewSource": "Airbnb snippet 2026-10-24",
+   "reviews": 69,
+   "reviewSource": "Airbnb",
    "highlights": [
-    "Only walkable 3BR villa lead in Kata/Karon",
-    "Sea views, some units with pool"
+    "Private pool",
+    "Superhost Peter",
+    "Restaurants en route"
    ],
    "praise": [
-    "comfortable place near the beach with ocean views",
-    "value 4.6"
+    "Peter's responsiveness, how quickly he resolves any issue",
+    "About a 10-min walk to Karon Beach",
+    "Communication 5.0"
    ],
    "complaints": [
-    "Name overlaps with a 2BR 'Prima Villas by PHR'",
-    "No review text readable"
+    "Value 4.7",
+    "Electricity billed separately"
    ],
    "links": {
-    "maps": "https://www.google.com/maps/search/?api=1&query=Sun+Paradise+Villas+Karon",
-    "official": "https://www.travelocity.com/Phuket-Hotels-Sun-Paradise-Villas-Karon.h12758973.Hotel-Information"
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "official": "https://www.travelocity.com/Phuket-Hotels-Sun-Paradise-Villas-Karon.h12758973.Hotel-Information",
+    "airbnb": "https://www.airbnb.co.in/rooms/51111407"
    },
    "tags": [
-    "phuket4"
+    "phuket4",
+    "beach",
+    "villa"
    ],
    "sources": [
-    "research/stays.md"
+    "research/stays.md",
+    "research/stays-2.md"
    ],
-   "verdict": "Needs a live Airbnb price and bathroom count before it counts.",
-   "rooms": "3 bedrooms, up to 6 guests; 2+2+1",
+   "verdict": "Decent Karon pool villa, 10-min walk",
+   "rooms": "3 BR (2 kings, queen) / 3 baths / 6",
    "distances": {
-    "beach": "~8 min walk",
+    "beach": "~10 min walk to Karon",
     "pier": "Rassada ~17 km",
     "airport": "~45 km"
    },
-   "fitsBudget": false,
+   "fitsBudget": true,
    "lngLat": [
     98.294,
     7.847
@@ -7287,6 +7334,1361 @@ window.TRIP = {
     7.87718
    ],
    "geo": "exact"
+  },
+  "s2-voyagers": {
+   "id": "s2-voyagers",
+   "name": "Voyagers Hostel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi village centre (inland, near Tsunami Shelter)",
+   "thai": null,
+   "tagline": "First choice for the dorm sleepers",
+   "priceTHB": 455,
+   "priceINR": null,
+   "priceNote": "455 THB per bunk. Hostelworld city page 'from €12.02', undated, converted at ~38 THB/€; no 18-Nov price rendered",
+   "when": null,
+   "book": null,
+   "rating": 10,
+   "scale": "10",
+   "reviews": 1304,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "All sub-scores 10.0",
+    "AC + safety boxes + light/plug per bed",
+    "Bar music not audible per hostel",
+    "Check-in 13:00-18:00, cards accepted"
+   ],
+   "praise": [
+    "It was so clean!! The dorms were cleaned every day",
+    "The staff were super helpful and friendly!!",
+    "Lovely clean rooms nice and chill vibe close to the centre"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Voyagers+Hostel+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/281619/voyagers-hostel/"
+   },
+   "tags": [
+    "dorm",
+    "hostel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "First choice for the dorm sleepers",
+   "rooms": "5 bunks in AC dorms, or 3 bunks + 2 elsewhere",
+   "distances": {
+    "beach": "~10 min to pier, few min to Loh Dalum"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-by-the-beach": {
+   "id": "s2-by-the-beach",
+   "name": "By the Beach Hostel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi, quiet corner near pier/beaches (0.74 km from centre)",
+   "thai": null,
+   "tagline": "Best pod fallback to Voyagers",
+   "priceTHB": 355,
+   "priceINR": null,
+   "priceNote": "355 THB per bunk. Hostelworld 'from €9.35', undated; cash only",
+   "when": null,
+   "book": null,
+   "rating": 9.8,
+   "scale": "10",
+   "reviews": 990,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "Pods with curtains",
+    "Lockers in room, AC all rooms",
+    "Value/Staff/Location 10.0",
+    "Check-in 14:00-20:00"
+   ],
+   "praise": [
+    "They remembered details about my trip",
+    "Very friendly staff and nice clean rooms",
+    "Really lovely, clean comfortable hostel with plenty of space."
+   ],
+   "complaints": [
+    "Beds quite firm",
+    "Cash only",
+    "Wouldn't return at that price (Mar 2026 reviewer)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=By+the+Beach+Hostel+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/292950/by-the-beach-hostel/"
+   },
+   "tags": [
+    "dorm",
+    "hostel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Best pod fallback to Voyagers",
+   "rooms": "curtained pods in 3 rooms; 18+",
+   "distances": {
+    "beach": "'moments from pier and beaches' (AI summary, unverified)"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-dormsin": {
+   "id": "s2-dormsin",
+   "name": "Dormsin",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi, Soi Banthai near Tonsai pier",
+   "thai": null,
+   "tagline": "Budget pods closest to the morning boat",
+   "priceTHB": 225,
+   "priceINR": null,
+   "priceNote": "225 THB per bunk. Hostelworld 'from €5.88', undated; privates from €9.35 pp; cash only",
+   "when": null,
+   "book": null,
+   "rating": 9.3,
+   "scale": "10",
+   "reviews": 1144,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "Cheapest top-rated pods",
+    "Big lockers (bring padlock)",
+    "Staff 10, Location 10",
+    "Not a party hostel"
+   ],
+   "praise": [
+    "The beds were comfy and created in a way that felt very private.",
+    "Jason is the absolute best and so kind and welcoming!",
+    "Jason is one hack of a great host."
+   ],
+   "complaints": [
+    "Showers freezing or scorching",
+    "Bathrooms could be cleaner",
+    "Inconsistent water pressure"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Dormsin+Hostel+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/284471/dormsin/"
+   },
+   "tags": [
+    "dorm",
+    "hostel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Budget pods closest to the morning boat",
+   "rooms": "24-pod and 16-pod rooms; couple pods on request",
+   "distances": {
+    "beach": "close to Tonsai pier (south bay)"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-blue-flow": {
+   "id": "s2-blue-flow",
+   "name": "Blue Flow Hostel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi, between Loh Dalum and Tonsai, 1 min from pier",
+   "thai": null,
+   "tagline": "Convenient but single-room and one bad recent review",
+   "priceTHB": 355,
+   "priceINR": null,
+   "priceNote": "355 THB per bunk. Hostelworld 'from €9.37', undated; cash only; reception closes 18:00",
+   "when": null,
+   "book": null,
+   "rating": 8.7,
+   "scale": "10",
+   "reviews": 179,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "Closest to pier",
+    "Free lockers + personal lockers",
+    "Location 9.6",
+    "18+"
+   ],
+   "praise": [
+    "Super friendly staff, couldn't do enough to help you!",
+    "Perfect location, great beds, so clean and tidy",
+    "Amazing staff! Ice was lovely"
+   ],
+   "complaints": [
+    "Moved to another hostel on arrival (Jun 2026)",
+    "Reception often unstaffed",
+    "Ants in bed; door doesn't lock"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Blue+Flow+Hostel+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/316187/blue-flow-hostel/"
+   },
+   "tags": [
+    "dorm",
+    "hostel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Convenient but single-room and one bad recent review",
+   "rooms": "one 10-pod AC room (mixed)",
+   "distances": {
+    "beach": "<1 min to pier, few metres to beach"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-blanco-beach-bar": {
+   "id": "s2-blanco-beach-bar",
+   "name": "Blanco Beach Bar",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Loh Dalum beach",
+   "thai": null,
+   "tagline": "Only for whoever wants the party; no sleep",
+   "priceTHB": 235,
+   "priceINR": null,
+   "priceNote": "235 THB per bunk. Hostelworld 'from €6.16', undated",
+   "when": null,
+   "book": null,
+   "rating": 8.7,
+   "scale": "10",
+   "reviews": 4963,
+   "reviewSource": "Hostelworld",
+   "highlights": [
+    "#1 party hostel",
+    "Lockers, CCTV, 24/7 security",
+    "Music until ~02:00, bar to 03:00",
+    "Daily boat parties"
+   ],
+   "praise": [
+    "The best hostel in phi phi by far",
+    "the staff is amazing and everybody is so great",
+    "Such a great hostel if you're looking to meet people"
+   ],
+   "complaints": [
+    "Sand in rooms",
+    "Basic bathrooms",
+    "Cleanliness 7.9"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Blanco+Beach+Bar+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/hostels/p/73234/blanco-beach-bar/"
+   },
+   "tags": [
+    "dorm",
+    "hostel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Only for whoever wants the party; no sleep",
+   "rooms": "AC 4/6-bed dorms, ages 18-35",
+   "distances": {
+    "beach": "on the beach"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-phi-phi-hotel": {
+   "id": "s2-phi-phi-hotel",
+   "name": "Phi Phi Hotel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai, steps from the pier",
+   "thai": null,
+   "tagline": "Only in-budget private with a pool",
+   "priceTHB": null,
+   "priceINR": 10538,
+   "priceNote": "1,250 THB per room. Kayak 30-31 Oct 2026: Superior RM 176 (≈1,250 THB); second rate RM 374",
+   "when": null,
+   "book": null,
+   "rating": 8.5,
+   "scale": "10",
+   "reviews": 66,
+   "reviewSource": "Kayak (Expedia 8.4 snippet)",
+   "highlights": [
+    "Outdoor pool",
+    "AC, breakfast for fee",
+    "Noise score 5/10",
+    "West Wing rooms across a lane"
+   ],
+   "praise": [
+    "Great location in the center of town and near beaches",
+    "Surprisingly quiet room. Friendly helpful staff.",
+    "The view and location in phi phi were perfect."
+   ],
+   "complaints": [
+    "Staff not that friendly (2017)",
+    "Occasional cleanliness problems",
+    "Outdated facilities"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Phi+Phi+Hotel+Tonsai"
+   },
+   "tags": [
+    "phiphi",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Only in-budget private with a pool",
+   "rooms": "2-3 per superior room",
+   "distances": {
+    "beach": "76 m to pier"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-panmanee": {
+   "id": "s2-panmanee",
+   "name": "Panmanee Hotel",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Tonsai, 2 min from the pier",
+   "thai": null,
+   "tagline": "Solid third room if everyone wants privates",
+   "priceTHB": null,
+   "priceINR": 9610,
+   "priceNote": "1,140 THB per room. Kayak 29-30 Oct 2026 lowest $38 (≈1,140 THB); Booking snippet $112",
+   "when": null,
+   "book": null,
+   "rating": 8.9,
+   "scale": "10",
+   "reviews": 4004,
+   "reviewSource": "Kayak (TripAdvisor 3.9/5 from 310, snippet)",
+   "highlights": [
+    "Most-reviewed budget hotel",
+    "AC, daily water",
+    "Location 10/10",
+    "Bathroom score 2/10"
+   ],
+   "praise": [
+    "Guests appreciated receiving a water bottle every day",
+    "Comfortable beds contributed to restful stays.",
+    "staff received positive remarks for their friendliness and helpfulness"
+   ],
+   "complaints": [
+    "Bathroom/sewage odours at night",
+    "Maintenance concerns",
+    "Mosque audible in some rooms"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Panmanee+Hotel+Phi+Phi"
+   },
+   "tags": [
+    "phiphi",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Solid third room if everyone wants privates",
+   "rooms": "2 per room, 39 rooms",
+   "distances": {
+    "beach": "132 yd to pier"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-kitty-guest-house": {
+   "id": "s2-kitty-guest-house",
+   "name": "Kitty Guest House",
+   "type": "stay",
+   "place": "phiphi",
+   "area": "Phi Phi, 2 min from Loh Dalum, 12-15 min from pier",
+   "thai": null,
+   "tagline": "Cheap quiet double, but far from the pier",
+   "priceTHB": null,
+   "priceINR": 8093,
+   "priceNote": "960 THB per room. Hostelworld 'from €12.69 per person', undated, doubled; Booking snippet from US$37; cash only",
+   "when": null,
+   "book": null,
+   "rating": 8.0,
+   "scale": "10",
+   "reviews": 252,
+   "reviewSource": "Hostelworld (Booking 8.0/665 snippet)",
+   "highlights": [
+    "Quiet",
+    "AC, balconies, towels",
+    "Security/Cleanliness 10",
+    "Value 6.0"
+   ],
+   "praise": [
+    "Staff were brilliant and extremely helpful.",
+    "Staff were so friendly and kind.",
+    "Fresh towels daily."
+   ],
+   "complaints": [
+    "Bed and pillow were really hard.",
+    "A bit out of the way",
+    "Faint party music from the beach"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kitty+Guest+House+Koh+Phi+Phi",
+    "hostelworld": "https://www.hostelworld.com/bed-and-breakfasts/p/89251/kitty-guest-house/"
+   },
+   "tags": [
+    "phiphi",
+    "guesthouse"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Cheap quiet double, but far from the pier",
+   "rooms": "2 per en-suite room, 16 rooms",
+   "distances": {
+    "beach": "2 min to Loh Dalum, 12-15 min to pier"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-katamanda-e5": {
+   "id": "s2-katamanda-e5",
+   "name": "Katamanda E5 Seaview Pool Villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata Noi (hillside estate)",
+   "thai": null,
+   "tagline": "Top pick if price <= ₹20k/night",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price widget did not render; ask host for 21-24 Nov",
+   "when": null,
+   "book": null,
+   "rating": 4.93,
+   "scale": "5",
+   "reviews": 45,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Private saltwater pool",
+    "Outdoor sala, sea views",
+    "Superhost 14 yrs, 882 reviews",
+    "Construction noise next door 10-17h this year"
+   ],
+   "praise": [
+    "responsive staff, Pook by name for warm hospitality",
+    "year-round private saltwater pool, sea views from the terrace",
+    "Kata Noi Beach is a short walk away"
+   ],
+   "complaints": [
+    "Neighbouring construction noise 10:00-17:00",
+    "Value 4.7 lowest sub-score"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Katamanda+Kata+Noi",
+    "airbnb": "https://www.airbnb.co.in/rooms/1028256"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Top pick if price <= ₹20k/night",
+   "rooms": "3 BR x king + sofa; 6 guests",
+   "distances": {
+    "beach": "Kata Noi 'a short walk'; Kata ~10 min downhill (~1 km)"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-villa-beachside-kata-noi": {
+   "id": "s2-villa-beachside-kata-noi",
+   "name": "Villa Beachside Kata Noi",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata Noi, beachside",
+   "thai": null,
+   "tagline": "The splurge; ~2.4x the ₹15k line",
+   "priceTHB": null,
+   "priceINR": 35687,
+   "priceNote": "12,700 THB per night for the whole place. Villa Getaways rate card: US$425/night 1 May-15 Dec 2026, 3-night min (≈₹35,700); includes housekeeper + daily breakfast",
+   "when": null,
+   "book": null,
+   "rating": null,
+   "scale": null,
+   "reviews": null,
+   "reviewSource": null,
+   "highlights": [
+    "Only true walk-to-sand 3BR found",
+    "Plunge pool",
+    "Live-in housekeeper, breakfast, 24h manager",
+    "Hotels.com also lists it"
+   ],
+   "praise": [
+    "daily service/housekeeper",
+    "breakfast included",
+    "beach gate 2 minutes"
+   ],
+   "complaints": [
+    "A lot of mosquitoes",
+    "Minor water/electric issues (fixed quickly)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Villa+Beachside+Kata+Noi",
+    "official": "https://www.villagetaways.com/thailand/villa-rentals-phuket-4209.html"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "The splurge; ~2.4x the ₹15k line",
+   "rooms": "3 BR en-suite; sleeps 6 (+child sofa bed)",
+   "distances": {
+    "beach": "~2 min via private rear gate"
+   },
+   "fitsBudget": false,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-kata-3br-pool-villa": {
+   "id": "s2-kata-3br-pool-villa",
+   "name": "Kata beach 3 bedroom pool villa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata village",
+   "thai": null,
+   "tagline": "Kata fallback with a pool; confirm walk time",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render",
+   "when": null,
+   "book": null,
+   "rating": 4.9,
+   "scale": "5",
+   "reviews": 29,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Private pool + community pool/gym/tennis",
+    "Superhost, 100% response",
+    "Shops/cafes nearby"
+   ],
+   "praise": [
+    "Recent guests loved the smooth start to this stay.",
+    "Guests mention the pool as a highlight.",
+    "Excellent location, within walking distance to the beach"
+   ],
+   "complaints": [
+    "No CO/smoke alarm"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1177898816275442283"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Kata fallback with a pool; confirm walk time",
+   "rooms": "3 BR / 3 baths / 6 guests",
+   "distances": {
+    "beach": "'within walking distance' of Kata, minutes not stated"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-kata-townhouse-1": {
+   "id": "s2-kata-townhouse-1",
+   "name": "Kata beach townhouse #1",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata",
+   "thai": null,
+   "tagline": "Best no-pool option near Kata",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render; 3,000 THB deposit; electricity 6 THB/kWh",
+   "when": null,
+   "book": null,
+   "rating": 4.98,
+   "scale": "5",
+   "reviews": 44,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Highest rating of the Kata set",
+    "No pool (180 THB pp next door)",
+    "Full kitchen, patio",
+    "Superhost"
+   ],
+   "praise": [
+    "friendly and responsive host, often going out of the way to help",
+    "Communication and accuracy 5.0",
+    "Location 4.9"
+   ],
+   "complaints": [
+    "No pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1136447179852507071"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Best no-pool option near Kata",
+   "rooms": "3 BR / 3 baths / 5 beds + sofa bed; 8 guests",
+   "distances": {
+    "beach": "600 m / ~10 min to Kata"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-karon-apt704": {
+   "id": "s2-karon-apt704",
+   "name": "Beachfront Escape on Karon Beach / Apt 704",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon beachfront",
+   "thai": null,
+   "tagline": "Closest-to-sand that sleeps exactly 5; swim elsewhere",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render",
+   "when": null,
+   "book": null,
+   "rating": 4.93,
+   "scale": "5",
+   "reviews": 182,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Guest favourite",
+    "Shared infinity pool + hot tub",
+    "130 m2, Nespresso kitchen",
+    "Karon has the worst rips"
+   ],
+   "praise": [
+    "Steps from Karon Beach, with restaurants, massage shops, and markets",
+    "Guests highlight Tina and Mr. Big as attentive hosts",
+    "Prime beachfront apartment on magnificent Karon beach."
+   ],
+   "complaints": [
+    "1% one-star",
+    "No hotel-gym access",
+    "Charcoal BBQ only"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/11612584"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Closest-to-sand that sleeps exactly 5; swim elsewhere",
+   "rooms": "2 BR (king + 3 singles) / 2 baths / max 5",
+   "distances": {
+    "beach": "20 m, directly across from Karon Beach"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-karon-exclusive-8638782": {
+   "id": "s2-karon-exclusive-8638782",
+   "name": "Phuket Exclusive Vacation - Beachfront & Seaview",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon beachfront",
+   "thai": null,
+   "tagline": "Karon beachfront alternative, 2 BR",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render",
+   "when": null,
+   "book": null,
+   "rating": 4.95,
+   "scale": "5",
+   "reviews": 190,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Exclusive infinity pool",
+    "High-end kitchen",
+    "Superhost 11 yrs"
+   ],
+   "praise": [
+    "Guests say this area is scenic and it's easy to get around.",
+    "Guests mention the pool as a highlight.",
+    "Rated 4.9 for cleanliness"
+   ],
+   "complaints": [
+    "5% three-star or below"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/8638782"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Karon beachfront alternative, 2 BR",
+   "rooms": "2 BR / 2 baths / 6 guests (sofa bed)",
+   "distances": {
+    "beach": "~50 m, Karon Beach outside the compound"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-karon-334sqm": {
+   "id": "s2-karon-334sqm",
+   "name": "334 sqm 3-bedroom Luxury Pool Villa (resort)",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Karon beachfront, inside a 5-star resort",
+   "thai": null,
+   "tagline": "Tempting but thin reviews and slow host",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render; host response rate 49%",
+   "when": null,
+   "book": null,
+   "rating": 5.0,
+   "scale": "5",
+   "reviews": 5,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "7 m private infinity pool + hot tub",
+    "Resort facilities",
+    "Only 5 reviews",
+    "Slow host"
+   ],
+   "praise": [],
+   "complaints": [
+    "Host responds 'within a few days'",
+    "Late check-out charged 50%"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Karon+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/31637169"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Tempting but thin reviews and slow host",
+   "rooms": "3 BR (2 singles / king / 2 singles) / 3 en-suite / 7",
+   "distances": {
+    "beach": "'right on Karon Beach' (no metres given)"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-rawai-walk-to-beach": {
+   "id": "s2-rawai-walk-to-beach",
+   "name": "3 Bedroom Pool Villa Walk to Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Rawai (Nai Harn 5-min drive)",
+   "thai": null,
+   "tagline": "Best-reviewed villa, just over ₹20k, needs a car",
+   "priceTHB": null,
+   "priceINR": 21187,
+   "priceNote": "7,540 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹63,586 for 3 nights (struck ₹79,222) ≈ ₹21,195/night",
+   "when": null,
+   "book": null,
+   "rating": 4.94,
+   "scale": "5",
+   "reviews": 312,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "312 reviews at 4.94",
+    "32 m2 private pool",
+    "Superhost 11 yrs",
+    "Not a swim beach on foot"
+   ],
+   "praise": [
+    "Amazing outdoor space",
+    "Exceptional check-in experience",
+    "pool, garden and outdoor area as highlights"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Rawai",
+    "airbnb": "https://www.airbnb.co.in/rooms/9503285"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Best-reviewed villa, just over ₹20k, needs a car",
+   "rooms": "3 BR king en-suite / 4.5 baths / max 6",
+   "distances": {
+    "beach": "250 m to a small cove; Nai Harn 5 min by car"
+   },
+   "fitsBudget": false,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-villa-vipa": {
+   "id": "s2-villa-vipa",
+   "name": "Villa Vipa - Unique 3 BR Pool Villa Naiharn Beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Nai Harn / Soi Naya, Rawai",
+   "thai": null,
+   "tagline": "In budget, but drive to the beach",
+   "priceTHB": null,
+   "priceINR": 16467,
+   "priceNote": "5,860 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹49,398 for 3 nights (struck ₹62,342) ≈ ₹16,466/night",
+   "when": null,
+   "book": null,
+   "rating": 4.91,
+   "scale": "5",
+   "reviews": 85,
+   "reviewSource": "Airbnb (search card)",
+   "highlights": [
+    "Private pool",
+    "Inside ₹20k",
+    "Not walkable to sand"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Nai+Harn+Beach+Rawai",
+    "airbnb": "https://www.airbnb.co.in/rooms/53191230"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "In budget, but drive to the beach",
+   "rooms": "3 BR / 3 baths / 4 beds",
+   "distances": {
+    "beach": "~5 min by car to Nai Harn; shops 5-min walk"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-shanti-bangtao": {
+   "id": "s2-shanti-bangtao",
+   "name": "Luxury 3BR Pool Villa walk to Bangtao beach",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao, Choeng Thale",
+   "thai": null,
+   "tagline": "OK Bang Tao pool villa, long walk",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 64,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "35 m2 private pool + hot tub",
+    "Full kitchen with oven/dishwasher",
+    "Host 1,064 reviews, no Superhost badge"
+   ],
+   "praise": [],
+   "complaints": [
+    "2% two-star, no text",
+    "Cleanliness/Location 4.7"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/3681990"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "OK Bang Tao pool villa, long walk",
+   "rooms": "3 BR (king + 4 singles) / 3.5 baths / 8",
+   "distances": {
+    "beach": "~15 min walk / 3 min drive to Bang Tao"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-bangtao-soi4-sleeps9": {
+   "id": "s2-bangtao-soi4-sleeps9",
+   "name": "Beautiful Villa Close to Beach, Sleeps 9",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao Soi 4, Choeng Thale",
+   "thai": null,
+   "tagline": "Budget walkable option; swim only on green flags",
+   "priceTHB": null,
+   "priceINR": 12645,
+   "priceNote": "4,500 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹37,918 for 3 nights (struck ₹81,451) ≈ ₹12,640/night",
+   "when": null,
+   "book": null,
+   "rating": 4.83,
+   "scale": "5",
+   "reviews": 12,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Cheapest walkable 3BR found",
+    "No pool",
+    "Full kitchen",
+    "Host 4.63 avg, 142 reviews"
+   ],
+   "praise": [],
+   "complaints": [
+    "8% three-star",
+    "No pool"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/1573075132689784851"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Budget walkable option; swim only on green flags",
+   "rooms": "3 BR (king / 2 singles / queen) + sofa beds / 3 baths / 9",
+   "distances": {
+    "beach": "~400 m / 10-min walk to Bang Tao"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-bangtao-laguna-pool-villa": {
+   "id": "s2-bangtao-laguna-pool-villa",
+   "name": "Private Pool Villa 3 BR Bang Tao Beach & Laguna",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Choeng Thale (Bang Tao/Layan)",
+   "thai": null,
+   "tagline": "Nice villa, wrong brief (drive to beach)",
+   "priceTHB": null,
+   "priceINR": 19024,
+   "priceNote": "6,770 THB per night for the whole place. Airbnb search card 21-24 Nov 2026: ₹57,086 for 3 nights ≈ ₹19,029/night",
+   "when": null,
+   "book": null,
+   "rating": 4.85,
+   "scale": "5",
+   "reviews": 143,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Private saltwater pool",
+    "Superhost 9 yrs",
+    "Not walkable"
+   ],
+   "praise": [
+    "guests highlight the pool, the outdoor bathrooms, and the host's responsiveness"
+   ],
+   "complaints": [
+    "Location 4.4"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Bang+Tao+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/19263110"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Nice villa, wrong brief (drive to beach)",
+   "rooms": "3 BR en-suite / 4 beds / 7",
+   "distances": {
+    "beach": "short drive to Bang Tao/Layan; Location 4.4"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-surin-large-villa": {
+   "id": "s2-surin-large-villa",
+   "name": "Large Luxury Villa & Big Pool - Bang Tao/Surin",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Surin, Choeng Thale",
+   "thai": null,
+   "tagline": "Over-spec; check price only if splurging",
+   "priceTHB": null,
+   "priceINR": null,
+   "priceNote": "Airbnb price did not render; likely over ₹20k",
+   "when": null,
+   "book": null,
+   "rating": 4.97,
+   "scale": "5",
+   "reviews": 228,
+   "reviewSource": "Airbnb",
+   "highlights": [
+    "Daily breakfast + staff",
+    "Shared 33x8 m pool, private hot tub",
+    "Superhost 12 yrs"
+   ],
+   "praise": [
+    "daily breakfast and attentive staff, with many praising Ja by name"
+   ],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Surin+Beach+Phuket",
+    "airbnb": "https://www.airbnb.co.in/rooms/5582769"
+   },
+   "tags": [
+    "beach",
+    "villa"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Over-spec; check price only if splurging",
+   "rooms": "5 BR kings / 5 en-suite / 10",
+   "distances": {
+    "beach": "7-10 min walk to Surin"
+   },
+   "fitsBudget": false,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-mantra-kata-noi": {
+   "id": "s2-mantra-kata-noi",
+   "name": "The Mantra Hotel Kata Noi",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata Noi",
+   "thai": null,
+   "tagline": "Hotel fallback on the best swimming bay",
+   "priceTHB": null,
+   "priceINR": 12898,
+   "priceNote": "1,530 THB per room. Kayak 30-31 Oct 2026: Queen $19, Standard $51-94, Deluxe $67-107; 1,530 THB ≈ the $51 standard",
+   "when": null,
+   "book": null,
+   "rating": 8.3,
+   "scale": "10",
+   "reviews": 446,
+   "reviewSource": "Kayak",
+   "highlights": [
+    "Beachfront on the calm bay",
+    "No pool, no breakfast",
+    "Bar, free wifi"
+   ],
+   "praise": [
+    "excellent location near the beach",
+    "friendly and helpful staff",
+    "daily cleaning, amenities like water and coffee"
+   ],
+   "complaints": [
+    "Small rooms, street/corridor noise",
+    "Inconsistent hot water",
+    "No parking"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=The+Mantra+Hotel+Kata+Noi"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Hotel fallback on the best swimming bay",
+   "rooms": "3 rooms (queen/standard/deluxe)",
+   "distances": {
+    "beach": "125 yd to Kata Noi"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-kata-noi-resort": {
+   "id": "s2-kata-noi-resort",
+   "name": "Kata Noi Resort",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata Noi",
+   "thai": null,
+   "tagline": "Cheap, pool, on the bay; thin data",
+   "priceTHB": null,
+   "priceINR": 7798,
+   "priceNote": "925 THB per room. Hotels.com snippet ₹2,597/night for 7-8 Aug (year unstated); Expedia ₩39,426 Jul",
+   "when": null,
+   "book": null,
+   "rating": 8.2,
+   "scale": "10",
+   "reviews": 57,
+   "reviewSource": "Hotels.com (snippet)",
+   "highlights": [
+    "Pool",
+    "Free parking",
+    "3-star"
+   ],
+   "praise": [],
+   "complaints": [],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Noi+Resort+Phuket"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Cheap, pool, on the bay; thin data",
+   "rooms": "3 rooms",
+   "distances": {
+    "beach": "steps from Kata Noi"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-kata-beachwalk": {
+   "id": "s2-kata-beachwalk",
+   "name": "Kata Beachwalk Hotel & Bungalows",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kata",
+   "thai": null,
+   "tagline": "Cheap and close, but noisy",
+   "priceTHB": null,
+   "priceINR": 10116,
+   "priceNote": "1,200 THB per room. Kayak 29-30 Oct 2026: $18-107 (1,200 THB ≈ the $40 mid rate)",
+   "when": null,
+   "book": null,
+   "rating": 8.5,
+   "scale": "10",
+   "reviews": 838,
+   "reviewSource": "Kayak (Expedia 8.2/99)",
+   "highlights": [
+    "Rooftop terrace, bar",
+    "Noise score 2.5/10",
+    "No lift"
+   ],
+   "praise": [
+    "excellent location close to the beach",
+    "friendly and helpful staff",
+    "my room with the balcony was really nice and comfortable"
+   ],
+   "complaints": [
+    "Cleanliness/towels lacking",
+    "Maintenance issues",
+    "Traffic and bar noise"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Kata+Beachwalk+Hotel+Phuket"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Cheap and close, but noisy",
+   "rooms": "3 standard/deluxe rooms",
+   "distances": {
+    "beach": "245 m to Kata"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-princess-kamala": {
+   "id": "s2-princess-kamala",
+   "name": "Princess Kamala Beachfront Hotel",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Best in-budget beach hotel in Kamala",
+   "priceTHB": null,
+   "priceINR": 9442,
+   "priceNote": "1,120 THB per room. Trip.com Kamala list 'from ₹3,146' (undated)",
+   "when": null,
+   "book": null,
+   "rating": 8.8,
+   "scale": "10",
+   "reviews": 439,
+   "reviewSource": "Trip.com list (reviews page 8.3/268; Hotels.com 8.4)",
+   "highlights": [
+    "2 pools, swim-up bar",
+    "Inside 3-5k INR",
+    "Kamala is a calm Nov beach with lifeguards"
+   ],
+   "praise": [
+    "Great swimming pool (54 reviews)",
+    "pool clean, plenty of loungers",
+    "beach immediately across the street"
+   ],
+   "complaints": [
+    "Poor air conditioning (13 reviews)",
+    "Pool gets very busy",
+    "Star rating 2.5 vs 4.5 depending on site"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Princess+Kamala+Beachfront+Hotel",
+    "tripadvisor": "https://uk.trip.com/hotels/phuket-hotel-detail-703390/princess-kamala-beachfront-phuket/review.html"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Best in-budget beach hotel in Kamala",
+   "rooms": "3 rooms",
+   "distances": {
+    "beach": "beach across the street per reviewers; Trip.com says 0.67 km"
+   },
+   "fitsBudget": true,
+   "lngLat": null,
+   "geo": null
+  },
+  "at-kamala-hotel": {
+   "id": "at-kamala-hotel",
+   "name": "At Kamala Hotel",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Kamala",
+   "thai": null,
+   "tagline": "Good hotel, over the per-room line and no pool",
+   "priceTHB": null,
+   "priceINR": 18040,
+   "priceNote": "2,140 THB per room. Kayak 30-31 Oct 2026: C$98-150 per room",
+   "when": null,
+   "book": null,
+   "rating": 8.8,
+   "scale": "10",
+   "reviews": 393,
+   "reviewSource": "Kayak (Hotels.com 9.2)",
+   "highlights": [
+    "Breakfast 8.5/10",
+    "No pool",
+    "Clean, comfortable"
+   ],
+   "praise": [
+    "excellent location near the beach, restaurants, and shops",
+    "Cleanliness and comfortable rooms were frequently highlighted",
+    "Many guests enjoyed the breakfast"
+   ],
+   "complaints": [
+    "No pool",
+    "Occasional room-view issues",
+    "Limited staff availability"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=At+Kamala+Hotel+Phuket"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Good hotel, over the per-room line and no pool",
+   "rooms": "3 rooms",
+   "distances": {
+    "beach": "0.9 km to Kamala Beach"
+   },
+   "fitsBudget": false,
+   "lngLat": null,
+   "geo": null
+  },
+  "s2-best-western-bangtao": {
+   "id": "s2-best-western-bangtao",
+   "name": "Best Western Premier Bangtao Beach Resort & Spa",
+   "type": "stay",
+   "place": "phuket",
+   "area": "Bang Tao beachfront",
+   "thai": null,
+   "tagline": "Beachfront but ~4x the per-room budget",
+   "priceTHB": null,
+   "priceINR": 65754,
+   "priceNote": "7,800 THB per room. Trip.com 'average price from NZ$434' (undated); breakfast THB 375 pp",
+   "when": null,
+   "book": null,
+   "rating": 9.1,
+   "scale": "10",
+   "reviews": 102,
+   "reviewSource": "Trip.com (Hotels.com 8.4; Google 4.6/2,289 snippet)",
+   "highlights": [
+    "Direct beach access",
+    "2 pools + kids pool",
+    "Dated rooms per Oyster"
+   ],
+   "praise": [
+    "Very nice hotel with great staff :)",
+    "Such lovely staff, clean, everything you need, right on the beach!",
+    "Several large pools. Direct beach access."
+   ],
+   "complaints": [
+    "Small gym, machines broken",
+    "Strong chlorine",
+    "Sea nearby not great (river outflow)"
+   ],
+   "links": {
+    "maps": "https://www.google.com/maps/search/?api=1&query=Best+Western+Premier+Bangtao+Beach+Resort"
+   },
+   "tags": [
+    "beach",
+    "hotel"
+   ],
+   "sources": [
+    "research/stays-2.md"
+   ],
+   "verdict": "Beachfront but ~4x the per-room budget",
+   "rooms": "3 rooms (family room option)",
+   "distances": {
+    "beach": "on the beach"
+   },
+   "fitsBudget": false,
+   "lngLat": null,
+   "geo": null
   }
  },
  "activities": [
